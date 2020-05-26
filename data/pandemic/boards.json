@@ -51,6 +51,7 @@
     "neighboursKey": "neighbours",
     "maxNeighbours": -1,
     "id": "cities",
+    "img": "pandemicBG.jpg",
     "nodes" :
     [
       {
@@ -78,7 +79,8 @@
         "coordinates": ["Vector2D",[100, 295]],
         "researchStation": ["Boolean", false],
         "infection": ["Integer[]", [0, 0, 0, 0]],
-        "players": ["Integer<>", []]
+        "players": ["Integer<>", []],
+        "edge": ["Boolean", true]
       },
       {
         "name": ["String","Chicago"],
@@ -303,7 +305,8 @@
         "coordinates": ["Vector2D",[1094, 296]],
         "researchStation": ["Boolean", false],
         "infection": ["Integer[]", [0, 0, 0, 0]],
-        "players": ["Integer<>", []]
+        "players": ["Integer<>", []],
+        "edge": ["Boolean", true]
       },
       {
         "name": ["String","Osaka"],
@@ -357,7 +360,8 @@
         "coordinates": ["Vector2D",[1060, 485]],
         "researchStation": ["Boolean", false],
         "infection": ["Integer[]", [0, 0, 0, 0]],
-        "players": ["Integer<>", []]
+        "players": ["Integer<>", []],
+        "edge": ["Boolean", true]
       },
       {
         "name": ["String","Sydney"],
@@ -366,7 +370,8 @@
         "coordinates": ["Vector2D",[1108, 655]],
         "researchStation": ["Boolean", false],
         "infection": ["Integer[]", [0, 0, 0, 0]],
-        "players": ["Integer<>", []]
+        "players": ["Integer<>", []],
+        "edge": ["Boolean", true]
       },
       {
         "name": ["String","Jakarta"],
@@ -456,7 +461,8 @@
         "coordinates": ["Vector2D",[117, 379]],
         "researchStation": ["Boolean", false],
         "infection": ["Integer[]", [0, 0, 0, 0]],
-        "players": ["Integer<>", []]
+        "players": ["Integer<>", []],
+        "edge": ["Boolean", true]
       },
       {
         "name": ["String","Lima"],

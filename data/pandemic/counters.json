@@ -2,13 +2,18 @@
   {
     "id": "Outbreaks",
     "min": ["Integer", 0],
-    "max": ["Integer", 8]
+    "max": ["Integer", 8],
+    "img": ["String", "obmarker.png"],
+    "backgroundImg": ["String", "obmarkerbg.png"],
+    "imgMax": ["String", "obmarkerlast.png"]
   },
   {
     "id": "Infection Rate",
     "min": ["Integer", 0],
     "max": ["Integer", 6],
-    "values": ["Integer[]", [2, 2, 2, 3, 3, 4, 4]]
+    "values": ["Integer[]", [2, 2, 2, 3, 3, 4, 4]],
+    "img": ["String", "irmarker.png"],
+    "backgroundImg": ["String", "irmarkerbg.png"]
   },
   {
     "id": "Disease yellow",
