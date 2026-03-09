@@ -350,6 +350,7 @@ public class GamePromptGenerator {
 
     public static void main(String[] args) {
         GamePromptGenerator generator = new GamePromptGenerator();
-        System.out.println(generator.createLLMTaskPrompt(TaskType.Heuristic, GameType.Dominion, 2, "TicTacToeHeuristic", false));
+        System.out.println(generator.createLLMTaskPrompt(TaskType.Heuristic, GameType.CantStop, 2, "CantStopHeuristic", false));
+//        System.out.println(generator.createLLMTaskPrompt(TaskType.Heuristic, GameType.Dominion, 2, "TicTacToeHeuristic", false));
     }
 }

@@ -43,3 +43,9 @@ src/pytag/env/
 metrics/out/*
 treeRecorder*
 .vscode/*
+
+# macOS metadata
+.DS_Store
+
+# Google service account credentials
+tagmscthesisllm-68811bb679ed.json

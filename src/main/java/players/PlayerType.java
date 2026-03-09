@@ -4,6 +4,7 @@ import core.*;
 import players.human.ActionController;
 import players.human.HumanConsolePlayer;
 import players.human.HumanGUIPlayer;
+import players.llm.LLMActionPlayer;
 import players.mcts.MCTSParams;
 import players.mcts.MCTSPlayer;
 import players.rmhc.RMHCParams;
@@ -33,6 +34,7 @@ public enum PlayerType {
     HumanConsolePlayer (new ArrayList<Property>() {{ add(Human); }}),
     Random (new ArrayList<Property>() {{ add(Simple); add(Stochastic); }}),
     OSLA (new ArrayList<Property>() {{ add(Simple); add(Stochastic); add(ForwardPlanning); add(Greedy); }}),
+    LLM (new ArrayList<Property>() {{ add(Stochastic); }}),
     MCTS (new ArrayList<Property>() {{ add(Stochastic); add(ForwardPlanning); add(TreeSearch); }}),
     RMHC (new ArrayList<Property>() {{ add(Stochastic); add(ForwardPlanning); add(EvolutionaryAlgorithm); }});
 
@@ -48,6 +50,8 @@ public enum PlayerType {
                 return Random;
             case "osla":
                 return OSLA;
+            case "llm": // llm agent
+                return LLM;
             case "mcts":
                 return MCTS;
             case "rmhc":
@@ -88,6 +92,9 @@ public enum PlayerType {
                 break;
             case OSLA:
                 player = new OSLAPlayer(r);
+                break;
+            case LLM:
+                player = new LLMActionPlayer();
                 break;
             case MCTS:
                 if (params == null) {

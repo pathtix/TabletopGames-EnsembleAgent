@@ -1,0 +1,1030 @@
+GameSeed,GameName,Round,Event,Tick,Turn,PlayerCount,GameID,ActionsReduced(Player),ActionsReduced(Action),ActionsReduced(ActionClass),ActionsReduced(ActionDescription),ActionsReduced(PlayerType),ActionsReduced(Size)
+-761848267,Poker,0,ACTION_CHOSEN,0,0,2,2,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-761848267,Poker,0,ACTION_CHOSEN,1,1,2,2,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-761848267,Poker,0,ACTION_CHOSEN,2,2,2,2,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-761848267,Poker,0,ACTION_CHOSEN,3,3,2,2,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-761848267,Poker,0,ACTION_CHOSEN,4,4,2,2,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-761848267,Poker,0,ACTION_CHOSEN,5,5,2,2,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-761848267,Poker,0,ACTION_CHOSEN,6,6,2,2,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-761848267,Poker,0,ACTION_CHOSEN,7,7,2,2,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-761848267,Poker,0,ACTION_CHOSEN,8,8,2,2,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-761848267,Poker,0,ACTION_CHOSEN,9,9,2,2,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-761848267,Poker,0,ACTION_CHOSEN,10,10,2,2,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-761848267,Poker,1,ACTION_CHOSEN,11,0,2,2,1,games.poker.actions.Raise@401002ab,Raise,Raise x4.0,mcts,7
+-761848267,Poker,1,ACTION_CHOSEN,12,1,2,2,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+1265535402,Poker,0,ACTION_CHOSEN,0,0,2,3,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+951784351,Poker,0,ACTION_CHOSEN,0,0,2,4,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+951784351,Poker,1,ACTION_CHOSEN,1,0,2,4,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+951784351,Poker,1,ACTION_CHOSEN,2,1,2,4,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,3
+59326873,Poker,0,ACTION_CHOSEN,0,0,2,5,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+59326873,Poker,0,ACTION_CHOSEN,1,1,2,5,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+59326873,Poker,1,ACTION_CHOSEN,2,0,2,5,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+59326873,Poker,1,ACTION_CHOSEN,3,1,2,5,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+59326873,Poker,1,ACTION_CHOSEN,4,2,2,5,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+59326873,Poker,1,ACTION_CHOSEN,5,3,2,5,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+59326873,Poker,1,ACTION_CHOSEN,6,4,2,5,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+59326873,Poker,1,ACTION_CHOSEN,7,5,2,5,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+59326873,Poker,2,ACTION_CHOSEN,8,0,2,5,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+59326873,Poker,2,ACTION_CHOSEN,9,1,2,5,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+59326873,Poker,2,ACTION_CHOSEN,10,2,2,5,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+59326873,Poker,2,ACTION_CHOSEN,11,3,2,5,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+59326873,Poker,3,ACTION_CHOSEN,12,0,2,5,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+59326873,Poker,3,ACTION_CHOSEN,13,1,2,5,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+59326873,Poker,3,ACTION_CHOSEN,14,2,2,5,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+59326873,Poker,3,ACTION_CHOSEN,15,3,2,5,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+-1934492820,Poker,0,ACTION_CHOSEN,0,0,2,6,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-1523228955,Poker,0,ACTION_CHOSEN,0,0,2,7,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1523228955,Poker,1,ACTION_CHOSEN,1,0,2,7,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1523228955,Poker,1,ACTION_CHOSEN,2,1,2,7,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1523228955,Poker,1,ACTION_CHOSEN,3,2,2,7,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1523228955,Poker,2,ACTION_CHOSEN,4,0,2,7,0,games.poker.actions.Call@ec7,Call,Call,mcts,5
+-1523228955,Poker,2,ACTION_CHOSEN,5,1,2,7,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1523228955,Poker,3,ACTION_CHOSEN,6,0,2,7,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1523228955,Poker,3,ACTION_CHOSEN,7,1,2,7,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1523228955,Poker,3,ACTION_CHOSEN,8,2,2,7,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1523228955,Poker,3,ACTION_CHOSEN,9,3,2,7,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1523228955,Poker,3,ACTION_CHOSEN,10,4,2,7,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+1982788428,Poker,0,ACTION_CHOSEN,0,0,2,8,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+1982788428,Poker,0,ACTION_CHOSEN,1,1,2,8,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1982788428,Poker,0,ACTION_CHOSEN,2,2,2,8,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1982788428,Poker,0,ACTION_CHOSEN,3,3,2,8,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+1982788428,Poker,0,ACTION_CHOSEN,4,4,2,8,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1982788428,Poker,0,ACTION_CHOSEN,5,5,2,8,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+1982788428,Poker,0,ACTION_CHOSEN,6,6,2,8,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1982788428,Poker,0,ACTION_CHOSEN,7,7,2,8,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+1100610694,Poker,0,ACTION_CHOSEN,0,0,2,9,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1100610694,Poker,0,ACTION_CHOSEN,1,1,2,9,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1100610694,Poker,1,ACTION_CHOSEN,2,0,2,9,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+1100610694,Poker,2,ACTION_CHOSEN,3,0,2,9,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1100610694,Poker,2,ACTION_CHOSEN,4,1,2,9,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1100610694,Poker,2,ACTION_CHOSEN,5,2,2,9,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1100610694,Poker,3,ACTION_CHOSEN,6,0,2,9,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1813934307,Poker,0,ACTION_CHOSEN,0,0,2,10,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1813934307,Poker,0,ACTION_CHOSEN,1,1,2,10,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1813934307,Poker,0,ACTION_CHOSEN,2,2,2,10,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1813934307,Poker,0,ACTION_CHOSEN,3,3,2,10,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1813934307,Poker,0,ACTION_CHOSEN,4,4,2,10,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1813934307,Poker,0,ACTION_CHOSEN,5,5,2,10,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1813934307,Poker,0,ACTION_CHOSEN,6,6,2,10,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1813934307,Poker,0,ACTION_CHOSEN,7,7,2,10,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1813934307,Poker,0,ACTION_CHOSEN,8,8,2,10,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1813934307,Poker,0,ACTION_CHOSEN,9,9,2,10,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-117798301,Poker,0,ACTION_CHOSEN,0,0,2,11,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-117798301,Poker,0,ACTION_CHOSEN,1,1,2,11,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-117798301,Poker,0,ACTION_CHOSEN,2,2,2,11,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-117798301,Poker,0,ACTION_CHOSEN,3,3,2,11,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,5
+-117798301,Poker,0,ACTION_CHOSEN,4,4,2,11,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,3
+-117798301,Poker,1,ACTION_CHOSEN,5,0,2,11,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,2
+-117798301,Poker,2,ACTION_CHOSEN,6,0,2,11,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-117798301,Poker,2,ACTION_CHOSEN,7,1,2,11,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-117798301,Poker,2,ACTION_CHOSEN,8,2,2,11,1,games.poker.actions.Check@2550f74,Check,Check,mcts,3
+-117798301,Poker,2,ACTION_CHOSEN,9,3,2,11,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-117798301,Poker,2,ACTION_CHOSEN,10,4,2,11,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-117798301,Poker,3,ACTION_CHOSEN,11,0,2,11,1,games.poker.actions.Call@ec8,Call,Call,mcts,4
+-117798301,Poker,3,ACTION_CHOSEN,12,1,2,11,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-117798301,Poker,3,ACTION_CHOSEN,13,2,2,11,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-117798301,Poker,3,ACTION_CHOSEN,14,3,2,11,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-117798301,Poker,3,ACTION_CHOSEN,15,4,2,11,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-117798301,Poker,3,ACTION_CHOSEN,16,5,2,11,1,games.poker.actions.Check@2550f74,Check,Check,mcts,3
+-117798301,Poker,3,ACTION_CHOSEN,17,6,2,11,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1422857726,Poker,0,ACTION_CHOSEN,0,0,2,12,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1422857726,Poker,0,ACTION_CHOSEN,1,1,2,12,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1422857726,Poker,1,ACTION_CHOSEN,2,0,2,12,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1422857726,Poker,1,ACTION_CHOSEN,3,1,2,12,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1422857726,Poker,2,ACTION_CHOSEN,4,0,2,12,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1422857726,Poker,2,ACTION_CHOSEN,5,1,2,12,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1422857726,Poker,2,ACTION_CHOSEN,6,2,2,12,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1422857726,Poker,3,ACTION_CHOSEN,7,0,2,12,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,6
+1422857726,Poker,4,ACTION_CHOSEN,8,0,2,12,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1422857726,Poker,4,ACTION_CHOSEN,9,1,2,12,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1422857726,Poker,4,ACTION_CHOSEN,10,2,2,12,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1422857726,Poker,4,ACTION_CHOSEN,11,3,2,12,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+1422857726,Poker,4,ACTION_CHOSEN,12,4,2,12,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,5
+1422857726,Poker,4,ACTION_CHOSEN,13,5,2,12,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,3
+-2144722273,Poker,0,ACTION_CHOSEN,0,0,2,13,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-2144722273,Poker,0,ACTION_CHOSEN,1,1,2,13,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2144722273,Poker,0,ACTION_CHOSEN,2,2,2,13,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-2144722273,Poker,0,ACTION_CHOSEN,3,3,2,13,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-2144722273,Poker,1,ACTION_CHOSEN,4,0,2,13,1,games.poker.actions.Call@ec8,Call,Call,mcts,5
+-2144722273,Poker,1,ACTION_CHOSEN,5,1,2,13,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2144722273,Poker,1,ACTION_CHOSEN,6,2,2,13,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-2144722273,Poker,1,ACTION_CHOSEN,7,3,2,13,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2144722273,Poker,1,ACTION_CHOSEN,8,4,2,13,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-2144722273,Poker,1,ACTION_CHOSEN,9,5,2,13,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-92884073,Poker,0,ACTION_CHOSEN,0,0,2,14,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-92884073,Poker,0,ACTION_CHOSEN,1,1,2,14,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-92884073,Poker,1,ACTION_CHOSEN,2,0,2,14,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,6
+-92884073,Poker,1,ACTION_CHOSEN,3,1,2,14,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-92884073,Poker,1,ACTION_CHOSEN,4,2,2,14,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-92884073,Poker,1,ACTION_CHOSEN,5,3,2,14,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1241158630,Poker,0,ACTION_CHOSEN,0,0,2,15,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1241158630,Poker,0,ACTION_CHOSEN,1,1,2,15,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-1246057841,Poker,0,ACTION_CHOSEN,0,0,2,16,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1246057841,Poker,0,ACTION_CHOSEN,1,1,2,16,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-1246057841,Poker,1,ACTION_CHOSEN,2,0,2,16,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+-1246057841,Poker,1,ACTION_CHOSEN,3,1,2,16,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-1246057841,Poker,1,ACTION_CHOSEN,4,2,2,16,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1246057841,Poker,1,ACTION_CHOSEN,5,3,2,16,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+-1246057841,Poker,1,ACTION_CHOSEN,6,4,2,16,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1246057841,Poker,1,ACTION_CHOSEN,7,5,2,16,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+-1246057841,Poker,1,ACTION_CHOSEN,8,6,2,16,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1246057841,Poker,1,ACTION_CHOSEN,9,7,2,16,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-1965389443,Poker,0,ACTION_CHOSEN,0,0,2,17,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1965389443,Poker,1,ACTION_CHOSEN,1,0,2,17,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1965389443,Poker,1,ACTION_CHOSEN,2,1,2,17,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1965389443,Poker,1,ACTION_CHOSEN,3,2,2,17,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1965389443,Poker,1,ACTION_CHOSEN,4,3,2,17,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1965389443,Poker,1,ACTION_CHOSEN,5,4,2,17,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1965389443,Poker,1,ACTION_CHOSEN,6,5,2,17,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1965389443,Poker,1,ACTION_CHOSEN,7,6,2,17,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-1965389443,Poker,1,ACTION_CHOSEN,8,7,2,17,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1965389443,Poker,1,ACTION_CHOSEN,9,8,2,17,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1965389443,Poker,2,ACTION_CHOSEN,10,0,2,17,0,games.poker.actions.Raise@4008028c,Raise,Raise x3.0,mcts,7
+-1965389443,Poker,2,ACTION_CHOSEN,11,1,2,17,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,2
+-1700595890,Poker,0,ACTION_CHOSEN,0,0,2,18,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+1053858588,Poker,0,ACTION_CHOSEN,0,0,2,19,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1053858588,Poker,1,ACTION_CHOSEN,1,0,2,19,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+1053858588,Poker,1,ACTION_CHOSEN,2,1,2,19,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1053858588,Poker,1,ACTION_CHOSEN,3,2,2,19,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1053858588,Poker,2,ACTION_CHOSEN,4,0,2,19,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,5
+1053858588,Poker,3,ACTION_CHOSEN,5,0,2,19,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,7
+-1772479063,Poker,0,ACTION_CHOSEN,0,0,2,20,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1772479063,Poker,0,ACTION_CHOSEN,1,1,2,20,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-1772479063,Poker,1,ACTION_CHOSEN,2,0,2,20,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-1772479063,Poker,2,ACTION_CHOSEN,3,0,2,20,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-1772479063,Poker,2,ACTION_CHOSEN,4,1,2,20,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1772479063,Poker,2,ACTION_CHOSEN,5,2,2,20,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1772479063,Poker,2,ACTION_CHOSEN,6,3,2,20,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-1772479063,Poker,2,ACTION_CHOSEN,7,4,2,20,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1772479063,Poker,2,ACTION_CHOSEN,8,5,2,20,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1772479063,Poker,2,ACTION_CHOSEN,9,6,2,20,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1772479063,Poker,2,ACTION_CHOSEN,10,7,2,20,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1772479063,Poker,2,ACTION_CHOSEN,11,8,2,20,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-1772479063,Poker,3,ACTION_CHOSEN,12,0,2,20,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+-1772479063,Poker,4,ACTION_CHOSEN,13,0,2,20,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1772479063,Poker,5,ACTION_CHOSEN,14,0,2,20,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,4
+-1772479063,Poker,5,ACTION_CHOSEN,15,1,2,20,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-1772479063,Poker,5,ACTION_CHOSEN,16,2,2,20,1,games.poker.actions.Check@2550f74,Check,Check,mcts,3
+-1772479063,Poker,5,ACTION_CHOSEN,17,3,2,20,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-645959195,Poker,0,ACTION_CHOSEN,0,0,2,21,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+-645959195,Poker,0,ACTION_CHOSEN,1,1,2,21,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-645959195,Poker,0,ACTION_CHOSEN,2,2,2,21,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-645959195,Poker,1,ACTION_CHOSEN,3,0,2,21,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+-645959195,Poker,1,ACTION_CHOSEN,4,1,2,21,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,3
+-645959195,Poker,2,ACTION_CHOSEN,5,0,2,21,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,4
+-645959195,Poker,2,ACTION_CHOSEN,6,1,2,21,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-645959195,Poker,2,ACTION_CHOSEN,7,2,2,21,0,games.poker.actions.Check@2550f73,Check,Check,mcts,3
+-645959195,Poker,2,ACTION_CHOSEN,8,3,2,21,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-1055396681,Poker,0,ACTION_CHOSEN,0,0,2,22,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-1055396681,Poker,0,ACTION_CHOSEN,1,1,2,22,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-1164548881,Poker,0,ACTION_CHOSEN,0,0,2,23,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-1164548881,Poker,0,ACTION_CHOSEN,1,1,2,23,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,3
+-1164548881,Poker,1,ACTION_CHOSEN,2,0,2,23,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+-1164548881,Poker,2,ACTION_CHOSEN,3,0,2,23,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1164548881,Poker,3,ACTION_CHOSEN,4,0,2,23,1,games.poker.actions.Call@ec8,Call,Call,mcts,4
+-1164548881,Poker,3,ACTION_CHOSEN,5,1,2,23,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1164548881,Poker,4,ACTION_CHOSEN,6,0,2,23,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1164548881,Poker,4,ACTION_CHOSEN,7,1,2,23,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1164548881,Poker,4,ACTION_CHOSEN,8,2,2,23,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1164548881,Poker,4,ACTION_CHOSEN,9,3,2,23,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1164548881,Poker,4,ACTION_CHOSEN,10,4,2,23,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1164548881,Poker,5,ACTION_CHOSEN,11,0,2,23,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,2
+-1164548881,Poker,6,ACTION_CHOSEN,12,0,2,23,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,7
+-1164548881,Poker,7,ACTION_CHOSEN,13,0,2,23,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-1164548881,Poker,8,ACTION_CHOSEN,14,0,2,23,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1164548881,Poker,8,ACTION_CHOSEN,15,1,2,23,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1164548881,Poker,8,ACTION_CHOSEN,16,2,2,23,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1164548881,Poker,8,ACTION_CHOSEN,17,3,2,23,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+-1164548881,Poker,9,ACTION_CHOSEN,18,0,2,23,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,5
+-1164548881,Poker,10,ACTION_CHOSEN,19,0,2,23,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1164548881,Poker,10,ACTION_CHOSEN,20,1,2,23,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+812531336,Poker,0,ACTION_CHOSEN,0,0,2,24,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+812531336,Poker,1,ACTION_CHOSEN,1,0,2,24,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+812531336,Poker,1,ACTION_CHOSEN,2,1,2,24,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+812531336,Poker,2,ACTION_CHOSEN,3,0,2,24,0,games.poker.actions.Raise@4008028c,Raise,Raise x3.0,mcts,7
+812531336,Poker,2,ACTION_CHOSEN,4,1,2,24,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,2
+812531336,Poker,3,ACTION_CHOSEN,5,0,2,24,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+812531336,Poker,3,ACTION_CHOSEN,6,1,2,24,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,3
+-1370798276,Poker,0,ACTION_CHOSEN,0,0,2,25,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-1370798276,Poker,0,ACTION_CHOSEN,1,1,2,25,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,3
+-1370798276,Poker,1,ACTION_CHOSEN,2,0,2,25,1,games.poker.actions.Call@ec8,Call,Call,mcts,6
+-1370798276,Poker,1,ACTION_CHOSEN,3,1,2,25,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1370798276,Poker,1,ACTION_CHOSEN,4,2,2,25,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-1370798276,Poker,1,ACTION_CHOSEN,5,3,2,25,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1370798276,Poker,1,ACTION_CHOSEN,6,4,2,25,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1370798276,Poker,1,ACTION_CHOSEN,7,5,2,25,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1370798276,Poker,2,ACTION_CHOSEN,8,0,2,25,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,7
+-1370798276,Poker,3,ACTION_CHOSEN,9,0,2,25,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+-1370798276,Poker,4,ACTION_CHOSEN,10,0,2,25,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+1258061264,Poker,0,ACTION_CHOSEN,0,0,2,26,0,games.poker.actions.Raise@4008028c,Raise,Raise x3.0,mcts,7
+1258061264,Poker,0,ACTION_CHOSEN,1,1,2,26,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,3
+1258061264,Poker,1,ACTION_CHOSEN,2,0,2,26,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+1258061264,Poker,2,ACTION_CHOSEN,3,0,2,26,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+1258061264,Poker,2,ACTION_CHOSEN,4,1,2,26,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+1130850843,Poker,0,ACTION_CHOSEN,0,0,2,27,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1130850843,Poker,0,ACTION_CHOSEN,1,1,2,27,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1130850843,Poker,1,ACTION_CHOSEN,2,0,2,27,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1130850843,Poker,1,ACTION_CHOSEN,3,1,2,27,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1130850843,Poker,1,ACTION_CHOSEN,4,2,2,27,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1130850843,Poker,2,ACTION_CHOSEN,5,0,2,27,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1130850843,Poker,2,ACTION_CHOSEN,6,1,2,27,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+1130850843,Poker,2,ACTION_CHOSEN,7,2,2,27,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,5
+1130850843,Poker,2,ACTION_CHOSEN,8,3,2,27,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+1130850843,Poker,2,ACTION_CHOSEN,9,4,2,27,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+661023748,Poker,0,ACTION_CHOSEN,0,0,2,28,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+661023748,Poker,0,ACTION_CHOSEN,1,1,2,28,1,games.poker.actions.Call@ec8,Call,Call,llm,3
+661023748,Poker,0,ACTION_CHOSEN,2,2,2,28,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+661023748,Poker,0,ACTION_CHOSEN,3,3,2,28,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-945724870,Poker,0,ACTION_CHOSEN,0,0,2,29,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-945724870,Poker,0,ACTION_CHOSEN,1,1,2,29,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-945724870,Poker,0,ACTION_CHOSEN,2,2,2,29,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-945724870,Poker,0,ACTION_CHOSEN,3,3,2,29,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-945724870,Poker,1,ACTION_CHOSEN,4,0,2,29,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,6
+-945724870,Poker,2,ACTION_CHOSEN,5,0,2,29,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-945724870,Poker,2,ACTION_CHOSEN,6,1,2,29,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,3
+-945724870,Poker,3,ACTION_CHOSEN,7,0,2,29,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+-945724870,Poker,4,ACTION_CHOSEN,8,0,2,29,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-945724870,Poker,5,ACTION_CHOSEN,9,0,2,29,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-945724870,Poker,6,ACTION_CHOSEN,10,0,2,29,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-945724870,Poker,6,ACTION_CHOSEN,11,1,2,29,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+633629831,Poker,0,ACTION_CHOSEN,0,0,2,30,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+633629831,Poker,1,ACTION_CHOSEN,1,0,2,30,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+633629831,Poker,2,ACTION_CHOSEN,2,0,2,30,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+633629831,Poker,3,ACTION_CHOSEN,3,0,2,30,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+633629831,Poker,4,ACTION_CHOSEN,4,0,2,30,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+633629831,Poker,5,ACTION_CHOSEN,5,0,2,30,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+633629831,Poker,5,ACTION_CHOSEN,6,1,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+633629831,Poker,5,ACTION_CHOSEN,7,2,2,30,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+633629831,Poker,5,ACTION_CHOSEN,8,3,2,30,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+633629831,Poker,5,ACTION_CHOSEN,9,4,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+633629831,Poker,5,ACTION_CHOSEN,10,5,2,30,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+633629831,Poker,5,ACTION_CHOSEN,11,6,2,30,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+633629831,Poker,5,ACTION_CHOSEN,12,7,2,30,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+633629831,Poker,6,ACTION_CHOSEN,13,0,2,30,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,4
+633629831,Poker,6,ACTION_CHOSEN,14,1,2,30,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,5
+633629831,Poker,7,ACTION_CHOSEN,15,0,2,30,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+633629831,Poker,7,ACTION_CHOSEN,16,1,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+633629831,Poker,7,ACTION_CHOSEN,17,2,2,30,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+633629831,Poker,8,ACTION_CHOSEN,18,0,2,30,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,4
+633629831,Poker,9,ACTION_CHOSEN,19,0,2,30,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+633629831,Poker,10,ACTION_CHOSEN,20,0,2,30,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,6
+633629831,Poker,10,ACTION_CHOSEN,21,1,2,30,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+633629831,Poker,10,ACTION_CHOSEN,22,2,2,30,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+633629831,Poker,10,ACTION_CHOSEN,23,3,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+633629831,Poker,10,ACTION_CHOSEN,24,4,2,30,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+633629831,Poker,10,ACTION_CHOSEN,25,5,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+633629831,Poker,10,ACTION_CHOSEN,26,6,2,30,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+633629831,Poker,10,ACTION_CHOSEN,27,7,2,30,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1058161920,Poker,0,ACTION_CHOSEN,0,0,2,31,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+-1058161920,Poker,0,ACTION_CHOSEN,1,1,2,31,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+-1058161920,Poker,1,ACTION_CHOSEN,2,0,2,31,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-1058161920,Poker,1,ACTION_CHOSEN,3,1,2,31,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+511577550,Poker,0,ACTION_CHOSEN,0,0,2,32,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-2008694050,Poker,0,ACTION_CHOSEN,0,0,2,33,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-2008694050,Poker,0,ACTION_CHOSEN,1,1,2,33,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-2008694050,Poker,1,ACTION_CHOSEN,2,0,2,33,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,6
+-2008694050,Poker,2,ACTION_CHOSEN,3,0,2,33,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-2008694050,Poker,2,ACTION_CHOSEN,4,1,2,33,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2008694050,Poker,2,ACTION_CHOSEN,5,2,2,33,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-2008694050,Poker,2,ACTION_CHOSEN,6,3,2,33,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2008694050,Poker,2,ACTION_CHOSEN,7,4,2,33,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2008694050,Poker,2,ACTION_CHOSEN,8,5,2,33,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-2008694050,Poker,2,ACTION_CHOSEN,9,6,2,33,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2008694050,Poker,2,ACTION_CHOSEN,10,7,2,33,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-2008694050,Poker,3,ACTION_CHOSEN,11,0,2,33,1,games.poker.actions.Raise@400802ab,Raise,Raise x3.0,mcts,7
+-2008694050,Poker,3,ACTION_CHOSEN,12,1,2,33,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+1367586724,Poker,0,ACTION_CHOSEN,0,0,2,34,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1367586724,Poker,0,ACTION_CHOSEN,1,1,2,34,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1367586724,Poker,1,ACTION_CHOSEN,2,0,2,34,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1367586724,Poker,1,ACTION_CHOSEN,3,1,2,34,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1367586724,Poker,1,ACTION_CHOSEN,4,2,2,34,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1367586724,Poker,1,ACTION_CHOSEN,5,3,2,34,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1367586724,Poker,2,ACTION_CHOSEN,6,0,2,34,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1367586724,Poker,2,ACTION_CHOSEN,7,1,2,34,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1367586724,Poker,2,ACTION_CHOSEN,8,2,2,34,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1367586724,Poker,2,ACTION_CHOSEN,9,3,2,34,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1367586724,Poker,2,ACTION_CHOSEN,10,4,2,34,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1367586724,Poker,2,ACTION_CHOSEN,11,5,2,34,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,3
+1367586724,Poker,3,ACTION_CHOSEN,12,0,2,34,1,games.poker.actions.Raise@400802ab,Raise,Raise x3.0,mcts,7
+1367586724,Poker,3,ACTION_CHOSEN,13,1,2,34,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,2
+1367586724,Poker,4,ACTION_CHOSEN,14,0,2,34,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+548981945,Poker,0,ACTION_CHOSEN,0,0,2,35,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+548981945,Poker,0,ACTION_CHOSEN,1,1,2,35,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+548981945,Poker,1,ACTION_CHOSEN,2,0,2,35,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+548981945,Poker,1,ACTION_CHOSEN,3,1,2,35,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+548981945,Poker,2,ACTION_CHOSEN,4,0,2,35,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+548981945,Poker,2,ACTION_CHOSEN,5,1,2,35,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+341958137,Poker,0,ACTION_CHOSEN,0,0,2,36,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,7
+341958137,Poker,1,ACTION_CHOSEN,1,0,2,36,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+341958137,Poker,2,ACTION_CHOSEN,2,0,2,36,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+341958137,Poker,2,ACTION_CHOSEN,3,1,2,36,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+341958137,Poker,2,ACTION_CHOSEN,4,2,2,36,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+341958137,Poker,3,ACTION_CHOSEN,5,0,2,36,1,games.poker.actions.Call@ec8,Call,Call,mcts,6
+341958137,Poker,3,ACTION_CHOSEN,6,1,2,36,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+341958137,Poker,3,ACTION_CHOSEN,7,2,2,36,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+341958137,Poker,3,ACTION_CHOSEN,8,3,2,36,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+341958137,Poker,3,ACTION_CHOSEN,9,4,2,36,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+341958137,Poker,3,ACTION_CHOSEN,10,5,2,36,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+341958137,Poker,3,ACTION_CHOSEN,11,6,2,36,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-1166412383,Poker,0,ACTION_CHOSEN,0,0,2,37,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1166412383,Poker,0,ACTION_CHOSEN,1,1,2,37,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1166412383,Poker,1,ACTION_CHOSEN,2,0,2,37,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+-1166412383,Poker,2,ACTION_CHOSEN,3,0,2,37,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1166412383,Poker,3,ACTION_CHOSEN,4,0,2,37,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1166412383,Poker,4,ACTION_CHOSEN,5,0,2,37,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+1310255589,Poker,0,ACTION_CHOSEN,0,0,2,38,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+1310255589,Poker,0,ACTION_CHOSEN,1,1,2,38,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+1310255589,Poker,1,ACTION_CHOSEN,2,0,2,38,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+1310255589,Poker,2,ACTION_CHOSEN,3,0,2,38,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+1310255589,Poker,2,ACTION_CHOSEN,4,1,2,38,1,games.poker.actions.Call@ec8,Call,Call,llm,3
+1310255589,Poker,2,ACTION_CHOSEN,5,2,2,38,0,games.poker.actions.Check@2550f73,Check,Check,mcts,3
+1310255589,Poker,2,ACTION_CHOSEN,6,3,2,38,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+25920364,Poker,0,ACTION_CHOSEN,0,0,2,39,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+25920364,Poker,0,ACTION_CHOSEN,1,1,2,39,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+25920364,Poker,1,ACTION_CHOSEN,2,0,2,39,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-836647236,Poker,0,ACTION_CHOSEN,0,0,2,40,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-836647236,Poker,0,ACTION_CHOSEN,1,1,2,40,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-836647236,Poker,1,ACTION_CHOSEN,2,0,2,40,1,games.poker.actions.Call@ec8,Call,Call,mcts,6
+-836647236,Poker,1,ACTION_CHOSEN,3,1,2,40,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-836647236,Poker,1,ACTION_CHOSEN,4,2,2,40,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-836647236,Poker,1,ACTION_CHOSEN,5,3,2,40,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,4
+-836647236,Poker,1,ACTION_CHOSEN,6,4,2,40,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-836647236,Poker,2,ACTION_CHOSEN,7,0,2,40,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-823748626,Poker,0,ACTION_CHOSEN,0,0,2,41,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-823748626,Poker,0,ACTION_CHOSEN,1,1,2,41,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-823748626,Poker,0,ACTION_CHOSEN,2,2,2,41,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-823748626,Poker,0,ACTION_CHOSEN,3,3,2,41,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,5
+-823748626,Poker,0,ACTION_CHOSEN,4,4,2,41,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+-823748626,Poker,0,ACTION_CHOSEN,5,5,2,41,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1686812522,Poker,0,ACTION_CHOSEN,0,0,2,42,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+1686812522,Poker,1,ACTION_CHOSEN,1,0,2,42,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+1686812522,Poker,1,ACTION_CHOSEN,2,1,2,42,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+1686812522,Poker,2,ACTION_CHOSEN,3,0,2,42,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1686812522,Poker,3,ACTION_CHOSEN,4,0,2,42,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+1686812522,Poker,3,ACTION_CHOSEN,5,1,2,42,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+1686812522,Poker,4,ACTION_CHOSEN,6,0,2,42,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+1686812522,Poker,4,ACTION_CHOSEN,7,1,2,42,1,games.poker.actions.Call@ec8,Call,Call,llm,3
+1686812522,Poker,4,ACTION_CHOSEN,8,2,2,42,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1686812522,Poker,4,ACTION_CHOSEN,9,3,2,42,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+1686812522,Poker,5,ACTION_CHOSEN,10,0,2,42,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-607121949,Poker,0,ACTION_CHOSEN,0,0,2,43,0,games.poker.actions.Raise@4008028c,Raise,Raise x3.0,mcts,7
+-607121949,Poker,0,ACTION_CHOSEN,1,1,2,43,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,3
+-607121949,Poker,1,ACTION_CHOSEN,2,0,2,43,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+-607121949,Poker,2,ACTION_CHOSEN,3,0,2,43,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+-607121949,Poker,2,ACTION_CHOSEN,4,1,2,43,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-331589514,Poker,0,ACTION_CHOSEN,0,0,2,44,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-331589514,Poker,0,ACTION_CHOSEN,1,1,2,44,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-331589514,Poker,1,ACTION_CHOSEN,2,0,2,44,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-331589514,Poker,2,ACTION_CHOSEN,3,0,2,44,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+-331589514,Poker,3,ACTION_CHOSEN,4,0,2,44,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-331589514,Poker,4,ACTION_CHOSEN,5,0,2,44,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+-331589514,Poker,5,ACTION_CHOSEN,6,0,2,44,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,7
+-331589514,Poker,5,ACTION_CHOSEN,7,1,2,44,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+1647587280,Poker,0,ACTION_CHOSEN,0,0,2,45,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1647587280,Poker,1,ACTION_CHOSEN,1,0,2,45,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+1647587280,Poker,1,ACTION_CHOSEN,2,1,2,45,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,3
+1647587280,Poker,2,ACTION_CHOSEN,3,0,2,45,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,5
+1647587280,Poker,3,ACTION_CHOSEN,4,0,2,45,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+1647587280,Poker,4,ACTION_CHOSEN,5,0,2,45,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,5
+-858288813,Poker,0,ACTION_CHOSEN,0,0,2,46,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-858288813,Poker,0,ACTION_CHOSEN,1,1,2,46,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-858288813,Poker,0,ACTION_CHOSEN,2,2,2,46,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-858288813,Poker,0,ACTION_CHOSEN,3,3,2,46,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-858288813,Poker,0,ACTION_CHOSEN,4,4,2,46,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-858288813,Poker,0,ACTION_CHOSEN,5,5,2,46,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-858288813,Poker,0,ACTION_CHOSEN,6,6,2,46,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-858288813,Poker,0,ACTION_CHOSEN,7,7,2,46,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-858288813,Poker,1,ACTION_CHOSEN,8,0,2,46,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-858288813,Poker,2,ACTION_CHOSEN,9,0,2,46,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-858288813,Poker,2,ACTION_CHOSEN,10,1,2,46,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-858288813,Poker,2,ACTION_CHOSEN,11,2,2,46,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-858288813,Poker,3,ACTION_CHOSEN,12,0,2,46,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+-858288813,Poker,3,ACTION_CHOSEN,13,1,2,46,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-858288813,Poker,3,ACTION_CHOSEN,14,2,2,46,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-858288813,Poker,3,ACTION_CHOSEN,15,3,2,46,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-858288813,Poker,3,ACTION_CHOSEN,16,4,2,46,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,5
+-858288813,Poker,4,ACTION_CHOSEN,17,0,2,46,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,5
+959800923,Poker,0,ACTION_CHOSEN,0,0,2,47,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+959800923,Poker,0,ACTION_CHOSEN,1,1,2,47,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+959800923,Poker,0,ACTION_CHOSEN,2,2,2,47,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+959800923,Poker,0,ACTION_CHOSEN,3,3,2,47,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+959800923,Poker,0,ACTION_CHOSEN,4,4,2,47,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+959800923,Poker,0,ACTION_CHOSEN,5,5,2,47,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+959800923,Poker,0,ACTION_CHOSEN,6,6,2,47,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+959800923,Poker,0,ACTION_CHOSEN,7,7,2,47,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+959800923,Poker,0,ACTION_CHOSEN,8,8,2,47,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+959800923,Poker,0,ACTION_CHOSEN,9,9,2,47,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+959800923,Poker,1,ACTION_CHOSEN,10,0,2,47,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+959800923,Poker,2,ACTION_CHOSEN,11,0,2,47,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1243800591,Poker,0,ACTION_CHOSEN,0,0,2,48,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1825748243,Poker,0,ACTION_CHOSEN,0,0,2,49,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+-1825748243,Poker,0,ACTION_CHOSEN,1,1,2,49,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-1825748243,Poker,1,ACTION_CHOSEN,2,0,2,49,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,7
+591132583,Poker,0,ACTION_CHOSEN,0,0,2,50,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+591132583,Poker,1,ACTION_CHOSEN,1,0,2,50,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+591132583,Poker,1,ACTION_CHOSEN,2,1,2,50,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+591132583,Poker,1,ACTION_CHOSEN,3,2,2,50,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+591132583,Poker,1,ACTION_CHOSEN,4,3,2,50,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+591132583,Poker,1,ACTION_CHOSEN,5,4,2,50,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+591132583,Poker,1,ACTION_CHOSEN,6,5,2,50,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+591132583,Poker,1,ACTION_CHOSEN,7,6,2,50,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+591132583,Poker,1,ACTION_CHOSEN,8,7,2,50,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+591132583,Poker,1,ACTION_CHOSEN,9,8,2,50,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+591132583,Poker,2,ACTION_CHOSEN,10,0,2,50,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+591132583,Poker,2,ACTION_CHOSEN,11,1,2,50,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,2
+-1989964644,Poker,0,ACTION_CHOSEN,0,0,2,51,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1989964644,Poker,0,ACTION_CHOSEN,1,1,2,51,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+2016888042,Poker,0,ACTION_CHOSEN,0,0,2,52,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+2016888042,Poker,0,ACTION_CHOSEN,1,1,2,52,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+2016888042,Poker,0,ACTION_CHOSEN,2,2,2,52,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+2016888042,Poker,0,ACTION_CHOSEN,3,3,2,52,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+577706162,Poker,0,ACTION_CHOSEN,0,0,2,53,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+577706162,Poker,0,ACTION_CHOSEN,1,1,2,53,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-790691465,Poker,0,ACTION_CHOSEN,0,0,2,54,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+-790691465,Poker,0,ACTION_CHOSEN,1,1,2,54,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-790691465,Poker,0,ACTION_CHOSEN,2,2,2,54,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-790691465,Poker,1,ACTION_CHOSEN,3,0,2,54,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-790691465,Poker,1,ACTION_CHOSEN,4,1,2,54,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-790691465,Poker,1,ACTION_CHOSEN,5,2,2,54,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-790691465,Poker,1,ACTION_CHOSEN,6,3,2,54,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-790691465,Poker,1,ACTION_CHOSEN,7,4,2,54,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+1794166089,Poker,0,ACTION_CHOSEN,0,0,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1794166089,Poker,0,ACTION_CHOSEN,1,1,2,55,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1794166089,Poker,0,ACTION_CHOSEN,2,2,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1794166089,Poker,0,ACTION_CHOSEN,3,3,2,55,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1794166089,Poker,0,ACTION_CHOSEN,4,4,2,55,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1794166089,Poker,1,ACTION_CHOSEN,5,0,2,55,1,games.poker.actions.Call@ec8,Call,Call,mcts,5
+1794166089,Poker,1,ACTION_CHOSEN,6,1,2,55,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1794166089,Poker,1,ACTION_CHOSEN,7,2,2,55,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1794166089,Poker,1,ACTION_CHOSEN,8,3,2,55,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1794166089,Poker,1,ACTION_CHOSEN,9,4,2,55,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1794166089,Poker,1,ACTION_CHOSEN,10,5,2,55,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1794166089,Poker,1,ACTION_CHOSEN,11,6,2,55,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1794166089,Poker,2,ACTION_CHOSEN,12,0,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1794166089,Poker,2,ACTION_CHOSEN,13,1,2,55,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1794166089,Poker,2,ACTION_CHOSEN,14,2,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1794166089,Poker,2,ACTION_CHOSEN,15,3,2,55,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+1794166089,Poker,3,ACTION_CHOSEN,16,0,2,55,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1794166089,Poker,3,ACTION_CHOSEN,17,1,2,55,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1794166089,Poker,4,ACTION_CHOSEN,18,0,2,55,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+1794166089,Poker,4,ACTION_CHOSEN,19,1,2,55,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+1794166089,Poker,5,ACTION_CHOSEN,20,0,2,55,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+1794166089,Poker,6,ACTION_CHOSEN,21,0,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1794166089,Poker,6,ACTION_CHOSEN,22,1,2,55,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1794166089,Poker,6,ACTION_CHOSEN,23,2,2,55,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1794166089,Poker,6,ACTION_CHOSEN,24,3,2,55,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+1794166089,Poker,6,ACTION_CHOSEN,25,4,2,55,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+1794166089,Poker,7,ACTION_CHOSEN,26,0,2,55,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,7
+1794166089,Poker,7,ACTION_CHOSEN,27,1,2,55,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+-1904572208,Poker,0,ACTION_CHOSEN,0,0,2,56,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-1018367025,Poker,0,ACTION_CHOSEN,0,0,2,57,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1018367025,Poker,0,ACTION_CHOSEN,1,1,2,57,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1018367025,Poker,1,ACTION_CHOSEN,2,0,2,57,1,games.poker.actions.Call@ec8,Call,Call,mcts,6
+-1018367025,Poker,1,ACTION_CHOSEN,3,1,2,57,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1018367025,Poker,2,ACTION_CHOSEN,4,0,2,57,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1018367025,Poker,2,ACTION_CHOSEN,5,1,2,57,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+958526274,Poker,0,ACTION_CHOSEN,0,0,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+958526274,Poker,0,ACTION_CHOSEN,1,1,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+958526274,Poker,1,ACTION_CHOSEN,2,0,2,58,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,6
+958526274,Poker,1,ACTION_CHOSEN,3,1,2,58,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+958526274,Poker,2,ACTION_CHOSEN,4,0,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+958526274,Poker,2,ACTION_CHOSEN,5,1,2,58,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+958526274,Poker,2,ACTION_CHOSEN,6,2,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+958526274,Poker,3,ACTION_CHOSEN,7,0,2,58,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,6
+958526274,Poker,4,ACTION_CHOSEN,8,0,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+958526274,Poker,4,ACTION_CHOSEN,9,1,2,58,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+958526274,Poker,4,ACTION_CHOSEN,10,2,2,58,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+958526274,Poker,4,ACTION_CHOSEN,11,3,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+958526274,Poker,4,ACTION_CHOSEN,12,4,2,58,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+958526274,Poker,4,ACTION_CHOSEN,13,5,2,58,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+958526274,Poker,4,ACTION_CHOSEN,14,6,2,58,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+958526274,Poker,5,ACTION_CHOSEN,15,0,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+958526274,Poker,6,ACTION_CHOSEN,16,0,2,58,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,llm,6
+958526274,Poker,6,ACTION_CHOSEN,17,1,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+958526274,Poker,7,ACTION_CHOSEN,18,0,2,58,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+958526274,Poker,7,ACTION_CHOSEN,19,1,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+958526274,Poker,7,ACTION_CHOSEN,20,2,2,58,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+958526274,Poker,7,ACTION_CHOSEN,21,3,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+958526274,Poker,7,ACTION_CHOSEN,22,4,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+958526274,Poker,8,ACTION_CHOSEN,23,0,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+958526274,Poker,8,ACTION_CHOSEN,24,1,2,58,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+958526274,Poker,9,ACTION_CHOSEN,25,0,2,58,1,games.poker.actions.Call@ec8,Call,Call,mcts,5
+958526274,Poker,9,ACTION_CHOSEN,26,1,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+958526274,Poker,10,ACTION_CHOSEN,27,0,2,58,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+958526274,Poker,10,ACTION_CHOSEN,28,1,2,58,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+958526274,Poker,10,ACTION_CHOSEN,29,2,2,58,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-678188423,Poker,0,ACTION_CHOSEN,0,0,2,59,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-678188423,Poker,1,ACTION_CHOSEN,1,0,2,59,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-678188423,Poker,2,ACTION_CHOSEN,2,0,2,59,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+-678188423,Poker,2,ACTION_CHOSEN,3,1,2,59,1,games.poker.actions.Call@ec8,Call,Call,llm,3
+-678188423,Poker,2,ACTION_CHOSEN,4,2,2,59,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-678188423,Poker,2,ACTION_CHOSEN,5,3,2,59,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-898097716,Poker,0,ACTION_CHOSEN,0,0,2,60,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-898097716,Poker,0,ACTION_CHOSEN,1,1,2,60,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1994297062,Poker,0,ACTION_CHOSEN,0,0,2,61,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-2000481381,Poker,0,ACTION_CHOSEN,0,0,2,62,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-2000481381,Poker,0,ACTION_CHOSEN,1,1,2,62,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-2000481381,Poker,0,ACTION_CHOSEN,2,2,2,62,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2000481381,Poker,0,ACTION_CHOSEN,3,3,2,62,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-2000481381,Poker,0,ACTION_CHOSEN,4,4,2,62,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2000481381,Poker,0,ACTION_CHOSEN,5,5,2,62,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-2000481381,Poker,0,ACTION_CHOSEN,6,6,2,62,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+-2000481381,Poker,1,ACTION_CHOSEN,7,0,2,62,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-2000481381,Poker,2,ACTION_CHOSEN,8,0,2,62,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,6
+-2000481381,Poker,2,ACTION_CHOSEN,9,1,2,62,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-2000481381,Poker,3,ACTION_CHOSEN,10,0,2,62,1,games.poker.actions.Raise@400802ab,Raise,Raise x3.0,mcts,7
+-2000481381,Poker,3,ACTION_CHOSEN,11,1,2,62,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+-2000481381,Poker,4,ACTION_CHOSEN,12,0,2,62,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,5
+-2000481381,Poker,5,ACTION_CHOSEN,13,0,2,62,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+-2000481381,Poker,5,ACTION_CHOSEN,14,1,2,62,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+-2000481381,Poker,6,ACTION_CHOSEN,15,0,2,62,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-2000481381,Poker,6,ACTION_CHOSEN,16,1,2,62,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2000481381,Poker,6,ACTION_CHOSEN,17,2,2,62,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-2000481381,Poker,7,ACTION_CHOSEN,18,0,2,62,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,7
+-2000481381,Poker,7,ACTION_CHOSEN,19,1,2,62,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,3
+-2000481381,Poker,8,ACTION_CHOSEN,20,0,2,62,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,5
+-2000481381,Poker,9,ACTION_CHOSEN,21,0,2,62,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-2000481381,Poker,10,ACTION_CHOSEN,22,0,2,62,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-2000481381,Poker,10,ACTION_CHOSEN,23,1,2,62,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2000481381,Poker,10,ACTION_CHOSEN,24,2,2,62,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2000481381,Poker,10,ACTION_CHOSEN,25,3,2,62,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-2000481381,Poker,10,ACTION_CHOSEN,26,4,2,62,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-2000481381,Poker,10,ACTION_CHOSEN,27,5,2,62,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-2000481381,Poker,10,ACTION_CHOSEN,28,6,2,62,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+-2000481381,Poker,10,ACTION_CHOSEN,29,7,2,62,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1580349829,Poker,0,ACTION_CHOSEN,0,0,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1580349829,Poker,0,ACTION_CHOSEN,1,1,2,63,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1580349829,Poker,0,ACTION_CHOSEN,2,2,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,0,ACTION_CHOSEN,3,3,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,0,ACTION_CHOSEN,4,4,2,63,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,5
+1580349829,Poker,1,ACTION_CHOSEN,5,0,2,63,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1580349829,Poker,1,ACTION_CHOSEN,6,1,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,1,ACTION_CHOSEN,7,2,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1580349829,Poker,1,ACTION_CHOSEN,8,3,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,1,ACTION_CHOSEN,9,4,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1580349829,Poker,1,ACTION_CHOSEN,10,5,2,63,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1580349829,Poker,2,ACTION_CHOSEN,11,0,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1580349829,Poker,2,ACTION_CHOSEN,12,1,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,2,ACTION_CHOSEN,13,2,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,2,ACTION_CHOSEN,14,3,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1580349829,Poker,2,ACTION_CHOSEN,15,4,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,2,ACTION_CHOSEN,16,5,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,2,ACTION_CHOSEN,17,6,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1580349829,Poker,2,ACTION_CHOSEN,18,7,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,2,ACTION_CHOSEN,19,8,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,2,ACTION_CHOSEN,20,9,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1580349829,Poker,3,ACTION_CHOSEN,21,0,2,63,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+1580349829,Poker,4,ACTION_CHOSEN,22,0,2,63,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,6
+1580349829,Poker,5,ACTION_CHOSEN,23,0,2,63,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,7
+1580349829,Poker,6,ACTION_CHOSEN,24,0,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1580349829,Poker,6,ACTION_CHOSEN,25,1,2,63,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+1580349829,Poker,6,ACTION_CHOSEN,26,2,2,63,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+1580349829,Poker,7,ACTION_CHOSEN,27,0,2,63,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,7
+1580349829,Poker,8,ACTION_CHOSEN,28,0,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1580349829,Poker,8,ACTION_CHOSEN,29,1,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,8,ACTION_CHOSEN,30,2,2,63,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1580349829,Poker,8,ACTION_CHOSEN,31,3,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,8,ACTION_CHOSEN,32,4,2,63,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1580349829,Poker,9,ACTION_CHOSEN,33,0,2,63,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1580349829,Poker,9,ACTION_CHOSEN,34,1,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,9,ACTION_CHOSEN,35,2,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1580349829,Poker,9,ACTION_CHOSEN,36,3,2,63,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1580349829,Poker,10,ACTION_CHOSEN,37,0,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1580349829,Poker,10,ACTION_CHOSEN,38,1,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,10,ACTION_CHOSEN,39,2,2,63,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1580349829,Poker,10,ACTION_CHOSEN,40,3,2,63,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1580349829,Poker,10,ACTION_CHOSEN,41,4,2,63,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1580349829,Poker,10,ACTION_CHOSEN,42,5,2,63,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1580349829,Poker,10,ACTION_CHOSEN,43,6,2,63,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1391076865,Poker,0,ACTION_CHOSEN,0,0,2,64,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1391076865,Poker,1,ACTION_CHOSEN,1,0,2,64,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+1391076865,Poker,1,ACTION_CHOSEN,2,1,2,64,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,3
+1391076865,Poker,2,ACTION_CHOSEN,3,0,2,64,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+1391076865,Poker,2,ACTION_CHOSEN,4,1,2,64,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1391076865,Poker,3,ACTION_CHOSEN,5,0,2,64,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+1391076865,Poker,3,ACTION_CHOSEN,6,1,2,64,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+1391076865,Poker,4,ACTION_CHOSEN,7,0,2,64,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+1391076865,Poker,4,ACTION_CHOSEN,8,1,2,64,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1391076865,Poker,4,ACTION_CHOSEN,9,2,2,64,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+1391076865,Poker,5,ACTION_CHOSEN,10,0,2,64,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+1391076865,Poker,5,ACTION_CHOSEN,11,1,2,64,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1391076865,Poker,5,ACTION_CHOSEN,12,2,2,64,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1391076865,Poker,6,ACTION_CHOSEN,13,0,2,64,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+1391076865,Poker,6,ACTION_CHOSEN,14,1,2,64,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+1391076865,Poker,6,ACTION_CHOSEN,15,2,2,64,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,5
+1391076865,Poker,7,ACTION_CHOSEN,16,0,2,64,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+1391076865,Poker,7,ACTION_CHOSEN,17,1,2,64,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+897038462,Poker,0,ACTION_CHOSEN,0,0,2,65,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+897038462,Poker,1,ACTION_CHOSEN,1,0,2,65,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,llm,7
+897038462,Poker,1,ACTION_CHOSEN,2,1,2,65,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,4
+-1260827127,Poker,0,ACTION_CHOSEN,0,0,2,66,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+1579747875,Poker,0,ACTION_CHOSEN,0,0,2,67,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-223343852,Poker,0,ACTION_CHOSEN,0,0,2,68,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-223343852,Poker,0,ACTION_CHOSEN,1,1,2,68,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-1153177027,Poker,0,ACTION_CHOSEN,0,0,2,69,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1153177027,Poker,1,ACTION_CHOSEN,1,0,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1153177027,Poker,1,ACTION_CHOSEN,2,1,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,1,ACTION_CHOSEN,3,2,2,69,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1153177027,Poker,1,ACTION_CHOSEN,4,3,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1153177027,Poker,1,ACTION_CHOSEN,5,4,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,1,ACTION_CHOSEN,6,5,2,69,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1153177027,Poker,2,ACTION_CHOSEN,7,0,2,69,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,5
+-1153177027,Poker,2,ACTION_CHOSEN,8,1,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1153177027,Poker,2,ACTION_CHOSEN,9,2,2,69,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1153177027,Poker,2,ACTION_CHOSEN,10,3,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,2,ACTION_CHOSEN,11,4,2,69,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,4
+-1153177027,Poker,3,ACTION_CHOSEN,12,0,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1153177027,Poker,3,ACTION_CHOSEN,13,1,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,3,ACTION_CHOSEN,14,2,2,69,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1153177027,Poker,3,ACTION_CHOSEN,15,3,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1153177027,Poker,3,ACTION_CHOSEN,16,4,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,3,ACTION_CHOSEN,17,5,2,69,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1153177027,Poker,3,ACTION_CHOSEN,18,6,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-1153177027,Poker,3,ACTION_CHOSEN,19,7,2,69,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+-1153177027,Poker,4,ACTION_CHOSEN,20,0,2,69,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+-1153177027,Poker,4,ACTION_CHOSEN,21,1,2,69,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1153177027,Poker,4,ACTION_CHOSEN,22,2,2,69,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-1153177027,Poker,5,ACTION_CHOSEN,23,0,2,69,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+-1153177027,Poker,6,ACTION_CHOSEN,24,0,2,69,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1153177027,Poker,7,ACTION_CHOSEN,25,0,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-1153177027,Poker,7,ACTION_CHOSEN,26,1,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,7,ACTION_CHOSEN,27,2,2,69,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1153177027,Poker,7,ACTION_CHOSEN,28,3,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,7,ACTION_CHOSEN,29,4,2,69,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1153177027,Poker,7,ACTION_CHOSEN,30,5,2,69,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1153177027,Poker,7,ACTION_CHOSEN,31,6,2,69,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1153177027,Poker,7,ACTION_CHOSEN,32,7,2,69,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1153177027,Poker,8,ACTION_CHOSEN,33,0,2,69,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+-1153177027,Poker,8,ACTION_CHOSEN,34,1,2,69,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+2007557166,Poker,0,ACTION_CHOSEN,0,0,2,70,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+2007557166,Poker,0,ACTION_CHOSEN,1,1,2,70,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+2007557166,Poker,0,ACTION_CHOSEN,2,2,2,70,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+2007557166,Poker,0,ACTION_CHOSEN,3,3,2,70,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+2007557166,Poker,0,ACTION_CHOSEN,4,4,2,70,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+2007557166,Poker,0,ACTION_CHOSEN,5,5,2,70,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+2007557166,Poker,1,ACTION_CHOSEN,6,0,2,70,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+2007557166,Poker,2,ACTION_CHOSEN,7,0,2,70,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+2007557166,Poker,2,ACTION_CHOSEN,8,1,2,70,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+2007557166,Poker,3,ACTION_CHOSEN,9,0,2,70,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+1244719795,Poker,0,ACTION_CHOSEN,0,0,2,71,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1244719795,Poker,1,ACTION_CHOSEN,1,0,2,71,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+1244719795,Poker,2,ACTION_CHOSEN,2,0,2,71,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+1244719795,Poker,3,ACTION_CHOSEN,3,0,2,71,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+1244719795,Poker,3,ACTION_CHOSEN,4,1,2,71,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1244719795,Poker,3,ACTION_CHOSEN,5,2,2,71,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1244719795,Poker,4,ACTION_CHOSEN,6,0,2,71,0,games.poker.actions.Call@ec7,Call,Call,mcts,5
+1244719795,Poker,4,ACTION_CHOSEN,7,1,2,71,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+1244719795,Poker,4,ACTION_CHOSEN,8,2,2,71,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1244719795,Poker,4,ACTION_CHOSEN,9,3,2,71,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+1244719795,Poker,4,ACTION_CHOSEN,10,4,2,71,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+1244719795,Poker,4,ACTION_CHOSEN,11,5,2,71,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1244719795,Poker,5,ACTION_CHOSEN,12,0,2,71,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,7
+-663319058,Poker,0,ACTION_CHOSEN,0,0,2,72,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+-663319058,Poker,0,ACTION_CHOSEN,1,1,2,72,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-1582360746,Poker,0,ACTION_CHOSEN,0,0,2,73,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1582360746,Poker,0,ACTION_CHOSEN,1,1,2,73,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1582360746,Poker,0,ACTION_CHOSEN,2,2,2,73,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-1582360746,Poker,0,ACTION_CHOSEN,3,3,2,73,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1582360746,Poker,0,ACTION_CHOSEN,4,4,2,73,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1582360746,Poker,0,ACTION_CHOSEN,5,5,2,73,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-1582360746,Poker,1,ACTION_CHOSEN,6,0,2,73,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+-1582360746,Poker,2,ACTION_CHOSEN,7,0,2,73,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+-1582360746,Poker,2,ACTION_CHOSEN,8,1,2,73,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,2
+-1582360746,Poker,3,ACTION_CHOSEN,9,0,2,73,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,3
+-1582360746,Poker,4,ACTION_CHOSEN,10,0,2,73,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1582360746,Poker,4,ACTION_CHOSEN,11,1,2,73,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1582360746,Poker,4,ACTION_CHOSEN,12,2,2,73,1,games.poker.actions.Check@2550f74,Check,Check,mcts,3
+-1582360746,Poker,4,ACTION_CHOSEN,13,3,2,73,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+917474602,Poker,0,ACTION_CHOSEN,0,0,2,74,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+917474602,Poker,0,ACTION_CHOSEN,1,1,2,74,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+917474602,Poker,0,ACTION_CHOSEN,2,2,2,74,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+917474602,Poker,0,ACTION_CHOSEN,3,3,2,74,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+917474602,Poker,0,ACTION_CHOSEN,4,4,2,74,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+917474602,Poker,0,ACTION_CHOSEN,5,5,2,74,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+917474602,Poker,0,ACTION_CHOSEN,6,6,2,74,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+917474602,Poker,0,ACTION_CHOSEN,7,7,2,74,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+669785561,Poker,0,ACTION_CHOSEN,0,0,2,75,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+669785561,Poker,1,ACTION_CHOSEN,1,0,2,75,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+669785561,Poker,1,ACTION_CHOSEN,2,1,2,75,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+669785561,Poker,2,ACTION_CHOSEN,3,0,2,75,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+669785561,Poker,2,ACTION_CHOSEN,4,1,2,75,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+669785561,Poker,3,ACTION_CHOSEN,5,0,2,75,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,5
+669785561,Poker,4,ACTION_CHOSEN,6,0,2,75,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+669785561,Poker,4,ACTION_CHOSEN,7,1,2,75,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+669785561,Poker,5,ACTION_CHOSEN,8,0,2,75,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,llm,7
+669785561,Poker,5,ACTION_CHOSEN,9,1,2,75,0,games.poker.actions.Call@ec7,Call,Call,mcts,3
+669785561,Poker,5,ACTION_CHOSEN,10,2,2,75,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+669785561,Poker,6,ACTION_CHOSEN,11,0,2,75,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,3
+669785561,Poker,7,ACTION_CHOSEN,12,0,2,75,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+669785561,Poker,7,ACTION_CHOSEN,13,1,2,75,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+669785561,Poker,7,ACTION_CHOSEN,14,2,2,75,0,games.poker.actions.Check@2550f73,Check,Check,mcts,3
+669785561,Poker,7,ACTION_CHOSEN,15,3,2,75,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+669785561,Poker,7,ACTION_CHOSEN,16,4,2,75,0,games.poker.actions.Check@2550f73,Check,Check,mcts,3
+669785561,Poker,7,ACTION_CHOSEN,17,5,2,75,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-2140500288,Poker,0,ACTION_CHOSEN,0,0,2,76,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+-2140500288,Poker,0,ACTION_CHOSEN,1,1,2,76,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+1541959231,Poker,0,ACTION_CHOSEN,0,0,2,77,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-1438079167,Poker,0,ACTION_CHOSEN,0,0,2,78,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1438079167,Poker,0,ACTION_CHOSEN,1,1,2,78,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1438079167,Poker,1,ACTION_CHOSEN,2,0,2,78,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,6
+-1438079167,Poker,1,ACTION_CHOSEN,3,1,2,78,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-1438079167,Poker,1,ACTION_CHOSEN,4,2,2,78,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1438079167,Poker,1,ACTION_CHOSEN,5,3,2,78,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1889064267,Poker,0,ACTION_CHOSEN,0,0,2,79,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1889064267,Poker,0,ACTION_CHOSEN,1,1,2,79,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1889064267,Poker,1,ACTION_CHOSEN,2,0,2,79,1,games.poker.actions.Call@ec8,Call,Call,mcts,7
+1889064267,Poker,1,ACTION_CHOSEN,3,1,2,79,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1889064267,Poker,2,ACTION_CHOSEN,4,0,2,79,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1889064267,Poker,2,ACTION_CHOSEN,5,1,2,79,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1889064267,Poker,2,ACTION_CHOSEN,6,2,2,79,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1889064267,Poker,3,ACTION_CHOSEN,7,0,2,79,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,6
+1889064267,Poker,3,ACTION_CHOSEN,8,1,2,79,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+1889064267,Poker,4,ACTION_CHOSEN,9,0,2,79,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1889064267,Poker,4,ACTION_CHOSEN,10,1,2,79,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1889064267,Poker,4,ACTION_CHOSEN,11,2,2,79,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1889064267,Poker,5,ACTION_CHOSEN,12,0,2,79,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,6
+1889064267,Poker,5,ACTION_CHOSEN,13,1,2,79,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+1889064267,Poker,6,ACTION_CHOSEN,14,0,2,79,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,7
+1889064267,Poker,6,ACTION_CHOSEN,15,1,2,79,1,games.poker.actions.Call@ec8,Call,Call,mcts,3
+1889064267,Poker,6,ACTION_CHOSEN,16,2,2,79,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1889064267,Poker,7,ACTION_CHOSEN,17,0,2,79,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-838741689,Poker,0,ACTION_CHOSEN,0,0,2,80,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-838741689,Poker,0,ACTION_CHOSEN,1,1,2,80,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-838741689,Poker,0,ACTION_CHOSEN,2,2,2,80,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-838741689,Poker,0,ACTION_CHOSEN,3,3,2,80,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+-838741689,Poker,1,ACTION_CHOSEN,4,0,2,80,1,games.poker.actions.Call@ec8,Call,Call,mcts,6
+-838741689,Poker,1,ACTION_CHOSEN,5,1,2,80,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-838741689,Poker,2,ACTION_CHOSEN,6,0,2,80,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-838741689,Poker,3,ACTION_CHOSEN,7,0,2,80,1,games.poker.actions.Call@ec8,Call,Call,mcts,4
+-838741689,Poker,3,ACTION_CHOSEN,8,1,2,80,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-838741689,Poker,3,ACTION_CHOSEN,9,2,2,80,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-838741689,Poker,3,ACTION_CHOSEN,10,3,2,80,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-838741689,Poker,3,ACTION_CHOSEN,11,4,2,80,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+2019754407,Poker,0,ACTION_CHOSEN,0,0,2,81,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+2019754407,Poker,0,ACTION_CHOSEN,1,1,2,81,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-1305452614,Poker,0,ACTION_CHOSEN,0,0,2,82,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+-1305452614,Poker,0,ACTION_CHOSEN,1,1,2,82,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+-1305452614,Poker,1,ACTION_CHOSEN,2,0,2,82,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-1305452614,Poker,1,ACTION_CHOSEN,3,1,2,82,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-521140757,Poker,0,ACTION_CHOSEN,0,0,2,83,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-521140757,Poker,0,ACTION_CHOSEN,1,1,2,83,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-521140757,Poker,1,ACTION_CHOSEN,2,0,2,83,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-521140757,Poker,2,ACTION_CHOSEN,3,0,2,83,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,6
+-521140757,Poker,3,ACTION_CHOSEN,4,0,2,83,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-521140757,Poker,4,ACTION_CHOSEN,5,0,2,83,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,llm,6
+-521140757,Poker,4,ACTION_CHOSEN,6,1,2,83,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+-521140757,Poker,5,ACTION_CHOSEN,7,0,2,83,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,7
+-521140757,Poker,5,ACTION_CHOSEN,8,1,2,83,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,2
+-521140757,Poker,6,ACTION_CHOSEN,9,0,2,83,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+-521140757,Poker,7,ACTION_CHOSEN,10,0,2,83,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+-521140757,Poker,7,ACTION_CHOSEN,11,1,2,83,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,2
+-1697300143,Poker,0,ACTION_CHOSEN,0,0,2,84,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,7
+-1697300143,Poker,1,ACTION_CHOSEN,1,0,2,84,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+-1697300143,Poker,2,ACTION_CHOSEN,2,0,2,84,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1697300143,Poker,2,ACTION_CHOSEN,3,1,2,84,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1697300143,Poker,2,ACTION_CHOSEN,4,2,2,84,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1697300143,Poker,3,ACTION_CHOSEN,5,0,2,84,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+-1697300143,Poker,4,ACTION_CHOSEN,6,0,2,84,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1697300143,Poker,4,ACTION_CHOSEN,7,1,2,84,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-1697300143,Poker,5,ACTION_CHOSEN,8,0,2,84,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1697300143,Poker,6,ACTION_CHOSEN,9,0,2,84,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1697300143,Poker,6,ACTION_CHOSEN,10,1,2,84,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1697300143,Poker,6,ACTION_CHOSEN,11,2,2,84,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1697300143,Poker,6,ACTION_CHOSEN,12,3,2,84,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1697300143,Poker,6,ACTION_CHOSEN,13,4,2,84,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1697300143,Poker,6,ACTION_CHOSEN,14,5,2,84,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1697300143,Poker,6,ACTION_CHOSEN,15,6,2,84,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1697300143,Poker,6,ACTION_CHOSEN,16,7,2,84,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1697300143,Poker,6,ACTION_CHOSEN,17,8,2,84,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+788761767,Poker,0,ACTION_CHOSEN,0,0,2,85,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+788761767,Poker,1,ACTION_CHOSEN,1,0,2,85,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+788761767,Poker,1,ACTION_CHOSEN,2,1,2,85,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+788761767,Poker,1,ACTION_CHOSEN,3,2,2,85,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+788761767,Poker,1,ACTION_CHOSEN,4,3,2,85,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+788761767,Poker,1,ACTION_CHOSEN,5,4,2,85,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+788761767,Poker,1,ACTION_CHOSEN,6,5,2,85,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+788761767,Poker,2,ACTION_CHOSEN,7,0,2,85,0,games.poker.actions.Call@ec7,Call,Call,mcts,5
+788761767,Poker,2,ACTION_CHOSEN,8,1,2,85,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+788761767,Poker,2,ACTION_CHOSEN,9,2,2,85,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-180947702,Poker,0,ACTION_CHOSEN,0,0,2,86,0,games.poker.actions.Raise@4000028c,Raise,Raise x2.0,mcts,7
+-180947702,Poker,0,ACTION_CHOSEN,1,1,2,86,1,games.poker.actions.Call@ec8,Call,Call,llm,3
+-180947702,Poker,0,ACTION_CHOSEN,2,2,2,86,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-180947702,Poker,0,ACTION_CHOSEN,3,3,2,86,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-1223366377,Poker,0,ACTION_CHOSEN,0,0,2,87,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-1223366377,Poker,1,ACTION_CHOSEN,1,0,2,87,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-1223366377,Poker,1,ACTION_CHOSEN,2,1,2,87,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+-1223366377,Poker,2,ACTION_CHOSEN,3,0,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1223366377,Poker,3,ACTION_CHOSEN,4,0,2,87,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1223366377,Poker,3,ACTION_CHOSEN,5,1,2,87,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+-1223366377,Poker,4,ACTION_CHOSEN,6,0,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1223366377,Poker,5,ACTION_CHOSEN,7,0,2,87,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1223366377,Poker,5,ACTION_CHOSEN,8,1,2,87,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1223366377,Poker,5,ACTION_CHOSEN,9,2,2,87,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1223366377,Poker,5,ACTION_CHOSEN,10,3,2,87,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1223366377,Poker,5,ACTION_CHOSEN,11,4,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1223366377,Poker,6,ACTION_CHOSEN,12,0,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,6
+-1223366377,Poker,7,ACTION_CHOSEN,13,0,2,87,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+-1223366377,Poker,8,ACTION_CHOSEN,14,0,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,6
+-1223366377,Poker,9,ACTION_CHOSEN,15,0,2,87,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+-1223366377,Poker,10,ACTION_CHOSEN,16,0,2,87,0,games.poker.actions.Call@ec7,Call,Call,mcts,6
+-1223366377,Poker,10,ACTION_CHOSEN,17,1,2,87,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+1430027135,Poker,0,ACTION_CHOSEN,0,0,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1430027135,Poker,0,ACTION_CHOSEN,1,1,2,88,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1430027135,Poker,1,ACTION_CHOSEN,2,0,2,88,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,7
+1430027135,Poker,1,ACTION_CHOSEN,3,1,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1430027135,Poker,1,ACTION_CHOSEN,4,2,2,88,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1430027135,Poker,1,ACTION_CHOSEN,5,3,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+1430027135,Poker,1,ACTION_CHOSEN,6,4,2,88,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1430027135,Poker,2,ACTION_CHOSEN,7,0,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1430027135,Poker,2,ACTION_CHOSEN,8,1,2,88,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+1430027135,Poker,2,ACTION_CHOSEN,9,2,2,88,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+1430027135,Poker,3,ACTION_CHOSEN,10,0,2,88,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+1430027135,Poker,4,ACTION_CHOSEN,11,0,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1430027135,Poker,4,ACTION_CHOSEN,12,1,2,88,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1430027135,Poker,4,ACTION_CHOSEN,13,2,2,88,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1430027135,Poker,4,ACTION_CHOSEN,14,3,2,88,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1430027135,Poker,4,ACTION_CHOSEN,15,4,2,88,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1430027135,Poker,4,ACTION_CHOSEN,16,5,2,88,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1430027135,Poker,4,ACTION_CHOSEN,17,6,2,88,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-1293302217,Poker,0,ACTION_CHOSEN,0,0,2,89,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1293302217,Poker,0,ACTION_CHOSEN,1,1,2,89,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1293302217,Poker,1,ACTION_CHOSEN,2,0,2,89,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,6
+-1293302217,Poker,2,ACTION_CHOSEN,3,0,2,89,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1293302217,Poker,2,ACTION_CHOSEN,4,1,2,89,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-1293302217,Poker,2,ACTION_CHOSEN,5,2,2,89,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1293302217,Poker,3,ACTION_CHOSEN,6,0,2,89,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-1293302217,Poker,4,ACTION_CHOSEN,7,0,2,89,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-1293302217,Poker,4,ACTION_CHOSEN,8,1,2,89,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1293302217,Poker,4,ACTION_CHOSEN,9,2,2,89,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-1293302217,Poker,5,ACTION_CHOSEN,10,0,2,89,1,games.poker.actions.Call@ec8,Call,Call,mcts,4
+-1293302217,Poker,5,ACTION_CHOSEN,11,1,2,89,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1293302217,Poker,5,ACTION_CHOSEN,12,2,2,89,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1293302217,Poker,5,ACTION_CHOSEN,13,3,2,89,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-1293302217,Poker,5,ACTION_CHOSEN,14,4,2,89,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-1293302217,Poker,5,ACTION_CHOSEN,15,5,2,89,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-1293302217,Poker,5,ACTION_CHOSEN,16,6,2,89,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+-1293302217,Poker,6,ACTION_CHOSEN,17,0,2,89,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-1293302217,Poker,6,ACTION_CHOSEN,18,1,2,89,0,games.poker.actions.Bet@f26,Bet,Bet 5,llm,4
+-1293302217,Poker,6,ACTION_CHOSEN,19,2,2,89,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,5
+-1293302217,Poker,6,ACTION_CHOSEN,20,3,2,89,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,3
+467892018,Poker,0,ACTION_CHOSEN,0,0,2,90,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+467892018,Poker,0,ACTION_CHOSEN,1,1,2,90,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+467892018,Poker,0,ACTION_CHOSEN,2,2,2,90,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+467892018,Poker,0,ACTION_CHOSEN,3,3,2,90,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+467892018,Poker,0,ACTION_CHOSEN,4,4,2,90,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+467892018,Poker,0,ACTION_CHOSEN,5,5,2,90,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+467892018,Poker,0,ACTION_CHOSEN,6,6,2,90,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+467892018,Poker,1,ACTION_CHOSEN,7,0,2,90,1,games.poker.actions.Raise@400002ab,Raise,Raise x2.0,mcts,5
+467892018,Poker,1,ACTION_CHOSEN,8,1,2,90,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,4
+467892018,Poker,2,ACTION_CHOSEN,9,0,2,90,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+467892018,Poker,2,ACTION_CHOSEN,10,1,2,90,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+467892018,Poker,2,ACTION_CHOSEN,11,2,2,90,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+467892018,Poker,2,ACTION_CHOSEN,12,3,2,90,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+467892018,Poker,2,ACTION_CHOSEN,13,4,2,90,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+-152387776,Poker,0,ACTION_CHOSEN,0,0,2,91,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+-152387776,Poker,0,ACTION_CHOSEN,1,1,2,91,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-152387776,Poker,0,ACTION_CHOSEN,2,2,2,91,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-152387776,Poker,0,ACTION_CHOSEN,3,3,2,91,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-152387776,Poker,0,ACTION_CHOSEN,4,4,2,91,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,4
+-152387776,Poker,1,ACTION_CHOSEN,5,0,2,91,1,games.poker.actions.Call@ec8,Call,Call,mcts,5
+-152387776,Poker,1,ACTION_CHOSEN,6,1,2,91,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+-152387776,Poker,1,ACTION_CHOSEN,7,2,2,91,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+-152387776,Poker,1,ACTION_CHOSEN,8,3,2,91,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-152387776,Poker,1,ACTION_CHOSEN,9,4,2,91,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-152387776,Poker,1,ACTION_CHOSEN,10,5,2,91,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+-152387776,Poker,1,ACTION_CHOSEN,11,6,2,91,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+-152387776,Poker,2,ACTION_CHOSEN,12,0,2,91,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+-152387776,Poker,2,ACTION_CHOSEN,13,1,2,91,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,4
+-569205173,Poker,0,ACTION_CHOSEN,0,0,2,92,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-569205173,Poker,1,ACTION_CHOSEN,1,0,2,92,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-569205173,Poker,2,ACTION_CHOSEN,2,0,2,92,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-569205173,Poker,3,ACTION_CHOSEN,3,0,2,92,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,7
+-1699285021,Poker,0,ACTION_CHOSEN,0,0,2,93,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+-1699285021,Poker,0,ACTION_CHOSEN,1,1,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,0,ACTION_CHOSEN,2,2,2,93,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1699285021,Poker,1,ACTION_CHOSEN,3,0,2,93,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1699285021,Poker,1,ACTION_CHOSEN,4,1,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,1,ACTION_CHOSEN,5,2,2,93,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1699285021,Poker,1,ACTION_CHOSEN,6,3,2,93,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+-1699285021,Poker,1,ACTION_CHOSEN,7,4,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,1,ACTION_CHOSEN,8,5,2,93,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1699285021,Poker,1,ACTION_CHOSEN,9,6,2,93,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1699285021,Poker,1,ACTION_CHOSEN,10,7,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,1,ACTION_CHOSEN,11,8,2,93,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1699285021,Poker,1,ACTION_CHOSEN,12,9,2,93,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-1699285021,Poker,2,ACTION_CHOSEN,13,0,2,93,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+-1699285021,Poker,2,ACTION_CHOSEN,14,1,2,93,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,2
+-1699285021,Poker,3,ACTION_CHOSEN,15,0,2,93,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1699285021,Poker,3,ACTION_CHOSEN,16,1,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,3,ACTION_CHOSEN,17,2,2,93,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1699285021,Poker,3,ACTION_CHOSEN,18,3,2,93,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1699285021,Poker,3,ACTION_CHOSEN,19,4,2,93,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,4
+-1699285021,Poker,4,ACTION_CHOSEN,20,0,2,93,0,games.poker.actions.Call@ec7,Call,Call,mcts,6
+-1699285021,Poker,4,ACTION_CHOSEN,21,1,2,93,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1699285021,Poker,4,ACTION_CHOSEN,22,2,2,93,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+-1699285021,Poker,5,ACTION_CHOSEN,23,0,2,93,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,llm,7
+-1699285021,Poker,5,ACTION_CHOSEN,24,1,2,93,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,4
+-1699285021,Poker,5,ACTION_CHOSEN,25,2,2,93,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-1479038364,Poker,0,ACTION_CHOSEN,0,0,2,94,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+74164153,Poker,0,ACTION_CHOSEN,0,0,2,95,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+74164153,Poker,0,ACTION_CHOSEN,1,1,2,95,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,llm,4
+74164153,Poker,0,ACTION_CHOSEN,2,2,2,95,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,3
+352888652,Poker,0,ACTION_CHOSEN,0,0,2,96,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+352888652,Poker,0,ACTION_CHOSEN,1,1,2,96,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+352888652,Poker,1,ACTION_CHOSEN,2,0,2,96,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+352888652,Poker,2,ACTION_CHOSEN,3,0,2,96,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+352888652,Poker,3,ACTION_CHOSEN,4,0,2,96,1,games.poker.actions.Call@ec8,Call,Call,llm,6
+352888652,Poker,3,ACTION_CHOSEN,5,1,2,96,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,4
+352888652,Poker,4,ACTION_CHOSEN,6,0,2,96,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+352888652,Poker,5,ACTION_CHOSEN,7,0,2,96,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,5
+352888652,Poker,6,ACTION_CHOSEN,8,0,2,96,0,games.poker.actions.Raise@4010028c,Raise,Raise x4.0,mcts,7
+352888652,Poker,6,ACTION_CHOSEN,9,1,2,96,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,2
+352888652,Poker,7,ACTION_CHOSEN,10,0,2,96,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+352888652,Poker,7,ACTION_CHOSEN,11,1,2,96,1,games.poker.actions.Bet@f45,Bet,Bet 5,llm,4
+352888652,Poker,7,ACTION_CHOSEN,12,2,2,96,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,2
+-1843737667,Poker,0,ACTION_CHOSEN,0,0,2,97,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-1843737667,Poker,1,ACTION_CHOSEN,1,0,2,97,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-1843737667,Poker,2,ACTION_CHOSEN,2,0,2,97,0,games.poker.actions.Call@ec7,Call,Call,mcts,7
+-1843737667,Poker,2,ACTION_CHOSEN,3,1,2,97,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1843737667,Poker,2,ACTION_CHOSEN,4,2,2,97,1,games.poker.actions.Call@ec8,Call,Call,llm,5
+-1843737667,Poker,2,ACTION_CHOSEN,5,3,2,97,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+-1843737667,Poker,2,ACTION_CHOSEN,6,4,2,97,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1843737667,Poker,2,ACTION_CHOSEN,7,5,2,97,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1843737667,Poker,2,ACTION_CHOSEN,8,6,2,97,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-1843737667,Poker,3,ACTION_CHOSEN,9,0,2,97,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1843737667,Poker,3,ACTION_CHOSEN,10,1,2,97,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1843737667,Poker,3,ACTION_CHOSEN,11,2,2,97,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,6
+-1843737667,Poker,4,ACTION_CHOSEN,12,0,2,97,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,6
+-1843737667,Poker,5,ACTION_CHOSEN,13,0,2,97,1,games.poker.actions.Fold@fffffadb,Fold,Fold,llm,7
+-1843737667,Poker,6,ACTION_CHOSEN,14,0,2,97,0,games.poker.actions.Raise@3ff0028c,Raise,Raise x1.0,mcts,7
+-1843737667,Poker,6,ACTION_CHOSEN,15,1,2,97,1,games.poker.actions.Call@ec8,Call,Call,llm,4
+-1843737667,Poker,6,ACTION_CHOSEN,16,2,2,97,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+-1843737667,Poker,6,ACTION_CHOSEN,17,3,2,97,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,3
+-2101547028,Poker,0,ACTION_CHOSEN,0,0,2,98,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,7
+-2101547028,Poker,1,ACTION_CHOSEN,1,0,2,98,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,6
+-1040932399,Poker,0,ACTION_CHOSEN,0,0,2,99,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+-1040932399,Poker,1,ACTION_CHOSEN,1,0,2,99,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+-1040932399,Poker,1,ACTION_CHOSEN,2,1,2,99,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+-1040932399,Poker,1,ACTION_CHOSEN,3,2,2,99,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+-1040932399,Poker,2,ACTION_CHOSEN,4,0,2,99,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,5
+1583997112,Poker,0,ACTION_CHOSEN,0,0,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1583997112,Poker,0,ACTION_CHOSEN,1,1,2,100,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1583997112,Poker,0,ACTION_CHOSEN,2,2,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1583997112,Poker,0,ACTION_CHOSEN,3,3,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,0,ACTION_CHOSEN,4,4,2,100,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1583997112,Poker,0,ACTION_CHOSEN,5,5,2,100,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+1583997112,Poker,1,ACTION_CHOSEN,6,0,2,100,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,5
+1583997112,Poker,2,ACTION_CHOSEN,7,0,2,100,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,7
+1583997112,Poker,3,ACTION_CHOSEN,8,0,2,100,1,games.poker.actions.Raise@3ff002ab,Raise,Raise x1.0,mcts,4
+1583997112,Poker,3,ACTION_CHOSEN,9,1,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1583997112,Poker,3,ACTION_CHOSEN,10,2,2,100,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,mcts,3
+1583997112,Poker,4,ACTION_CHOSEN,11,0,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1583997112,Poker,4,ACTION_CHOSEN,12,1,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,4,ACTION_CHOSEN,13,2,2,100,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1583997112,Poker,4,ACTION_CHOSEN,14,3,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,6
+1583997112,Poker,4,ACTION_CHOSEN,15,4,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,4,ACTION_CHOSEN,16,5,2,100,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1583997112,Poker,4,ACTION_CHOSEN,17,6,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,4,ACTION_CHOSEN,18,7,2,100,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1583997112,Poker,5,ACTION_CHOSEN,19,0,2,100,1,games.poker.actions.Fold@fffffadb,Fold,Fold,mcts,7
+1583997112,Poker,6,ACTION_CHOSEN,20,0,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,7
+1583997112,Poker,6,ACTION_CHOSEN,21,1,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,6,ACTION_CHOSEN,22,2,2,100,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1583997112,Poker,6,ACTION_CHOSEN,23,3,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,5
+1583997112,Poker,6,ACTION_CHOSEN,24,4,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,6,ACTION_CHOSEN,25,5,2,100,1,games.poker.actions.Check@2550f74,Check,Check,mcts,4
+1583997112,Poker,6,ACTION_CHOSEN,26,6,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,6,ACTION_CHOSEN,27,7,2,100,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1583997112,Poker,6,ACTION_CHOSEN,28,8,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1583997112,Poker,7,ACTION_CHOSEN,29,0,2,100,1,games.poker.actions.Raise@400802ab,Raise,Raise x3.0,mcts,7
+1583997112,Poker,7,ACTION_CHOSEN,30,1,2,100,0,games.poker.actions.Fold@fffffada,Fold,Fold,llm,2
+1583997112,Poker,8,ACTION_CHOSEN,31,0,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,4
+1583997112,Poker,8,ACTION_CHOSEN,32,1,2,100,0,games.poker.actions.Check@2550f73,Check,Check,llm,4
+1583997112,Poker,8,ACTION_CHOSEN,33,2,2,100,1,games.poker.actions.Bet@f45,Bet,Bet 5,mcts,4
+1583997112,Poker,8,ACTION_CHOSEN,34,3,2,100,0,games.poker.actions.Call@ec7,Call,Call,llm,3
+1583997112,Poker,8,ACTION_CHOSEN,35,4,2,100,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,llm,4
+915047829,Poker,0,ACTION_CHOSEN,0,0,2,101,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,7
+915047829,Poker,1,ACTION_CHOSEN,1,0,2,101,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,7
+915047829,Poker,2,ACTION_CHOSEN,2,0,2,101,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,5
+915047829,Poker,3,ACTION_CHOSEN,3,0,2,101,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+915047829,Poker,3,ACTION_CHOSEN,4,1,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,3,ACTION_CHOSEN,5,2,2,101,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+915047829,Poker,4,ACTION_CHOSEN,6,0,2,101,0,games.poker.actions.Fold@fffffada,Fold,Fold,mcts,4
+915047829,Poker,5,ACTION_CHOSEN,7,0,2,101,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+915047829,Poker,5,ACTION_CHOSEN,8,1,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,5,ACTION_CHOSEN,9,2,2,101,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+915047829,Poker,5,ACTION_CHOSEN,10,3,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,5,ACTION_CHOSEN,11,4,2,101,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+915047829,Poker,5,ACTION_CHOSEN,12,5,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,5,ACTION_CHOSEN,13,6,2,101,0,games.poker.actions.Bet@f26,Bet,Bet 5,mcts,4
+915047829,Poker,5,ACTION_CHOSEN,14,7,2,101,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+915047829,Poker,6,ACTION_CHOSEN,15,0,2,101,0,games.poker.actions.Call@ec7,Call,Call,mcts,5
+915047829,Poker,6,ACTION_CHOSEN,16,1,2,101,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
+915047829,Poker,7,ACTION_CHOSEN,17,0,2,101,1,games.poker.actions.Call@ec8,Call,Call,llm,7
+915047829,Poker,7,ACTION_CHOSEN,18,1,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,7,ACTION_CHOSEN,19,2,2,101,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+915047829,Poker,7,ACTION_CHOSEN,20,3,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,7,ACTION_CHOSEN,21,4,2,101,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+915047829,Poker,7,ACTION_CHOSEN,22,5,2,101,1,games.poker.actions.Check@2550f74,Check,Check,llm,4
+915047829,Poker,7,ACTION_CHOSEN,23,6,2,101,0,games.poker.actions.Check@2550f73,Check,Check,mcts,4
+915047829,Poker,8,ACTION_CHOSEN,24,0,2,101,0,games.poker.actions.AllIn@e36f4c0e,AllIn,All in,mcts,3
