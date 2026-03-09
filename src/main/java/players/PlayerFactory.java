@@ -5,6 +5,7 @@ import evaluation.optimisation.TunableParameters;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import players.basicMCTS.BasicMCTSPlayer;
+import players.llm.LLMActionPlayer;
 import players.rhea.RHEAParams;
 import players.rhea.RHEAPlayer;
 import players.rmhc.RMHCParams;
@@ -75,6 +76,7 @@ public class PlayerFactory {
             case "mcts" -> new BasicMCTSPlayer();
             case "rmhc" -> new RMHCPlayer(new RMHCParams());
             case "rhea" -> new RHEAPlayer(new RHEAParams());
+            case "llm" -> new LLMActionPlayer();
             default -> throw new AssertionError("Unknown file or player key : " + input);
         };
     }

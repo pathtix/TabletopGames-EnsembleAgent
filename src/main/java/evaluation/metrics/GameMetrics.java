@@ -143,7 +143,6 @@ public class GameMetrics implements IMetricsCollection {
         }
     }
 
-
     public static class CurrentPlayerVisibility extends AbstractMetric {
 
         @Override
@@ -321,7 +320,6 @@ public class GameMetrics implements IMetricsCollection {
             return columns;
         }
     }
-
 
     /**
      * Records the actions taken during the game
