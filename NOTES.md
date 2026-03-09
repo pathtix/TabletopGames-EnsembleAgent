@@ -18,6 +18,8 @@ currently tested games with llmactionplayer
 need to add game releated information to be able to use this action list as a training data.
 phase, chip context, heuristic score?, etc.
 
+(TODO : check listeners, and GameMetrics.java for adding additional fields to listeners)
+
 GameSeed,GameName,Round,Event,Tick,Turn,PlayerCount,GameID,ActionsReduced(Player),ActionsReduced(Action),ActionsReduced(ActionClass),ActionsReduced(ActionDescription),ActionsReduced(PlayerType),ActionsReduced(Size)
 -1295863753,Poker,0,ACTION_CHOSEN,0,0,2,2,0,games.poker.actions.Call@ec7,Call,Call,Basic MCTS,7
 -1295863753,Poker,0,ACTION_CHOSEN,1,1,2,2,1,games.poker.actions.AllIn@e36f4c0f,AllIn,All in,llm,4
@@ -33,5 +35,5 @@ GameSeed,GameName,Round,Event,Tick,Turn,PlayerCount,GameID,ActionsReduced(Player
 
 ----------------------------------------------------------
 
-random idea: reprompt the llmactionplayer with the action returned from the query, but this time with game state + action id + possible actions = `this is the action you returned, do you confirm it that it will be a *good* move or do you want to change it?`
+reprompt the llmactionplayer with the action returned from the query, but this time with game state + action id + possible actions = `this is the action you returned, do you confirm it that it will be a *good* move or do you want to change it?`
 
