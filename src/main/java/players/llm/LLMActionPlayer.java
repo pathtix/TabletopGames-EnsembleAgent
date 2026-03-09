@@ -18,8 +18,9 @@ public class LLMActionPlayer extends AbstractPlayer {
 
     private transient LLMAccess llmAccess;
 
+    // adding these model based parameters to tunable parameter might help
     public LLMActionPlayer() {
-//        this(new PlayerParameters(), LLMAccess.LLM_MODEL.GEMINI, LLMAccess.LLM_SIZE.SMALL, null, 3000);
+//      this(new PlayerParameters(), LLMAccess.LLM_MODEL.GEMINI, LLMAccess.LLM_SIZE.SMALL, null, 3000);
         this(new PlayerParameters(), LLMAccess.LLM_MODEL.GEMINI, LLMAccess.LLM_SIZE.LARGE, null, 3000);
     }
 
@@ -76,24 +77,24 @@ public class LLMActionPlayer extends AbstractPlayer {
         actionsText = actionsBuilder.toString();
 
         // A game related rules can be passed in prompt? (2-3 bullet points of core game rules?)
-
         String gameName = gameState.getGameType().name();
 
         if (gameName.equals("DotsAndBoxes")) {
             promptText =
                     """
-                    You are controlling a Dots and Boxes game-playing agent.
+                    You are controlling a Dots and Boxes game playing agent.
                     You are Player %d. Choose the action that is best for Player %d.
                     Choose exactly one legal action from the numbered list.
 
-                    Output contract:
+                    Output format:
                     ACTION_ID: <int>
 
                     Rules:
                     - Return exactly one line, do not include any other text, punctuation, or explanation.
                     - Use exactly the prefix ACTION_ID:
                     - The id must be one of the listed action ids.
-                    - Each action corresponds to drawing a line between two dots. If you complete a box by drawing a line, you get an extra turn.
+                    - Each action corresponds to drawing a line between two dots.
+                    - If you complete a box by drawing a line, you get an extra turn.
 
                     State summary:
                     %s
@@ -163,14 +164,10 @@ public class LLMActionPlayer extends AbstractPlayer {
             if (!myHoleCardsBuilder.isEmpty()) myHoleCardsBuilder.append(", ");
             myHoleCardsBuilder.append(card.toString());
         }
-
         String myHoleCards = myHoleCardsBuilder.toString();
 
-        // community cards
-        String communityCards = "";
-        if (pokerGameState.getCommunityCards().getSize() == 0) {
-            communityCards = "None";
-        }else {
+        String communityCards = "None";
+        if (pokerGameState.getCommunityCards().getSize() != 0) {
             StringBuilder communityCardsBuilder = new StringBuilder();
             for (core.components.FrenchCard card : pokerGameState.getCommunityCards().getComponents()) {
                 if (!communityCardsBuilder.isEmpty()) communityCardsBuilder.append(", ");
@@ -194,7 +191,9 @@ public class LLMActionPlayer extends AbstractPlayer {
                     pokerGameState.getPlayerAllIn()[j] ? " ALL-IN"  : "",
                     j == pokerGameState.getBigId()     ? " [BB]"    : (j == pokerGameState.getSmallId() ? " [SB]" : "")
             ));
-            if (j < playerCount - 1) players.append(" | ");
+
+            if (j < playerCount - 1)
+                players.append(" | ");
         }
 
         return String.format(
