@@ -1,0 +1,389 @@
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . . . . . . 
+4 . . . . . . . . 
+5 . . . . . . . . 
+6 . . . . . . . . 
+7 . . . . x . . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The board is almost entirely empty. The opponent has a single piece in column 3. There are no immediate threats. Since the opponent only has one piece, there are no immediate opportunities for me to win. I will place my piece in column 3 to counter the opponent.
+
+ACTION_ID: 3
+
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . . . . . . 
+4 . . . . . . . . 
+5 . . . . . . . . 
+6 . . . . x . . . 
+7 . . . o x . . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The board is:
+```
+........
+........
+........
+........
+........
+........
+....x...
+...ox...
+```
+It is Player 1's (o) turn.
+
+The opponent (x) has a piece in column 3, rows 6 and 7. If x plays in column 3, they will win. So I must block column 3.
+
+Therefore, the best move is to play in column 3.
+
+ACTION_ID: 3
+
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . . . . . . 
+4 . . . . . . . . 
+5 . . . x . . . . 
+6 . . . o x . . . 
+7 . . . o x . . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The opponent (x) has two pieces in column 4. If x plays column 4, x will have three pieces in a row. If I don't play column 4, the opponent might win in the next turn. So, I need to play column 4.
+ACTION_ID: 4
+
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . . . . . . 
+4 . . . x . . . . 
+5 . . . x o . . . 
+6 . . . o x . . . 
+7 . . . o x . . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The board currently looks like this:
+
+........
+........
+........
+........
+....x...
+....xo...
+...oxx...
+...oxx...
+
+I am player o.
+Player x has two pieces in column 3, and I have two pieces in column 3.
+Player x has two pieces in column 4, and I have one piece in column 4.
+If I play in column 3, I will not win, but I will prevent player x from getting three in a row.
+If I play in column 4, I will not win, but I will prevent player x from getting three in a row.
+If I play in column 5, I will have two in a row.
+I should consider whether player x has a near-win.
+Player x has two in column 3. If x plays column 3, x will have 3 in a row.
+Player x has two in column 4. If x plays column 4, x will have 3 in a row.
+I should consider whether I have a near-win.
+I don't have an immediate win.
+If I play in column 3, I will not win, and player x will not win.
+If I play in column 4, I will not win, and player x will not win.
+If I play in column 5, I will have two in a row.
+Let me check if there is a diagonal or horizontal win.
+There are no immediate threats or opportunities.
+I will play in column 5 to get two in a row.
+
+ACTION_ID: 5
+
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . . . . . . 
+4 . . . x . . . . 
+5 . . . x o . . . 
+6 . . . o x . . . 
+7 . . x o x o . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The opponent has two pieces in column 3 and one in column 2 and 4.
+If I place my piece in column 3, the opponent will be able to place another piece in column 3 to win.
+If I place my piece in column 2, the opponent can place a piece in column 2 to make three in a row.
+If I place my piece in column 4, the opponent can place a piece in column 4 to make three in a row.
+However, the opponent has x in (4,3), (5,3), (7,3), and if the opponent plays in column 3, they win. So I must play there.
+
+ACTION_ID: 3
+
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . . . . . . 
+3 . . . o . . . . 
+4 . . . x x . . . 
+5 . . . x o . . . 
+6 . . . o x . . . 
+7 . . x o x o . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The board is:
+```
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . o . . . .
+. . . x x . . .
+. . . x o . . .
+. . . o x . . .
+. . x o x o . .
+```
+I am player 1 (o).
+The opponent is player 0 (x).
+The legal actions are columns 0, 1, 2, 3, 4, 5, 6, 7.
+
+The opponent has two pieces in a row in column 3 (rows 5, 6). If the opponent plays in column 3, they will win. Therefore, I should play in column 3 to block them.
+If I play in column 3, the board becomes:
+```
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . o . . . .
+. . . x x . . .
+. . . x o . . .
+. . . o x . . .
+. . x o x o . .
+```
+```
+. . . . . . . .
+. . . . . . . .
+. . . o . . . .
+. . . o . . . .
+. . . x x . . .
+. . . x o . . .
+. . . o x . . .
+. . x o x o . .
+```
+If I play in column 4, I could potentially win. However, the opponent could also play in column 4 and win.
+If I play in column 2, the opponent could potentially win.
+The most immediate threat is that the opponent can win in column 3. So, I must block them.
+
+ACTION_ID: 3
+
+Model: GEMINI
+Query: You are a Connect4 agent.
+You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+then output your chosen action on the last line in exactly this format:
+ACTION_ID: <int>
+
+Rules:
+  - The id must be one of the listed action ids.
+  - Use exactly the prefix ACTION_ID: on the final line.
+
+Board (x = Player 0, o = Player 1, . = empty):
+ 0 1 2 3 4 5 6 7 
+0 . . . . . . . . 
+1 . . . . . . . . 
+2 . . . o . . . . 
+3 . . . o . . . . 
+4 . . . x x . . . 
+5 . . . x o . . . 
+6 . . x o x . . . 
+7 . . x o x o . . 
+x = Player 0, o = Player 1, . = empty
+Current player: 1
+
+Legal actions: (id action):
+0 : Col 0
+1 : Col 1
+2 : Col 2
+3 : Col 3
+4 : Col 4
+5 : Col 5
+6 : Col 6
+7 : Col 7
+
+Response: The opponent (x) has two pieces in a row in column 3 (rows 4 and 5). If I don't play in column 3, the opponent will win.
+I have two pieces in a row in column 3 (rows 2 and 3). If I play in column 3, I will have three in a row.
+
+Column 4 has x x . . . . . . If I play in column 4, I will have x x o x o x and I don't win.
+Column 3 has x x x o o o o If I play in column 3, I will have o o o o
+
+The opponent can win by playing in column 3. I must block it.
+ACTION_ID: 3
+

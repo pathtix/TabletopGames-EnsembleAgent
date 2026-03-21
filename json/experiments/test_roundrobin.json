@@ -1,8 +1,8 @@
 {
-  "game" : "Poker",
+  "game" : "Connect4",
   "nPlayers" : 2,
   "mode" : "random",
-  "matchups" : 100,
+  "matchups" : 20,
   "verbose" : true,
   "listener" : "json/listeners/GameResultsAndActionListener.json",
   "destDir" : "json/experiments/outputDir",

@@ -1,0 +1,7 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "modelType" : "GEMINI",
+  "modelSize" : "LARGE",
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/outputDir/LLMActionPlayerLog.txt"
+}
