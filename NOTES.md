@@ -37,3 +37,31 @@ GameSeed,GameName,Round,Event,Tick,Turn,PlayerCount,GameID,ActionsReduced(Player
 
 reprompt the llmactionplayer with the action returned from the query, but this time with game state + action id + possible actions = `this is the action you returned, do you confirm it that it will be a *good* move or do you want to change it?`
 
+
+----------------------------------------------------------
+
+pom.xml
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-vertex-ai-gemini</artifactId>
+    <version>1.0.0-beta4</version>
+</dependency>
+```
+
+TODO: ask to james about updating this to a newer version? 
+
+<!-- Source: https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-vertex-ai-gemini -->
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-vertex-ai-gemini</artifactId>
+    <version>1.12.2-beta22</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+maybe in new version of the vertex ai gemini package there can be a thinking config, it can also be used in the evalua-
+tion of the models.

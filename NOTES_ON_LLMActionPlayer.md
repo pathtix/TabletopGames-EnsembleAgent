@@ -487,6 +487,7 @@ GameSeed,GameName,Round,Event,Tick,Turn,PlayerCount,GameID,ActionsReduced(Player
 A 50 game of LLMActionPlayer vs MCTS (LLM model = gemini-2.0)
 
 MCTS parameters:
+```json
 {
 	"class" : "players.mcts.MCTSParams",
 	"K" : 1.0,
@@ -504,7 +505,7 @@ MCTS parameters:
  		"class" : "players.heuristics.ScoreHeuristic"
 	}
 }
-
+```
 ============= Poker - 100 games played ============= 
 llm got 34.00 points. llm won 34.0% of the 100 games of the tournament. llm won 34.0% of the 100 games it played during the tournament.
 llm got a mean score of 33.00.
@@ -520,3 +521,38 @@ llm: Win rate 0.34 +/- 0.047	Mean Ordinal 1.66 +/- 0.05
 
 ----------------------------------------------------------------------------------------
 
+A 50 game of LLMActionPlayer vs MCTS (LLM model = gemini-2.5-flash-lite)
+
+MCTS parameters:
+```json
+{
+"class" : "players.mcts.MCTSParams",
+"K" : 1.0,
+"rolloutLength" : 100,
+"maxTreeDepth" : 30,
+"treePolicy" : "UCB",
+"opponentTreePolicy" : "OneTree",
+"selectionPolicy" : "SIMPLE",
+"information" : "Open_Loop",
+"rolloutType" : "RANDOM",
+"budgetType" : "BUDGET_TIME",
+"budget" : 40,
+"breakMS" : 0,
+"heuristic" : {
+"class" : "players.heuristics.ScoreHeuristic"
+}
+}
+```
+
+============= Poker - 50 games played =============
+llm got 21.50 points. llm won 42.0% of the 50 games of the tournament. llm won 42.0% of the 50 games it played during the tournament.
+llm got a mean score of 42.60.
+llm won 42.0% of the 50 games against mcts.
+
+mcts got 28.50 points. mcts won 56.0% of the 50 games of the tournament. mcts won 56.0% of the 50 games it played during the tournament.
+mcts got a mean score of 57.40.
+mcts won 56.0% of the 50 games against llm.
+
+---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation)
+mcts: Win rate 0.57 +/- 0.069	Mean Ordinal 1.42 +/- 0.07
+llm: Win rate 0.43 +/- 0.069	Mean Ordinal 1.56 +/- 0.07

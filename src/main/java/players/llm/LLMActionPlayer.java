@@ -11,34 +11,24 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LLMActionPlayer extends AbstractPlayer {
-    private final LLMAccess.LLM_MODEL modelType;
-    private final LLMAccess.LLM_SIZE modelSize;
-    private final String logFileName;
-    private final int maxStateChars;
-
     private transient LLMAccess llmAccess;
 
-    // adding these model based parameters to tunable parameter might help
     public LLMActionPlayer() {
-//      this(new PlayerParameters(), LLMAccess.LLM_MODEL.GEMINI, LLMAccess.LLM_SIZE.SMALL, null, 3000);
-        this(new PlayerParameters(), LLMAccess.LLM_MODEL.GEMINI, LLMAccess.LLM_SIZE.LARGE, null, 3000);
+        this(new LLMActionParams());
     }
 
-    public LLMActionPlayer(LLMAccess.LLM_MODEL modelType, LLMAccess.LLM_SIZE modelSize) {
-        this(new PlayerParameters(), modelType, modelSize, null, 3000);
+    public LLMActionPlayer(LLMActionParams params) {
+        super(params, "LLMActionPlayer");
     }
 
-    public LLMActionPlayer(PlayerParameters parameters,
-                           LLMAccess.LLM_MODEL modelType,
-                           LLMAccess.LLM_SIZE modelSize,
-                           String logFileName,
-                           int maxStateChars) {
-        super(parameters, "LLMActionPlayer");
-        this.modelType = modelType;
-        this.modelSize = modelSize;
-        this.logFileName = logFileName;
-        this.maxStateChars = Math.max(200, maxStateChars);
-        this.llmAccess = new LLMAccess(modelType, modelSize, logFileName);
+    public LLMActionPlayer(LLMAccess.LLM_MODEL modelType, LLMAccess.LLM_SIZE llmSize) {
+        this(new LLMActionParams());
+        getParameters().setParameterValue("modelType", modelType);
+        getParameters().setParameterValue("modelSize", llmSize);
+    }
+
+    public LLMActionParams getParameters() {
+        return (LLMActionParams) parameters;
     }
 
     @Override
@@ -57,100 +47,125 @@ public class LLMActionPlayer extends AbstractPlayer {
 
     private Integer queryActionId(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String prompt = buildPrompt(gameState, possibleActions);
-        String response = getLLMAccess().getResponse(prompt, modelType, modelSize);
+        long start = System.currentTimeMillis();
+        String response = getLLMAccess().getResponse(prompt);
+        long elapsedMs = System.currentTimeMillis() - start;
+        System.out.printf("[LLMActionPlayer] API call took %d ms (model=%s size=%s)%n",
+                elapsedMs, getParameters().modelType, getParameters().modelSize);
         return parseActionId(response);
     }
 
     private String buildPrompt(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String stateText = compactState(gameState);
-        String actionsText = "";
-        String promptText = "";
-
-        StringBuilder actionsBuilder = new StringBuilder();
-        for (int i = 0; i < possibleActions.size(); i++) {
-            if (i > 0) {
-                actionsBuilder.append("\n");
-            }
-
-            actionsBuilder.append(i).append(" ").append(compactActionString(possibleActions.get(i), gameState));
-        }
-        actionsText = actionsBuilder.toString();
-
-        // A game related rules can be passed in prompt? (2-3 bullet points of core game rules?)
+        String actionsText = buildActionText(possibleActions, gameState);
         String gameName = gameState.getGameType().name();
 
-        if (gameName.equals("DotsAndBoxes")) {
-            promptText =
-                    """
-                    You are controlling a Dots and Boxes game playing agent.
-                    You are Player %d. Choose the action that is best for Player %d.
-                    Choose exactly one legal action from the numbered list.
+        return switch (gameName) {
+            case "DotsAndBoxes" -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
+            case "Poker"        -> buildPromptPoker(gameState, stateText, actionsText);
+            case "Connect4"     -> buildPromptConnect4(gameState, stateText, actionsText);
+            default             -> "";
+        };
+    }
 
-                    Output format:
-                    ACTION_ID: <int>
-
-                    Rules:
-                    - Return exactly one line, do not include any other text, punctuation, or explanation.
-                    - Use exactly the prefix ACTION_ID:
-                    - The id must be one of the listed action ids.
-                    - Each action corresponds to drawing a line between two dots.
-                    - If you complete a box by drawing a line, you get an extra turn.
-
-                    State summary:
-                    %s
-
-                    Action legend:
-                    H_y_x means horizontal edge (x,y)->(x+1,y)
-                    V_y_x means vertical edge (x,y)->(x,y+1)
-
-                    Legal actions:
-                    %s
-                    """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer(), stateText, actionsText);
-        } 
-        else if (gameName.equals("Poker"))
-        {
-            promptText =
-                    """
-                    You are a Texas Hold'em poker agent.
-                    You are Player %d. Maximise your long run chip count.
-            
-                    Output contract:
-                    ACTION_ID: <int>
-            
-                    Rules:
-                    - Return exactly one line with no other text, punctuation, or explanation.
-                    - Use exactly the prefix ACTION_ID:
-                    - The id must be one of the listed action ids.
-            
-                    Game state:
-                    %s
-            
-                    Action glossary:
-                    - Check  : stay in without betting (only when no bet faces you)
-                    - Call   : match the current bet
-                    - Bet N  : open betting at N chips
-                    - Raise xM : raise to M times the current bet
-                    - AllIn  : commit all remaining chips
-                    - Fold   : surrender your hand
-            
-                    Legal actions (id  action):
-                    %s
-                    """.formatted(gameState.getCurrentPlayer(), stateText, actionsText);
+    private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
+        StringBuilder actionsBuilder = new StringBuilder();
+        for (int i = 0; i < possibleActions.size(); i++) {
+            if (i > 0) actionsBuilder.append("\n");
+            actionsBuilder.append(i).append(" ").append(compactActionString(possibleActions.get(i), gameState));
         }
-        return promptText;
+        return actionsBuilder.toString();
+    }
+
+    private String buildPromptDotsAndBoxes(AbstractGameState gameState, String stateText, String actionsText) {
+        return """
+        You are controlling a Dots and Boxes game playing agent.
+        You are Player %d. Choose the action that is best for Player %d.
+        Choose exactly one legal action from the numbered list.
+
+        Output format:
+        ACTION_ID: <int>
+
+        Rules:
+        - Return exactly one line, do not include any other text, punctuation, or explanation.
+        - Use exactly the prefix ACTION_ID:
+        - The id must be one of the listed action ids.
+        - Each action corresponds to drawing a line between two dots.
+        - If you complete a box by drawing a line, you get an extra turn.
+
+        State summary:
+        %s
+
+        Action legend:
+        H_y_x means horizontal edge (x,y)->(x+1,y)
+        V_y_x means vertical edge (x,y)->(x,y+1)
+
+        Legal actions:
+        %s
+        """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer(), stateText, actionsText);
+    }
+
+    private String buildPromptPoker(AbstractGameState gameState, String stateText, String actionsText) {
+        return """
+        You are a Texas Hold'em poker agent.
+        You are Player %d. Maximise your long run chip count.
+
+        Output contract:
+        ACTION_ID: <int>
+
+        Rules:
+        - Return exactly one line with no other text, punctuation, or explanation.
+        - Use exactly the prefix ACTION_ID:
+        - The id must be one of the listed action ids.
+
+        Game state:
+        %s
+
+        Action glossary:
+        - Check  : stay in without betting (only when no bet faces you)
+        - Call   : match the current bet
+        - Bet N  : open betting at N chips
+        - Raise xM : raise to M times the current bet
+        - AllIn  : commit all remaining chips
+        - Fold   : surrender your hand
+
+        Legal actions (id  action):
+        %s
+        """.formatted(gameState.getCurrentPlayer(), stateText, actionsText);
+    }
+
+    private String buildPromptConnect4(AbstractGameState gameState, String stateText, String actionsText) {
+        return """
+        You are a Connect4 agent.
+        You are Player %d (%s). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+
+        Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
+        that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+
+        Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
+        then output your chosen action on the last line in exactly this format:
+        ACTION_ID: <int>
+
+        Rules:
+          - The id must be one of the listed action ids.
+          - Use exactly the prefix ACTION_ID: on the final line.
+
+        Board (x = Player 0, o = Player 1, . = empty):
+        %s
+
+        Legal actions: (id action):
+        %s
+        """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer() == 0 ? "x" : "o", stateText, actionsText);
     }
 
     private String compactState(AbstractGameState gameState) {
         String gameName = gameState.getGameType().name();
-
-        if (gameName.equals("DotsAndBoxes")) {
-            return compactDotsAndBoxesState(gameState);
-        }
-        else if (gameName.equals("Poker")) {
-            return compactPokerState(gameState);
-        }
-
-        return gameState.toString();
+        return switch (gameName) {
+            case "DotsAndBoxes" -> compactDotsAndBoxesState(gameState);
+            case "Poker"        -> compactPokerState(gameState);
+            case "Connect4"     -> compactConnect4State(gameState);
+            default -> "";
+        };
     }
 
     private String compactPokerState(AbstractGameState gameState) {
@@ -237,43 +252,73 @@ public class LLMActionPlayer extends AbstractPlayer {
         );
         String oneLine = stateText.replaceAll("\\s+", " ").trim();
 
-        if (!(oneLine.length() <= maxStateChars))
-            return oneLine.substring(0, maxStateChars) + "...";
+        if (!(oneLine.length() <= getParameters().maxStateChars))
+            return oneLine.substring(0, getParameters().maxStateChars) + "...";
 
         return oneLine;
     }
 
-    private String compactActionString(AbstractAction action, AbstractGameState gameState) {
-        String actionText = "";
-        try {
-            actionText = action.getString(gameState);
-        } catch (Exception e) {
-            actionText = action.toString();
+    private String compactConnect4State(AbstractGameState gameState) {
+        games.connect4.Connect4GameState connect4GameState = (games.connect4.Connect4GameState) gameState;
+        core.components.GridBoard gridBoard = connect4GameState.getGridBoard();
+        int width = gridBoard.getWidth();
+        int height = gridBoard.getHeight();
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ");
+        for (int x = 0; x < width; x++) {
+            sb.append(x).append(" ");
+        }
+        sb.append("\n");
+
+        for (int y = 0; y < height; y++) {
+            sb.append(y).append(" ");
+            for (int x = 0; x < width; x++) {
+                sb.append(gridBoard.getElement(x, y).getComponentName()).append(" ");
+            }
+            sb.append("\n");
         }
 
-        String oneLine = actionText.replaceAll("\\s+", " ").trim();
+        sb.append("x = Player 0, o = Player 1, . = empty\n");
+        sb.append("Current player: ").append(gameState.getCurrentPlayer());
+        return sb.toString();
+    }
+
+    private String compactActionString(AbstractAction action, AbstractGameState gameState) {
+        return switch (gameState.getGameType().name()) {
+            case "DotsAndBoxes" -> compactActionDotsAndBoxes(action, gameState);
+            case "Connect4"     -> compactActionConnect4(action);
+            default             -> defaultActionString(action, gameState);
+        };
+    }
+
+    private String compactActionDotsAndBoxes(AbstractAction action, AbstractGameState gameState) {
+        String oneLine = defaultActionString(action, gameState);
         Matcher matcher = Pattern.compile("\\((\\d+),(\\d+)\\)\\s*->\\s*\\((\\d+),(\\d+)\\)").matcher(oneLine);
-        if (!matcher.find()) {
-            return oneLine;
-        }
+        if (!matcher.find()) return oneLine;
 
         int x1 = Integer.parseInt(matcher.group(1));
         int y1 = Integer.parseInt(matcher.group(2));
         int x2 = Integer.parseInt(matcher.group(3));
         int y2 = Integer.parseInt(matcher.group(4));
 
-        if (y1 == y2) {
-            int y = y1;
-            int x = Math.min(x1, x2);
-            return "H_" + y + "_" + x;
-        }
-        if (x1 == x2) {
-            int y = Math.min(y1, y2);
-            int x = x1;
-            return "V_" + y + "_" + x;
-        }
-
+        if (y1 == y2) return "H_" + y1 + "_" + Math.min(x1, x2);
+        if (x1 == x2) return "V_" + Math.min(y1, y2) + "_" + x1;
         return "E_" + x1 + "_" + y1 + x2 + y2;
+    }
+
+    private String compactActionConnect4(AbstractAction action) {
+        if (action instanceof core.actions.SetGridValueAction sgva)
+            return ": Col " + sgva.getX();
+        return action.toString();
+    }
+
+    private String defaultActionString(AbstractAction action, AbstractGameState gameState) {
+        try {
+            return action.getString(gameState).replaceAll("\\s+", " ").trim();
+        } catch (Exception e) {
+            return action.toString();
+        }
     }
 
     private Integer parseActionId(String response) {
@@ -299,14 +344,19 @@ public class LLMActionPlayer extends AbstractPlayer {
 
     private LLMAccess getLLMAccess() {
         if (llmAccess == null) {
-            llmAccess = new LLMAccess(modelType, modelSize, logFileName);
+            LLMAccess.LLM_MODEL model = (LLMAccess.LLM_MODEL) getParameters().getParameterValue("modelType");
+            LLMAccess.LLM_SIZE  size = (LLMAccess.LLM_SIZE) getParameters().getParameterValue("modelSize");
+            String logFile  = (String) getParameters().getParameterValue("logFileName");
+            System.out.printf("[LLMActionPlayer] Creating LLMAccess: model=%s size=%s%n", model, size);
+            llmAccess = new LLMAccess(model, size, logFile);
         }
+
         return llmAccess;
     }
 
     @Override
     public AbstractPlayer copy() {
-        LLMActionPlayer retValue = new LLMActionPlayer(parameters, modelType, modelSize, logFileName, maxStateChars);
+        LLMActionPlayer retValue = new LLMActionPlayer((LLMActionParams) parameters.copy());
         retValue.decorators = decorators;
         retValue.setName(this.toString());
         return retValue;

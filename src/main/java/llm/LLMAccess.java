@@ -28,7 +28,7 @@ import java.util.Collections;
 
 public class LLMAccess {
 
-    static VertexAiGeminiChatModel[] geminiModel = new VertexAiGeminiChatModel[3];
+    static VertexAiGeminiChatModel[] geminiModel = new VertexAiGeminiChatModel[6];
     static MistralAiChatModel[] mistralModel = new MistralAiChatModel[3];
     static OpenAiChatModel[] openaiModel = new OpenAiChatModel[3];
     static AnthropicChatModel[] anthropicModel = new AnthropicChatModel[3];
@@ -89,6 +89,11 @@ public class LLMAccess {
         this.modelSize = modelSize;
         if (geminiProject != null && !geminiProject.isEmpty()) {
             try {
+                geminiModel[0] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-2.0-flash-lite")
+                        .build();
                 geminiModel[1] = VertexAiGeminiChatModel.builder()
                         .project(geminiProject)
                         .location(geminiLocation)
@@ -99,15 +104,25 @@ public class LLMAccess {
                         // .modelName("gemini-1.5-pro")   // $1.25 per million characters input, $0.3125 per million output
                         .modelName("gemini-2.0-flash") // $0.075 per million characters output, $0.01875 per million characters input
                         .build();
-                geminiModel[0] = VertexAiGeminiChatModel.builder()
-                        .project(geminiProject)
-                        .location(geminiLocation)
-                        .modelName("gemini-2.0-flash-lite")
-                        .build();
                 geminiModel[2] = VertexAiGeminiChatModel.builder()
                         .project(geminiProject)
                         .location(geminiLocation)
                         .modelName("gemini-2.5-flash-preview-05-20")
+                        .build();
+                geminiModel[3] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-2.5-flash-lite") // $0.10 per million characters input, $0.40 per million output
+                        .build();
+                geminiModel[4] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-2.5-flash") // $0.30 per million characters input, $1.25 per million output
+                        .build();
+                geminiModel[5] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-2.5-pro") // $2.50 per million characters input, $10.00 per million output
                         .build();
             } catch (Error e) {
                 System.out.println("Error creating Gemini model: " + e.getMessage());
@@ -173,7 +188,8 @@ public class LLMAccess {
         } else {
             ChatModel modelToUse = switch (modelType) {
                 case MISTRAL -> modelSize == LLM_SIZE.SMALL ? mistralModel[0] : mistralModel[1];
-                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1];
+              case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1]; // 0 = 2.0 flash lite, 1 = 2.0 flash
+//                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[3] : geminiModel[4]; // 3 = 2.5 flash-lite, 4 = 2.5 flash, 5 = 2.5 pro
                 case OPENAI -> modelSize == LLM_SIZE.SMALL ? openaiModel[0] : openaiModel[1];
                 case ANTHROPIC -> modelSize == LLM_SIZE.SMALL ? anthropicModel[0] : anthropicModel[1];
                 default -> throw new IllegalArgumentException("Unknown model type: " + modelType);
