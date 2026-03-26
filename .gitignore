@@ -49,3 +49,4 @@ treeRecorder*
 
 # Google service account credentials
 tagmscthesisllm-68811bb679ed.json
+/json/experiments/outputDir/

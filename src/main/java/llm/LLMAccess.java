@@ -3,15 +3,22 @@ package llm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.AccessToken;
 import com.google.auth.oauth2.GoogleCredentials;
+import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.anthropic.AnthropicChatModel;
 import dev.langchain4j.model.anthropic.AnthropicChatModelName;
-import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.mistralai.MistralAiChatModelName;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModelName;
 import dev.langchain4j.model.openai.OpenAiTokenCountEstimator;
-import dev.langchain4j.model.vertexai.VertexAiGeminiChatModel;
 import dev.langchain4j.model.mistralai.MistralAiChatModel;
+
+// import dev.langchain4j.memory.chat.MessageWindowChatMemory; is needed for memory based chat history
+import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.vertexai.gemini.VertexAiGeminiChatModel;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.service.AiServices;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import utilities.JSONUtils;
@@ -27,8 +34,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 
 public class LLMAccess {
-
-    static VertexAiGeminiChatModel[] geminiModel = new VertexAiGeminiChatModel[6];
+    static VertexAiGeminiChatModel[] geminiModel = new VertexAiGeminiChatModel[8];
     static MistralAiChatModel[] mistralModel = new MistralAiChatModel[3];
     static OpenAiChatModel[] openaiModel = new OpenAiChatModel[3];
     static AnthropicChatModel[] anthropicModel = new AnthropicChatModel[3];
@@ -43,6 +49,7 @@ public class LLMAccess {
     File logFile;
     FileWriter logWriter;
 
+//    String geminiLocation = "europe-west2";
     String geminiLocation = "europe-west9";
     // String llamaLocationLarge = "us-east5";  // Required for Llama 4 Maverick
     String llamaLocationLarge = "us-central1";
@@ -50,6 +57,8 @@ public class LLMAccess {
 
     LLM_MODEL modelType;
     LLM_SIZE modelSize;
+
+    MessageWindowChatMemory chatMemory;
 
     long inputTokens = 0;
     long outputTokens = 0;
@@ -85,6 +94,7 @@ public class LLMAccess {
                 System.out.println("Error creating log file: " + e.getMessage());
             }
         }
+
         this.modelType = modelType;
         this.modelSize = modelSize;
         if (geminiProject != null && !geminiProject.isEmpty()) {
@@ -124,10 +134,28 @@ public class LLMAccess {
                         .location(geminiLocation)
                         .modelName("gemini-2.5-pro") // $2.50 per million characters input, $10.00 per million output
                         .build();
+                geminiModel[6] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-3-flash-preview") // $0.50 per million input tokens, $3.00 per million output tokens
+                        .build();
+                geminiModel[7] = VertexAiGeminiChatModel.builder()
+                        .project(geminiProject)
+                        .location(geminiLocation)
+                        .modelName("gemini-3.1-flash-lite-preview") // $0.25 per million input tokens, $1.50 per million output tokens
+                        .build();
             } catch (Error e) {
                 System.out.println("Error creating Gemini model: " + e.getMessage());
             }
         }
+
+        // memory window for 20 messages
+        // TODO: use chatMemory to save game rule details etc.
+        MessageWindowChatMemory chatMemory = MessageWindowChatMemory.builder()
+                .maxMessages(20)
+                .build();
+
+        this.chatMemory = chatMemory;
 
         if (mistralToken != null && !mistralToken.isEmpty()) {
             mistralModel[0] = MistralAiChatModel.builder()
@@ -151,19 +179,20 @@ public class LLMAccess {
                     .apiKey(openaiToken)
                     .build();
             openaiModel[2] = OpenAiChatModel.builder()
-                    .modelName(OpenAiChatModelName.O1_MINI) // $6 per million input tokens, $18 per million output tokens
+                    .modelName(OpenAiChatModelName.O1) // $6 per million input tokens, $18 per million output tokens
                     .apiKey(openaiToken)
                     .build();
         }
 
+        // TODO : Fix this pricing lists for CLAUDE 3.5 etc. (they needed to change when VertexAI package updated)
         if (anthropicToken != null && !anthropicToken.isEmpty()) {
             anthropicModel[0] = AnthropicChatModel.builder()
-                    .modelName(AnthropicChatModelName.CLAUDE_3_5_HAIKU_20241022) // $0.80 per million input tokens, $4 per million output tokens
-                    .apiKey(anthropicToken)
+                    .modelName(AnthropicChatModelName.CLAUDE_SONNET_4_20250514)
+                    .apiKey(anthropicToken)                                     // But 3.5 is deprecated
                     .maxTokens(4096)
                     .build();
             anthropicModel[1] = AnthropicChatModel.builder()
-                    .modelName(AnthropicChatModelName.CLAUDE_3_5_SONNET_20241022) // $3 per million input tokens, $15 per million output tokens
+                    .modelName(AnthropicChatModelName.CLAUDE_SONNET_4_5_20250929) // $3 per million input tokens, $15 per million output tokens
                     .apiKey(anthropicToken)
                     .maxTokens(8192)
                     .build();
@@ -188,8 +217,9 @@ public class LLMAccess {
         } else {
             ChatModel modelToUse = switch (modelType) {
                 case MISTRAL -> modelSize == LLM_SIZE.SMALL ? mistralModel[0] : mistralModel[1];
-              case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1]; // 0 = 2.0 flash lite, 1 = 2.0 flash
-//                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[3] : geminiModel[4]; // 3 = 2.5 flash-lite, 4 = 2.5 flash, 5 = 2.5 pro
+                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1]; // 0 = 2.0 flash lite, 1 = 2.0 flash
+//              case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[3] : geminiModel[4]; // 3 = 2.5 flash-lite, 4 = 2.5 flash, 5 = 2.5 pro
+//              case GEMINI  -> modelSize == LLM_SIZE.SMALL ? geminiModel[6] : geminiModel[7]; // 6 = 3 flash preview, 7 = 3.1 flash-lite preview
                 case OPENAI -> modelSize == LLM_SIZE.SMALL ? openaiModel[0] : openaiModel[1];
                 case ANTHROPIC -> modelSize == LLM_SIZE.SMALL ? anthropicModel[0] : anthropicModel[1];
                 default -> throw new IllegalArgumentException("Unknown model type: " + modelType);
@@ -204,6 +234,16 @@ public class LLMAccess {
             }
             if (modelToUse != null) {
                 try {
+//                    TODO : look into more possible use of history
+//                    there should be something like if it is the first query sent, add it into memory, and send it
+//                    everytime we are sending another query
+//                    https://codelabs.developers.google.com/codelabs/gemini-java-developers#8
+//
+//                    chatMemory.add(UserMessage.from(query));
+//                    ChatResponse responseFromAllMemory = modelToUse.chat(chatMemory.messages());
+//                    chatMemory.add(responseFromAllMemory.aiMessage()); // this adds response from llm to history again
+//                    String textResponse = responseFromAllMemory.aiMessage().text();
+
                     response = modelToUse.chat(query);
                 } catch (Exception e) {
                     System.out.println("Error getting response from model: " + e.getMessage());
@@ -235,6 +275,11 @@ public class LLMAccess {
      */
     public String getResponse(String query) {
         return getResponse(query, this.modelType, this.modelSize);
+    }
+
+    // TODO : Implement getting response from local LLMs via endpoints (Ollama, LMStudio)
+    private String getResponseWithLocalLLMEndpoints() {
+        throw new UnsupportedOperationException("Not implemented yet.");
     }
 
     private String getResponseWithLowLevelHttp(String query, LLM_SIZE size) {

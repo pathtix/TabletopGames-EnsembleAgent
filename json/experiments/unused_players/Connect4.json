@@ -10,5 +10,5 @@
   "reuseTree" : true,
   "information" : "Open_Loop",
   "class" : "players.mcts.MCTSParams",
-  "budget" : 100
+  "budget" : 40
 }

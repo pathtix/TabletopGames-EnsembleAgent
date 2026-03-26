@@ -143,6 +143,10 @@ public class SGGameState extends AbstractGameState {
      * we know the contents of the hands of the players that are deckRotations spaces to the left of the current player
      * if this returns true, then the information provided by the playerHands is reliably correct (if false, then this information is shuffled)
      */
+    public int getDeckRotations() {
+        return deckRotations;
+    }
+
     public boolean isHandKnown(int playerId, int opponentId) {
         // Player 0 is one space to the 'Left' of player 1
         int opponentSpacesToLeft = (playerId - opponentId + getNPlayers()) % getNPlayers();
