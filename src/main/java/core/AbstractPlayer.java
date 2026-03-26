@@ -42,6 +42,12 @@ public abstract class AbstractPlayer {
         return playerID;
     }
 
+    // I have commited a sin, it was saying "Do not change it!", but I don't have any idea to do it
+    // added for assigning PhaseBasedEnsemblePlayer's playerID to MCTS and LLMActionPlayer to show them as one player
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
+    }
+
     public final void setName(String name) {
         this.name = name;
     }

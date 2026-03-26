@@ -1,8 +1,8 @@
 {
-  "game" : "Connect4",
-  "nPlayers" : 2,
+  "game" : "Catan",
+  "nPlayers" : 3,
   "mode" : "random",
-  "matchups" : 20,
+  "matchups" : 100,
   "verbose" : true,
   "listener" : "json/listeners/GameResultsAndActionListener.json",
   "destDir" : "json/experiments/outputDir",
