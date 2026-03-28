@@ -26,6 +26,7 @@ import utilities.JSONUtils;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -38,6 +39,7 @@ public class LLMAccess {
     static MistralAiChatModel[] mistralModel = new MistralAiChatModel[3];
     static OpenAiChatModel[] openaiModel = new OpenAiChatModel[3];
     static AnthropicChatModel[] anthropicModel = new AnthropicChatModel[3];
+
 
     static OpenAiTokenCountEstimator tokenizer = new OpenAiTokenCountEstimator("o200k_base");
 
@@ -55,6 +57,12 @@ public class LLMAccess {
     String llamaLocationLarge = "us-central1";
     String llamaLocationSmall = "us-central1";
 
+    // Local LLM Settings
+    String localLLMBaseURL = "http://10.102.122.116";
+    String localLLMBasePort = "1234";
+    String[] localLLMModelNames = new String[2];
+    boolean localLLMModelLoaded = false;
+
     LLM_MODEL modelType;
     LLM_SIZE modelSize;
 
@@ -68,7 +76,8 @@ public class LLMAccess {
         MISTRAL,
         OPENAI,
         ANTHROPIC,
-        LLAMA
+        LLAMA,
+        LOCAL_LLM
     }
 
     public enum LLM_SIZE {
@@ -149,6 +158,7 @@ public class LLMAccess {
             }
         }
 
+        localLLMModelNames[0] = "qwen/qwen3.5-9b";
         // memory window for 20 messages
         // TODO: use chatMemory to save game rule details etc.
         MessageWindowChatMemory chatMemory = MessageWindowChatMemory.builder()
@@ -214,7 +224,11 @@ public class LLMAccess {
         if (modelType == LLM_MODEL.LLAMA) {
             // do this the hardcore way
             response = getResponseWithLowLevelHttp(query, modelSize);
-        } else {
+        }
+        if  (modelType == LLM_MODEL.LOCAL_LLM) {
+            response = getResponseWithLocalLLMEndpoints(query);
+        }
+        else {
             ChatModel modelToUse = switch (modelType) {
                 case MISTRAL -> modelSize == LLM_SIZE.SMALL ? mistralModel[0] : mistralModel[1];
                 case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1]; // 0 = 2.0 flash lite, 1 = 2.0 flash
@@ -278,8 +292,77 @@ public class LLMAccess {
     }
 
     // TODO : Implement getting response from local LLMs via endpoints (Ollama, LMStudio)
-    private String getResponseWithLocalLLMEndpoints() {
-        throw new UnsupportedOperationException("Not implemented yet.");
+    // General implemetation is ready, but model selection is important
+    // qwen 3.5 9b, wasn't really the correct model since MLX support is not ready yet
+    // it runs on cpu and api call times was worse than gemini 2.0 flash
+
+    private String getResponseWithLocalLLMEndpoints(String query) {
+        // hardcoded first model for now, there can be other models to use later on
+        String targetModel = localLLMModelNames[0];
+        HttpClient client = HttpClient.newHttpClient();
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            if (!localLLMModelLoaded) {
+                HttpRequest listRequest = HttpRequest.newBuilder()
+                        .uri(URI.create(localLLMBaseURL + ":" + localLLMBasePort + "/api/v1/models"))
+                        .header("Accept", "application/json")
+                        .GET()
+                        .version(HttpClient.Version.HTTP_1_1)
+                        .build();
+
+                String listRespons = client.send(listRequest, HttpResponse.BodyHandlers.ofString()).body();
+                JSONObject json = JSONUtils.fromString(listRespons);
+                JSONArray models = (JSONArray) json.get("models");
+
+                boolean isLoaded = false;
+                for (Object model : models) {
+                    JSONObject modelJson = (JSONObject) model;
+                    if (targetModel.equals(modelJson.get("key"))) {
+                        isLoaded = !((JSONArray) modelJson.get("loaded_instances")).isEmpty();
+                        break;
+                    }
+                }
+
+                if (!isLoaded) {
+                    String loadBody = String.format("{\"identifier\": \"%s\"}", targetModel);
+                    HttpRequest loadRequest = HttpRequest.newBuilder()
+                            .uri(URI.create(localLLMBaseURL + ":" + localLLMBasePort + "/api/v1/models/load"))
+                            .header("Content-Type", "application/json")
+                            .POST(HttpRequest.BodyPublishers.ofString(loadBody, StandardCharsets.UTF_8))
+                            .version(HttpClient.Version.HTTP_1_1)
+                            .build();
+                    client.send(loadRequest, HttpResponse.BodyHandlers.ofString());
+                }
+                localLLMModelLoaded = true;
+            }
+
+            // TODO : no think from the prompt directly, doesn't work, I turned it of from UI of LMStudio it needs to be fixed
+            String chatBody = String.format("{\"model\": \"%s\", \"stream\": false, " +
+                            "\"max_tokens\": 200, \"temperature\": 0.3, \"messages\": " +
+                            "[{\"role\": \"system\", \"content\": \"/no_think\"}, " +
+                            "{\"role\": \"user\", \"content\": %s}]}",
+                    targetModel, objectMapper.writeValueAsString(query));
+
+            HttpRequest chatRequest = HttpRequest.newBuilder()
+                    .uri(URI.create(localLLMBaseURL + ":" + localLLMBasePort + "/v1/chat/completions"))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(chatBody, StandardCharsets.UTF_8))
+                    .version(HttpClient.Version.HTTP_1_1)
+                    .build();
+
+            String chatResponse = client.send(chatRequest, HttpResponse.BodyHandlers.ofString()).body();
+            JSONObject chatJson = JSONUtils.fromString(chatResponse);
+            JSONArray choices = (JSONArray) chatJson.get("choices");
+            JSONObject choice = (JSONObject) choices.get(0);
+            JSONObject message = (JSONObject) choice.get("message");
+            return (String) message.get("content");
+
+        } catch (Exception e) {
+            System.out.println("Error getting response from model: " + e.getMessage());
+        }
+
+        return "";
     }
 
     private String getResponseWithLowLevelHttp(String query, LLM_SIZE size) {

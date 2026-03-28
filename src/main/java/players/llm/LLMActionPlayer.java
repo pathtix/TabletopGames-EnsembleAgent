@@ -328,7 +328,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         Legal placements (id -> tiles touched -> total pips):
         %s
 
-        OUTPUT the final answer as following:
+        Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
         ACTION_ID: <int>
         """.formatted(round, stateText, actionsText);
     }
