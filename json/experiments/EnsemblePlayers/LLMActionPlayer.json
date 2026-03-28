@@ -1,8 +1,8 @@
 {
   "class" : "players.llm.LLMActionParams",
-  "modelType" : "GEMINI",
-  "modelSize" : "LARGE",
+  "modelType" : "LOCAL_LLM",
+  "modelSize" : "SMALL",
   "maxStateChars" : 3000,
   "logFileName" : "json/experiments/outputDir/LLMActionPlayerLog.txt",
-  "verbose" : false
+  "verbose" : true
 }

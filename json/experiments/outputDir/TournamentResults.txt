@@ -1,26 +1,31 @@
-Game: Connect4, Players: 2, Mode: RANDOM, TotalGames: 50, GamesPerMatchup: 50
-Connect4 got 13.00 points. Connect4 won 26.0% of the 50 games of the tournament. Connect4 won 26.0% of the 50 games it played during the tournament.
-Connect4 got a mean score of -0.48.
-Connect4 won 26.0% of the 50 games against LLMActionPlayer.
+Game: Catan, Players: 4, Mode: RANDOM, TotalGames: 50, GamesPerMatchup: 50
+Catan_3 got 9.50 points. Catan_3 won 16.0% of the 50 games of the tournament. Catan_3 won 16.0% of the 50 games it played during the tournament.
+Catan_3 got a mean score of 5.34.
+Catan_3 won 16.0% of the 50 games against PhaseBasedEnsemblePlayer.
+Catan_3 won 16.0% of the 50 games against Catan_2.
+Catan_3 won 16.0% of the 50 games against Catan.
 
-LLMActionPlayer got 37.00 points. LLMActionPlayer won 74.0% of the 50 games of the tournament. LLMActionPlayer won 74.0% of the 50 games it played during the tournament.
-LLMActionPlayer got a mean score of 0.48.
-LLMActionPlayer won 74.0% of the 50 games against Connect4.
+PhaseBasedEnsemblePlayer got 23.00 points. PhaseBasedEnsemblePlayer won 42.0% of the 50 games of the tournament. PhaseBasedEnsemblePlayer won 42.0% of the 50 games it played during the tournament.
+PhaseBasedEnsemblePlayer got a mean score of 7.48.
+PhaseBasedEnsemblePlayer won 42.0% of the 50 games against Catan_3.
+PhaseBasedEnsemblePlayer won 42.0% of the 50 games against Catan_2.
+PhaseBasedEnsemblePlayer won 42.0% of the 50 games against Catan.
+
+Catan_2 got 9.50 points. Catan_2 won 16.0% of the 50 games of the tournament. Catan_2 won 16.0% of the 50 games it played during the tournament.
+Catan_2 got a mean score of 5.82.
+Catan_2 won 16.0% of the 50 games against Catan_3.
+Catan_2 won 16.0% of the 50 games against PhaseBasedEnsemblePlayer.
+Catan_2 won 16.0% of the 50 games against Catan.
+
+Catan got 8.00 points. Catan won 14.0% of the 50 games of the tournament. Catan won 14.0% of the 50 games it played during the tournament.
+Catan got a mean score of 5.68.
+Catan won 14.0% of the 50 games against Catan_3.
+Catan won 14.0% of the 50 games against PhaseBasedEnsemblePlayer.
+Catan won 14.0% of the 50 games against Catan_2.
 
 ---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
-LLMActionPlayer: Win rate 0.74 +/- 0.062	Mean Ordinal 1.26 +/- 0.06
-Connect4: Win rate 0.26 +/- 0.062	Mean Ordinal 1.74 +/- 0.06
-
-Game: Connect4, Players: 2, Mode: RANDOM, TotalGames: 20, GamesPerMatchup: 20
-Connect4 got 20.00 points. Connect4 won 100.0% of the 20 games of the tournament. Connect4 won 100.0% of the 20 games it played during the tournament.
-Connect4 got a mean score of 1.00.
-Connect4 won 100.0% of the 20 games against LLMActionPlayer.
-
-LLMActionPlayer got 0.00 points. LLMActionPlayer won 0.0% of the 20 games of the tournament. LLMActionPlayer won 0.0% of the 20 games it played during the tournament.
-LLMActionPlayer got a mean score of -1.00.
-LLMActionPlayer won 0.0% of the 20 games against Connect4.
-
----- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
-Connect4: Win rate 1.00 +/- 0.000	Mean Ordinal 1.00 +/- 0.00
-LLMActionPlayer: Win rate 0.00 +/- 0.000	Mean Ordinal 2.00 +/- 0.00
+PhaseBasedEnsemblePlayer: Win rate 0.46 +/- 0.068	Mean Ordinal 1.86 +/- 0.15
+Catan_3: Win rate 0.19 +/- 0.053	Mean Ordinal 2.66 +/- 0.15
+Catan_2: Win rate 0.19 +/- 0.053	Mean Ordinal 2.38 +/- 0.14
+Catan: Win rate 0.16 +/- 0.050	Mean Ordinal 2.48 +/- 0.13
 

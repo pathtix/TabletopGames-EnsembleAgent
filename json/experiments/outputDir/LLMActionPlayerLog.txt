@@ -1,389 +1,124 @@
 
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+Model: LOCAL_LLM
+Query: You are placing a settlement in Catan setup (round 1/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
 
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
 
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
+Placement goals (in priority order):
+1. Maximise total pip count : higher pips = more frequent resource production
+2. Maximise resource diversity : 3 different resources is better than duplicates
+3. In Round 2 avoid numbers already covered by your first settlement
+
+Opponent settlements:
+ P-1: BRICK 12, LUMBER 3, ORE 10, ORE 2, GRAIN 4, LUMBER 8, GRAIN 5, BRICK 9, WOOL 8, GRAIN 3, BRICK 11, WOOL 6, GRAIN 11, LUMBER 5, LUMBER 9, WOOL 4
+
+
+Think in 2-3 sentences, then end with ACTION_ID on the last line.
+Do NOT redraw the board.
+
+Legal placements (id -> tiles touched -> total pips):
+0 [BRICK 12(1pip), ORE 2(1pip), GRAIN 4(3pip)] -> 5 pips, 3 resources
+3 [BRICK 12(1pip), GRAIN 4(3pip), LUMBER 8(5pip)] -> 9 pips, 3 resources
+6 [BRICK 12(1pip), LUMBER 8(5pip), LUMBER 3(2pip)] -> 8 pips, 2 resources
+9 [BRICK 12(1pip), LUMBER 3(2pip)] -> 3 pips, 2 resources
+12 [BRICK 12(1pip)] -> 1 pips, 1 resources
+14 [BRICK 12(1pip), ORE 2(1pip)] -> 2 pips, 2 resources
+17 [LUMBER 3(2pip)] -> 2 pips, 1 resources
+19 [ORE 10(3pip), LUMBER 8(5pip), ORE 10(3pip)] -> 11 pips, 2 resources
+22 [ORE 10(3pip), ORE 10(3pip), GRAIN 5(4pip)] -> 10 pips, 2 resources
+25 [ORE 10(3pip), GRAIN 5(4pip)] -> 7 pips, 2 resources
+28 [ORE 2(1pip), BRICK 9(4pip)] -> 5 pips, 2 resources
+31 [ORE 2(1pip), BRICK 9(4pip), GRAIN 4(3pip)] -> 8 pips, 3 resources
+34 [ORE 2(1pip)] -> 1 pips, 1 resources
+38 [GRAIN 4(3pip), BRICK 9(4pip), WOOL 8(5pip)] -> 12 pips, 3 resources
+41 [GRAIN 4(3pip), WOOL 8(5pip), GRAIN 3(2pip)] -> 10 pips, 2 resources
+44 [GRAIN 4(3pip), GRAIN 3(2pip), LUMBER 8(5pip)] -> 10 pips, 2 resources
+47 [LUMBER 8(5pip), GRAIN 3(2pip), ORE 10(3pip)] -> 10 pips, 3 resources
+50 [ORE 10(3pip), GRAIN 3(2pip), BRICK 11(2pip)] -> 7 pips, 3 resources
+53 [ORE 10(3pip), BRICK 11(2pip), WOOL 6(5pip)] -> 10 pips, 3 resources
+56 [GRAIN 5(4pip)] -> 4 pips, 1 resources
+58 [BRICK 9(4pip), GRAIN 11(2pip)] -> 6 pips, 2 resources
+61 [BRICK 9(4pip), GRAIN 11(2pip), WOOL 8(5pip)] -> 11 pips, 3 resources
+64 [BRICK 9(4pip)] -> 4 pips, 1 resources
+66 [WOOL 8(5pip), GRAIN 11(2pip)] -> 7 pips, 2 resources
+69 [WOOL 8(5pip), LUMBER 5(4pip)] -> 9 pips, 2 resources
+72 [WOOL 8(5pip), LUMBER 5(4pip), GRAIN 3(2pip)] -> 11 pips, 3 resources
+75 [GRAIN 3(2pip), LUMBER 5(4pip), BRICK 11(2pip)] -> 8 pips, 3 resources
+78 [BRICK 11(2pip), LUMBER 5(4pip), LUMBER 9(4pip)] -> 10 pips, 2 resources
+81 [BRICK 11(2pip), LUMBER 9(4pip), WOOL 6(5pip)] -> 11 pips, 3 resources
+84 [BRICK 11(2pip), WOOL 6(5pip), WOOL 6(5pip)] -> 12 pips, 2 resources
+87 [WOOL 6(5pip), WOOL 6(5pip)] -> 10 pips, 1 resources
+90 [GRAIN 11(2pip)] -> 2 pips, 1 resources
+96 [LUMBER 5(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+99 [LUMBER 5(4pip), WOOL 4(3pip), LUMBER 9(4pip)] -> 11 pips, 2 resources
+102 [LUMBER 9(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+105 [LUMBER 9(4pip)] -> 4 pips, 1 resources
+107 [LUMBER 9(4pip), WOOL 6(5pip)] -> 9 pips, 2 resources
+110 [WOOL 6(5pip)] -> 5 pips, 1 resources
+114 [WOOL 4(3pip)] -> 3 pips, 1 resources
+
+Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
 ACTION_ID: <int>
 
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
+Response: Placement 38 offers the highest pip count (12) with three distinct resources (Grain, Brick, Wool), maximizing immediate production potential and diversity. While placement 84 also yields 12 pips, it duplicates Wool, which is less optimal than the diverse mix in 38. This choice also avoids duplicating numbers already covered by the opponent's existing settlements.
+ACTION_ID: 38
 
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . . . . . . 
-4 . . . . . . . . 
-5 . . . . . . . . 
-6 . . . . . . . . 
-7 . . . . x . . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
+Model: LOCAL_LLM
+Query: You are placing a settlement in Catan setup (round 2/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
 
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
+A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
 
-Response: The board is almost entirely empty. The opponent has a single piece in column 3. There are no immediate threats. Since the opponent only has one piece, there are no immediate opportunities for me to win. I will place my piece in column 3 to counter the opponent.
+Placement goals (in priority order):
+1. Maximise total pip count : higher pips = more frequent resource production
+2. Maximise resource diversity : 3 different resources is better than duplicates
+3. In Round 2 avoid numbers already covered by your first settlement
 
-ACTION_ID: 3
+Your first settlement covers: GRAIN 4
+Opponent settlements:
+ P-1: BRICK 12, LUMBER 3, ORE 10, ORE 2, LUMBER 8, GRAIN 5, BRICK 9, WOOL 8, GRAIN 3, BRICK 11, WOOL 6, GRAIN 11, LUMBER 5, LUMBER 9, WOOL 4
 
 
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
+Think in 2-3 sentences, then end with ACTION_ID on the last line.
+Do NOT redraw the board.
 
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
+Legal placements (id -> tiles touched -> total pips):
+0 [BRICK 12(1pip), ORE 2(1pip), GRAIN 4(3pip)] -> 5 pips, 3 resources
+3 [BRICK 12(1pip), GRAIN 4(3pip), LUMBER 8(5pip)] -> 9 pips, 3 resources
+6 [BRICK 12(1pip), LUMBER 8(5pip), LUMBER 3(2pip)] -> 8 pips, 2 resources
+9 [BRICK 12(1pip), LUMBER 3(2pip)] -> 3 pips, 2 resources
+12 [BRICK 12(1pip)] -> 1 pips, 1 resources
+14 [BRICK 12(1pip), ORE 2(1pip)] -> 2 pips, 2 resources
+17 [LUMBER 3(2pip)] -> 2 pips, 1 resources
+19 [ORE 2(1pip), BRICK 9(4pip)] -> 5 pips, 2 resources
+22 [ORE 2(1pip)] -> 1 pips, 1 resources
+26 [GRAIN 4(3pip), GRAIN 3(2pip), LUMBER 8(5pip)] -> 10 pips, 2 resources
+29 [LUMBER 8(5pip), GRAIN 3(2pip), ORE 10(3pip)] -> 10 pips, 3 resources
+32 [ORE 10(3pip), GRAIN 3(2pip), BRICK 11(2pip)] -> 7 pips, 3 resources
+35 [ORE 10(3pip), BRICK 11(2pip), WOOL 6(5pip)] -> 10 pips, 3 resources
+38 [GRAIN 5(4pip)] -> 4 pips, 1 resources
+40 [BRICK 9(4pip), GRAIN 11(2pip)] -> 6 pips, 2 resources
+43 [BRICK 9(4pip)] -> 4 pips, 1 resources
+45 [WOOL 8(5pip), GRAIN 11(2pip)] -> 7 pips, 2 resources
+48 [WOOL 8(5pip), LUMBER 5(4pip)] -> 9 pips, 2 resources
+51 [WOOL 8(5pip), LUMBER 5(4pip), GRAIN 3(2pip)] -> 11 pips, 3 resources
+54 [GRAIN 3(2pip), LUMBER 5(4pip), BRICK 11(2pip)] -> 8 pips, 3 resources
+57 [BRICK 11(2pip), LUMBER 5(4pip), LUMBER 9(4pip)] -> 10 pips, 2 resources
+60 [BRICK 11(2pip), LUMBER 9(4pip), WOOL 6(5pip)] -> 11 pips, 3 resources
+63 [GRAIN 11(2pip)] -> 2 pips, 1 resources
+69 [LUMBER 5(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+72 [LUMBER 5(4pip), WOOL 4(3pip), LUMBER 9(4pip)] -> 11 pips, 2 resources
+75 [LUMBER 9(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+78 [LUMBER 9(4pip)] -> 4 pips, 1 resources
+80 [LUMBER 9(4pip), WOOL 6(5pip)] -> 9 pips, 2 resources
+83 [WOOL 6(5pip)] -> 5 pips, 1 resources
+85 [WOOL 4(3pip)] -> 3 pips, 1 resources
 
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
+Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
 ACTION_ID: <int>
 
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . . . . . . 
-4 . . . . . . . . 
-5 . . . . . . . . 
-6 . . . . x . . . 
-7 . . . o x . . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The board is:
-```
-........
-........
-........
-........
-........
-........
-....x...
-...ox...
-```
-It is Player 1's (o) turn.
-
-The opponent (x) has a piece in column 3, rows 6 and 7. If x plays in column 3, they will win. So I must block column 3.
-
-Therefore, the best move is to play in column 3.
-
-ACTION_ID: 3
-
-
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
-
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
-
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
-ACTION_ID: <int>
-
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . . . . . . 
-4 . . . . . . . . 
-5 . . . x . . . . 
-6 . . . o x . . . 
-7 . . . o x . . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The opponent (x) has two pieces in column 4. If x plays column 4, x will have three pieces in a row. If I don't play column 4, the opponent might win in the next turn. So, I need to play column 4.
-ACTION_ID: 4
-
-
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
-
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
-
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
-ACTION_ID: <int>
-
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . . . . . . 
-4 . . . x . . . . 
-5 . . . x o . . . 
-6 . . . o x . . . 
-7 . . . o x . . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The board currently looks like this:
-
-........
-........
-........
-........
-....x...
-....xo...
-...oxx...
-...oxx...
-
-I am player o.
-Player x has two pieces in column 3, and I have two pieces in column 3.
-Player x has two pieces in column 4, and I have one piece in column 4.
-If I play in column 3, I will not win, but I will prevent player x from getting three in a row.
-If I play in column 4, I will not win, but I will prevent player x from getting three in a row.
-If I play in column 5, I will have two in a row.
-I should consider whether player x has a near-win.
-Player x has two in column 3. If x plays column 3, x will have 3 in a row.
-Player x has two in column 4. If x plays column 4, x will have 3 in a row.
-I should consider whether I have a near-win.
-I don't have an immediate win.
-If I play in column 3, I will not win, and player x will not win.
-If I play in column 4, I will not win, and player x will not win.
-If I play in column 5, I will have two in a row.
-Let me check if there is a diagonal or horizontal win.
-There are no immediate threats or opportunities.
-I will play in column 5 to get two in a row.
-
-ACTION_ID: 5
-
-
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
-
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
-
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
-ACTION_ID: <int>
-
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . . . . . . 
-4 . . . x . . . . 
-5 . . . x o . . . 
-6 . . . o x . . . 
-7 . . x o x o . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The opponent has two pieces in column 3 and one in column 2 and 4.
-If I place my piece in column 3, the opponent will be able to place another piece in column 3 to win.
-If I place my piece in column 2, the opponent can place a piece in column 2 to make three in a row.
-If I place my piece in column 4, the opponent can place a piece in column 4 to make three in a row.
-However, the opponent has x in (4,3), (5,3), (7,3), and if the opponent plays in column 3, they win. So I must play there.
-
-ACTION_ID: 3
-
-
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
-
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
-
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
-ACTION_ID: <int>
-
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . . . . . . 
-3 . . . o . . . . 
-4 . . . x x . . . 
-5 . . . x o . . . 
-6 . . . o x . . . 
-7 . . x o x o . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The board is:
-```
-. . . . . . . .
-. . . . . . . .
-. . . . . . . .
-. . . o . . . .
-. . . x x . . .
-. . . x o . . .
-. . . o x . . .
-. . x o x o . .
-```
-I am player 1 (o).
-The opponent is player 0 (x).
-The legal actions are columns 0, 1, 2, 3, 4, 5, 6, 7.
-
-The opponent has two pieces in a row in column 3 (rows 5, 6). If the opponent plays in column 3, they will win. Therefore, I should play in column 3 to block them.
-If I play in column 3, the board becomes:
-```
-. . . . . . . .
-. . . . . . . .
-. . . . . . . .
-. . . o . . . .
-. . . x x . . .
-. . . x o . . .
-. . . o x . . .
-. . x o x o . .
-```
-```
-. . . . . . . .
-. . . . . . . .
-. . . o . . . .
-. . . o . . . .
-. . . x x . . .
-. . . x o . . .
-. . . o x . . .
-. . x o x o . .
-```
-If I play in column 4, I could potentially win. However, the opponent could also play in column 4 and win.
-If I play in column 2, the opponent could potentially win.
-The most immediate threat is that the opponent can win in column 3. So, I must block them.
-
-ACTION_ID: 3
-
-Model: GEMINI
-Query: You are a Connect4 agent.
-You are Player 1 (o). Get 4 of your pieces in a row (horizontal, vertical or diagonal).
-
-Gravity rule: a piece dropped in column C lands on the highest row index (closest to row 7)
-that currently shows '.' in that column. Do NOT place pieces at arbitrary rows.
-
-Reason briefly about immediate threats (opponent about to win) and opportunities (you about to win),
-then output your chosen action on the last line in exactly this format:
-ACTION_ID: <int>
-
-Rules:
-  - The id must be one of the listed action ids.
-  - Use exactly the prefix ACTION_ID: on the final line.
-
-Board (x = Player 0, o = Player 1, . = empty):
- 0 1 2 3 4 5 6 7 
-0 . . . . . . . . 
-1 . . . . . . . . 
-2 . . . o . . . . 
-3 . . . o . . . . 
-4 . . . x x . . . 
-5 . . . x o . . . 
-6 . . x o x . . . 
-7 . . x o x o . . 
-x = Player 0, o = Player 1, . = empty
-Current player: 1
-
-Legal actions: (id action):
-0 : Col 0
-1 : Col 1
-2 : Col 2
-3 : Col 3
-4 : Col 4
-5 : Col 5
-6 : Col 6
-7 : Col 7
-
-Response: The opponent (x) has two pieces in a row in column 3 (rows 4 and 5). If I don't play in column 3, the opponent will win.
-I have two pieces in a row in column 3 (rows 2 and 3). If I play in column 3, I will have three in a row.
-
-Column 4 has x x . . . . . . If I play in column 4, I will have x x o x o x and I don't win.
-Column 3 has x x x o o o o If I play in column 3, I will have o o o o
-
-The opponent can win by playing in column 3. I must block it.
-ACTION_ID: 3
-
+Response: Placement 51 offers the highest pip count (11) and perfect resource diversity (Wool, Lumber, Grain), while avoiding the numbers 4 and 5 already covered by your first settlement. This position maximizes production frequency and variety for the MCTS agent's advantage.
+ACTION_ID: 51
