@@ -58,7 +58,7 @@ public class LLMAccess {
     String llamaLocationSmall = "us-central1";
 
     // Local LLM Settings
-    String localLLMBaseURL = "http://10.102.122.116";
+    String localLLMBaseURL = "http://10.60.89.11";
     String localLLMBasePort = "1234";
     String[] localLLMModelNames = new String[2];
     boolean localLLMModelLoaded = false;
@@ -158,7 +158,9 @@ public class LLMAccess {
             }
         }
 
-        localLLMModelNames[0] = "qwen/qwen3.5-9b";
+        localLLMModelNames[0] = "qwen/qwen3.5-9b"; // -> thinking model, works on gguf
+        localLLMModelNames[1] = "qwen/qwen3-4b-2507"; // -> non thinking model works on mlx as well
+
         // memory window for 20 messages
         // TODO: use chatMemory to save game rule details etc.
         MessageWindowChatMemory chatMemory = MessageWindowChatMemory.builder()
@@ -298,7 +300,7 @@ public class LLMAccess {
 
     private String getResponseWithLocalLLMEndpoints(String query) {
         // hardcoded first model for now, there can be other models to use later on
-        String targetModel = localLLMModelNames[0];
+        String targetModel = localLLMModelNames[1];
         HttpClient client = HttpClient.newHttpClient();
         ObjectMapper objectMapper = new ObjectMapper();
 

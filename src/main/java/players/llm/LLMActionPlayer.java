@@ -320,15 +320,14 @@ public class LLMActionPlayer extends AbstractPlayer {
         2. Maximise resource diversity : 3 different resources is better than duplicates
         3. In Round 2 avoid numbers already covered by your first settlement
 
+        Gamestate:
         %s
-
-        Think in 2-3 sentences, then end with ACTION_ID on the last line.
-        Do NOT redraw the board.
-
+        
         Legal placements (id -> tiles touched -> total pips):
         %s
 
-        Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
+        Think in exactly one sentence, Do NOT redraw the board.
+        Your response MUST end with exactly: ACTION_ID: <int>.
         ACTION_ID: <int>
         """.formatted(round, stateText, actionsText);
     }
@@ -693,6 +692,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         LLMActionPlayer retValue = new LLMActionPlayer((LLMActionParams) parameters.copy());
         retValue.decorators = decorators;
         retValue.setName(this.toString());
+        retValue.llmAccess = this.llmAccess;
         return retValue;
     }
 }

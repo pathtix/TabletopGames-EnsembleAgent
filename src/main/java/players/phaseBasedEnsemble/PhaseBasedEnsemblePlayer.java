@@ -26,6 +26,7 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
 
     public PhaseBasedEnsemblePlayer(PhaseBasedEnsembleParams params) {
         super(params, "PhaseBasedEnsemblePlayer");
+        llmPlayer = new LLMActionPlayer(params.llmParams);
     }
 
     public PhaseBasedEnsembleParams getParameters() {
@@ -125,6 +126,7 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
     public AbstractPlayer copy() {
         PhaseBasedEnsemblePlayer copy = new PhaseBasedEnsemblePlayer((PhaseBasedEnsembleParams) parameters.copy());
         copy.setName(this.toString());
+        copy.llmPlayer = this.llmPlayer;
         return copy;
     }
 }

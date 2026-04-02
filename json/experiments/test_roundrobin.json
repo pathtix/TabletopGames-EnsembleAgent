@@ -1,6 +1,6 @@
 {
   "game" : "Catan",
-  "nPlayers" : 4,
+  "nPlayers" : 3,
   "mode" : "random",
   "matchups" : 50,
   "verbose" : true,
