@@ -1,0 +1,124 @@
+
+Model: LOCAL_LLM
+Query: You are placing a settlement in Catan setup (round 1/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
+
+Placement goals (in priority order):
+1. Maximise total pip count : higher pips = more frequent resource production
+2. Maximise resource diversity : 3 different resources is better than duplicates
+3. In Round 2 avoid numbers already covered by your first settlement
+
+Opponent settlements:
+ P-1: BRICK 12, LUMBER 3, ORE 10, ORE 2, GRAIN 4, LUMBER 8, GRAIN 5, BRICK 9, WOOL 8, GRAIN 3, BRICK 11, WOOL 6, GRAIN 11, LUMBER 5, LUMBER 9, WOOL 4
+
+
+Think in 2-3 sentences, then end with ACTION_ID on the last line.
+Do NOT redraw the board.
+
+Legal placements (id -> tiles touched -> total pips):
+0 [BRICK 12(1pip), ORE 2(1pip), GRAIN 4(3pip)] -> 5 pips, 3 resources
+3 [BRICK 12(1pip), GRAIN 4(3pip), LUMBER 8(5pip)] -> 9 pips, 3 resources
+6 [BRICK 12(1pip), LUMBER 8(5pip), LUMBER 3(2pip)] -> 8 pips, 2 resources
+9 [BRICK 12(1pip), LUMBER 3(2pip)] -> 3 pips, 2 resources
+12 [BRICK 12(1pip)] -> 1 pips, 1 resources
+14 [BRICK 12(1pip), ORE 2(1pip)] -> 2 pips, 2 resources
+17 [LUMBER 3(2pip)] -> 2 pips, 1 resources
+19 [ORE 10(3pip), LUMBER 8(5pip), ORE 10(3pip)] -> 11 pips, 2 resources
+22 [ORE 10(3pip), ORE 10(3pip), GRAIN 5(4pip)] -> 10 pips, 2 resources
+25 [ORE 10(3pip), GRAIN 5(4pip)] -> 7 pips, 2 resources
+28 [ORE 2(1pip), BRICK 9(4pip)] -> 5 pips, 2 resources
+31 [ORE 2(1pip), BRICK 9(4pip), GRAIN 4(3pip)] -> 8 pips, 3 resources
+34 [ORE 2(1pip)] -> 1 pips, 1 resources
+38 [GRAIN 4(3pip), BRICK 9(4pip), WOOL 8(5pip)] -> 12 pips, 3 resources
+41 [GRAIN 4(3pip), WOOL 8(5pip), GRAIN 3(2pip)] -> 10 pips, 2 resources
+44 [GRAIN 4(3pip), GRAIN 3(2pip), LUMBER 8(5pip)] -> 10 pips, 2 resources
+47 [LUMBER 8(5pip), GRAIN 3(2pip), ORE 10(3pip)] -> 10 pips, 3 resources
+50 [ORE 10(3pip), GRAIN 3(2pip), BRICK 11(2pip)] -> 7 pips, 3 resources
+53 [ORE 10(3pip), BRICK 11(2pip), WOOL 6(5pip)] -> 10 pips, 3 resources
+56 [GRAIN 5(4pip)] -> 4 pips, 1 resources
+58 [BRICK 9(4pip), GRAIN 11(2pip)] -> 6 pips, 2 resources
+61 [BRICK 9(4pip), GRAIN 11(2pip), WOOL 8(5pip)] -> 11 pips, 3 resources
+64 [BRICK 9(4pip)] -> 4 pips, 1 resources
+66 [WOOL 8(5pip), GRAIN 11(2pip)] -> 7 pips, 2 resources
+69 [WOOL 8(5pip), LUMBER 5(4pip)] -> 9 pips, 2 resources
+72 [WOOL 8(5pip), LUMBER 5(4pip), GRAIN 3(2pip)] -> 11 pips, 3 resources
+75 [GRAIN 3(2pip), LUMBER 5(4pip), BRICK 11(2pip)] -> 8 pips, 3 resources
+78 [BRICK 11(2pip), LUMBER 5(4pip), LUMBER 9(4pip)] -> 10 pips, 2 resources
+81 [BRICK 11(2pip), LUMBER 9(4pip), WOOL 6(5pip)] -> 11 pips, 3 resources
+84 [BRICK 11(2pip), WOOL 6(5pip), WOOL 6(5pip)] -> 12 pips, 2 resources
+87 [WOOL 6(5pip), WOOL 6(5pip)] -> 10 pips, 1 resources
+90 [GRAIN 11(2pip)] -> 2 pips, 1 resources
+96 [LUMBER 5(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+99 [LUMBER 5(4pip), WOOL 4(3pip), LUMBER 9(4pip)] -> 11 pips, 2 resources
+102 [LUMBER 9(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+105 [LUMBER 9(4pip)] -> 4 pips, 1 resources
+107 [LUMBER 9(4pip), WOOL 6(5pip)] -> 9 pips, 2 resources
+110 [WOOL 6(5pip)] -> 5 pips, 1 resources
+114 [WOOL 4(3pip)] -> 3 pips, 1 resources
+
+Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
+ACTION_ID: <int>
+
+Response: Placement 38 offers the highest pip count (12) with three distinct resources (Grain, Brick, Wool), maximizing immediate production potential and diversity. While placement 84 also yields 12 pips, it duplicates Wool, which is less optimal than the diverse mix in 38. This choice also avoids duplicating numbers already covered by the opponent's existing settlements.
+ACTION_ID: 38
+
+Model: LOCAL_LLM
+Query: You are placing a settlement in Catan setup (round 2/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
+
+Placement goals (in priority order):
+1. Maximise total pip count : higher pips = more frequent resource production
+2. Maximise resource diversity : 3 different resources is better than duplicates
+3. In Round 2 avoid numbers already covered by your first settlement
+
+Your first settlement covers: GRAIN 4
+Opponent settlements:
+ P-1: BRICK 12, LUMBER 3, ORE 10, ORE 2, LUMBER 8, GRAIN 5, BRICK 9, WOOL 8, GRAIN 3, BRICK 11, WOOL 6, GRAIN 11, LUMBER 5, LUMBER 9, WOOL 4
+
+
+Think in 2-3 sentences, then end with ACTION_ID on the last line.
+Do NOT redraw the board.
+
+Legal placements (id -> tiles touched -> total pips):
+0 [BRICK 12(1pip), ORE 2(1pip), GRAIN 4(3pip)] -> 5 pips, 3 resources
+3 [BRICK 12(1pip), GRAIN 4(3pip), LUMBER 8(5pip)] -> 9 pips, 3 resources
+6 [BRICK 12(1pip), LUMBER 8(5pip), LUMBER 3(2pip)] -> 8 pips, 2 resources
+9 [BRICK 12(1pip), LUMBER 3(2pip)] -> 3 pips, 2 resources
+12 [BRICK 12(1pip)] -> 1 pips, 1 resources
+14 [BRICK 12(1pip), ORE 2(1pip)] -> 2 pips, 2 resources
+17 [LUMBER 3(2pip)] -> 2 pips, 1 resources
+19 [ORE 2(1pip), BRICK 9(4pip)] -> 5 pips, 2 resources
+22 [ORE 2(1pip)] -> 1 pips, 1 resources
+26 [GRAIN 4(3pip), GRAIN 3(2pip), LUMBER 8(5pip)] -> 10 pips, 2 resources
+29 [LUMBER 8(5pip), GRAIN 3(2pip), ORE 10(3pip)] -> 10 pips, 3 resources
+32 [ORE 10(3pip), GRAIN 3(2pip), BRICK 11(2pip)] -> 7 pips, 3 resources
+35 [ORE 10(3pip), BRICK 11(2pip), WOOL 6(5pip)] -> 10 pips, 3 resources
+38 [GRAIN 5(4pip)] -> 4 pips, 1 resources
+40 [BRICK 9(4pip), GRAIN 11(2pip)] -> 6 pips, 2 resources
+43 [BRICK 9(4pip)] -> 4 pips, 1 resources
+45 [WOOL 8(5pip), GRAIN 11(2pip)] -> 7 pips, 2 resources
+48 [WOOL 8(5pip), LUMBER 5(4pip)] -> 9 pips, 2 resources
+51 [WOOL 8(5pip), LUMBER 5(4pip), GRAIN 3(2pip)] -> 11 pips, 3 resources
+54 [GRAIN 3(2pip), LUMBER 5(4pip), BRICK 11(2pip)] -> 8 pips, 3 resources
+57 [BRICK 11(2pip), LUMBER 5(4pip), LUMBER 9(4pip)] -> 10 pips, 2 resources
+60 [BRICK 11(2pip), LUMBER 9(4pip), WOOL 6(5pip)] -> 11 pips, 3 resources
+63 [GRAIN 11(2pip)] -> 2 pips, 1 resources
+69 [LUMBER 5(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+72 [LUMBER 5(4pip), WOOL 4(3pip), LUMBER 9(4pip)] -> 11 pips, 2 resources
+75 [LUMBER 9(4pip), WOOL 4(3pip)] -> 7 pips, 2 resources
+78 [LUMBER 9(4pip)] -> 4 pips, 1 resources
+80 [LUMBER 9(4pip), WOOL 6(5pip)] -> 9 pips, 2 resources
+83 [WOOL 6(5pip)] -> 5 pips, 1 resources
+85 [WOOL 4(3pip)] -> 3 pips, 1 resources
+
+Your response MUST end with exactly: ACTION_ID: <int>. No exceptions:
+ACTION_ID: <int>
+
+Response: Placement 51 offers the highest pip count (11) and perfect resource diversity (Wool, Lumber, Grain), while avoiding the numbers 4 and 5 already covered by your first settlement. This position maximizes production frequency and variety for the MCTS agent's advantage.
+ACTION_ID: 51
