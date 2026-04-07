@@ -18,6 +18,7 @@ import games.sushigo.SGGameState;
 import games.sushigo.actions.ChooseCard;
 import games.sushigo.cards.SGCard;
 import llm.LLMAccess;
+import llm.LLMAccessGoogleGenAI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +37,7 @@ import java.util.regex.Pattern;
 public class LLMActionPlayer extends AbstractPlayer {
     private static final Logger log = LoggerFactory.getLogger(LLMActionPlayer.class);
     private transient LLMAccess llmAccess;
+    private transient LLMAccessGoogleGenAI llmAccessGenAI;
 
     public LLMActionPlayer() {
         this(new LLMActionParams());
@@ -75,19 +77,24 @@ public class LLMActionPlayer extends AbstractPlayer {
     // create llmaccess eagerly to remove the overhead of first API call of each game
     @Override
     public void initializePlayer(AbstractGameState gameState) {
-        getLLMAccess();
+        // getLLMAccess();
+        getLLMAccessGenAI();
     }
 
     private Integer queryActionId(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String prompt = buildPrompt(gameState, possibleActions);
         if (!this.getParameters().verbose) {
-            String response = getLLMAccess().getResponse(prompt);
+            // String response = getLLMAccess().getResponse(prompt);
+
+            // response with no thinking, no history
+            String response = getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
             return parseActionId(response);
         }
 
         // call llm for a response with timer, is there a better way to time things?
         long start = System.currentTimeMillis();
-        String response = getLLMAccess().getResponse(prompt);
+        // String response = getLLMAccess().getResponse(prompt);
+        String response = getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
         long elapsedMs = System.currentTimeMillis() - start;
         System.out.printf("[%s] API call took %d ms (model=%s size=%s)%n", this, elapsedMs, getParameters().modelType, getParameters().modelSize);
         logIfInvalidAction(response); // basic console output to see if llm returned an action that is not including ACTION ID response
@@ -295,8 +302,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Use exactly the prefix ACTION_ID: on the final line.
         - Do not output anything else.
         
-        OUTPUT the final answer as following:
-        ACTION_ID: <int>
+        Think in exactly one sentence, OUTPUT the final answer as following ACTION_ID: <int>
 
         Game state:
         %s
@@ -687,12 +693,26 @@ public class LLMActionPlayer extends AbstractPlayer {
         return llmAccess;
     }
 
+    private LLMAccessGoogleGenAI getLLMAccessGenAI() {
+        if (llmAccessGenAI == null) {
+            String project = System.getenv("GEMINI_PROJECT");
+            String location = "europe-west9";
+            String logFile = (String) getParameters().getParameterValue("logFileName");
+
+            if (this.getParameters().verbose)
+                System.out.printf("[%s] Creating LLMAccessGoogleGenAI: model=%s%n", this, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
+            llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile);
+        }
+        return llmAccessGenAI;
+    }
+    
     @Override
     public AbstractPlayer copy() {
         LLMActionPlayer retValue = new LLMActionPlayer((LLMActionParams) parameters.copy());
         retValue.decorators = decorators;
         retValue.setName(this.toString());
         retValue.llmAccess = this.llmAccess;
+        retValue.llmAccessGenAI = this.llmAccessGenAI;
         return retValue;
     }
 }
