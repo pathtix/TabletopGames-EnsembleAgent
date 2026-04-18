@@ -63,8 +63,8 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
 
     private boolean useLLM(AbstractGameState gameState) {
         PhaseBasedEnsembleParams pbep = getParameters();
-        return switch (gameState.getGameType().name()) {
-            case "Connect4" -> {
+        return switch (gameState.getGameType()) {
+            case Connect4 -> {
                 if (pbep.connect4LLMFillThreshold <= 0.0) yield false;
 
                 Connect4GameState Connect4GameState = (Connect4GameState) gameState;
@@ -79,7 +79,7 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
                 yield ((double) filled / total < pbep.connect4LLMFillThreshold);
             }
 
-            case "SushiGo" -> {
+            case SushiGo -> {
                 if (!pbep.sushiGoLLMUntilFullRotation) yield false;
                 SGGameState SushiGoGameState = (SGGameState) gameState;
 
@@ -87,24 +87,13 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
                 yield (SushiGoGameState.getDeckRotations() < SushiGoGameState.getNPlayers() - 1);
             }
 
-            case "Catan" -> {
-                if (!pbep.catanLLMDuringSetup) yield false;
+            case Catan -> gameState.getGamePhase().equals(pbep.catanLLMPhase); // other phases can be added with again game phase enum checking
 
-                // return LLM player if the game phase of Catan is still in setup
-                yield gameState.getGamePhase().equals(CatanGameState.CatanGamePhase.Setup);
+            case Poker -> {
+                PokerGameState.PokerGamePhase currentGP = (PokerGameState.PokerGamePhase) gameState.getGamePhase();
+                yield currentGP.ordinal() <= pbep.pokerLLMPhase.ordinal();
             }
 
-            case "Poker" -> {
-                PokerGameState poker = (PokerGameState) gameState;
-                int communityCards = poker.getCommunityCards().getSize();
-                yield switch (pbep.pokerLLMPhase) {
-                    case "pre-flop" -> communityCards == 0;
-                    case "flop"     -> communityCards <= 3;
-                    case "turn"     -> communityCards <= 4;
-                    case "river"    -> communityCards <= 5;
-                    default         -> false;
-                };
-            }
             default -> false;
         };
     }

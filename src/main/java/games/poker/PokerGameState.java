@@ -37,7 +37,8 @@ public class PokerGameState extends AbstractGameState implements IPrintable {
     boolean bet;  // True if a bet was made this street
     protected int bigId; // Stores the id of the previous big blind
 
-    enum PokerGamePhase implements IGamePhase {
+    // GamePhases that may occur in Poker (for ensemble agent params)
+    public enum PokerGamePhase implements IGamePhase {
         Preflop,
         Flop,
         Turn,

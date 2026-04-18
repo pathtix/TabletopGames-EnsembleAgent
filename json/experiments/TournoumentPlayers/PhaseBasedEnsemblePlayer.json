@@ -3,6 +3,6 @@
   "llmParamsFile":  "json/experiments/EnsemblePlayers/LLMActionPlayer.json",
   "connect4LLMFillThreshold" : 0.07,
   "sushiGoLLMUntilFullRotation": true,
-  "catanLLMDuringSetup": true,
-  "pokerLLMPhase": "flop"
+  "catanLLMPhase": {"enum": "games.catan.CatanGameState$CatanGamePhase", "value": "Setup"},
+  "pokerLLMPhase": {"enum": "games.poker.PokerGameState$PokerGamePhase", "value": "Flop"}
 }
