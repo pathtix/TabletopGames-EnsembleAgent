@@ -77,6 +77,7 @@ public class LLMActionPlayer extends AbstractPlayer {
     // create llmaccess eagerly to remove the overhead of first API call of each game
     @Override
     public void initializePlayer(AbstractGameState gameState) {
+        // TODO : Add a check if the model that stated in the parameters is a Gemini model get new LLMAccess otherwise create the old one
         // getLLMAccess();
         getLLMAccessGenAI();
     }
