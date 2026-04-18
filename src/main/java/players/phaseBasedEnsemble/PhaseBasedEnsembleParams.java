@@ -1,6 +1,5 @@
 package players.phaseBasedEnsemble;
 
-import core.interfaces.IGamePhase;
 import games.catan.CatanGameState;
 import games.poker.PokerGameState;
 import players.PlayerParameters;
@@ -9,7 +8,6 @@ import players.mcts.MCTSParams;
 import utilities.JSONUtils;
 
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class PhaseBasedEnsembleParams extends PlayerParameters {

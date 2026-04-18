@@ -5,14 +5,11 @@ import core.AbstractGameState;
 import core.AbstractPlayer;
 import core.actions.AbstractAction;
 import core.components.GridBoard;
-import games.catan.CatanGameState;
 import games.connect4.Connect4GameState;
 import games.poker.PokerGameState;
 import games.sushigo.SGGameState;
 import players.llm.LLMActionPlayer;
 import players.mcts.MCTSPlayer;
-
-import java.lang.reflect.Field;
 import java.util.List;
 
 public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
