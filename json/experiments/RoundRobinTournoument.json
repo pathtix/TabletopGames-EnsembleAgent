@@ -1,0 +1,10 @@
+{
+  "game" : "Poker",
+  "nPlayers" : 3,
+  "mode" : "random",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json",
+  "destDir" : "json/experiments/outputDir",
+  "playerDirectory" : "json/experiments/test_players"
+}
