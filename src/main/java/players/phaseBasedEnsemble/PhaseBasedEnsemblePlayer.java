@@ -17,6 +17,9 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
     private transient LLMActionPlayer llmPlayer;
     private transient MCTSPlayer mctsPlayer;
 
+    private int llmCallCount = 0;
+    private int fallbackCount = 0;
+
     public PhaseBasedEnsemblePlayer() {
         this(new PhaseBasedEnsembleParams());
     }
@@ -50,13 +53,29 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
 
     @Override
     public AbstractAction _getAction(AbstractGameState gameState, List<AbstractAction> possibleActions) {
-        return selectPlayer(gameState)._getAction(gameState, possibleActions);
+        if (!useLLM(gameState)) {
+            return getMCTSPlayer()._getAction(gameState, possibleActions);
+        }
+
+        long timeBudgetMs = getParameters().mctsParams.budget;
+        llmCallCount++;
+
+        long start = System.currentTimeMillis();
+        AbstractAction llmAction = getLLMPlayer()._getAction(gameState, possibleActions);
+        long elapsed = System.currentTimeMillis() - start;
+
+        if (elapsed > timeBudgetMs) {
+            fallbackCount++;
+            return getMCTSPlayer()._getAction(gameState, possibleActions);
+            // return possibleActions.get(rnd.nextInt(possibleActions.size()));
+        }
+        return llmAction;
     }
 
-    private AbstractPlayer selectPlayer(AbstractGameState gameState) {
-        if (!useLLM(gameState)) return getMCTSPlayer();
-        return getLLMPlayer();
-    }
+//    private AbstractPlayer selectPlayer(AbstractGameState gameState) {
+//        if (!useLLM(gameState)) return getMCTSPlayer();
+//        return getLLMPlayer();
+//    }
 
     private boolean useLLM(AbstractGameState gameState) {
         PhaseBasedEnsembleParams pbep = getParameters();
@@ -106,6 +125,16 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
             if (getForwardModel() != null) mctsPlayer.setForwardModel(getForwardModel());
         }
         return mctsPlayer;
+    }
+
+    @Override
+    public void finalizePlayer(AbstractGameState gameState) {
+        if (llmCallCount > 0) {
+            System.out.printf("Game ended! LLM fallbacks: %d/%d (%.1f%%)%n",
+                    fallbackCount, llmCallCount, (100.0 * fallbackCount / llmCallCount));
+        }
+        llmCallCount = 0;
+        fallbackCount = 0;
     }
 
     @Override

@@ -1,6 +1,6 @@
 {
-  "game" : "Poker",
-  "nPlayers" : 2,
+  "game" : "SushiGo",
+  "nPlayers" : 3,
   "mode" : "random",
   "matchups" : 200,
   "verbose" : true,

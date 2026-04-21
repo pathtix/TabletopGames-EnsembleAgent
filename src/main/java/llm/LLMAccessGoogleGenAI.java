@@ -62,7 +62,6 @@ public class LLMAccessGoogleGenAI {
                 .location(location)
                 .build();
 
-        System.out.println("[GenAI] Gemini → Vertex AI (project=" + project + ", location=" + location + ")");
         initLog(logFileName);
     }
 
@@ -71,7 +70,6 @@ public class LLMAccessGoogleGenAI {
         this.geminiClient = Client.builder()
                 .apiKey(apiKey)
                 .build();
-        System.out.println("[GenAI] Gemini → Developer API");
         initLog(logFileName);
     }
 
