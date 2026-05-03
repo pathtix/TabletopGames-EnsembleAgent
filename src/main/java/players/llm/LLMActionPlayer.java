@@ -2,11 +2,13 @@ package players.llm;
 
 import core.AbstractGameState;
 import core.AbstractPlayer;
+import core.Game;
 import core.actions.AbstractAction;
 import core.components.BoardNodeWithEdges;
 import core.components.Deck;
 import core.components.FrenchCard;
 import core.components.GridBoard;
+import games.GameType;
 import games.catan.CatanGameState;
 import games.catan.CatanParameters;
 import games.catan.actions.setup.PlaceSettlementWithRoad;
@@ -15,6 +17,7 @@ import games.connect4.Connect4GameState;
 import games.poker.PokerGameState;
 import games.poker.components.MoneyPot;
 import games.sushigo.SGGameState;
+import games.sushigo.SGLLMFeatures;
 import games.sushigo.actions.ChooseCard;
 import games.sushigo.cards.SGCard;
 import llm.LLMAccess;
@@ -105,15 +108,15 @@ public class LLMActionPlayer extends AbstractPlayer {
     private String buildPrompt(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String stateText = compactState(gameState);
         String actionsText = buildActionText(possibleActions, gameState);
-        String gameName = gameState.getGameType().name();
+        GameType gameName = gameState.getGameType();
 
         return switch (gameName) {
-            case "DotsAndBoxes" -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
-            case "Poker"        -> buildPromptPoker(gameState, stateText, actionsText);
-            case "Connect4"     -> buildPromptConnect4(gameState, stateText, actionsText);
-            case "SushiGo"      -> buildPromptSushiGo(gameState, stateText, actionsText);
-            case "Catan"        -> buildPromptCatan(gameState, stateText, actionsText);
-            default             -> "";
+            case DotsAndBoxes -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
+            case Poker -> buildPromptPoker(gameState, stateText, actionsText);
+            case Connect4 -> buildPromptConnect4(gameState, stateText, actionsText);
+            case SushiGo -> buildPromptSushiGo(gameState, stateText, actionsText);
+            case Catan -> buildPromptCatan(gameState, stateText, actionsText);
+            default -> "";
         };
     }
 
@@ -226,15 +229,15 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Return exactly one line with no other text, punctuation, or explanation.
         - Use exactly the prefix ACTION_ID:
         - The id must be one of the listed action ids.
-        
+
         Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
-        
+
         Game state:
         %s
 
         Pot odds:
         %s
-        
+
         Action glossary:
         - Check  : stay in without betting (only when no bet faces you)
         - Call   : match the current bet
@@ -302,7 +305,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         - The id must be one of the listed action ids.
         - Use exactly the prefix ACTION_ID: on the final line.
         - Do not output anything else.
-        
+
         Think in exactly one sentence, OUTPUT the final answer as following ACTION_ID: <int>
 
         Game state:
@@ -329,7 +332,7 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Gamestate:
         %s
-        
+
         Legal placements (id -> tiles touched -> total pips):
         %s
 
@@ -340,13 +343,13 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String compactState(AbstractGameState gameState) {
-        String gameName = gameState.getGameType().name();
+        GameType gameName = gameState.getGameType();
         return switch (gameName) {
-            case "DotsAndBoxes" -> compactDotsAndBoxesState(gameState);
-            case "Poker"        -> compactPokerState(gameState);
-            case "Connect4"     -> compactConnect4State(gameState);
-            case "SushiGo"      -> compactSushiGoState(gameState);
-            case "Catan"        -> compactCatanState(gameState);
+            case DotsAndBoxes -> compactDotsAndBoxesState(gameState);
+            case Poker -> compactPokerState(gameState);
+            case Connect4 -> compactConnect4State(gameState);
+            case SushiGo -> compactSushiGoState(gameState);
+            case Catan -> compactCatanState(gameState);
             default -> "";
         };
     }
@@ -564,12 +567,12 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String compactActionString(AbstractAction action, AbstractGameState gameState) {
-        return switch (gameState.getGameType().name()) {
-            case "DotsAndBoxes" -> compactActionDotsAndBoxes(action, gameState);
-            case "Connect4"     -> compactActionConnect4(action);
-            case "SushiGo"      -> compactActionSushiGo(action,  gameState);
-            case "Catan"        -> compactActionCatan(action, gameState);
-            default             -> defaultActionString(action, gameState);
+        return switch (gameState.getGameType()) {
+            case DotsAndBoxes -> compactActionDotsAndBoxes(action, gameState);
+            case Connect4 -> compactActionConnect4(action);
+            case SushiGo -> compactActionSushiGo(action,  gameState);
+            case Catan -> compactActionCatan(action, gameState);
+            default -> defaultActionString(action, gameState);
         };
     }
 
@@ -706,7 +709,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         }
         return llmAccessGenAI;
     }
-    
+
     @Override
     public AbstractPlayer copy() {
         LLMActionPlayer retValue = new LLMActionPlayer((LLMActionParams) parameters.copy());
