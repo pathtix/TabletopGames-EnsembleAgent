@@ -121,7 +121,7 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
-        if (gameState.getGameType().name().equals("Catan"))
+        if (gameState.getGameType() == GameType.Catan)
             return buildCatanActionText(possibleActions, gameState);
 
         StringBuilder actionsBuilder = new StringBuilder();
