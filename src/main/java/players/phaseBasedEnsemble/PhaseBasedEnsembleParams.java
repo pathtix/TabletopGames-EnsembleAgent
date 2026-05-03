@@ -7,7 +7,6 @@ import players.llm.LLMActionParams;
 import players.mcts.MCTSParams;
 import utilities.JSONUtils;
 
-import java.io.File;
 import java.util.Arrays;
 
 public class PhaseBasedEnsembleParams extends PlayerParameters {
@@ -23,26 +22,12 @@ public class PhaseBasedEnsembleParams extends PlayerParameters {
     public PokerGameState.PokerGamePhase pokerLLMPhase = PokerGameState.PokerGamePhase.Preflop; // use LLM till pokerLLMPhase use MCTS after
 
     public PhaseBasedEnsembleParams() {
-        addTunableParameter("llmParamsFile", "json/experiments/EnsemblePlayers/LLMActionPlayer.json");
-        addTunableParameter("mctsParamsFile", getMCTSPlayerPath("json/experiments/EnsemblePlayers")); // game spesific MCTS player json
+        addTunableParameter("llmParamsFile", "");
+        addTunableParameter("mctsParamsFile", "");
         addTunableParameter("connect4LLMFillThreshold", 0.0, Arrays.asList(0.0, 0.1, 0.25, 0.5));
         addTunableParameter("sushiGoLLMUntilFullRotation", true);
         addTunableParameter("catanLLMPhase", CatanGameState.CatanGamePhase.Setup, Arrays.asList(CatanGameState.CatanGamePhase.values()));
         addTunableParameter("pokerLLMPhase", PokerGameState.PokerGamePhase.Preflop, Arrays.asList(PokerGameState.PokerGamePhase.values()));
-    }
-
-    // this is not the best way I think, but gets the non LLMActionPlayer.json in the EnsemblePlayer folder as MCTS agent
-    private String getMCTSPlayerPath(String ensemblePlayerFolderPath) {
-        File folder = new File(ensemblePlayerFolderPath);
-        File[] listOfFiles = folder.listFiles();
-
-        if (listOfFiles == null || listOfFiles.length == 0) return null;
-        for (File file : listOfFiles) {
-            if (file.getName().endsWith(".json") && !file.getName().equals("LLMActionPlayer.json")) {
-                return file.getPath();
-            }
-        }
-        return null;
     }
 
     @Override

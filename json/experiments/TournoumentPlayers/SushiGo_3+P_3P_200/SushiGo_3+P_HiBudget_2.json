@@ -13,5 +13,5 @@
   "rolloutType": "RANDOM",
   "information": "Information_Set",
   "class": "players.mcts.MCTSParams",
-  "budget": 400
+  "budget": 750
 }

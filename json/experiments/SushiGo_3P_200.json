@@ -1,0 +1,10 @@
+{
+  "game" : "SushiGo",
+  "nPlayers" : 3,
+  "mode" : "random",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json",
+  "destDir" : "json/experiments/OutputDirectory/SushiGo_3P_200",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/SushiGo_3P_200"
+}
