@@ -1,7 +1,4 @@
 #!/bin/sh
-# Usage: ./run_games_bg.sh <ram> <config.json>
-#   <ram>         heap size passed to -Xmx (e.g. 2g, 4g, 8g, 512m)
-#   <config.json> RunGames config file
 ram=$1
 config=$2
 stem="${config%.json}"

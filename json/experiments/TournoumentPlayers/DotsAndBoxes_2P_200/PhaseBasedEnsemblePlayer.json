@@ -1,7 +1,7 @@
 {
   "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/SushiGo_3P_200/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/SushiGo_3P_200/SushiGo_1.json",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/DotsAndBoxes_2P_200/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/DotsAndBoxes_2P_200/DotsAndBoxes.json",
   "connect4LLMFillThreshold" : 0.07,
   "sushiGoLLMUntilFullRotation": true,
   "catanLLMPhase": {"enum": "games.catan.CatanGameState$CatanGamePhase", "value": "Setup"},

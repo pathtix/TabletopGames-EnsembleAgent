@@ -1,6 +1,6 @@
 {
   "class" : "players.llm.LLMActionParams",
-  "stateFeatureClass" : "games.sushigo.SGLLMFeatures",
+  "stateFeatureClass" : "games.dotsboxes.DBLLMFeatures",
   "modelType" : "GEMINI",
   "modelSize" : "LARGE",
   "maxStateChars" : 3000,

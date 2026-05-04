@@ -2,11 +2,14 @@ package players.llm;
 
 import core.AbstractGameState;
 import core.AbstractPlayer;
+import core.Game;
 import core.actions.AbstractAction;
 import core.components.BoardNodeWithEdges;
 import core.components.Deck;
 import core.components.FrenchCard;
 import core.components.GridBoard;
+import core.interfaces.IStateFeatureJSON;
+import games.GameType;
 import games.catan.CatanGameState;
 import games.catan.CatanParameters;
 import games.catan.actions.setup.PlaceSettlementWithRoad;
@@ -15,6 +18,7 @@ import games.connect4.Connect4GameState;
 import games.poker.PokerGameState;
 import games.poker.components.MoneyPot;
 import games.sushigo.SGGameState;
+import games.sushigo.SGLLMFeatures;
 import games.sushigo.actions.ChooseCard;
 import games.sushigo.cards.SGCard;
 import llm.LLMAccess;
@@ -35,7 +39,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LLMActionPlayer extends AbstractPlayer {
-    private static final Logger log = LoggerFactory.getLogger(LLMActionPlayer.class);
     private transient LLMAccess llmAccess;
     private transient LLMAccessGoogleGenAI llmAccessGenAI;
 
@@ -63,11 +66,6 @@ public class LLMActionPlayer extends AbstractPlayer {
         if (isValidActionId(actionId, possibleActions.size()))
             return possibleActions.get(actionId);
 
-        // fallback to random?
-        // a rerun can be also made ? - which can consume more input tokens, and more importantly time
-        // to verify the move made by the llm, we can ask the llm again with a prompt like - again need time
-        // game state + action id + possible actions = `this is the action you returned, do you confirm it that it will be a *good* move or do you want to change it?`
-
         if (this.getParameters().verbose)
             System.out.printf("[%s] Action ID : %d selected randomly since LLM choose non valid action",this, actionId);
 
@@ -92,33 +90,32 @@ public class LLMActionPlayer extends AbstractPlayer {
             return parseActionId(response);
         }
 
-        // call llm for a response with timer, is there a better way to time things?
         long start = System.currentTimeMillis();
-        // String response = getLLMAccess().getResponse(prompt);
         String response = getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
         long elapsedMs = System.currentTimeMillis() - start;
+
         System.out.printf("[%s] API call took %d ms (model=%s size=%s)%n", this, elapsedMs, getParameters().modelType, getParameters().modelSize);
-        logIfInvalidAction(response); // basic console output to see if llm returned an action that is not including ACTION ID response
+        logIfInvalidAction(response);
         return parseActionId(response);
     }
 
     private String buildPrompt(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String stateText = compactState(gameState);
         String actionsText = buildActionText(possibleActions, gameState);
-        String gameName = gameState.getGameType().name();
+        GameType gameName = gameState.getGameType();
 
         return switch (gameName) {
-            case "DotsAndBoxes" -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
-            case "Poker"        -> buildPromptPoker(gameState, stateText, actionsText);
-            case "Connect4"     -> buildPromptConnect4(gameState, stateText, actionsText);
-            case "SushiGo"      -> buildPromptSushiGo(gameState, stateText, actionsText);
-            case "Catan"        -> buildPromptCatan(gameState, stateText, actionsText);
-            default             -> "";
+            case DotsAndBoxes -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
+            case Poker -> buildPromptPoker(gameState, stateText, actionsText);
+            case Connect4 -> buildPromptConnect4(gameState, stateText, actionsText);
+            case SushiGo -> buildPromptSushiGo(gameState, stateText, actionsText);
+            case Catan -> buildPromptCatan(gameState, stateText, actionsText);
+            default -> "";
         };
     }
 
     private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
-        if (gameState.getGameType().name().equals("Catan"))
+        if (gameState.getGameType() == GameType.Catan)
             return buildCatanActionText(possibleActions, gameState);
 
         StringBuilder actionsBuilder = new StringBuilder();
@@ -191,29 +188,7 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String buildPromptPoker(AbstractGameState gameState, String stateText, String actionsText) {
-        PokerGameState poker = (PokerGameState) gameState;
-        int llmPlayer = poker.getCurrentPlayer();
-
-        // equity calculation to help with llm to take actions better
-        int pot = 0;
-        for (MoneyPot mp : poker.getMoneyPots()) pot += mp.getValue();
-
-        int myBet = poker.getPlayerBet()[llmPlayer].getValue();
-        int maxBet = 0;
-        for (int j = 0; j < poker.getNPlayers(); j++)
-            maxBet = Math.max(maxBet, poker.getPlayerBet()[j].getValue());
-
-        int costToCall = maxBet - myBet;
-
-        String equityLine;
-        if (costToCall <= 0) {
-            equityLine = "No bet to face you can check for free.";
-        }
-        else {
-            int total = pot + costToCall;
-            int potOdds = (int) Math.round(100.0 * costToCall / total);
-            equityLine = String.format("Cost to call: %d chips | Pot: %d chips | Pot odds: %d%% | Assess your hand strength (as strong/medium/weak/drawing given your hole cards and community cards) call only if your hand strength justifies this pot odds threshold.", costToCall, pot, potOdds);
-        }
+        int llmPlayer = gameState.getCurrentPlayer();
 
         return """
         You are a World Class Texas Hold'em poker agent.
@@ -226,15 +201,12 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Return exactly one line with no other text, punctuation, or explanation.
         - Use exactly the prefix ACTION_ID:
         - The id must be one of the listed action ids.
-        
+
         Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
-        
+
         Game state:
         %s
 
-        Pot odds:
-        %s
-        
         Action glossary:
         - Check  : stay in without betting (only when no bet faces you)
         - Call   : match the current bet
@@ -245,7 +217,7 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions (id  action):
         %s
-        """.formatted(llmPlayer, stateText, equityLine, actionsText);
+        """.formatted(llmPlayer, stateText, actionsText);
     }
 
     private String buildPromptConnect4(AbstractGameState gameState, String stateText, String actionsText) {
@@ -302,7 +274,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         - The id must be one of the listed action ids.
         - Use exactly the prefix ACTION_ID: on the final line.
         - Do not output anything else.
-        
+
         Think in exactly one sentence, OUTPUT the final answer as following ACTION_ID: <int>
 
         Game state:
@@ -329,7 +301,7 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Gamestate:
         %s
-        
+
         Legal placements (id -> tiles touched -> total pips):
         %s
 
@@ -340,236 +312,25 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String compactState(AbstractGameState gameState) {
-        String gameName = gameState.getGameType().name();
-        return switch (gameName) {
-            case "DotsAndBoxes" -> compactDotsAndBoxesState(gameState);
-            case "Poker"        -> compactPokerState(gameState);
-            case "Connect4"     -> compactConnect4State(gameState);
-            case "SushiGo"      -> compactSushiGoState(gameState);
-            case "Catan"        -> compactCatanState(gameState);
-            default -> "";
-        };
-    }
-
-    private String compactPokerState(AbstractGameState gameState) {
-        PokerGameState pokerGameState = (PokerGameState) gameState;
-        int curentPlayerId = pokerGameState.getCurrentPlayer();
-        int playerCount = pokerGameState.getNPlayers();
-
-        StringBuilder sb = new StringBuilder();
-        for (FrenchCard card : pokerGameState.getPlayerDecks().get(curentPlayerId).getComponents()) {
-            if (!sb.isEmpty()) sb.append(", ");
-            sb.append(card.toString());
-        }
-        String myHoleCards = sb.toString();
-
-        String communityCards = "None";
-        if (pokerGameState.getCommunityCards().getSize() != 0) {
-            StringBuilder ccBuilder = new StringBuilder();
-            for (FrenchCard card : pokerGameState.getCommunityCards().getComponents()) {
-                if (!ccBuilder.isEmpty()) ccBuilder.append(", ");
-                ccBuilder.append(card.toString());
-            }
-            communityCards = ccBuilder.toString();
-        }
-
-        StringBuilder players = new StringBuilder();
-        for (int j = 0; j < playerCount; j++) {
-            players.append(String.format("Player %d: stack=%d bet=%d%s%s%s",
-                    j,
-                    pokerGameState.getPlayerMoney()[j].getValue(),
-                    pokerGameState.getPlayerBet()[j].getValue(),
-                    pokerGameState.getPlayerFold()[j]  ? " FOLDED"  : "",
-                    pokerGameState.getPlayerAllIn()[j] ? " ALL-IN"  : "",
-                    j == pokerGameState.getBigId()     ? " [BB]"    : (j == pokerGameState.getSmallId() ? " [SB]" : "")
-            ));
-
-            if (j < playerCount - 1)
-                players.append(" | ");
-        }
-
-        String playerInfo = players.toString();
-        return String.format(
-                "Phase=%s | MyHand=[%s] | Community=[%s] | %s",
-                gameState.getGamePhase(),
-                myHoleCards,
-                communityCards,
-                playerInfo
-        );
-    }
-
-    private String compactDotsAndBoxesState(AbstractGameState gameState) {
-        StringBuilder scoresBuilder = new StringBuilder();
-
-        for (int player = 0; player < gameState.getNPlayers(); player++) {
-            if (player > 0) {
-                scoresBuilder.append(", ");
-            }
-            scoresBuilder.append("Player ").append(player).append(": ").append(gameState.getGameScore(player));
-        }
-
-        String scores = scoresBuilder.toString();
-        String stateText = String.format(
-                "Game=%s, CurrentPlayer=%d, Round=%d, Turn=%d, Scores=[%s], Status=%s, Phase=%s, State=%s",
-                gameState.getGameType().name(),
-                gameState.getCurrentPlayer(),
-                gameState.getRoundCounter(),
-                gameState.getTurnCounter(),
-                scores,
-                gameState.getGameStatus(),
-                gameState.getGamePhase(),
-                gameState
-        );
-        String oneLine = stateText.replaceAll("\\s+", " ").trim();
-
-        if (!(oneLine.length() <= getParameters().maxStateChars))
-            return oneLine.substring(0, getParameters().maxStateChars) + "...";
-
-        return oneLine;
-    }
-
-    private String compactConnect4State(AbstractGameState gameState) {
-        Connect4GameState connect4GameState = (Connect4GameState) gameState;
-        GridBoard gridBoard = connect4GameState.getGridBoard();
-        int width = gridBoard.getWidth();
-        int height = gridBoard.getHeight();
-
-        StringBuilder sb = new StringBuilder();
-        sb.append(" ");
-        for (int x = 0; x < width; x++) {
-            sb.append(x).append(" ");
-        }
-        sb.append("\n");
-
-        for (int y = 0; y < height; y++) {
-            sb.append(y).append(" ");
-            for (int x = 0; x < width; x++) {
-                sb.append(gridBoard.getElement(x, y).getComponentName()).append(" ");
-            }
-            sb.append("\n");
-        }
-
-        sb.append("x = Player 0, o = Player 1, . = empty\n");
-        sb.append("Current player: ").append(gameState.getCurrentPlayer()).append("\n");
-        sb.append("Board is 0-indexed: columns 0-").append(width - 1).append(" (left to right), rows 0-").append(height - 1).append(" (top to bottom, row ").append(height - 1).append(" is the bottom).\n");
-        return sb.toString();
-    }
-
-    private String compactSushiGoState(AbstractGameState gameState) {
-        SGGameState sgGameState = (SGGameState) gameState;
-        int player = sgGameState.getCurrentPlayer();
-
-        StringBuilder sb = new StringBuilder();
-
-        Deck<SGCard> hand = sgGameState.getPlayerHands().get(player);
-        sb.append("Round: ").append(gameState.getRoundCounter() + 1).append("/3");
-
-        sb.append("Your hand: ");
-        for (int i = 0; i < hand.getSize(); i++)
-            sb.append(hand.get(i)).append(" ");
-
-        sb.append("\n");
-
-        sb.append("Your played cards: ");
-        sgGameState.getPlayedCards().get(player).getComponents().forEach(c -> sb.append(c).append(" "));
-        sb.append("\n");
-
-        // show how many more of each set card you need to score
-        int tempura = sgGameState.getPlayedCardTypes(SGCard.SGCardType.Tempura, player).getValue();
-        int sashimi  = sgGameState.getPlayedCardTypes(SGCard.SGCardType.Sashimi,  player).getValue();
-        int needTempura = (tempura % 2 == 0) ? 2 : 1;
-        int needSashimi  = (sashimi  % 3 == 0) ? 3 : (3 - sashimi % 3);
-        sb.append(String.format("Set progress: Tempura %d played (need %d more for next pair) | Sashimi %d played (need %d more for next triple)\n", tempura, needTempura, sashimi, needSashimi));
-
-        for (int i = 0; i < sgGameState.getNPlayers(); i++) {
-            if (i == player) continue;
-            sb.append("Player ").append(i).append(" played :");
-            sgGameState.getPlayedCards().get(i).forEach(c -> sb.append(c).append(" "));
-            sb.append("\n");
-        }
-
-        sb.append("Scores: ");
-        for (int i = 0; i < gameState.getNPlayers(); i++) {
-            sb.append("Player ").append(i).append(": ").append((int) gameState.getGameScore(i)).append(" ");
-        }
-        sb.append("\n");
-
-        sb.append("Puddings: ");
-        for (int i = 0; i < sgGameState.getNPlayers(); i++)
-            sb.append("Player ").append(i).append(": ").append(sgGameState.getPlayedCardTypes(SGCard.SGCardType.Pudding, i).getValue()).append(" ");
-        sb.append("\n");
-        return sb.toString();
-    }
-
-    private String compactCatanState(AbstractGameState gameState) {
-        CatanGameState catanGameState = (CatanGameState) gameState;
-        int player = catanGameState.getCurrentPlayer();
-        int round = catanGameState.getRoundCounter() + 1;
-
-        CatanTile[][] board = catanGameState.getBoard();
-        CatanParameters catanParameters = (CatanParameters) gameState.getGameParameters();
-
-        // search all settlements connect them with their owner
-        Map<Integer, Integer> vertexOwner = new HashMap<>();
-        Map<Integer, Set<String>> playerCoverage = new LinkedHashMap<>();
-
-        for (BoardNodeWithEdges settlement : catanGameState.getSettlements()) {
-            vertexOwner.put(settlement.getComponentID(), settlement.getOwnerId());
-        }
-
-        for (CatanTile[] row : board) {
-            for (CatanTile tile : row) {
-                if (tile.getTileType() == CatanTile.TileType.SEA || tile.getTileType() == CatanTile.TileType.DESERT || tile.getNumber() == 0)
-                    continue;
-
-                CatanParameters.Resource resource = catanParameters.productMapping.get(tile.getTileType());
-                if (resource == null) continue;
-                for (int vid : tile.getVerticesBoardNodeIDs()) {
-                    if (vertexOwner.containsKey(vid)) {
-                        int owner = vertexOwner.get(vid);
-                        Set<String> playerTiles = playerCoverage.get(owner);
-
-                        if (playerTiles == null) {
-                            playerTiles = new LinkedHashSet<>();
-                            playerCoverage.put(owner, playerTiles);
-                        }
-                        playerTiles.add(resource + " " + tile.getNumber());
-                        break;
-                    }
-                }
+        String className = getParameters().stateFeatureClass;
+        if (className != null && !className.isEmpty()) {
+            try {
+                IStateFeatureJSON extractor = (IStateFeatureJSON) Class.forName(className).getDeclaredConstructor().newInstance();
+                return extractor.getObservationJson(gameState, gameState.getCurrentPlayer());
+            } catch (Exception e) {
+                System.out.println("Could not instantiate state feature class : " + className);
             }
         }
-
-        StringBuilder sb = new StringBuilder();
-        if (round == 2) {
-            Set<String> mine = playerCoverage.get(player);
-            if (mine != null && !mine.isEmpty())
-                sb.append("Your first settlement covers: ").append(String.join(", ", mine)).append("\n");
-        }
-
-        boolean hasOpponents = playerCoverage.keySet().stream().anyMatch(k -> k != player);
-
-        if (!hasOpponents) {
-            sb.append("No opponent settlements placed yet.\n");
-            return sb.toString();
-        }
-
-        sb.append("Opponent settlements:\n");
-        for (Map.Entry<Integer, Set<String>> e : playerCoverage.entrySet()) {
-            if (e.getKey() == player) continue;
-            sb.append(" P").append(e.getKey()).append(": ").append(String.join(", ", e.getValue())).append("\n");
-        }
-
-        return sb.toString();
+        return null;
     }
 
     private String compactActionString(AbstractAction action, AbstractGameState gameState) {
-        return switch (gameState.getGameType().name()) {
-            case "DotsAndBoxes" -> compactActionDotsAndBoxes(action, gameState);
-            case "Connect4"     -> compactActionConnect4(action);
-            case "SushiGo"      -> compactActionSushiGo(action,  gameState);
-            case "Catan"        -> compactActionCatan(action, gameState);
-            default             -> defaultActionString(action, gameState);
+        return switch (gameState.getGameType()) {
+            case DotsAndBoxes -> compactActionDotsAndBoxes(action, gameState);
+            case Connect4 -> compactActionConnect4(action);
+            case SushiGo -> compactActionSushiGo(action,  gameState);
+            case Catan -> compactActionCatan(action, gameState);
+            default -> defaultActionString(action, gameState);
         };
     }
 
@@ -706,7 +467,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         }
         return llmAccessGenAI;
     }
-    
+
     @Override
     public AbstractPlayer copy() {
         LLMActionPlayer retValue = new LLMActionPlayer((LLMActionParams) parameters.copy());

@@ -5,5 +5,6 @@
   "connect4LLMFillThreshold" : 0.07,
   "sushiGoLLMUntilFullRotation": true,
   "catanLLMPhase": {"enum": "games.catan.CatanGameState$CatanGamePhase", "value": "Setup"},
-  "pokerLLMPhase": {"enum": "games.poker.PokerGameState$PokerGamePhase", "value": "Flop"}
+  "pokerLLMPhase": {"enum": "games.poker.PokerGameState$PokerGamePhase", "value": "Flop"},
+  "useFairBudget" : false
 }

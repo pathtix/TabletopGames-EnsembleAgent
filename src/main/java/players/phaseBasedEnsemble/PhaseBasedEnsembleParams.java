@@ -13,9 +13,9 @@ public class PhaseBasedEnsembleParams extends PlayerParameters {
     public LLMActionParams llmParams  = new LLMActionParams();
     public MCTSParams mctsParams = new MCTSParams();
 
-
     public double connect4LLMFillThreshold = 0.0; // switch to MCTS once this fraction of the board is filled
     public boolean sushiGoLLMUntilFullRotation = true; // use LLM while cards haven't done a full rotation, switch to MCTS after
+    public boolean useFairBudget = true;
 
     // TODO: Robber and Trade phases can also be implemented
     public CatanGameState.CatanGamePhase catanLLMPhase = CatanGameState.CatanGamePhase.Setup; // use LLM only during setup phase later use MCTS
@@ -28,6 +28,7 @@ public class PhaseBasedEnsembleParams extends PlayerParameters {
         addTunableParameter("sushiGoLLMUntilFullRotation", true);
         addTunableParameter("catanLLMPhase", CatanGameState.CatanGamePhase.Setup, Arrays.asList(CatanGameState.CatanGamePhase.values()));
         addTunableParameter("pokerLLMPhase", PokerGameState.PokerGamePhase.Preflop, Arrays.asList(PokerGameState.PokerGamePhase.values()));
+        addTunableParameter("useFairBudget", true);
     }
 
     @Override
@@ -42,6 +43,7 @@ public class PhaseBasedEnsembleParams extends PlayerParameters {
         sushiGoLLMUntilFullRotation = (boolean) getParameterValue("sushiGoLLMUntilFullRotation");
         catanLLMPhase = (CatanGameState.CatanGamePhase) getParameterValue("catanLLMPhase");
         pokerLLMPhase = (PokerGameState.PokerGamePhase) getParameterValue("pokerLLMPhase");
+        useFairBudget = (boolean) getParameterValue("useFairBudget");
     }
 
     @Override

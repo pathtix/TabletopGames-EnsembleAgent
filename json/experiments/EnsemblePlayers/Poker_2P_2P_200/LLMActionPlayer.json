@@ -1,6 +1,6 @@
 {
   "class" : "players.llm.LLMActionParams",
-  "stateFeatureClass" : "games.sushigo.SGLLMFeatures",
+  "stateFeatureClass" : "games.poker.PokerLLMFeatures",
   "modelType" : "GEMINI",
   "modelSize" : "LARGE",
   "maxStateChars" : 3000,
