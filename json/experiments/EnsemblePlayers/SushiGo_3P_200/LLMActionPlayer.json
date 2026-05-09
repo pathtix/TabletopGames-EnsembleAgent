@@ -1,8 +1,9 @@
 {
   "class" : "players.llm.LLMActionParams",
   "stateFeatureClass" : "games.sushigo.SGLLMFeatures",
-  "modelType" : "GEMINI",
-  "modelSize" : "LARGE",
+  "actionListClass" : "games.sushigo.SGLLMActions",
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "GEMINI"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
   "maxStateChars" : 3000,
   "logFileName" : "json/experiments/outputDir/LLMActionPlayerLog.txt",
   "verbose" : true

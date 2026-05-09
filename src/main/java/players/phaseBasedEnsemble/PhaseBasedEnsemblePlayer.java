@@ -79,8 +79,7 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
             case Connect4 -> {
                 if (params.connect4LLMFillThreshold <= 0.0) yield false;
 
-                Connect4GameState Connect4GameState =
-                    (Connect4GameState) gameState;
+                Connect4GameState Connect4GameState = (Connect4GameState) gameState;
                 GridBoard grid = Connect4GameState.getGridBoard();
                 int total = grid.getWidth() * grid.getHeight();
                 int filled = 0;

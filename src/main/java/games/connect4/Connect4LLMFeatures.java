@@ -4,6 +4,9 @@ import core.AbstractGameState;
 import core.interfaces.IStateFeatureJSON;
 import core.components.GridBoard;
 import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import java.util.LinkedHashMap;
 
 public class Connect4LLMFeatures implements IStateFeatureJSON{
 
@@ -14,22 +17,21 @@ public class Connect4LLMFeatures implements IStateFeatureJSON{
         int width = grid.getWidth();
         int height = grid.getHeight();
 
-        JSONObject json = new JSONObject();
+        LinkedHashMap<String, Object> board = new LinkedHashMap<>();
+        board.put("columns", "0 1 2 3 4 5 6 7");
+
+        for (int y = 0; y < height; y++) {
+            StringBuilder row = new StringBuilder();
+            for (int x = 0; x < width; x++)
+                row.append(grid.getElement(x, y).getComponentName()).append(" ");
+            board.put("row" + y, row.toString().trim());
+        }
+
+        LinkedHashMap<String, Object> json = new LinkedHashMap<>();
         json.put("currentPlayer", playerID);
         json.put("symbol", playerID == 0 ? "x" : "o");
+        json.put("board", board);
 
-        StringBuilder board = new StringBuilder();
-        board.append(" ");
-        for (int x = 0; x < width; x++) board.append(x).append(" ");
-        board.append("\n");
-        for (int y = 0; y < height; y++) {
-            board.append(y).append(" ");
-            for (int x = 0; x < width; x++)
-                board.append(grid.getElement(x, y).getComponentName()).append(" ");
-            board.append("\n");
-        }
-        json.put("board", board.toString().trim());
-
-        return json.toJSONString();
+        return JSONValue.toJSONString(json);
     }
 }

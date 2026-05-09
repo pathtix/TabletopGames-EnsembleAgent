@@ -1,0 +1,10 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.connect4.Connect4LLMFeatures",
+  "actionListClass" : "games.connect4.Connect4LLMActions",
+  "modelType" : "GEMINI",
+  "modelSize" : "LARGE",
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/outputDir/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

@@ -1,0 +1,10 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Connect4_2P_200/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Connect4_2P_200/Connect4.json",
+  "connect4LLMFillThreshold" : 0.07,
+  "sushiGoLLMUntilFullRotation": true,
+  "catanLLMPhase": {"enum": "games.catan.CatanGameState$CatanGamePhase", "value": "Setup"},
+  "pokerLLMPhase": {"enum": "games.poker.PokerGameState$PokerGamePhase", "value": "Flop"},
+  "useFairBudget" : false
+}

@@ -2,39 +2,14 @@ package players.llm;
 
 import core.AbstractGameState;
 import core.AbstractPlayer;
-import core.Game;
 import core.actions.AbstractAction;
-import core.components.BoardNodeWithEdges;
-import core.components.Deck;
-import core.components.FrenchCard;
-import core.components.GridBoard;
+import core.interfaces.IActionListBuilder;
 import core.interfaces.IStateFeatureJSON;
 import games.GameType;
-import games.catan.CatanGameState;
-import games.catan.CatanParameters;
-import games.catan.actions.setup.PlaceSettlementWithRoad;
-import games.catan.components.CatanTile;
-import games.connect4.Connect4GameState;
-import games.poker.PokerGameState;
-import games.poker.components.MoneyPot;
 import games.sushigo.SGGameState;
-import games.sushigo.SGLLMFeatures;
-import games.sushigo.actions.ChooseCard;
-import games.sushigo.cards.SGCard;
 import llm.LLMAccess;
 import llm.LLMAccessGoogleGenAI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -66,8 +41,8 @@ public class LLMActionPlayer extends AbstractPlayer {
         if (isValidActionId(actionId, possibleActions.size()))
             return possibleActions.get(actionId);
 
-        if (this.getParameters().verbose)
-            System.out.printf("[%s] Action ID : %d selected randomly since LLM choose non valid action",this, actionId);
+        if (getParameters().verbose)
+            System.out.printf("[%s] Action ID : %d selected randomly since LLM returned non valid action",this, actionId);
 
         return possibleActions.get(rnd.nextInt(possibleActions.size()));
     }
@@ -75,28 +50,34 @@ public class LLMActionPlayer extends AbstractPlayer {
     // create llmaccess eagerly to remove the overhead of first API call of each game
     @Override
     public void initializePlayer(AbstractGameState gameState) {
-        // TODO : Add a check if the model that stated in the parameters is a Gemini model get new LLMAccess otherwise create the old one
-        // getLLMAccess();
-        getLLMAccessGenAI();
+        if (getParameters().modelType.equals(LLMAccess.LLM_MODEL.GEMINI)) {
+            getLLMAccessGenAI();
+            return;
+        }
+
+        getLLMAccess();
     }
 
     private Integer queryActionId(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String prompt = buildPrompt(gameState, possibleActions);
-        if (!this.getParameters().verbose) {
-            // String response = getLLMAccess().getResponse(prompt);
-
-            // response with no thinking, no history
-            String response = getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
-            return parseActionId(response);
-        }
-
         long start = System.currentTimeMillis();
-        String response = getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
+        String response = getResponse(prompt);
         long elapsedMs = System.currentTimeMillis() - start;
 
-        System.out.printf("[%s] API call took %d ms (model=%s size=%s)%n", this, elapsedMs, getParameters().modelType, getParameters().modelSize);
-        logIfInvalidAction(response);
+        if (getParameters().verbose)
+        {
+            System.out.printf("[%s] API call took %d ms (model=%s size=%s)%n", this, elapsedMs, getParameters().modelType, getParameters().modelSize);
+            logIfInvalidAction(response);
+        }
+
         return parseActionId(response);
+    }
+
+    private String getResponse(String prompt) {
+        if (getParameters().modelType.equals(LLMAccess.LLM_MODEL.GEMINI)) {
+            return getLLMAccessGenAI().getResponse(prompt, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
+        }
+        return getLLMAccess().getResponse(prompt);
     }
 
     private String buildPrompt(AbstractGameState gameState, List<AbstractAction> possibleActions) {
@@ -110,53 +91,8 @@ public class LLMActionPlayer extends AbstractPlayer {
             case Connect4 -> buildPromptConnect4(gameState, stateText, actionsText);
             case SushiGo -> buildPromptSushiGo(gameState, stateText, actionsText);
             case Catan -> buildPromptCatan(gameState, stateText, actionsText);
-            default -> "";
+            default -> "Game is not supported!";
         };
-    }
-
-    private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
-        if (gameState.getGameType() == GameType.Catan)
-            return buildCatanActionText(possibleActions, gameState);
-
-        StringBuilder actionsBuilder = new StringBuilder();
-        for (int i = 0; i < possibleActions.size(); i++) {
-            if (i > 0) actionsBuilder.append("\n");
-            actionsBuilder.append(i).append(" ").append(compactActionString(possibleActions.get(i), gameState));
-        }
-        return actionsBuilder.toString();
-    }
-
-    private String buildCatanActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
-        Map<String, Integer> seen = new LinkedHashMap<>();
-        for (int i = 0; i < possibleActions.size(); i++) {
-            String actionStr = compactActionCatan(possibleActions.get(i), gameState);
-            // catanTileSignature for reducing duplicated tile data into one (with different edge, they create same but different in order)
-            String tileSigniture = catanTileSignature(actionStr);
-            if (!seen.containsKey(tileSigniture)) {
-                seen.put(tileSigniture, i);
-            }
-        }
-
-        StringBuilder sb = new StringBuilder();
-        boolean first = true;
-        for (Map.Entry<String, Integer> e : seen.entrySet()) {
-            if (!first) sb.append("\n");
-            int id = e.getValue();
-            sb.append(id).append(" ").append(compactActionCatan(possibleActions.get(id), gameState));
-            first = false;
-        }
-        return sb.toString();
-    }
-
-    private String catanTileSignature(String actionStr) {
-        int arrow = actionStr.indexOf("->");
-        String tilesPart = (arrow > 0 ? actionStr.substring(0, arrow) : actionStr).replaceAll("[\\[\\]]", "").trim();
-
-        List<String> tiles = new ArrayList<>();
-        for (String t : tilesPart.split(",")) tiles.add(t.trim());
-
-        Collections.sort(tiles);
-        return String.join(",", tiles);
     }
 
     private String buildPromptDotsAndBoxes(AbstractGameState gameState, String stateText, String actionsText) {
@@ -184,6 +120,10 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions:
         %s
+        
+        Think in exactly one sentence, Do NOT redraw the board.
+        Your response MUST end with exactly: ACTION_ID: <int>.
+        ACTION_ID: <int>
         """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer(), stateText, actionsText);
     }
 
@@ -217,6 +157,10 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions (id  action):
         %s
+        
+        Think in exactly one sentence.
+        Your response MUST end with exactly: ACTION_ID: <int>.
+        ACTION_ID: <int>
         """.formatted(llmPlayer, stateText, actionsText);
     }
 
@@ -230,9 +174,6 @@ public class LLMActionPlayer extends AbstractPlayer {
         Think in 2-3 sentences max, then end with ACTION_ID on the last line.
         Do NOT redraw the board. Do NOT repeat the action list.
 
-        OUTPUT the final answer as following:
-        ACTION_ID: <int>
-
         The id must be one of the listed action ids.
 
         Board (x=P0, o=P1, .=empty):
@@ -240,6 +181,10 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions (id col):
         %s
+        
+        Think in exactly one sentence, Do NOT redraw the board.
+        Your response MUST end with exactly: ACTION_ID: <int>.
+        ACTION_ID: <int>
         """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer() == 0 ? "x" : "o", stateText, actionsText);
     }
 
@@ -275,13 +220,15 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Use exactly the prefix ACTION_ID: on the final line.
         - Do not output anything else.
 
-        Think in exactly one sentence, OUTPUT the final answer as following ACTION_ID: <int>
-
         Game state:
         %s
 
         Legal actions (id card):
         %s
+        
+        Think in exactly one sentence.
+        Your response MUST end with exactly: ACTION_ID: <int>.
+        ACTION_ID: <int>
         """.formatted(gameState.getCurrentPlayer(), handNumber, totalHands, totalHands - 1, stateText, actionsText);
     }
 
@@ -311,6 +258,19 @@ public class LLMActionPlayer extends AbstractPlayer {
         """.formatted(round, stateText, actionsText);
     }
 
+    private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
+        String className = getParameters().actionListClass;
+        if (className != null && !className.isEmpty()) {
+            try {
+                IActionListBuilder builder = (IActionListBuilder) Class.forName(className).getDeclaredConstructor().newInstance();
+                return builder.buildActionsText(possibleActions, gameState);
+            } catch (Exception e) {
+                System.out.println("Could not instantiate action list class : " + className);
+            }
+        }
+        return "Class couldn't be found.";
+    }
+
     private String compactState(AbstractGameState gameState) {
         String className = getParameters().stateFeatureClass;
         if (className != null && !className.isEmpty()) {
@@ -321,109 +281,14 @@ public class LLMActionPlayer extends AbstractPlayer {
                 System.out.println("Could not instantiate state feature class : " + className);
             }
         }
-        return null;
-    }
-
-    private String compactActionString(AbstractAction action, AbstractGameState gameState) {
-        return switch (gameState.getGameType()) {
-            case DotsAndBoxes -> compactActionDotsAndBoxes(action, gameState);
-            case Connect4 -> compactActionConnect4(action);
-            case SushiGo -> compactActionSushiGo(action,  gameState);
-            case Catan -> compactActionCatan(action, gameState);
-            default -> defaultActionString(action, gameState);
-        };
-    }
-
-    private String compactActionDotsAndBoxes(AbstractAction action, AbstractGameState gameState) {
-        String oneLine = defaultActionString(action, gameState);
-        Matcher matcher = Pattern.compile("\\((\\d+),(\\d+)\\)\\s*->\\s*\\((\\d+),(\\d+)\\)").matcher(oneLine);
-        if (!matcher.find()) return oneLine;
-
-        int x1 = Integer.parseInt(matcher.group(1));
-        int y1 = Integer.parseInt(matcher.group(2));
-        int x2 = Integer.parseInt(matcher.group(3));
-        int y2 = Integer.parseInt(matcher.group(4));
-
-        if (y1 == y2) return "H_" + y1 + "_" + Math.min(x1, x2);
-        if (x1 == x2) return "V_" + Math.min(y1, y2) + "_" + x1;
-        return "E_" + x1 + "_" + y1 + x2 + y2;
-    }
-
-    private String compactActionConnect4(AbstractAction action) {
-        if (action instanceof core.actions.SetGridValueAction sgva)
-            return "Col " + sgva.getX() + " (piece lands at row " + sgva.getY() + ")";
-        return action.toString();
-    }
-
-    private String compactActionSushiGo(AbstractAction action, AbstractGameState gameState) {
-        if (action instanceof ChooseCard cc) {
-            String card = cc.getCard(gameState).toString();
-            return cc.useChopsticks ? card + " (+chopsticks)" : card;
-        }
-        return defaultActionString(action, gameState);
-    }
-
-    private String compactActionCatan(AbstractAction action, AbstractGameState gameState) {
-        if (!(action instanceof PlaceSettlementWithRoad pswr))
-            return defaultActionString(action, gameState);
-
-        CatanGameState catanGameState = (CatanGameState) gameState;
-        CatanTile[][] board = catanGameState.getBoard();
-        CatanParameters catanParameters = (CatanParameters) gameState.getGameParameters();
-
-        // add all touching tiles into a list
-        List<CatanTile> touching = new ArrayList<>();
-        touching.add(board[pswr.x][pswr.y]);
-
-        // get neigbour tiles that is arround to this tile
-        for (int[] neighbor : board[pswr.x][pswr.y].getNeighboursOnVertex(pswr.vertex)) {
-            if (neighbor[0] >= 0 &&
-                neighbor[0] < board.length &&
-                neighbor[1] >= 0 &&
-                neighbor[1] < board[0].length
-            )
-                touching.add(board[neighbor[0]][neighbor[1]]);
-        }
-
-        int totalPips = 0;
-        Set<String> resources = new LinkedHashSet<>();
-        List<String> parts = new ArrayList<>();
-
-        // calculate up to 3 tiles around a vertex, its resources and pips of each tile
-        for (CatanTile tile : touching) {
-            if (tile.getTileType() == CatanTile.TileType.SEA || tile.getTileType() == CatanTile.TileType.DESERT || tile.getNumber() == 0)
-                continue;
-
-            CatanParameters.Resource resource = catanParameters.productMapping.get(tile.getTileType());
-            if (resource == null) continue;
-
-            int pips = 6 - Math.abs(tile.getNumber() - 7);
-            totalPips += pips;
-            resources.add(resource.name());
-            parts.add(resource + " " + tile.getNumber() + "(" + pips + "pip)");
-        }
-
-        if (parts.isEmpty()) return "SEA/DESERT only";
-        return String.format("[%s] -> %d pips, %d resources", String.join(", ", parts), totalPips, resources.size());
-    }
-
-    private String defaultActionString(AbstractAction action, AbstractGameState gameState) {
-        try {
-            return action.getString(gameState).replaceAll("\\s+", " ").trim();
-        } catch (Exception e) {
-            return action.toString();
-        }
+        return "Class couldn't be found.";
     }
 
     private Integer parseActionId(String response) {
-        if (response == null) {
-            return null;
-        }
-
+        if (response == null) return null;
         Matcher matcher = Pattern.compile("(?i)ACTION_ID\\s*:\\s*(-?\\d+)").matcher(response);
-        if (!matcher.find()) {
-            return null;
-        }
+
+        if (!matcher.find()) return null;
 
         try {
             return Integer.parseInt(matcher.group(1));
@@ -437,15 +302,15 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private void logIfInvalidAction(String response) {
-        if (!this.getParameters().verbose) return;
+        if (!getParameters().verbose) return;
         if (parseActionId(response) == null) System.out.printf("[%s] Invalid response: %s%n", this, response);
     }
 
     private LLMAccess getLLMAccess() {
         if (llmAccess == null) {
-            LLMAccess.LLM_MODEL model = (LLMAccess.LLM_MODEL) getParameters().getParameterValue("modelType");
-            LLMAccess.LLM_SIZE  size = (LLMAccess.LLM_SIZE) getParameters().getParameterValue("modelSize");
-            String logFile  = (String) getParameters().getParameterValue("logFileName");
+            LLMAccess.LLM_MODEL model = getParameters().modelType;
+            LLMAccess.LLM_SIZE size = getParameters().modelSize;
+            String logFile = getParameters().logFileName;
 
             if (this.getParameters().verbose)
                 System.out.printf("[%s] Creating LLMAccess: model=%s size=%s%n",this, model, size);
@@ -459,9 +324,9 @@ public class LLMActionPlayer extends AbstractPlayer {
         if (llmAccessGenAI == null) {
             String project = System.getenv("GEMINI_PROJECT");
             String location = "europe-west9";
-            String logFile = (String) getParameters().getParameterValue("logFileName");
+            String logFile = getParameters().logFileName;
 
-            if (this.getParameters().verbose)
+            if (getParameters().verbose)
                 System.out.printf("[%s] Creating LLMAccessGoogleGenAI: model=%s%n", this, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
             llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile);
         }
