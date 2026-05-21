@@ -3,5 +3,5 @@
   "llmParamsFile":  "json/experiments/EnsemblePlayers/Connect4_2P_200/LLMActionPlayer.json",
   "mctsParamsFile": "json/experiments/EnsemblePlayers/Connect4_2P_200/Connect4.json",
   "phaseConfig": "json/experiments/EnsemblePlayers/Connect4_2P_200/LLMPhaseConfig.json",
-  "useFairBudget" : false
+  "llmTimeoutFallback" : true
 }

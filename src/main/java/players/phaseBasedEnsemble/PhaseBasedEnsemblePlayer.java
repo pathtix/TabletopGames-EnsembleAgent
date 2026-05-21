@@ -56,7 +56,7 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
             return getMCTSPlayer()._getAction(gameState, possibleActions);
         }
 
-        if (params.useFairBudget) {
+        if (params.llmTimeoutFallback) {
             long timeBudgetMs = params.phaseConfig.matchedBudgetMs;
 
             long start = System.currentTimeMillis();

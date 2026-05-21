@@ -3,5 +3,5 @@
   "llmParamsFile":  "json/experiments/EnsemblePlayers/SushiGo_3P_200/LLMActionPlayer.json",
   "mctsParamsFile": "json/experiments/EnsemblePlayers/SushiGo_3P_200/SushiGo.json",
   "phaseConfig": "json/experiments/EnsemblePlayers/SushiGo_3P_200/LLMPhaseConfig.json",
-  "useFairBudget" : false
+  "llmTimeoutFallback" : true
 }
