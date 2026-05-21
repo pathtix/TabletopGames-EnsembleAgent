@@ -144,6 +144,8 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
 
+        Strategy: Assess your hand strength (strong / medium / weak / drawing) using your hole cards and the community cards. The state JSON includes pot, costToCall, and potOddsPct, call only when your hand strength justifies the pot odds.
+        
         Game state:
         %s
 
