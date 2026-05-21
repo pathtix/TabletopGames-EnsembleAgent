@@ -1,0 +1,5 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "matchedBudgetMs": 1200,
+  "pokerLLMPhase": { "enum": "games.poker.PokerGameState$PokerGamePhase", "value": "Flop" }
+}

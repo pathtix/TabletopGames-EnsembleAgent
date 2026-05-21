@@ -1,0 +1,7 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/SushiGo_3P_500_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/SushiGo_3P_500_Fair/SushiGo.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/SushiGo_3P_500_Fair/LLMPhaseConfig.json",
+  "llmTimeoutFallback" : true
+}

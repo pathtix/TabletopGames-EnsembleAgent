@@ -1,0 +1,7 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_3P_500_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_3P_500_Fair/Catan_LearnedHeuristic.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_3P_500_Fair/LLMPhaseConfig.json",
+  "llmTimeoutFallback" : true
+}
