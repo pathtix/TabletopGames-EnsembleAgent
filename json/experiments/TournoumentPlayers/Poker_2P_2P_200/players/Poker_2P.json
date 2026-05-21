@@ -8,5 +8,5 @@
   "treePolicy": "UCB_Tuned",
   "information": "Information_Set",
   "class": "players.mcts.MCTSParams",
-  "budget": 450
+  "budget": 40
 }

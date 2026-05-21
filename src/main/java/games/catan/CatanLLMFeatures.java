@@ -9,7 +9,6 @@ import org.json.simple.JSONObject;
 import java.util.*;
 
 public class CatanLLMFeatures implements IStateFeatureJSON {
-
     @Override
     public String getObservationJson(AbstractGameState gameState, int playerID) {
         CatanGameState cgs = (CatanGameState) gameState;

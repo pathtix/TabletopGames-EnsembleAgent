@@ -5,6 +5,6 @@
   "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "GEMINI"},
   "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
   "maxStateChars" : 3000,
-  "logFileName" : "json/experiments/outputDir/LLMActionPlayerLog.txt",
+  "logFileName" : "json/experiments/OutputDirectory/SushiGo_3P_200/LLMActionPlayerLog.txt",
   "verbose" : true
 }

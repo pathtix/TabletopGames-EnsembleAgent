@@ -4,7 +4,7 @@
   "mode" : "random",
   "matchups" : 200,
   "verbose" : true,
-  "listener" : "json/listeners/GameResultsAndActionListener.json",
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/Connect4_2P_200/listeners/LLMPhaseBudgetListener.json",
   "destDir" : "json/experiments/OutputDirectory/Connect4_2P_200",
   "playerDirectory" : "json/experiments/TournoumentPlayers/Connect4_2P_200"
 }
