@@ -1,0 +1,10 @@
+{
+  "game" : "Catan",
+  "nPlayers" : 3,
+  "mode" : "random",
+  "matchups" : 300,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/Catan_3P_200/listeners/LLMPhaseBudgetListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Catan_3P_200",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Catan_3P_200/players"
+}

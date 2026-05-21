@@ -1,0 +1,7 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Catan_3P_200/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Catan_3P_200/Catan.json",
+  "phaseConfig": "json/experiments/EnsemblePlayers/Catan_3P_200/LLMPhaseConfig.json",
+  "llmTimeoutFallback" : true
+}

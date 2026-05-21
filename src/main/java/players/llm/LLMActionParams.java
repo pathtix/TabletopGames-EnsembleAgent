@@ -9,14 +9,18 @@ public class LLMActionParams extends PlayerParameters {
     public LLMAccess.LLM_MODEL modelType = LLMAccess.LLM_MODEL.GEMINI;
     public LLMAccess.LLM_SIZE modelSize = LLMAccess.LLM_SIZE.LARGE;
     public String logFileName = "json/experiments/outputDir/LLMActionPlayerLog.txt";
+    public String stateFeatureClass = "";
+    public String actionListClass = "";
     public int maxStateChars = 3000;
     public boolean verbose = false;
 
     public LLMActionParams() {
         addTunableParameter("modelType", LLMAccess.LLM_MODEL.GEMINI, Arrays.asList(LLMAccess.LLM_MODEL.values()));
         addTunableParameter("modelSize",  LLMAccess.LLM_SIZE.LARGE, Arrays.asList(LLMAccess.LLM_SIZE.values()));
-        addTunableParameter("logFileName", "json/experiments/outputDir/LLMActionPlayerLog.txt");
+        addTunableParameter("logFileName", "json/experiments/OutputDirectory/LLMActionPlayerLog.txt");
         addTunableParameter("maxStateChars",  3000, Arrays.asList(500, 1000, 2000, 3000, 5000));
+        addTunableParameter("stateFeatureClass", "");
+        addTunableParameter("actionListClass", "");
         addTunableParameter("verbose", false);
     }
 
@@ -27,6 +31,8 @@ public class LLMActionParams extends PlayerParameters {
         modelSize = (LLMAccess.LLM_SIZE) getParameterValue("modelSize");
         logFileName = (String) getParameterValue("logFileName");
         maxStateChars = (int) getParameterValue("maxStateChars");
+        stateFeatureClass = (String) getParameterValue("stateFeatureClass");
+        actionListClass = (String) getParameterValue("actionListClass");
         verbose = (boolean) getParameterValue("verbose");
     }
 

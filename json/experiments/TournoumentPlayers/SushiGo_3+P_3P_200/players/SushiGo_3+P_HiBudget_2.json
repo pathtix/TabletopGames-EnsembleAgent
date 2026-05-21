@@ -1,10 +1,10 @@
 {
   "budgetType": "BUDGET_TIME",
-  "rolloutLength": 30,
-  "opponentTreePolicy": "OneTree",
+  "rolloutLength": 300,
+  "opponentTreePolicy": "MultiTree",
   "MASTGamma": 0,
   "heuristic": {
-    "class": "players.heuristics.LeaderHeuristic"
+    "class": "players.heuristics.ScoreHeuristic"
   },
   "K": 1,
   "exploreEpsilon": 0.1,
@@ -13,5 +13,5 @@
   "rolloutType": "RANDOM",
   "information": "Information_Set",
   "class": "players.mcts.MCTSParams",
-  "budget": 750
+  "budget": 400
 }

@@ -1,0 +1,8 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "matchedBudgetMs": 1000,
+  "catanLLMPhase": {
+    "enum": "games.catan.CatanGameState$CatanGamePhase",
+    "value": "Setup"
+  }
+}
