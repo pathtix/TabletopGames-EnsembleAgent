@@ -1,7 +1,0 @@
-{
-  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/Poker_2P_2P_200/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/Poker_2P_2P_200/Poker_2P.json",
-  "phaseConfig": "json/experiments/EnsemblePlayers/Poker_2P_2P_200/LLMPhaseConfig.json",
-  "llmTimeoutFallback" : true
-}

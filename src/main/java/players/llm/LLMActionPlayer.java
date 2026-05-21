@@ -108,8 +108,11 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Return exactly one line, do not include any other text, punctuation, or explanation.
         - Use exactly the prefix ACTION_ID:
         - The id must be one of the listed action ids.
+        
+        Strategy:
         - Each action corresponds to drawing a line between two dots.
-        - If you complete a box by drawing a line, you get an extra turn.
+        - Completing a box gives you another turn, chain completions when possible.
+        - Avoid drawing the third side of a box (it hands a free box to the opponent).
 
         State summary:
         %s
@@ -169,15 +172,20 @@ public class LLMActionPlayer extends AbstractPlayer {
     private String buildPromptConnect4(AbstractGameState gameState, String stateText, String actionsText) {
         return """
         You are a Connect4 agent. You are Player %d (%s).
-        Goal: get 4 of your pieces in a row (horizontal, vertical, or diagonal). Block opponent threats.
+        
+        Rules:
+        - The id must be one of the listed action ids.
+        - Use exactly the prefix ACTION_ID:
+        
+        Strategy:
+        - Goal: get 4 of your pieces in a row (horizontal, vertical, or diagonal).
+        - Block opponent threats, a line of 3 piece of opponent's must be answered.
 
         Gravity: a piece in column C lands on the lowest empty row in that column.
 
         Think in 2-3 sentences max, then end with ACTION_ID on the last line.
         Do NOT redraw the board. Do NOT repeat the action list.
-
-        The id must be one of the listed action ids.
-
+        
         Board (x=P0, o=P1, .=empty):
         %s
 
@@ -214,9 +222,10 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Chopsticks: on a future turn, pick 2 cards instead of 1
         - Pudding: end of GAME - most=+6pts, fewest=-6pts (no penalty in 2-player)
 
-        Set building rules:
+        Strategy:
         - If you have already played Tempura or Sashimi, PRIORITIZE picking more of the same to complete the set.
-
+        - Build toward high-value combos early, MCTS will close it out after rotation.
+        
         Rules:
         - The id must be one of the listed action ids.
         - Use exactly the prefix ACTION_ID: on the final line.
@@ -243,7 +252,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
         Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
 
-        Placement goals (in priority order):
+        Strategy (Placement goals (in priority order)):
         1. Maximise total pip count : higher pips = more frequent resource production
         2. Maximise resource diversity : 3 different resources is better than duplicates
         3. In Round 2 avoid numbers already covered by your first settlement
