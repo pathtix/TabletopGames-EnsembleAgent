@@ -51,27 +51,9 @@ public class PhaseBasedEnsemblePlayer extends AbstractPlayer {
 
     @Override
     public AbstractAction _getAction(AbstractGameState gameState, List<AbstractAction> possibleActions) {
-        PhaseBasedEnsembleParams params = getParameters();
         if (!useLLM(gameState)) {
             return getMCTSPlayer()._getAction(gameState, possibleActions);
         }
-
-        if (params.llmTimeoutFallback) {
-            long timeBudgetMs = params.phaseConfig.matchedBudgetMs;
-
-            long start = System.currentTimeMillis();
-            AbstractAction llmAction = getLLMPlayer()._getAction(gameState, possibleActions);
-            long elapsed = System.currentTimeMillis() - start;
-
-            if (elapsed > timeBudgetMs) {
-                // to prevent overhead of another mcts action creation
-                // return getMCTSPlayer()._getAction(gameState, possibleActions);
-                return possibleActions.get(rnd.nextInt(possibleActions.size()));
-            }
-
-            return llmAction;
-        }
-
         return getLLMPlayer()._getAction(gameState, possibleActions);
     }
 
