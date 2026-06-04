@@ -17,21 +17,21 @@ public class LLMAccessGoogleGenAI {
     private final Client geminiClient;
 
     public static final String[] GEMINI_MODEL_NAMES = {
-        "gemini-2.0-flash-lite", // 0
-        "gemini-2.0-flash", // 1
-        "gemini-2.5-flash-preview-05-20", // 2
-        "gemini-2.5-flash-lite", // 3
-        "gemini-2.5-flash", // 4
-        "gemini-2.5-pro", // 5
-        "gemini-3-flash-preview", // 6
-        "gemini-3.1-flash-lite-preview", // 7
+        "gemini-2.5-flash-lite",
+        "gemini-2.5-flash",
+        "gemini-3.1-flash-lite",
+        "gemini-3-flash",
+        "gemini-3.5-flash",
+        "gemma-4-26b-a4b-it",
+        "gemma-4-e4b-it",
+        "gemma-4-e2b-it"
     };
+
 
     public static String modelNameForSize(LLMAccess.LLM_SIZE size) {
         return switch (size) {
-            case SMALL -> GEMINI_MODEL_NAMES[0]; // gemini-2.0-flash-lite
-            case LARGE -> GEMINI_MODEL_NAMES[1]; // gemini-2.0-flash
-            case REASONING -> GEMINI_MODEL_NAMES[2]; // gemini-2.5-flash-preview-05-20
+            case SMALL -> GEMINI_MODEL_NAMES[5]; // gemma-4-26b-a4b-it
+            case LARGE -> GEMINI_MODEL_NAMES[1]; // gemini-2.5-flash
             default -> GEMINI_MODEL_NAMES[0]; // just get SMALL one
         };
     }
@@ -142,7 +142,6 @@ public class LLMAccessGoogleGenAI {
                     contentsToSend,
                     generateContentConfig
                 );
-
             String responseString = response.text();
 
             // add models answer to chat history as well, if chat history is gettin used
@@ -157,9 +156,7 @@ public class LLMAccessGoogleGenAI {
             outputTokens += tokenizer.estimateTokenCountInText(responseString);
             return responseString;
         } catch (Exception e) {
-            System.out.println(
-                "Error getting Gemini response: " + e.getMessage()
-            );
+            System.out.println("[GenAI] Error (" + e.getClass().getName() + "): " + e.getMessage());
             e.printStackTrace();
 
             if (useChatHistory) {
