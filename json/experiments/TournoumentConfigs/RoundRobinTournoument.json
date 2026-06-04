@@ -4,7 +4,7 @@
   "mode" : "exhaustive",
   "matchups" : 50,
   "verbose" : true,
-  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/SushiGo_3P_500/listeners/LLMPhaseBudgetListener.json",
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/SushiGo_3P_500_Fair/listeners/LLMPhaseBudgetListener.json",
   "destDir" : "json/experiments/OutputDirectory/SushiGo_3P_500",
   "playerDirectory" : "json/experiments/TournoumentPlayers/SushiGo_3P_500/players"
 }
