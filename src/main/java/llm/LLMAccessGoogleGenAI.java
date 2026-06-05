@@ -15,6 +15,8 @@ import java.util.List;
 public class LLMAccessGoogleGenAI {
 
     private final Client geminiClient;
+    private final String project = System.getenv("GEMINI_PROJECT");
+    private final String location = "europe-west2";
 
     public static final String[] GEMINI_MODEL_NAMES = {
         "gemini-2.5-flash-lite",
@@ -61,10 +63,13 @@ public class LLMAccessGoogleGenAI {
         String location,
         String logFileName
     ) {
+        String finalProject = (project != null && !project.isEmpty()) ? project : this.project;
+        String finalLocation = (location != null && !location.isEmpty()) ? location : this.location;
+
         this.geminiClient = Client.builder()
             .vertexAI(true)
-            .project(project)
-            .location(location)
+            .project(finalProject)
+            .location(finalLocation)
             .build();
 
         initLog(logFileName);
