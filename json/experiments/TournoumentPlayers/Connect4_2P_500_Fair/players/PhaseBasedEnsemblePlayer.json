@@ -2,6 +2,5 @@
   "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
   "llmParamsFile":  "json/experiments/EnsemblePlayers/Connect4_2P_500_Fair/LLMActionPlayer.json",
   "mctsParamsFile": "json/experiments/EnsemblePlayers/Connect4_2P_500_Fair/Connect4.json",
-  "phaseConfigFile": "json/experiments/EnsemblePlayers/Connect4_2P_500_Fair/LLMPhaseConfig.json",
-  "llmTimeoutFallback" : true
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Connect4_2P_500_Fair/LLMPhaseConfig.json"
 }

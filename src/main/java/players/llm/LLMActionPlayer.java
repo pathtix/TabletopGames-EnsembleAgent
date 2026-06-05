@@ -334,7 +334,7 @@ public class LLMActionPlayer extends AbstractPlayer {
     private LLMAccessGoogleGenAI getLLMAccessGenAI() {
         if (llmAccessGenAI == null) {
             String project = System.getenv("GEMINI_PROJECT");
-            String location = "europe-west9";
+            String location = "europe-west2";
             String logFile = getParameters().logFileName;
 
             if (getParameters().verbose)
