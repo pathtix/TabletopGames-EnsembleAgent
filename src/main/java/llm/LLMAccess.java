@@ -3,10 +3,8 @@ package llm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.AccessToken;
 import com.google.auth.oauth2.GoogleCredentials;
-import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.anthropic.AnthropicChatModel;
 import dev.langchain4j.model.anthropic.AnthropicChatModelName;
-import dev.langchain4j.model.chat.response.ChatResponse;
 import dev.langchain4j.model.mistralai.MistralAiChatModelName;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModelName;
@@ -17,7 +15,6 @@ import dev.langchain4j.model.mistralai.MistralAiChatModel;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.vertexai.gemini.VertexAiGeminiChatModel;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
-import dev.langchain4j.service.AiServices;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -26,7 +23,6 @@ import utilities.JSONUtils;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -47,12 +43,13 @@ public class LLMAccess {
     String geminiProject = System.getenv("GEMINI_PROJECT");
     String openaiToken = System.getenv("OPENAI_TOKEN");
     String anthropicToken = System.getenv("ANTHROPIC_TOKEN");
+    String openRouterToken = System.getenv("OPENROUTER_TOKEN");
 
     File logFile;
     FileWriter logWriter;
 
-//    String geminiLocation = "europe-west2";
-    String geminiLocation = "europe-west9";
+    String geminiLocation = "europe-west2";
+
     // String llamaLocationLarge = "us-east5";  // Required for Llama 4 Maverick
     String llamaLocationLarge = "us-central1";
     String llamaLocationSmall = "us-central1";
@@ -77,7 +74,8 @@ public class LLMAccess {
         OPENAI,
         ANTHROPIC,
         LLAMA,
-        LOCAL_LLM
+        LOCAL_LLM,
+        OPENROUTER
     }
 
     public enum LLM_SIZE {
@@ -158,16 +156,9 @@ public class LLMAccess {
             }
         }
 
+        // local models
         localLLMModelNames[0] = "qwen/qwen3.5-9b"; // -> thinking model, works on gguf
         localLLMModelNames[1] = "qwen/qwen3-4b-2507"; // -> non thinking model works on mlx as well
-
-        // memory window for 20 messages
-        // TODO: use chatMemory to save game rule details etc.
-        MessageWindowChatMemory chatMemory = MessageWindowChatMemory.builder()
-                .maxMessages(20)
-                .build();
-
-        this.chatMemory = chatMemory;
 
         if (mistralToken != null && !mistralToken.isEmpty()) {
             mistralModel[0] = MistralAiChatModel.builder()
@@ -209,7 +200,6 @@ public class LLMAccess {
                     .maxTokens(8192)
                     .build();
         }
-
     }
 
     /**
@@ -227,15 +217,16 @@ public class LLMAccess {
             // do this the hardcore way
             response = getResponseWithLowLevelHttp(query, modelSize);
         }
-        if  (modelType == LLM_MODEL.LOCAL_LLM) {
+        else if (modelType == LLM_MODEL.LOCAL_LLM) {
             response = getResponseWithLocalLLMEndpoints(query);
+        }
+        else if (modelType == LLM_MODEL.OPENROUTER) {
+            response = getResponseWithOpenRouterHttp(query);
         }
         else {
             ChatModel modelToUse = switch (modelType) {
                 case MISTRAL -> modelSize == LLM_SIZE.SMALL ? mistralModel[0] : mistralModel[1];
-                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[0] : geminiModel[1]; // 0 = 2.0 flash lite, 1 = 2.0 flash
-//              case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[3] : geminiModel[4]; // 3 = 2.5 flash-lite, 4 = 2.5 flash, 5 = 2.5 pro
-//              case GEMINI  -> modelSize == LLM_SIZE.SMALL ? geminiModel[6] : geminiModel[7]; // 6 = 3 flash preview, 7 = 3.1 flash-lite preview
+                case GEMINI -> modelSize == LLM_SIZE.SMALL ? geminiModel[3] : geminiModel[4]; // 3 = 2.5 flash lite, 4 = 2.5 flash
                 case OPENAI -> modelSize == LLM_SIZE.SMALL ? openaiModel[0] : openaiModel[1];
                 case ANTHROPIC -> modelSize == LLM_SIZE.SMALL ? anthropicModel[0] : anthropicModel[1];
                 default -> throw new IllegalArgumentException("Unknown model type: " + modelType);
@@ -250,16 +241,6 @@ public class LLMAccess {
             }
             if (modelToUse != null) {
                 try {
-//                    TODO : look into more possible use of history
-//                    there should be something like if it is the first query sent, add it into memory, and send it
-//                    everytime we are sending another query
-//                    https://codelabs.developers.google.com/codelabs/gemini-java-developers#8
-//
-//                    chatMemory.add(UserMessage.from(query));
-//                    ChatResponse responseFromAllMemory = modelToUse.chat(chatMemory.messages());
-//                    chatMemory.add(responseFromAllMemory.aiMessage()); // this adds response from llm to history again
-//                    String textResponse = responseFromAllMemory.aiMessage().text();
-
                     response = modelToUse.chat(query);
                 } catch (Exception e) {
                     System.out.println("Error getting response from model: " + e.getMessage());
@@ -293,11 +274,9 @@ public class LLMAccess {
         return getResponse(query, this.modelType, this.modelSize);
     }
 
-    // TODO : Implement getting response from local LLMs via endpoints (Ollama, LMStudio)
     // General implemetation is ready, but model selection is important
     // qwen 3.5 9b, wasn't really the correct model since MLX support is not ready yet
     // it runs on cpu and api call times was worse than gemini 2.0 flash
-
     private String getResponseWithLocalLLMEndpoints(String query) {
         // hardcoded first model for now, there can be other models to use later on
         String targetModel = localLLMModelNames[1];
@@ -365,6 +344,48 @@ public class LLMAccess {
         }
 
         return "";
+    }
+
+    private String getResponseWithOpenRouterHttp(String query) {
+        String apiURL = "https://openrouter.ai/api/v1/chat/completions";
+        String modelName = "meta-llama/llama-3.1-8b-instruct";
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonContent;
+        try {
+            jsonContent = objectMapper.writeValueAsString(query);
+        } catch (IOException e) {
+            System.out.println("Error converting query to JSON: " + e.getMessage());
+            return "Error converting query to JSON";
+        }
+
+        String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0,\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(apiURL))
+                .header("Authorization", "Bearer " + openRouterToken)
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody, StandardCharsets.UTF_8))
+                .build();
+
+        try {
+            String rawStringResponse = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+            JSONObject json = (rawStringResponse == null || rawStringResponse.isEmpty()) ? null : JSONUtils.fromString(rawStringResponse);
+            JSONArray choices = (JSONArray) json.get("choices");
+
+            if (choices == null || choices.isEmpty()) {
+                System.out.println("No choices found in response" + rawStringResponse);
+                return "";
+            }
+
+            JSONObject choice = (JSONObject) choices.get(0);
+            JSONObject message = (JSONObject) choice.get("message");
+            return (String) message.get("content");
+        } catch (Exception e) {
+            System.out.println("Error getting response from model: " + e.getMessage());
+            e.printStackTrace();
+        }
+        throw new RuntimeException("Failed to get response from Gemma model");
     }
 
     private String getResponseWithLowLevelHttp(String query, LLM_SIZE size) {

@@ -24,15 +24,12 @@ public class LLMAccessGoogleGenAI {
         "gemini-3.1-flash-lite",
         "gemini-3-flash",
         "gemini-3.5-flash",
-        "gemma-4-26b-a4b-it",
-        "gemma-4-e4b-it",
-        "gemma-4-e2b-it"
     };
 
 
     public static String modelNameForSize(LLMAccess.LLM_SIZE size) {
         return switch (size) {
-            case SMALL -> GEMINI_MODEL_NAMES[5]; // gemma-4-26b-a4b-it
+            case SMALL -> GEMINI_MODEL_NAMES[0]; // gemini-2.5-flash-lite
             case LARGE -> GEMINI_MODEL_NAMES[1]; // gemini-2.5-flash
             default -> GEMINI_MODEL_NAMES[0]; // just get SMALL one
         };
