@@ -1,0 +1,4 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "connect4LLMFillThreshold": 0.07
+}

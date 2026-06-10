@@ -114,8 +114,12 @@ public class LLMAccessGoogleGenAI {
         }
 
         try {
-            GenerateContentConfig.Builder configBuilder =
-                GenerateContentConfig.builder();
+            GenerateContentConfig.Builder configBuilder = GenerateContentConfig.builder();
+            configBuilder.temperature(0.1f);
+
+            // TODO: These are selected for now, after switching to Gemini 2.5 Flash these started to occur more
+            configBuilder.maxOutputTokens(256);
+            configBuilder.frequencyPenalty(0.3f);
 
             if (useThinking) {
                 configBuilder.thinkingConfig(
@@ -156,6 +160,17 @@ public class LLMAccessGoogleGenAI {
             }
 
             outputTokens += tokenizer.estimateTokenCountInText(responseString);
+
+            if (logWriter != null) {
+                String output = String.format("%nModel: %s%nQuery: %s%nResponse: %s%n", modelName, query, responseString);
+                try {
+                    logWriter.write(output);
+                    logWriter.flush();
+                }catch (Exception e) {
+                    System.out.println("Error writing to log file: " + e.getMessage());
+                }
+            }
+
             return responseString;
         } catch (Exception e) {
             System.out.println("[GenAI] Error (" + e.getClass().getName() + "): " + e.getMessage());

@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Poker_MAST_4P_500_LLAMA/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Poker_MAST_4P_500_LLAMA/Poker_MAST.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Poker_MAST_4P_500_LLAMA/LLMPhaseConfig.json"
+}

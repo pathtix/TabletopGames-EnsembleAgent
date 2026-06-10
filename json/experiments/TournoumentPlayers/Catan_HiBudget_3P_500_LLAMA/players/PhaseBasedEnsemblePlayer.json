@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Catan_HiBudget_3P_500_LLAMA/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Catan_HiBudget_3P_500_LLAMA/Catan_HiBudget.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Catan_HiBudget_3P_500_LLAMA/LLMPhaseConfig.json"
+}

@@ -359,7 +359,7 @@ public class LLMAccess {
             return "Error converting query to JSON";
         }
 
-        String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0,\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
+        String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0.1,\"frequency_penalty\":0.3,\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(apiURL))

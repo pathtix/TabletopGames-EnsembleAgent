@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/SushiGo_HiBudget_3P_500_LLAMA_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/SushiGo_HiBudget_3P_500_LLAMA_Fair/SushiGo_HiBudget.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/SushiGo_HiBudget_3P_500_LLAMA_Fair/LLMPhaseConfig.json"
+}

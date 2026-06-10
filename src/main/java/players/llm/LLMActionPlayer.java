@@ -108,7 +108,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Return exactly one line, do not include any other text, punctuation, or explanation.
         - Use exactly the prefix ACTION_ID:
         - The id must be one of the listed action ids.
-        
+
         Strategy:
         - Each action corresponds to drawing a line between two dots.
         - Completing a box gives you another turn, chain completions when possible.
@@ -123,10 +123,9 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions:
         %s
-        
+
         Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <int>.
-        ACTION_ID: <int>
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
         """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer(), stateText, actionsText);
     }
 
@@ -148,7 +147,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
 
         Strategy: Assess your hand strength (strong / medium / weak / drawing) using your hole cards and the community cards. The state JSON includes pot, costToCall, and potOddsPct, call only when your hand strength justifies the pot odds.
-        
+
         Game state:
         %s
 
@@ -162,21 +161,20 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions (id  action):
         %s
-        
-        Think in exactly one sentence.
-        Your response MUST end with exactly: ACTION_ID: <int>.
-        ACTION_ID: <int>
+
+        Think in exactly one sentence
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
         """.formatted(llmPlayer, stateText, actionsText);
     }
 
     private String buildPromptConnect4(AbstractGameState gameState, String stateText, String actionsText) {
         return """
         You are a Connect4 agent. You are Player %d (%s).
-        
+
         Rules:
         - The id must be one of the listed action ids.
         - Use exactly the prefix ACTION_ID:
-        
+
         Strategy:
         - Goal: get 4 of your pieces in a row (horizontal, vertical, or diagonal).
         - Block opponent threats, a line of 3 piece of opponent's must be answered.
@@ -185,16 +183,15 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Think in 2-3 sentences max, then end with ACTION_ID on the last line.
         Do NOT redraw the board. Do NOT repeat the action list.
-        
+
         Board (x=P0, o=P1, .=empty):
         %s
 
         Legal actions (id col):
         %s
-        
+
         Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <int>.
-        ACTION_ID: <int>
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
         """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer() == 0 ? "x" : "o", stateText, actionsText);
     }
 
@@ -225,7 +222,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         Strategy:
         - If you have already played Tempura or Sashimi, PRIORITIZE picking more of the same to complete the set.
         - Build toward high-value combos early, MCTS will close it out after rotation.
-        
+
         Rules:
         - The id must be one of the listed action ids.
         - Use exactly the prefix ACTION_ID: on the final line.
@@ -236,10 +233,9 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         Legal actions (id card):
         %s
-        
+
         Think in exactly one sentence.
-        Your response MUST end with exactly: ACTION_ID: <int>.
-        ACTION_ID: <int>
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
         """.formatted(gameState.getCurrentPlayer(), handNumber, totalHands, totalHands - 1, stateText, actionsText);
     }
 
@@ -264,8 +260,7 @@ public class LLMActionPlayer extends AbstractPlayer {
         %s
 
         Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <int>.
-        ACTION_ID: <int>
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
         """.formatted(round, stateText, actionsText);
     }
 
