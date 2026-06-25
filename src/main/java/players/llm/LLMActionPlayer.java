@@ -2,10 +2,12 @@ package players.llm;
 
 import core.AbstractGameState;
 import core.AbstractPlayer;
+import core.Game;
 import core.actions.AbstractAction;
 import core.interfaces.IActionListBuilder;
 import core.interfaces.IStateFeatureJSON;
 import games.GameType;
+import games.catan.CatanGameState;
 import games.sushigo.SGGameState;
 import llm.LLMAccess;
 import llm.LLMAccessGoogleGenAI;
@@ -67,10 +69,10 @@ public class LLMActionPlayer extends AbstractPlayer {
         if (getParameters().verbose)
         {
             System.out.printf("[%s] API call took %d ms (model=%s size=%s)%n", this, elapsedMs, getParameters().modelType, getParameters().modelSize);
-            logIfInvalidAction(response);
+            logIfInvalidAction(response, possibleActions.size(), gameState.getGameType());
         }
 
-        return parseActionId(response);
+        return parseActionId(response, possibleActions.size(), gameState.getGameType());
     }
 
     private String getResponse(String prompt) {
@@ -86,47 +88,12 @@ public class LLMActionPlayer extends AbstractPlayer {
         GameType gameName = gameState.getGameType();
 
         return switch (gameName) {
-            case DotsAndBoxes -> buildPromptDotsAndBoxes(gameState, stateText, actionsText);
             case Poker -> buildPromptPoker(gameState, stateText, actionsText);
             case Connect4 -> buildPromptConnect4(gameState, stateText, actionsText);
             case SushiGo -> buildPromptSushiGo(gameState, stateText, actionsText);
             case Catan -> buildPromptCatan(gameState, stateText, actionsText);
             default -> "Game is not supported!";
         };
-    }
-
-    private String buildPromptDotsAndBoxes(AbstractGameState gameState, String stateText, String actionsText) {
-        return """
-        You are controlling a Dots and Boxes game playing agent.
-        You are Player %d. Choose the action that is best for Player %d.
-        Choose exactly one legal action from the numbered list.
-
-        OUTPUT the final answer as following:
-        ACTION_ID: <int>
-
-        Rules:
-        - Return exactly one line, do not include any other text, punctuation, or explanation.
-        - Use exactly the prefix ACTION_ID:
-        - The id must be one of the listed action ids.
-
-        Strategy:
-        - Each action corresponds to drawing a line between two dots.
-        - Completing a box gives you another turn, chain completions when possible.
-        - Avoid drawing the third side of a box (it hands a free box to the opponent).
-
-        State summary:
-        %s
-
-        Action legend:
-        H_y_x means horizontal edge (x,y)->(x+1,y)
-        V_y_x means vertical edge (x,y)->(x,y+1)
-
-        Legal actions:
-        %s
-
-        Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer(), stateText, actionsText);
     }
 
     private String buildPromptPoker(AbstractGameState gameState, String stateText, String actionsText) {
@@ -136,20 +103,9 @@ public class LLMActionPlayer extends AbstractPlayer {
         You are a World Class Texas Hold'em poker agent.
         You are Player %d. Maximise your long run chip count.
 
-        OUTPUT the final answer as following:
-        ACTION_ID: <int>
-
-        Rules:
-        - Return exactly one line with no other text, punctuation, or explanation.
-        - Use exactly the prefix ACTION_ID:
-        - The id must be one of the listed action ids.
-
         Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
 
         Strategy: Assess your hand strength (strong / medium / weak / drawing) using your hole cards and the community cards. The state JSON includes pot, costToCall, and potOddsPct, call only when your hand strength justifies the pot odds.
-
-        Game state:
-        %s
 
         Action glossary:
         - Check  : stay in without betting (only when no bet faces you)
@@ -158,6 +114,9 @@ public class LLMActionPlayer extends AbstractPlayer {
         - Raise xM : raise to M times the current bet
         - AllIn  : commit all remaining chips
         - Fold   : surrender your hand
+
+        Game state:
+        %s
 
         Legal actions (id  action):
         %s
@@ -240,23 +199,107 @@ public class LLMActionPlayer extends AbstractPlayer {
     }
 
     private String buildPromptCatan(AbstractGameState gameState, String stateText, String actionsText) {
+        if (gameState.getGamePhase().equals(CatanGameState.CatanGamePhase.Robber))
+            return buildPromptCatanRobber(gameState, stateText, actionsText);
+
+        return buildPromptCatanSetup(gameState, stateText, actionsText);
+    }
+
+    private String buildPromptCatanSetup(AbstractGameState gameState, String stateText, String actionsText) {
         int round = gameState.getRoundCounter() + 1;
+
         return """
         You are placing a settlement in Catan setup (round %d/2).
         An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
 
-        A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
-        Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
+        A settlement sits on a corner where up to 3 tiles meet. Each tile has its OWN dice number and produces its resource whenever that number is rolled.
 
-        Strategy (Placement goals (in priority order)):
-        1. Maximise total pip count : higher pips = more frequent resource production
-        2. Maximise resource diversity : 3 different resources is better than duplicates
-        3. In Round 2 avoid numbers already covered by your first settlement
+        Two dice are rolled each turn, so middle numbers are far more likely than extreme ones: 6 and 8 come up most often, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. A tile numbered 6 or 8 therefore produces much more frequently than one numbered 2 or 12.
+
+        Example: a settlement on a wood-5 tile, a wood-9 tile, and a brick-6 tile makes 1 wood on a roll of 5, 1 wood on a roll of 9, and 1 brick on a roll of 6.
+
+        Strategy:
+        A good starting spot is one that produces frequently AND gives you a useful spread (diversity) of resources, without leaning too hard on a single dice number.
+
+        In round 2, also consider what your first settlement already covers (shown in the state).
 
         Gamestate:
         %s
 
-        Legal placements (id -> tiles touched -> total pips):
+        Legal placements (each lists the tiles it touches as resource number):
+        %s
+
+        Think in exactly one sentence, Do NOT redraw the board.
+        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
+        """.formatted(round, stateText, actionsText);
+
+        // return """
+        // You are placing a settlement in Catan setup (round %d/2).
+        // An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+        // A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+        // Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
+
+        // Strategy (Placement goals (in priority order)):
+        // 1. Maximise total pip count : higher pips = more frequent resource production
+        // 2. Maximise resource diversity : 3 different resources is better than duplicates
+        // 3. In Round 2 avoid numbers already covered by your first settlement
+
+        // Gamestate:
+        // %s
+
+        // Legal placements (id -> tiles touched -> total pips):
+        // %s
+
+        // Think in exactly one sentence, Do NOT redraw the board.
+        // Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
+        // """.formatted(round, stateText, actionsText);
+
+        // return """
+        // You are placing a settlement in Catan setup (round %d/2).
+        // An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+        // A settlement sits on a corner where up to 3 tiles meet. Each tile has its OWN dice number and produces its resource whenever that number is rolled.
+
+        // Example: a settlement on a wood-5 tile, a wood-9 tile, and a brick-6 tile makes 1 wood on a roll of 5, 1 wood on a roll of 9, and 1 brick on a roll of 6. Numbers near 7 (6 and 8) come up far more often than numbers near 2 or 12 the "pip" value shown for each tile reflects this (more pips = pays out more often).
+
+        // Strategy:
+        // A good starting spot is one that produces frequently AND gives you a useful spread (diversity) of resources, without leaning too hard on a single dice number.
+
+        // In round 2, also consider what your first settlement already covers (shown in the state).
+
+        // Gamestate:
+        // %s
+
+        // Legal placements (each lists the tiles it touches as resource number(pip)):
+        // %s
+
+        // Think in exactly one sentence, Do NOT redraw the board.
+        // Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
+        // """.formatted(round, stateText, actionsText);
+    }
+
+    private String buildPromptCatanRobber(AbstractGameState gameState, String stateText, String actionsText) {
+        int round = gameState.getRoundCounter() + 1;
+        return """
+        You are playing the robber in Catan (round %d). You rolled 7 (or a knight played) and you must move the robber. You then steal one random resource card from a player settled on that tile.
+
+        Placing the robber on a tile BLOCKS it: that tile produces nothing for anyone settled on it until the robber moves again.
+
+        How often a tile pays out depends only on its number, not its resource. Two dice make 6 and 8 the most common, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. So a tile numbered 6 or 8 is a far stronger block than one numbered 2, 11 or 12, whatever resource it carries.
+
+        Your goal is to damage your strongest opponent by placing the robber on one of its frequent tiles. Do not just match their main resource, blocking that resource on a rare number like 11 denies them almost nothing.
+
+        Don't block a tile you are also settled on ("blocks you").
+
+        When the block value is similar, steal from whoever holds the most cards.
+
+        "steal: none" means no card is there to be taken. (player has no resource cards)
+
+        Gamestate (opponents' settlements show what each opponent produces):
+        %s
+
+        Legal robber moves:
         %s
 
         Think in exactly one sentence, Do NOT redraw the board.
@@ -290,26 +333,34 @@ public class LLMActionPlayer extends AbstractPlayer {
         return "Class couldn't be found.";
     }
 
-    private Integer parseActionId(String response) {
+    private Integer parseActionId(String response, int actionCount, GameType gameType) {
         if (response == null) return null;
-        Matcher matcher = Pattern.compile("(?i)ACTION_ID\\s*:\\s*(-?\\d+)").matcher(response);
 
-        if (!matcher.find()) return null;
+        java.util.List<String> patterns = new java.util.ArrayList<>();
+        patterns.add("(?i)ACTION[_\\s]*ID\\s*[:=]\\s*(\\d+)"); // this one is universal for all games to parse the action
 
-        try {
-            return Integer.parseInt(matcher.group(1));
-        } catch (NumberFormatException e) {
-            return null;
+        if (gameType == GameType.Catan) {
+            patterns.add("(\\d+)\\s*\\[[^\\]]*\\(\\d+pip\\)"); // 29 [BRICK 5(4pip)...
+            patterns.add("(?i)\\b(?:location|position|tile|placement)\\s+(\\d+)"); // position 43, position x
         }
+
+        for (String pattern : patterns) {
+            Matcher matcher = Pattern.compile(pattern).matcher(response);
+            if (matcher.find()) {
+                int id =  Integer.parseInt(matcher.group(1));
+                if (id >= 0 && id < actionCount) return id;
+            }
+        }
+        return null;
     }
 
     private boolean isValidActionId(Integer actionId, int actionCount) {
         return actionId != null && actionId >= 0 && actionId < actionCount;
     }
 
-    private void logIfInvalidAction(String response) {
+    private void logIfInvalidAction(String response, int actionCount, GameType gameType) {
         if (!getParameters().verbose) return;
-        if (parseActionId(response) == null) System.out.printf("[%s] Invalid response: %s%n", this, response);
+        if (parseActionId(response, actionCount, gameType) == null) System.out.printf("[%s] Invalid response: %s%n", this, response);
     }
 
     private LLMAccess getLLMAccess() {
@@ -329,12 +380,15 @@ public class LLMActionPlayer extends AbstractPlayer {
     private LLMAccessGoogleGenAI getLLMAccessGenAI() {
         if (llmAccessGenAI == null) {
             String project = System.getenv("GEMINI_PROJECT");
+            String apiKey = System.getenv("GOOGLE_AI_STUDIO_KEY");
             String location = "europe-west2";
             String logFile = getParameters().logFileName;
 
             if (getParameters().verbose)
                 System.out.printf("[%s] Creating LLMAccessGoogleGenAI: model=%s%n", this, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
-            llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile);
+
+//            llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile); // Vertex AI
+            llmAccessGenAI = new LLMAccessGoogleGenAI(apiKey, logFile);
         }
         return llmAccessGenAI;
     }

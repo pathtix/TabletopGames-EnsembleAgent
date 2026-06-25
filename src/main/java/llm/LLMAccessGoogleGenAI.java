@@ -119,7 +119,7 @@ public class LLMAccessGoogleGenAI {
 
             // TODO: These are selected for now, after switching to Gemini 2.5 Flash these started to occur more
             configBuilder.maxOutputTokens(256);
-            configBuilder.frequencyPenalty(0.3f);
+//            configBuilder.frequencyPenalty(0.3f);
 
             if (useThinking) {
                 configBuilder.thinkingConfig(

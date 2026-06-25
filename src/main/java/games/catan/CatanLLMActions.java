@@ -3,12 +3,18 @@ package games.catan;
 import core.AbstractGameState;
 import core.actions.AbstractAction;
 import core.interfaces.IActionListBuilder;
+import games.catan.actions.robber.MoveRobberAndSteal;
+import games.catan.components.Building;
 import games.catan.actions.setup.PlaceSettlementWithRoad;
 import games.catan.components.CatanTile;
+import games.puertorico.actions.Build;
 
 import java.util.*;
 
 public class CatanLLMActions implements IActionListBuilder {
+    private static final boolean SHOW_TOTALS = false;
+    private static final boolean SHOW_PIPS = false;
+
     @Override
     public String buildActionsText(List<AbstractAction> actions, AbstractGameState gameState) {
         Set<String> seenTileSets = new HashSet<>();
@@ -36,6 +42,9 @@ public class CatanLLMActions implements IActionListBuilder {
         }
 
         // TODO : robber and trade should be added as their action compactions
+        if (action instanceof MoveRobberAndSteal robber) {
+            return formatRobber(robber, gameState);
+        }
 
         try {
             return action.getString(gameState).replaceAll("\\s+", " ").trim();
@@ -63,11 +72,49 @@ public class CatanLLMActions implements IActionListBuilder {
         for (ProductiveTile t : productiveTiles(touching, gameState)) {
             totalPips += t.pips();
             resources.add(t.resource().name());
-            parts.add(t.resource() + " " + t.number() + "(" + t.pips() + "pip)");
+            parts.add(SHOW_PIPS
+                ? t.resource() + " " + t.number() + "(" + t.pips() + "pip)"
+                : t.resource() + " " + t.number());
         }
 
         if (parts.isEmpty()) return "SEA/DESERT only";
-        return String.format("[%s] -> %d pips, %d resources", String.join(", ", parts), totalPips, resources.size());
+        String tiles = "[" + String.join(", ", parts) + "]";
+        return SHOW_TOTALS ? String.format("%s -> %d pips, %d resources", tiles, totalPips, resources.size()) : tiles;
+        // return String.format("[%s] -> %d pips, %d resources", String.join(", ", parts), totalPips, resources.size());
+    }
+
+    private String formatRobber(MoveRobberAndSteal robber, AbstractGameState gameState) {
+        CatanGameState cgs = (CatanGameState) gameState;
+        CatanParameters params = (CatanParameters) cgs.getGameParameters();
+        CatanTile tile = cgs.getBoard()[robber.x][robber.y];
+
+        String tileString;
+        CatanParameters.Resource resource = params.productMapping.get(tile.getTileType());
+
+        // tile information
+        if (resource == null || tile.getNumber() == 0) {
+            tileString = "desert/sea (no production)";
+        } else {
+            tileString = SHOW_PIPS ? resource + " " + tile.getNumber() + " (" + (6 - Math.abs(tile.getNumber() - 7)) + "pip)"
+            : resource + " " + tile.getNumber();
+        }
+
+        // settlement, ownership information
+        List<String> blocked = new ArrayList<>();
+        for (Building b : cgs.getBuildings(tile)) {
+            if (b.getOwnerId() == -1) continue;
+
+            blocked.add(b.getOwnerId() == robber.player ? "you" : "p" + b.getOwnerId());
+        }
+
+        String blocking = blocked.isEmpty() ? "blocks 0 player" : "blocks " + String.join(",", blocked);
+
+        // stealing information
+        String stealing = robber.targetPlayer < 0 ? "steal: none"
+                      : "steal p" + robber.targetPlayer + " (" + cgs.getNResourcesInHand(robber.targetPlayer) + " cards)";
+
+
+        return "move robber to " + tileString + " | " + blocking + " | " + stealing;
     }
 
     private List<CatanTile> getTouchingTiles(PlaceSettlementWithRoad pswr, AbstractGameState gameState) {

@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_SetupRobber_3P_200_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_SetupRobber_3P_200_Fair/Catan_LearnedHeuristic.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_SetupRobber_3P_200_Fair/LLMPhaseConfig.json"
+}

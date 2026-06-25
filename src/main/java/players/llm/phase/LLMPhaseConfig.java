@@ -3,6 +3,11 @@ import games.catan.CatanGameState;
 import games.poker.PokerGameState;
 import org.json.simple.JSONObject;
 import utilities.JSONUtils;
+import java.util.Set;
+import java.util.EnumSet;
+
+import org.apache.hadoop.shaded.com.google.gson.JsonArray;
+import org.json.simple.JSONArray;
 
 public class LLMPhaseConfig {
     public int matchedBudgetMs = 500;
@@ -12,7 +17,7 @@ public class LLMPhaseConfig {
     public boolean sushiGoLLMUntilFullRotation = true;
 
     // TODO: Robber and Trade phases can also be implemented
-    public CatanGameState.CatanGamePhase catanLLMPhase = CatanGameState.CatanGamePhase.Setup;
+    public Set<CatanGameState.CatanGamePhase> catanLLMPhases = EnumSet.of(CatanGameState.CatanGamePhase.Setup);
 
     // use LLM until pokerLLMPhase (pokerLLMPhase included) use MCTS after
     public PokerGameState.PokerGamePhase pokerLLMPhase = PokerGameState.PokerGamePhase.Preflop;
@@ -29,8 +34,12 @@ public class LLMPhaseConfig {
         if (json.containsKey("sushiGoLLMUntilFullRotation"))
             sushiGoLLMUntilFullRotation = (boolean) json.get("sushiGoLLMUntilFullRotation");
 
-        if (json.containsKey("catanLLMPhase"))
-            catanLLMPhase = JSONUtils.loadClassFromJSON((JSONObject) json.get("catanLLMPhase"));
+        if (json.containsKey("catanLLMPhases")) {
+            JSONObject phasesJson = (JSONObject) json.get("catanLLMPhases");
+            catanLLMPhases = EnumSet.noneOf(CatanGameState.CatanGamePhase.class);
+            for (Object o : (JSONArray) phasesJson.get("value"))
+                catanLLMPhases.add(CatanGameState.CatanGamePhase.valueOf((String) o));
+        }
 
         if (json.containsKey("pokerLLMPhase"))
             pokerLLMPhase = JSONUtils.loadClassFromJSON((JSONObject) json.get("pokerLLMPhase"));

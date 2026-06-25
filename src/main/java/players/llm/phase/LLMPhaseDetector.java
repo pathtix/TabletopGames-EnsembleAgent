@@ -30,7 +30,7 @@ public class LLMPhaseDetector {
                 SGGameState sgs = (SGGameState) gameState;
                 yield sgs.getDeckRotations() < sgs.getNPlayers() - 1;
             }
-            case Catan -> gameState.getGamePhase().equals(config.catanLLMPhase);
+            case Catan -> config.catanLLMPhases.contains(gameState.getGamePhase());
             case Poker -> {
                 PokerGameState.PokerGamePhase phase = (PokerGameState.PokerGamePhase) gameState.getGamePhase();
                 yield phase.ordinal() <= config.pokerLLMPhase.ordinal();

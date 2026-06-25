@@ -359,7 +359,10 @@ public class LLMAccess {
             return "Error converting query to JSON";
         }
 
-        String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0.1,\"frequency_penalty\":0.3,\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
+        String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0.1,\"frequency_penalty\":0.3," +
+                // "\"provider\":{\"order\":[\"Groq\"], \"allow_fallbacks\":false}," +
+                "\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(apiURL))
@@ -382,10 +385,40 @@ public class LLMAccess {
             JSONObject message = (JSONObject) choice.get("message");
             return (String) message.get("content");
         } catch (Exception e) {
-            System.out.println("Error getting response from model: " + e.getMessage());
-            e.printStackTrace();
+                System.out.println("Error getting response from model: " + e.getMessage());
+                e.printStackTrace();
         }
-        throw new RuntimeException("Failed to get response from Gemma model");
+        throw new RuntimeException("Failed to get response from Openrouter LLama 3.1 8B Instruct model");
+
+//        int maxRetries = 3;
+//        for (int attempt = 0; attempt < maxRetries; attempt++) {
+//            try {
+//                HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+//
+//                if (response.statusCode() == 429) {
+//                    System.out.println("Groq returned 429 status code " + "attempt (" + attempt + 1 + ")" + "waiting 1s and retrying...");
+//                    Thread.sleep(1000);
+//                    continue;
+//                }
+//
+//                String rawStringResponse = response.body();
+//                JSONObject json = (rawStringResponse == null || rawStringResponse.isEmpty()) ? null : JSONUtils.fromString(rawStringResponse);
+//                JSONArray choices = (JSONArray) json.get("choices");
+//
+//                if (choices == null || choices.isEmpty()) {
+//                    System.out.println("No choices found in response" + rawStringResponse);
+//                    return "";
+//                }
+//
+//                JSONObject choice = (JSONObject) choices.get(0);
+//                JSONObject message = (JSONObject) choice.get("message");
+//                return (String) message.get("content");
+//            } catch (Exception e) {
+//                System.out.println("Error getting response from model: " + e.getMessage());
+//                e.printStackTrace();
+//            }
+//        }
+//        throw new RuntimeException("Failed to get response from Openrouter (Groq) model after " + maxRetries + " attempts.");
     }
 
     private String getResponseWithLowLevelHttp(String query, LLM_SIZE size) {
