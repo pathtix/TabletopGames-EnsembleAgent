@@ -1,0 +1,11 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.poker.PokerLLMFeatures",
+  "actionListClass" : "games.poker.PokerLLMActions",
+  "promptFile": { "default": "json/prompts/Poker/rankings_only.txt" },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "GEMINI"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/OutputDirectory/Poker_PreflopFlopTurnRiver_2P_200_Fair/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

@@ -237,6 +237,12 @@ public class SGGameState extends AbstractGameState {
         return playedCards;
     }
 
+    // Discard pile getter so LLMActionPlayer can count Maki as physical cards
+    // (getPlayedCardTypesAllGame aggregates Maki by icon count, losing per-card counts).
+    public Deck<SGCard> getDiscardPile() {
+        return discardPile;
+    }
+
     @Override
     protected ArrayList<Integer> _getUnknownComponentsIds(int playerId) {
         return new ArrayList<Integer>() {{

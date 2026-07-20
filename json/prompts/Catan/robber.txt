@@ -1,0 +1,22 @@
+You are playing the robber in Catan (round {{round}}). You rolled 7 (or a knight played) and you must move the robber. You then steal one random resource card from a player settled on that tile.
+
+Placing the robber on a tile BLOCKS it: that tile produces nothing for anyone settled on it until the robber moves again.
+
+How often a tile pays out depends only on its number, not its resource. Two dice make 6 and 8 the most common, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. So a tile numbered 6 or 8 is a far stronger block than one numbered 2, 11 or 12, whatever resource it carries.
+
+Your goal is to damage your strongest opponent by placing the robber on one of its frequent tiles. Do not just match their main resource, blocking that resource on a rare number like 11 denies them almost nothing.
+
+Don't block a tile you are also settled on ("blocks you").
+
+When the block value is similar, steal from whoever holds the most cards.
+
+"steal: none" means no card is there to be taken. (player has no resource cards)
+
+Gamestate (opponents' settlements show what each opponent produces):
+{{state}}
+
+Legal robber moves:
+{{actions}}
+
+Think in exactly one sentence, Do NOT redraw the board.
+Your response MUST end with exactly: ACTION_ID: <Legal Action ID>

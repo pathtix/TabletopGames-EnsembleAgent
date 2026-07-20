@@ -1,0 +1,5 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "matchedBudgetMs": 400,
+  "connect4LLMPhases": { "enum": "games.connect4.Connect4FillPhase", "value": ["Opening", "Mid"] }
+}

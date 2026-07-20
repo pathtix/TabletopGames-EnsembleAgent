@@ -2,6 +2,8 @@ package players.llm;
 import llm.LLMAccess;
 import players.PlayerParameters;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
 
 // TODO : Later, other params like Temperature, K etc. also can be added into tunable parameters to optimise further.
 
@@ -14,14 +16,18 @@ public class LLMActionParams extends PlayerParameters {
     public int maxStateChars = 3000;
     public boolean verbose = false;
 
+    public Map<String, String> promptFile = new HashMap<>();
+
     public LLMActionParams() {
         addTunableParameter("modelType", LLMAccess.LLM_MODEL.GEMINI, Arrays.asList(LLMAccess.LLM_MODEL.values()));
         addTunableParameter("modelSize",  LLMAccess.LLM_SIZE.LARGE, Arrays.asList(LLMAccess.LLM_SIZE.values()));
         addTunableParameter("logFileName", "json/experiments/OutputDirectory/LLMActionPlayerLog.txt");
         addTunableParameter("maxStateChars",  3000, Arrays.asList(500, 1000, 2000, 3000, 5000));
+        addStaticParameter("promptFile", new HashMap<String, String>());
         addTunableParameter("stateFeatureClass", "");
         addTunableParameter("actionListClass", "");
         addTunableParameter("verbose", false);
+
     }
 
     @Override
@@ -29,6 +35,7 @@ public class LLMActionParams extends PlayerParameters {
         super._reset();
         modelType = (LLMAccess.LLM_MODEL) getParameterValue("modelType");
         modelSize = (LLMAccess.LLM_SIZE) getParameterValue("modelSize");
+        promptFile = (Map<String, String>) getParameterValue("promptFile");
         logFileName = (String) getParameterValue("logFileName");
         maxStateChars = (int) getParameterValue("maxStateChars");
         stateFeatureClass = (String) getParameterValue("stateFeatureClass");

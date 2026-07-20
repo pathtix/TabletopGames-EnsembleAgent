@@ -41,9 +41,7 @@ public class SGLLMFeatures implements IStateFeatureJSON {
         int tempura = sggs.getPlayedCardTypes(SGCard.SGCardType.Tempura, playerID).getValue();
         int sashimi = sggs.getPlayedCardTypes(SGCard.SGCardType.Sashimi,  playerID).getValue();
         json.put("tempuraPlayed", tempura);
-        json.put("tempuraNeedForNextPair", (tempura % 2 == 0) ? 2 : 1);
         json.put("sashimiPlayed", sashimi);
-        json.put("sashimiNeedForNextTriple", (sashimi % 3 == 0) ? 3 : (3 - sashimi % 3));
 
         // scores and pudding counts
         JSONObject scores = new JSONObject();

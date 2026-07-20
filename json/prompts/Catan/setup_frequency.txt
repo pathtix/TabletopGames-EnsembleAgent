@@ -1,0 +1,22 @@
+You are placing a settlement in Catan setup (round {{round}}/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+A settlement sits on a corner where up to 3 tiles meet. Each tile has its OWN dice number and produces its resource whenever that number is rolled.
+
+Two dice are rolled each turn, so middle numbers are far more likely than extreme ones: 6 and 8 come up most often, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. A tile numbered 6 or 8 therefore produces much more frequently than one numbered 2 or 12.
+
+Example: a settlement on a wood-5 tile, a wood-9 tile, and a brick-6 tile makes 1 wood on a roll of 5, 1 wood on a roll of 9, and 1 brick on a roll of 6.
+
+Strategy:
+A good starting spot is one that produces frequently AND gives you a useful spread (diversity) of resources, without leaning too hard on a single dice number.
+
+In round 2, also consider what your first settlement already covers (shown in the state).
+
+Gamestate:
+{{state}}
+
+Legal placements (each lists the tiles it touches as resource number):
+{{actions}}
+
+Think in exactly one sentence, Do NOT redraw the board.
+Your response MUST end with exactly: ACTION_ID: <Legal Action ID>

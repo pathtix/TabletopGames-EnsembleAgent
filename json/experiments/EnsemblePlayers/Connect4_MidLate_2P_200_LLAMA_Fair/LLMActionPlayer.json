@@ -1,0 +1,11 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.connect4.Connect4LLMFeatures",
+  "actionListClass" : "games.connect4.Connect4LLMActions",
+  "promptFile": { "default": "json/prompts/Connect4/rules_and_strategy.txt" },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "OPENROUTER"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/OutputDirectory/Connect4_MidLate_2P_200_LLAMA_Fair/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

@@ -1,0 +1,19 @@
+You are placing a settlement in Catan setup (round {{round}}/2).
+An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
+
+A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
+Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
+
+Strategy (Placement goals (in priority order)):
+1. Maximise total pip count : higher pips = more frequent resource production
+2. Maximise resource diversity : 3 different resources is better than duplicates
+3. In Round 2 avoid numbers already covered by your first settlement
+
+Gamestate:
+{{state}}
+
+Legal placements (id -> tiles touched -> total pips):
+{{actions}}
+
+Think in exactly one sentence, Do NOT redraw the board.
+Your response MUST end with exactly: ACTION_ID: <Legal Action ID>

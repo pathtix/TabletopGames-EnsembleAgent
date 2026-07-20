@@ -1,0 +1,4 @@
+{
+  "class": "evaluation.listeners.LLMPhaseBudgetListener",
+  "args": ["json/experiments/EnsemblePlayers/Catan_Full_3P_200_Fair/LLMPhaseConfig.json"]
+}

@@ -2,6 +2,7 @@ package games.catan;
 
 import core.AbstractGameState;
 import core.components.BoardNodeWithEdges;
+import core.components.Counter;
 import core.interfaces.IStateFeatureJSON;
 import games.catan.components.CatanTile;
 import org.json.simple.JSONObject;
@@ -16,6 +17,14 @@ public class CatanLLMFeatures implements IStateFeatureJSON {
 
         int round = cgs.getRoundCounter() + 1;
         json.put("round", round);
+
+        JSONObject myResources = new JSONObject();
+        for (Map.Entry<CatanParameters.Resource, Counter> e : cgs.getPlayerResources(playerID).entrySet()) {
+            if (e.getKey() == CatanParameters.Resource.WILD) continue;
+            int n = e.getValue().getValue();
+            if (n > 0) myResources.put(e.getKey().toString(), n);
+        }
+        json.put("myResources", myResources);
 
         CatanTile[][] board = cgs.getBoard();
         CatanParameters catanParameters = (CatanParameters) gameState.getGameParameters();

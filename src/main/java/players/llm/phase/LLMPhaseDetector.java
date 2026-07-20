@@ -2,7 +2,9 @@ package players.llm.phase;
 
 import core.AbstractGameState;
 import core.components.GridBoard;
+import games.catan.CatanGameState;
 import games.connect4.Connect4GameState;
+import games.connect4.Connect4FillPhase;
 import games.poker.PokerGameState;
 import games.sushigo.SGGameState;
 
@@ -10,7 +12,7 @@ public class LLMPhaseDetector {
     public static boolean isLLMPhase(AbstractGameState gameState, LLMPhaseConfig config) {
         return switch (gameState.getGameType()) {
             case Connect4 -> {
-                if (config.connect4LLMFillThreshold <= 0.0) yield false;
+                if (config.connect4LLMPhases.isEmpty()) yield false;
 
                 Connect4GameState c4gs = (Connect4GameState) gameState;
                 GridBoard grid = c4gs.getGridBoard();
@@ -22,19 +24,19 @@ public class LLMPhaseDetector {
                         if (!grid.getElement(x, y).getComponentName().equals("."))
                             filled++;
 
-                // if total filled smaller than threshold returns true which calls LLM player otherwise MCTS player.
-                yield ((double) filled / total < config.connect4LLMFillThreshold);
+                yield config.connect4LLMPhases.contains(Connect4FillPhase.of((double) filled / total));
             }
             case SushiGo -> {
                 if (!config.sushiGoLLMUntilFullRotation) yield false;
                 SGGameState sgs = (SGGameState) gameState;
                 yield sgs.getDeckRotations() < sgs.getNPlayers() - 1;
             }
-            case Catan -> config.catanLLMPhases.contains(gameState.getGamePhase());
-            case Poker -> {
-                PokerGameState.PokerGamePhase phase = (PokerGameState.PokerGamePhase) gameState.getGamePhase();
-                yield phase.ordinal() <= config.pokerLLMPhase.ordinal();
+            case Catan -> {
+                CatanGameState cgs = (CatanGameState) gameState;
+                if (config.catanLLMTrade && cgs.getTradeOffer() != null) yield true; // llm if pbep has any trade offer
+                yield config.catanLLMPhases.contains(gameState.getGamePhase());
             }
+            case Poker -> config.pokerLLMPhases.contains(gameState.getGamePhase());
             default -> false;
         };
     }

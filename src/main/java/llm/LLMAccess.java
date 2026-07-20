@@ -360,7 +360,7 @@ public class LLMAccess {
         }
 
         String requestBody = String.format("{\"model\":\"%s\",\"max_tokens\":256,\"temperature\":0.1,\"frequency_penalty\":0.3," +
-                // "\"provider\":{\"order\":[\"Groq\"], \"allow_fallbacks\":false}," +
+                "\"provider\":{\"order\":[\"Groq\"]}," +
                 "\"messages\":[{\"role\":\"user\",\"content\":%s}]}", modelName, jsonContent);
 
         HttpClient client = HttpClient.newHttpClient();

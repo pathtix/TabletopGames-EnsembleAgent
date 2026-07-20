@@ -1,0 +1,5 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "matchedBudgetMs": 475,
+  "sushiGoLLMUntilFullRotation": true
+}

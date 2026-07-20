@@ -1,0 +1,11 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.sushigo.SGLLMFeatures",
+  "actionListClass" : "games.sushigo.SGLLMActions",
+  "promptFile": { "default": "json/prompts/SushiGo/minimal.txt" },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "GEMINI"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/OutputDirectory/SushiGo_Minimal_3P_200_Fair/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

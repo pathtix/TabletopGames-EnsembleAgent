@@ -4,20 +4,31 @@ import core.AbstractGameState;
 import core.AbstractPlayer;
 import core.Game;
 import core.actions.AbstractAction;
+import core.components.Counter;
+import core.components.Deck;
 import core.interfaces.IActionListBuilder;
 import core.interfaces.IStateFeatureJSON;
 import games.GameType;
 import games.catan.CatanGameState;
 import games.sushigo.SGGameState;
+import games.sushigo.SGParameters;
+import games.sushigo.cards.SGCard;
 import llm.LLMAccess;
 import llm.LLMAccessGoogleGenAI;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Map;
+import java.nio.file.Path;
+import java.util.EnumMap;
+import java.util.HashMap;
 
 public class LLMActionPlayer extends AbstractPlayer {
     private transient LLMAccess llmAccess;
     private transient LLMAccessGoogleGenAI llmAccessGenAI;
+
+    private final Map<String,String> promptCache = new HashMap<>();
 
     public LLMActionPlayer() {
         this(new LLMActionParams());
@@ -56,7 +67,6 @@ public class LLMActionPlayer extends AbstractPlayer {
             getLLMAccessGenAI();
             return;
         }
-
         getLLMAccess();
     }
 
@@ -82,6 +92,33 @@ public class LLMActionPlayer extends AbstractPlayer {
         return getLLMAccess().getResponse(prompt);
     }
 
+    private String loadPromptTemplate(String key) {
+        String path = getParameters().promptFile.get(key);
+        String template;
+
+        if (path == null)
+            throw new IllegalStateException("No promptFile fot this key " + key + ". Following is available ones: " + getParameters().promptFile);
+
+        if (promptCache.containsKey(path))
+            return promptCache.get(path);
+
+        // if prompt not already cached read from the txt files
+        try {
+            template = Files.readString(Path.of(path));
+        } catch (Exception e) {
+            throw new RuntimeException("Prompt file not found at: " + path, e);
+        }
+
+        promptCache.put(path, template);
+        return template;
+    }
+
+    private String fillPlaceholders(String template, Map<String, String> vars) {
+        String output = template;
+        for (var e : vars.entrySet()) output = output.replace("{{" + e.getKey() + "}}", e.getValue());
+        return output;
+    }
+
     private String buildPrompt(AbstractGameState gameState, List<AbstractAction> possibleActions) {
         String stateText = compactState(gameState);
         String actionsText = buildActionText(possibleActions, gameState);
@@ -99,212 +136,102 @@ public class LLMActionPlayer extends AbstractPlayer {
     private String buildPromptPoker(AbstractGameState gameState, String stateText, String actionsText) {
         int llmPlayer = gameState.getCurrentPlayer();
 
-        return """
-        You are a World Class Texas Hold'em poker agent.
-        You are Player %d. Maximise your long run chip count.
-
-        Hand rankings (best to worst): Royal Flush > Straight Flush > Four of a Kind > Full House > Flush > Straight > Three of a Kind > Two Pair > Pair > High Card
-
-        Strategy: Assess your hand strength (strong / medium / weak / drawing) using your hole cards and the community cards. The state JSON includes pot, costToCall, and potOddsPct, call only when your hand strength justifies the pot odds.
-
-        Action glossary:
-        - Check  : stay in without betting (only when no bet faces you)
-        - Call   : match the current bet
-        - Bet N  : open betting at N chips
-        - Raise xM : raise to M times the current bet
-        - AllIn  : commit all remaining chips
-        - Fold   : surrender your hand
-
-        Game state:
-        %s
-
-        Legal actions (id  action):
-        %s
-
-        Think in exactly one sentence
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(llmPlayer, stateText, actionsText);
+        return fillPlaceholders(loadPromptTemplate("default"), Map.of(
+            "player", String.valueOf(llmPlayer),
+            "state", stateText,
+            "actions", actionsText));
     }
 
     private String buildPromptConnect4(AbstractGameState gameState, String stateText, String actionsText) {
-        return """
-        You are a Connect4 agent. You are Player %d (%s).
+        int llmPlayer = gameState.getCurrentPlayer();
+        return fillPlaceholders(loadPromptTemplate("default"), Map.of(
+            "player", String.valueOf(llmPlayer),
+            "symbol", llmPlayer == 0 ? "x" : "o",
+            "state", stateText,
+            "actions", actionsText));
+    }
 
-        Rules:
-        - The id must be one of the listed action ids.
-        - Use exactly the prefix ACTION_ID:
+    private String formatDeckCounts(EnumMap<SGCard.SGCardType,Integer> counts) {
+        StringBuilder sb = new StringBuilder();
 
-        Strategy:
-        - Goal: get 4 of your pieces in a row (horizontal, vertical, or diagonal).
-        - Block opponent threats, a line of 3 piece of opponent's must be answered.
-
-        Gravity: a piece in column C lands on the lowest empty row in that column.
-
-        Think in 2-3 sentences max, then end with ACTION_ID on the last line.
-        Do NOT redraw the board. Do NOT repeat the action list.
-
-        Board (x=P0, o=P1, .=empty):
-        %s
-
-        Legal actions (id col):
-        %s
-
-        Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(gameState.getCurrentPlayer(), gameState.getCurrentPlayer() == 0 ? "x" : "o", stateText, actionsText);
+        for (var e : counts.entrySet()) {
+            if (sb.length() > 0) sb.append(", ");
+            sb.append(e.getKey()).append(' ').append(e.getValue());
+        }
+        return sb.toString();
     }
 
     private String buildPromptSushiGo(AbstractGameState gameState, String stateText, String actionsText) {
-        SGGameState sg = (SGGameState) gameState;
-        int handNumber = sg.getDeckRotations() + 1;
-        int totalHands = sg.getNPlayers();
+        SGGameState sggs = (SGGameState) gameState;
+        SGParameters sggp = (SGParameters) sggs.getGameParameters();
 
-        return """
-        You are the LLM component of a hybrid Sushi Go agent (Player %d).
-        You handle the early hands of each round (%d/%d this round) while card information is still hidden.
-        After hand %d, an MCTS play will take over with full card knowledge.
-        Build a strong scoring position in these early picks so MCTS can close it out.
+        int handNumber = sggs.getDeckRotations() + 1;
+        int totalHands = sggs.getNPlayers();
 
-        Pick exactly 1 card from your hand, the rest passes to player on your left.
-        Goal: maximise your score over 3 rounds.
+        // card counts static -> shows whole deck all time
+        EnumMap<SGCard.SGCardType, Integer> deck = new EnumMap<>(SGCard.SGCardType.class);
+        for (var e : sggp.nCardsPerType.entrySet())
+            deck.merge(e.getKey().a, e.getValue(), Integer::sum);
 
-        Scoring reference:
-        - Maki (1/2/3 icons): end of round — most icons=6pts, second most=3pts (split ties)
-        - Tempura: pair = 5pts, single=0
-        - Sashimi: set of 3 = 10pts, fewer=0
-        - Dumpling: 1 = 1, 2 = 3, 3 = 6, 4 = 10, 5+ = 15pts
-        - Squid Nigiri: 3pts (9 on Wasabi) | Salmon Nigiri: 2pts (6) | Egg Nigiri: 1pt (3)
-        - Wasabi: triples the NEXT nigiri played on it; worth 0 alone
-        - Chopsticks: on a future turn, pick 2 cards instead of 1
-        - Pudding: end of GAME - most=+6pts, fewest=-6pts (no penalty in 2-player)
+        // card counts dynamic -> shows reamaining cards (whole deck - (seen cards + player's cards))
+        EnumMap<SGCard.SGCardType, Integer> remainingDeck = new EnumMap<>(deck);
+        // Map<SGCard.SGCardType, Counter>[] playedAll = sggs.getPlayedCardTypesAllGame();
 
-        Strategy:
-        - If you have already played Tempura or Sashimi, PRIORITIZE picking more of the same to complete the set.
-        - Build toward high-value combos early, MCTS will close it out after rotation.
+        // reducing all played cards
+        for (Deck<SGCard> played : sggs.getPlayedCards())
+            for (SGCard card : played)
+                remainingDeck.merge(card.type, -1, Integer::sum);
 
-        Rules:
-        - The id must be one of the listed action ids.
-        - Use exactly the prefix ACTION_ID: on the final line.
-        - Do not output anything else.
+        // reducing the all discarded cards (that in discard pile)
+        for (SGCard card : sggs.getDiscardPile())
+            remainingDeck.merge(card.type, -1, Integer::sum);
 
-        Game state:
-        %s
+        // reducing own hand
+        for (SGCard c : sggs.getPlayerHands().get(gameState.getCurrentPlayer()))
+            remainingDeck.merge(c.type, -1, Integer::sum);
 
-        Legal actions (id card):
-        %s
+        remainingDeck.replaceAll((k, v) -> Math.max(0, v));
 
-        Think in exactly one sentence.
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(gameState.getCurrentPlayer(), handNumber, totalHands, totalHands - 1, stateText, actionsText);
+        return fillPlaceholders(loadPromptTemplate("default"), Map.of(
+            "player", String.valueOf(gameState.getCurrentPlayer()),
+            "hand", String.valueOf(handNumber),
+            "totalHands", String.valueOf(totalHands),
+            "lastLLMHand", String.valueOf(totalHands - 1),
+            "fullDeckCounts", formatDeckCounts(deck),
+            "remainingDeckCounts", formatDeckCounts(remainingDeck),
+            "state", stateText,
+            "actions", actionsText));
     }
 
     private String buildPromptCatan(AbstractGameState gameState, String stateText, String actionsText) {
-        if (gameState.getGamePhase().equals(CatanGameState.CatanGamePhase.Robber))
-            return buildPromptCatanRobber(gameState, stateText, actionsText);
+        CatanGameState cgs = (CatanGameState) gameState;
+        String phaseKey;
 
-        return buildPromptCatanSetup(gameState, stateText, actionsText);
-    }
+        if (cgs.getTradeOffer() != null) {
+            String me = "p" + gameState.getCurrentPlayer();
+            String offerText = cgs.getTradeOffer().getString(gameState).replace(me, me + " (you)");
+            String actions = actionsText.replace(me, me + " (you)");
+            return fillPlaceholders(loadPromptTemplate("Trade"), Map.of(
+                    "player", String.valueOf(gameState.getCurrentPlayer()),
+                    "round", String.valueOf(gameState.getRoundCounter() + 1),
+                    "offer", offerText,
+                    "state", stateText,
+                    "actions", actions
+            ));
+        }
 
-    private String buildPromptCatanSetup(AbstractGameState gameState, String stateText, String actionsText) {
-        int round = gameState.getRoundCounter() + 1;
+        switch (gameState.getGamePhase()) {
+            case CatanGameState.CatanGamePhase.Robber -> phaseKey = "Robber";
+            case CatanGameState.CatanGamePhase.Setup -> phaseKey = "Setup";
+            // case CatanGameState.CatanGamePhase.Trade -> phaseKey = "Trade";
+            default -> phaseKey = "Setup";
+        }
 
-        return """
-        You are placing a settlement in Catan setup (round %d/2).
-        An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
-
-        A settlement sits on a corner where up to 3 tiles meet. Each tile has its OWN dice number and produces its resource whenever that number is rolled.
-
-        Two dice are rolled each turn, so middle numbers are far more likely than extreme ones: 6 and 8 come up most often, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. A tile numbered 6 or 8 therefore produces much more frequently than one numbered 2 or 12.
-
-        Example: a settlement on a wood-5 tile, a wood-9 tile, and a brick-6 tile makes 1 wood on a roll of 5, 1 wood on a roll of 9, and 1 brick on a roll of 6.
-
-        Strategy:
-        A good starting spot is one that produces frequently AND gives you a useful spread (diversity) of resources, without leaning too hard on a single dice number.
-
-        In round 2, also consider what your first settlement already covers (shown in the state).
-
-        Gamestate:
-        %s
-
-        Legal placements (each lists the tiles it touches as resource number):
-        %s
-
-        Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(round, stateText, actionsText);
-
-        // return """
-        // You are placing a settlement in Catan setup (round %d/2).
-        // An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
-
-        // A settlement touches up to 3 tiles. Each tile produces its resource every time its number is rolled.
-        // Example : If a settlement touches to for example 2 wood tiles and 1 brick tile, if that number is rolled, player gets 2 woods and 1 brick.
-
-        // Strategy (Placement goals (in priority order)):
-        // 1. Maximise total pip count : higher pips = more frequent resource production
-        // 2. Maximise resource diversity : 3 different resources is better than duplicates
-        // 3. In Round 2 avoid numbers already covered by your first settlement
-
-        // Gamestate:
-        // %s
-
-        // Legal placements (id -> tiles touched -> total pips):
-        // %s
-
-        // Think in exactly one sentence, Do NOT redraw the board.
-        // Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        // """.formatted(round, stateText, actionsText);
-
-        // return """
-        // You are placing a settlement in Catan setup (round %d/2).
-        // An MCTS agent will play the full game after setup, your only job is to give it the strongest possible starting position.
-
-        // A settlement sits on a corner where up to 3 tiles meet. Each tile has its OWN dice number and produces its resource whenever that number is rolled.
-
-        // Example: a settlement on a wood-5 tile, a wood-9 tile, and a brick-6 tile makes 1 wood on a roll of 5, 1 wood on a roll of 9, and 1 brick on a roll of 6. Numbers near 7 (6 and 8) come up far more often than numbers near 2 or 12 the "pip" value shown for each tile reflects this (more pips = pays out more often).
-
-        // Strategy:
-        // A good starting spot is one that produces frequently AND gives you a useful spread (diversity) of resources, without leaning too hard on a single dice number.
-
-        // In round 2, also consider what your first settlement already covers (shown in the state).
-
-        // Gamestate:
-        // %s
-
-        // Legal placements (each lists the tiles it touches as resource number(pip)):
-        // %s
-
-        // Think in exactly one sentence, Do NOT redraw the board.
-        // Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        // """.formatted(round, stateText, actionsText);
-    }
-
-    private String buildPromptCatanRobber(AbstractGameState gameState, String stateText, String actionsText) {
-        int round = gameState.getRoundCounter() + 1;
-        return """
-        You are playing the robber in Catan (round %d). You rolled 7 (or a knight played) and you must move the robber. You then steal one random resource card from a player settled on that tile.
-
-        Placing the robber on a tile BLOCKS it: that tile produces nothing for anyone settled on it until the robber moves again.
-
-        How often a tile pays out depends only on its number, not its resource. Two dice make 6 and 8 the most common, then 5 and 9, then 4 and 10, then 3 and 11, while 2 and 12 are the rarest. So a tile numbered 6 or 8 is a far stronger block than one numbered 2, 11 or 12, whatever resource it carries.
-
-        Your goal is to damage your strongest opponent by placing the robber on one of its frequent tiles. Do not just match their main resource, blocking that resource on a rare number like 11 denies them almost nothing.
-
-        Don't block a tile you are also settled on ("blocks you").
-
-        When the block value is similar, steal from whoever holds the most cards.
-
-        "steal: none" means no card is there to be taken. (player has no resource cards)
-
-        Gamestate (opponents' settlements show what each opponent produces):
-        %s
-
-        Legal robber moves:
-        %s
-
-        Think in exactly one sentence, Do NOT redraw the board.
-        Your response MUST end with exactly: ACTION_ID: <Legal Action ID>
-        """.formatted(round, stateText, actionsText);
+        return fillPlaceholders(loadPromptTemplate(phaseKey), Map.of(
+            "round", String.valueOf(gameState.getRoundCounter() + 1),
+            "state", stateText,
+            "actions", actionsText
+        ));
     }
 
     private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
@@ -387,8 +314,8 @@ public class LLMActionPlayer extends AbstractPlayer {
             if (getParameters().verbose)
                 System.out.printf("[%s] Creating LLMAccessGoogleGenAI: model=%s%n", this, LLMAccessGoogleGenAI.modelNameForSize(getParameters().modelSize));
 
-//            llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile); // Vertex AI
-            llmAccessGenAI = new LLMAccessGoogleGenAI(apiKey, logFile);
+           llmAccessGenAI = new LLMAccessGoogleGenAI(project, location, logFile); // Vertex AI
+            // llmAccessGenAI = new LLMAccessGoogleGenAI(apiKey, logFile);
         }
         return llmAccessGenAI;
     }
