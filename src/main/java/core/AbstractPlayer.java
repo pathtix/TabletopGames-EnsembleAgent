@@ -17,6 +17,7 @@ public abstract class AbstractPlayer {
     private AbstractForwardModel forwardModel;
     public PlayerParameters parameters;
     protected List<IPlayerDecorator> decorators;
+    protected boolean considerSingletonActions = false;
 
     public AbstractPlayer(PlayerParameters parameters, String name) {
         this.parameters = parameters != null ? parameters : new PlayerParameters();
@@ -42,10 +43,8 @@ public abstract class AbstractPlayer {
         return playerID;
     }
 
-    // I have commited a sin, it was saying "Do not change it!", but I don't have any idea to do it
-    // added for assigning PhaseBasedEnsemblePlayer's playerID to MCTS and LLMActionPlayer to show them as one player
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
+    public void setPlayerID(int p) {
+        this.playerID = p;
     }
 
     public final void setName(String name) {
@@ -91,20 +90,31 @@ public abstract class AbstractPlayer {
      * @param model
      */
     public void setForwardModel(AbstractForwardModel model) {
-        // TODO: We currently have no way of specifying a Decorator to only apply
-        // TODO: to the 'top-level' of getAction(), without also being used in the search algorithm.
-        // This could be useful if we want to take random actions at the top level (but not in search)
-        this.forwardModel = model;
-        for (IPlayerDecorator decorator : decorators) {
-            model.addPlayerDecorator(decorator);
+        // For consistency we only include Decorators specified with this player
+        // This complements the logic in getForwardModel
+        if (model instanceof DecoratedForwardModel decoratedModel) {
+            this.forwardModel = decoratedModel.wrappedFM;
+        } else {
+            this.forwardModel = model;
         }
     }
     /**
      * Retrieves the forward model for current game being played.
-     *
+     * This will add decorators (if any exist) to the underlying forward model
      * @return - ForwardModel
      */
     public final AbstractForwardModel getForwardModel() {
+        // TODO: We currently have no way of specifying a Decorator to only apply
+        // TODO: to the 'top-level' of getAction(), without also being used in the search algorithm.
+        // This could be useful if we want to take random actions at the top level (but not in search)
+        if (!decorators.isEmpty()) {
+            DecoratedForwardModel decoratedModel = new DecoratedForwardModel(forwardModel);
+            for (IPlayerDecorator decorator : decorators) {
+                boolean allPlayers = !decorator.decisionPlayerOnly();
+                decoratedModel.addDecorator(allPlayers ? -1 : playerID, decorator.copy());
+            }
+            return decoratedModel;
+        }
         return forwardModel;
     }
 
@@ -118,6 +128,10 @@ public abstract class AbstractPlayer {
 
     public final void removeDecorator(IPlayerDecorator decorator) {
         decorators.remove(decorator);
+    }
+
+    public final List<IPlayerDecorator> getDecorators() {
+        return new ArrayList<>(decorators);
     }
 
     @Override
@@ -136,6 +150,14 @@ public abstract class AbstractPlayer {
      */
     public abstract AbstractAction _getAction(AbstractGameState gameState, List<AbstractAction> possibleActions);
 
+    /**
+     * overrideAction is called in the main Game loop if the action chosen by the agent (via _getAction)
+     * is overridden for any reason (usually because an adviser intervenes)
+     * This enables the agent to update its internal state (if any)
+     */
+    public void overrideAction(AbstractAction originalAction, AbstractAction override) {
+        // do nothing...purely for overriding in sub-classes
+    }
     /* Methods that can be implemented in subclass */
 
     /**
@@ -145,6 +167,9 @@ public abstract class AbstractPlayer {
      * @param gameState observation of the initial game state
      */
     public void initializePlayer(AbstractGameState gameState) {
+        for (IPlayerDecorator decorator : decorators) {
+            decorator.initialiseBeforeGame();
+        }
     }
 
     /**
@@ -154,6 +179,9 @@ public abstract class AbstractPlayer {
      * @param gameState observation of the final game state
      */
     public void finalizePlayer(AbstractGameState gameState) {
+        for (IPlayerDecorator decorator : decorators) {
+            decorator.finaliseAfterGame();
+        }
     }
 
     /**

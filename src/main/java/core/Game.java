@@ -2,8 +2,7 @@ package core;
 
 import core.actions.AbstractAction;
 import core.actions.DoNothing;
-import core.interfaces.IExtendedSequence;
-import core.interfaces.IPrintable;
+import core.interfaces.*;
 import core.turnorders.ReactiveTurnOrder;
 import evaluation.listeners.IGameListener;
 import evaluation.metrics.Event;
@@ -29,12 +28,12 @@ import players.rmhc.RMHCPlayer;
 import players.simple.FirstActionPlayer;
 import players.simple.OSLAPlayer;
 import players.simple.RandomPlayer;
-import utilities.Pair;
-import utilities.Utils;
+import utilities.*;
 
 import javax.swing.Timer;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -67,14 +66,9 @@ public class Game {
     private int nActionsPerTurn, nActionsPerTurnSum, nActionsPerTurnCount;
     private boolean pause, stop;
     private boolean debug = false;
-    // Video recording
-    private Rectangle areaBounds;
-    private boolean recordingVideo = false;
-    String fileName = "output.mp4";
-    String formatName = "mp4";
-    String codecName = null;
-    int snapsPerSecond = 10;
     private int turnPause;
+    protected AbstractAction overrideAction;
+    protected String savedStateDirectory = "SavedStates";
 
     /**
      * Game constructor. Receives a list of players, a forward model and a game state. Sets unique and final
@@ -160,11 +154,6 @@ public class Game {
             frame.setFrameProperties();
             frame.validate();
             frame.pack();
-
-            // Video recording setup
-            if (game.recordingVideo) {
-                game.areaBounds = new Rectangle(0, 0, frame.getWidth(), frame.getHeight());
-            }
 
             Timer guiUpdater = new Timer((int) game.getCoreParameters().frameSleepMS, event -> game.updateGUI(gui, frame));
             guiUpdater.start();
@@ -252,8 +241,11 @@ public class Game {
                 // Allow player to initialize
                 player.initializePlayer(observation);
             }
-        int gameID = idFountain.incrementAndGet();
-        gameState.setGameID(gameID);
+        resetStats();
+    }
+
+    public void reset(AbstractGameState gameState) {
+        this.gameState = gameState;
         resetStats();
     }
 
@@ -271,6 +263,8 @@ public class Game {
         nActionsPerTurn = 1;
         nActionsPerTurnCount = 0;
         lastPlayer = -1;
+        int gameID = idFountain.incrementAndGet();
+        gameState.setGameID(gameID);
     }
 
     /**
@@ -386,7 +380,9 @@ public class Game {
 
         // Get actions for the player
         s = System.nanoTime();
-        List<AbstractAction> observedActions = forwardModel.computeAvailableActions(observation, currentPlayer.getParameters().actionSpace);
+        List<AbstractAction> observedActions = currentPlayer.getForwardModel() == null ?
+                forwardModel.computeAvailableActions(observation, currentPlayer.getParameters().actionSpace) :
+                currentPlayer.getForwardModel().computeAvailableActions(observation, currentPlayer.getParameters().actionSpace);
         if (observedActions.isEmpty()) {
             Stack<IExtendedSequence> actionsInProgress = gameState.getActionsInProgress();
             IExtendedSequence topOfStack = null;
@@ -431,9 +427,9 @@ public class Game {
         // Either ask player which action to use or, in case no actions are available, report the updated observation
         AbstractAction action = null;
         if (!observedActions.isEmpty()) {
-            if (observedActions.size() == 1 && (!(currentPlayer instanceof HumanGUIPlayer || currentPlayer instanceof HumanConsolePlayer) || observedActions.get(0) instanceof DoNothing)) {
+            if (observedActions.size() == 1 && !currentPlayer.considerSingletonActions) {
                 // Can only do 1 action, so do it.
-                action = observedActions.get(0);
+                action = observedActions.getFirst();
                 currentPlayer.registerUpdatedObservation(observation);
             } else {
                 // Get action from player, and time it
@@ -457,7 +453,7 @@ public class Game {
             }
             // We publish an ACTION_CHOSEN message before we implement the action, so that observers can record the state that led to the decision
             AbstractAction finalAction = action;
-            listeners.forEach(l -> l.onEvent(Event.createEvent(Event.GameEvent.ACTION_CHOSEN, gameState, finalAction, activePlayer)));
+            listeners.forEach(l -> l.onEvent(Event.createEvent(Event.GameEvent.ACTION_CHOSEN, gameState, finalAction, observedActions, activePlayer)));
 
         } else {
             currentPlayer.registerUpdatedObservation(observation);
@@ -479,7 +475,20 @@ public class Game {
         } else {
             // Resolve action and game rules, time it
             s = System.nanoTime();
-            // we copy the action before using it..so that the action returned by oneAction() does not have a state link
+            if (overrideAction != null) {
+                currentPlayer.overrideAction(action, overrideAction);
+                action = overrideAction;
+               // System.out.println("Overriding action with " + overrideAction);
+                overrideAction = null;
+            }
+            // if requested, save a copy of the full undeterminized game state (we do this in the Game loop to avoid passing the real state to agents)
+            if (action.saveGame() && gameState instanceof IToJSON serialisableGameState) {
+                String directory = String.format("%s%s%s%sG%d", savedStateDirectory, File.separator, gameType.name(), File.separator, gameState.getGameID());
+                Utils.createDirectory(directory);
+                String filename = String.format("%sP%d_Tick%d.json", directory + File.separator, activePlayer, gameState.getGameTick());
+                JSONUtils.writeJSON(serialisableGameState.toJSON(), filename);
+            }
+            // we copy the action before using it...so that the action returned by oneAction() does not have a state link
             forwardModel.next(gameState, action.copy());
             nextTime = (System.nanoTime() - s);
         }
@@ -489,7 +498,7 @@ public class Game {
         // We publish an ACTION_TAKEN message once the action is taken so that observers can record the result of the action
         // (such as the next player)
         AbstractAction finalAction1 = action;
-        listeners.forEach(l -> l.onEvent(Event.createEvent(Event.GameEvent.ACTION_TAKEN, gameState, finalAction1.copy(), activePlayer)));
+        listeners.forEach(l -> l.onEvent(Event.createEvent(Event.GameEvent.ACTION_TAKEN, gameState, finalAction1.copy(), observedActions, activePlayer)));
 
         if (debug) System.out.printf("Finishing oneAction for player %s%n", activePlayer);
         return action;
@@ -580,6 +589,14 @@ public class Game {
     }
 
     /**
+     * May be called by a third party observer (i.e. a listener) if it interjects an action to override a player
+     * @param overrideAction
+     */
+    public void setOverrideAction(AbstractAction overrideAction) {
+        this.overrideAction = overrideAction;
+    }
+
+    /**
      * Retrieves the number of game loop repetitions performed in this game.
      *
      * @return - tick number
@@ -639,6 +656,13 @@ public class Game {
     public void clearListeners() {
         listeners.clear();
         getGameState().clearListeners();
+    }
+
+    public void setSavedStatesDirectory(String dir) {
+        savedStateDirectory = dir;
+    }
+    public String getSavedStatesDirectory() {
+        return savedStateDirectory;
     }
 
     /**

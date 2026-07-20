@@ -40,6 +40,7 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
     public MCTSPlayer(MCTSParams params, String name) {
         super(params, name);
         rnd = new Random(parameters.getRandomSeed());
+        considerSingletonActions = true;
     }
 
     @Override
@@ -53,7 +54,7 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
             rnd = new Random(parameters.getRandomSeed());
             getParameters().rolloutPolicy = null;
             getParameters().getRolloutStrategy();
-            getParameters().opponentModel = null;  // thi swill force reconstruction from random seed
+            getParameters().opponentModel = null;  // this will force reconstruction from random seed
             getParameters().getOpponentModel();
             //       System.out.println("Resetting seed for MCTS player to " + params.getRandomSeed());
         }
@@ -64,6 +65,7 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
         oldGraphKeys = new HashMap<>();
         getParameters().getRolloutStrategy().initializePlayer(state);
         getParameters().getOpponentModel().initializePlayer(state);
+        super.initializePlayer(state);
     }
 
     /**
@@ -232,7 +234,11 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
             }
         }
         if (!foundPointInHistory) {
-            throw new AssertionError("Unable to find matching action in history : " + lastExpected);
+            String message = String.format("Agent: %s, P%d unable to find matching action in history : %s%n\t\t%b:%s%d%n%s", this, rootPlayer, lastExpected,
+                    params.reuseTree, params.opponentTreePolicy, params.maxTreeDepth,
+                    history.reversed().stream().limit(20).map(p -> String.format("%d:%s", p.a, p.b)).collect(Collectors.joining("\n\t\t")));
+            System.out.println(message);
+            throw new AssertionError(message);
         }
         if (debug)
             System.out.println("\tBacktracking complete : " + (newRoot == null ? "no matching node found" : "node found"));
@@ -272,7 +278,10 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
     @Override
     public AbstractAction _getAction(AbstractGameState gameState, List<AbstractAction> actions) {
         // Search for best action from the root
+        if (actions.size() == 1)
+            return actions.getFirst();  // take the only action available
         long currentTimeNano = System.nanoTime();
+        // creating the root node also sets the Forward Model (and wraps it in any decorators)
         createRootNode(gameState);
         long timeTaken = System.nanoTime() - currentTimeNano;
 
@@ -297,8 +306,33 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
 
         if (root.children.size() > 3 * actions.size() && !(root instanceof MCGSNode) && !getParameters().reuseTree && !getParameters().actionSpace.equals(gameState.getCoreGameParameters().actionSpace))
             throw new AssertionError(String.format("Unexpectedly large number of children: %d with action size of %d", root.children.size(), actions.size()));
-        lastAction = new Pair<>(gameState.getCurrentPlayer(), root.bestAction());
+        lastAction = Pair.of(gameState.getCurrentPlayer(), root.bestAction());
         return lastAction.b.copy();
+    }
+
+    @Override
+    public void overrideAction(AbstractAction originalAction, AbstractAction override) {
+        if (!lastAction.b.equals(originalAction)) {
+            throw new IllegalArgumentException("Original action does not match the last action taken" + lastAction.b + " vs " + originalAction);
+        }
+        lastAction = Pair.of(lastAction.a, override.copy());
+    }
+
+    public double getValue(AbstractAction action) {
+        return root.getValue(action);
+    }
+    // Proportion of visits - this does not take account of nValidVisits (which would be especially important away from root node)
+    public double getVisitProportion(AbstractAction action) {
+        return root.actionVisits(action) / (double) root.getVisits();
+    }
+    public int getVisits(AbstractAction action) {
+        return root.actionVisits(action);
+    }
+    public int getRootVisits() {
+        return root.getVisits();
+    }
+    public SingleTreeNode getRoot() {
+        return root;
     }
 
     @Override
@@ -332,6 +366,10 @@ public class MCTSPlayer extends AbstractPlayer implements IAnyTimePlayer, IHasSt
     @Override
     public Map<AbstractAction, Map<String, Object>> getDecisionStats() {
         Map<AbstractAction, Map<String, Object>> retValue = new LinkedHashMap<>();
+
+        // no decision statistics
+        if (root == null)
+            return retValue;
 
         int players = root.state.getNPlayers();
         if (root != null && root.getVisits() > 1) {

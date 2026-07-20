@@ -3,12 +3,14 @@ package core.components;
 import java.util.*;
 
 import core.CoreConstants;
+import core.interfaces.IToJSON;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import utilities.JSONUtils;
 
 import static core.components.Dice.Type.*;
 
-public class Dice extends Component {
+public class Dice extends Component implements IToJSON {
     public enum Type{
         d3(3),
         d4(4),
@@ -31,7 +33,7 @@ public class Dice extends Component {
     public final Type type;
     public final int nSides; // Number of sides
     protected int value;  // Current value after last roll
-    private double[] pdf = null;
+    private double[] pdf;
 
     public Dice() {
         this(d6);  // By default d6
@@ -41,28 +43,59 @@ public class Dice extends Component {
         super(CoreConstants.ComponentType.DICE);
         this.type = type;
         this.nSides = type.nSides;
+        this.pdf = new double[nSides];
+        Arrays.fill(pdf, 1.0/nSides);
     }
     public Dice(int nSides) {
         super(CoreConstants.ComponentType.DICE);
         this.nSides = nSides;
-        this.type = Type.sidesToType(nSides);
+        this.type = sidesToType(nSides);
+        this.pdf = new double[nSides];
+        Arrays.fill(pdf, 1.0/nSides);
     }
-    public Dice(String json) {
+    public Dice(double[] pdf) {
         super(CoreConstants.ComponentType.DICE);
-        JSONObject data = JSONUtils.loadJSONFile(json);
-        this.nSides = ((Long) data.get("nSides")).intValue();
-        this.type = Type.sidesToType(nSides);
+        this.pdf = pdf.clone();
+        this.nSides = pdf.length;
+        this.type = sidesToType(nSides);
+    }
+    public Dice(JSONObject data) {
+        this(((Number) data.get("nSides")).intValue());
         Object pdfObj = data.get("pdf");
         if (pdfObj != null) {
-            org.json.simple.JSONArray arr = (org.json.simple.JSONArray) pdfObj;
+            JSONArray arr = (JSONArray) pdfObj;
             pdf = new double[arr.size()];
             for (int i = 0; i < arr.size(); i++) {
                 pdf[i] = ((Number) arr.get(i)).doubleValue();
             }
             double total = Arrays.stream(pdf).sum();
-            if (Math.abs(total - 1.0) > 0.000001)
+            // The standard JSON format stores numbers to 3 sig fig.
+            // We may therefore need to adjust to make sure the PDF sums to 1
+            if (Math.abs(total - 1.0) > 0.01)
                 throw new IllegalArgumentException("Invalid PDF in Dice: " + Arrays.toString(pdf));
+            else if (Math.abs(total - 1.0) > 1e-6) {
+                for (int i = 0; i < pdf.length; i++) {
+                    pdf[i] /= total;
+                }
+            }
         }
+        if (data.containsKey("value")) {
+            this.value = ((Number) data.get("value")).intValue();
+        }
+        if (data.containsKey("id")) {
+            int id = ((Number) data.get("id")).intValue();
+            try {
+                java.lang.reflect.Field f = Component.class.getDeclaredField("componentID");
+                f.setAccessible(true);
+                f.set(this, id);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public Dice(String json) {
+        this(JSONUtils.loadJSONFile(json));
     }
 
     private Dice(Type type, int nSides, int value, int ID) {
@@ -70,6 +103,11 @@ public class Dice extends Component {
         this.type = type;
         this.nSides = nSides;
         this.value = value;
+        pdf = new double[0];
+    }
+
+    public double[] getPdf() {
+        return pdf.clone();
     }
 
     /**
@@ -118,7 +156,7 @@ public class Dice extends Component {
     @Override
     public Dice copy() {
         Dice copy = new Dice(type, nSides, value, componentID);
-        if (pdf != null) copy.pdf = Arrays.copyOf(pdf, pdf.length);
+        copy.pdf = Arrays.copyOf(pdf, pdf.length);
         copyComponentTo(copy);
         return copy;
     }
@@ -127,4 +165,19 @@ public class Dice extends Component {
     public final int hashCode() {
         return componentID;
     }
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject dJSON = new JSONObject();
+        dJSON.put("value", value);
+        dJSON.put("nSides", nSides);
+        if (pdf != null && pdf.length > 0) {
+            JSONArray pdfArray = new JSONArray();
+            for (double p : pdf) pdfArray.add(p);
+            dJSON.put("pdf", pdfArray);
+        }
+        dJSON.put("id", componentID);
+        return dJSON;
+    }
+
 }

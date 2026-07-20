@@ -8,6 +8,7 @@ import evaluation.RunArg;
 import evaluation.listeners.IGameListener;
 import evaluation.optimisation.ntbea.functions.FunctionEvaluator;
 import evaluation.optimisation.ntbea.functions.NTBEAFunction;
+import evaluation.tournaments.AgentArchiver;
 import evaluation.tournaments.RoundRobinTournament;
 import games.GameType;
 import evaluation.optimisation.ntbea.*;
@@ -217,7 +218,7 @@ public class NTBEA {
                 createListeners().forEach(tournament::addListener);
                 tournament.run();
                 // create a new list of results in descending order of score
-                IntToDoubleFunction cmp = params.evalMethod.equals("Ordinal") ? tournament::getOrdinalAlphaRank : tournament::getWinRateAlphaRank;
+                IntToDoubleFunction cmp = params.evalMethod.equals("Ordinal") ? tournament::getOrdinalRank : tournament::getWinRate;
                 List<Integer> agentsInOrder = IntStream.range(0, players.size())
                         .boxed()
                         .sorted(Comparator.comparingDouble(cmp::applyAsDouble))
@@ -226,10 +227,9 @@ public class NTBEA {
                 params.logFile = "RRT_" + params.logFile;
                 for (int index : agentsInOrder) {
                     if (params.verbose)
-                        System.out.printf("Player %d %s\tWin Rate: %.3f +/- %.3f\tMean Ordinal: %.2f +/- %.2f\tWinAlpha: %.3f\tOrdinalAlpha: %.3f%n", index, Arrays.toString(winnerSettings.get(index)),
+                        System.out.printf("Player %d %s\tWin Rate: %.3f +/- %.3f\tMean Ordinal: %.2f +/- %.2f%n", index, Arrays.toString(winnerSettings.get(index)),
                                 tournament.getWinRate(index), tournament.getWinStdErr(index),
-                                tournament.getOrdinalRank(index), tournament.getOrdinalStdErr(index),
-                                tournament.getWinRateAlphaRank(index), tournament.getOrdinalAlphaRank(index));
+                                tournament.getOrdinalRank(index), tournament.getOrdinalStdErr(index));
                     Pair<Double, Double> resultToReport = new Pair<>(tournament.getWinRate(index), tournament.getWinStdErr(index));
                     if (params.evalMethod.equals("Ordinal"))
                         resultToReport = new Pair<>(tournament.getOrdinalRank(index), tournament.getOrdinalStdErr(index));
@@ -242,6 +242,17 @@ public class NTBEA {
                 bestResult = params.evalMethod.equals("Ordinal") ?
                         new Pair<>(new Pair<>(tournament.getOrdinalRank(agentsInOrder.get(0)), tournament.getOrdinalStdErr(agentsInOrder.get(0))), winnerSettings.get(agentsInOrder.get(0))) :
                         new Pair<>(new Pair<>(tournament.getWinRate(agentsInOrder.get(0)), tournament.getWinStdErr(agentsInOrder.get(0))), winnerSettings.get(agentsInOrder.get(0)));
+
+                if (params.repeats > 1) {
+                    List<File> agentFiles = new ArrayList<>();
+                    for (int i = 0; i < params.repeats; i++) {
+                        agentFiles.add(new File(params.destDir + File.separator + "Recommended_" + i + ".json"));
+                    }
+                    if (players.size() == agentFiles.size()) {
+                        AgentArchiver archiver = new AgentArchiver();
+                        archiver.archive(tournament.getTournamentResults(), players, agentFiles, params.destDir);
+                    }
+                }
 
                 // We then want to check the win rate against the elite agent (if one was provided)
                 // we only regard an agent as better if it beats the elite agent with about 80% confidence (adjusted for multiple comparisons)

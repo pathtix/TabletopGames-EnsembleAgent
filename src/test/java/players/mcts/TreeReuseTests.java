@@ -2,7 +2,6 @@ package players.mcts;
 
 import core.*;
 import core.actions.AbstractAction;
-import core.interfaces.IGamePhase;
 import games.GameType;
 import games.cantstop.CantStopForwardModel;
 import games.dominion.DominionConstants;
@@ -13,7 +12,6 @@ import games.dominion.cards.CardType;
 import games.tictactoe.TicTacToeForwardModel;
 import org.junit.Before;
 import org.junit.Test;
-import org.netlib.lapack.Dgetrf;
 import players.PlayerConstants;
 import players.simple.RandomPlayer;
 
@@ -45,9 +43,9 @@ public class TreeReuseTests {
     }
 
     public void initialiseTicTacToe() {
-        playerOne = new TestMCTSPlayer(paramsOne, STNWithTestInstrumentation::new);
+        playerOne = new TestMCTSPlayer(paramsOne);
         playerOne.rolloutTest = false;
-        playerTwo = new TestMCTSPlayer(paramsTwo, STNWithTestInstrumentation::new);
+        playerTwo = new TestMCTSPlayer(paramsTwo);
         playerTwo.rolloutTest = false;
         fm = new TicTacToeForwardModel();
         game = GameType.TicTacToe.createGameInstance(2, 404);
@@ -58,9 +56,9 @@ public class TreeReuseTests {
     public void initialiseDominion() {
         playerOne = paramsOne.opponentTreePolicy == MCTSEnums.OpponentTreePolicy.OMA
                 ? new TestMCTSPlayer(paramsOne, OMATreeNode::new)
-                : new TestMCTSPlayer(paramsOne, STNWithTestInstrumentation::new);
+                : new TestMCTSPlayer(paramsOne);
         playerOne.rolloutTest = false;
-        playerTwo = new TestMCTSPlayer(paramsTwo, STNWithTestInstrumentation::new);
+        playerTwo = new TestMCTSPlayer(paramsTwo);
         playerTwo.rolloutTest = false;
         fm = new DominionForwardModel();
         game = GameType.Dominion.createGameInstance(3, 404);
@@ -69,9 +67,9 @@ public class TreeReuseTests {
     }
 
     public void initialiseCantStop() {
-        playerOne = new TestMCTSPlayer(paramsOne, STNWithTestInstrumentation::new);
+        playerOne = new TestMCTSPlayer(paramsOne);
         playerOne.rolloutTest = false;
-        playerTwo = new TestMCTSPlayer(paramsTwo, STNWithTestInstrumentation::new);
+        playerTwo = new TestMCTSPlayer(paramsTwo);
         playerTwo.rolloutTest = false;
         fm = new CantStopForwardModel();
         game = GameType.CantStop.createGameInstance(3, 404);
@@ -95,6 +93,7 @@ public class TreeReuseTests {
         initialiseTicTacToe();
         runGame();
     }
+
     @Test
     public void treeReuseTestII() {
         initialiseCantStop();
@@ -221,13 +220,11 @@ public class TreeReuseTests {
                 assertEquals(preActionCopy.getGamePhase(), newRoot.state.getGamePhase());
                 // we also want to check if we have a whole load of ESTATE purchases
                 if (preActionCopy instanceof DominionGameState dgs) {
-                    if (newRoot instanceof STNWithTestInstrumentation STN) {
-                        int ESTATE_Visits = STN.getActionStats(new BuyCard(CardType.ESTATE, 0)) == null ? 0
-                                : STN.getActionStats(new BuyCard(CardType.ESTATE, 0)).validVisits;
-                        int ESTATES_available = dgs.getCardsIncludedInGame().get(CardType.ESTATE);
-                        if (ESTATES_available == 0)
-                            assertTrue(ESTATE_Visits <= oldVisits);
-                    }
+                    int ESTATE_Visits = newRoot.getActionStats(new BuyCard(CardType.ESTATE, 0)) == null ? 0
+                            : newRoot.getActionStats(new BuyCard(CardType.ESTATE, 0)).validVisits;
+                    int ESTATES_available = dgs.getCardsIncludedInGame().get(CardType.ESTATE);
+                    if (ESTATES_available == 0)
+                        assertTrue(ESTATE_Visits <= oldVisits);
                 }
                 // check tree reuse
                 if (oldRoots[0] != null) {

@@ -1,13 +1,18 @@
 package games.backgammon;
 
+import com.github.javaparser.javadoc.description.JavadocSnippet;
 import core.AbstractGameState;
 import core.AbstractParameters;
 import core.components.*;
+import core.interfaces.IToJSON;
+import evaluation.optimisation.TunableParameters;
 import games.GameType;
+import games.XIIScripta.XIIParameters;
+import org.json.simple.JSONObject;
 
 import java.util.*;
 
-public class BGGameState extends AbstractGameState {
+public class BGGameState extends AbstractGameState implements IToJSON {
 
 //    Backgammon involves moving 15 checkers around a board, aiming to be the first to "bear off" (remove) all your pieces before your opponent. Players move their pieces based on dice rolls, and a key strategy involves hitting opponent's pieces (blots) to send them to the bar, forcing them to re-enter the game.
 //    Here's a more detailed breakdown of the rules:
@@ -48,8 +53,32 @@ public class BGGameState extends AbstractGameState {
 
     protected List<Token> movedThisTurn;
 
+    protected int[] loadedDiceUsages;
+
     public BGGameState(AbstractParameters gameParameters, int nPlayers) {
         super(gameParameters, nPlayers);
+    }
+
+    public BGGameState(JSONObject jsonObject) {
+        this(new BGParameters(),
+                ((Number) (((JSONObject) jsonObject.get("abstractGameState")).get("nPlayers"))).intValue());
+        // Now we want to update the parameters based on the contents of the JSON object
+        // We have to do this after the super constructor, because the super constructor will have initialised the gameParameters to a default value
+        // and we can't put this code earlier before Java 25
+        JSONObject abstractGameStateJSON = (JSONObject) jsonObject.get("abstractGameState");
+        JSONObject gameParamsJSON = (JSONObject) abstractGameStateJSON.get("gameParams");
+        String paramsClassName = (String) gameParamsJSON.get("class");
+        if (paramsClassName.equals("games.backgammon.BGParameters")) {
+            this.gameParameters = TunableParameters.loadFromJSON(new BGParameters(), gameParamsJSON);
+        } else if (paramsClassName.equals("games.XIIScripta.XIIParameters")) {
+            this.gameParameters = TunableParameters.loadFromJSON(new XIIParameters(), gameParamsJSON);
+        } else {
+            throw new IllegalArgumentException("Unknown parameters class: " + paramsClassName);
+        }
+        reset();
+        BGForwardModel fm = new BGForwardModel();
+        fm.setup(this);
+        BGStateJSON.loadFromJSON(this, jsonObject);
     }
 
     /**
@@ -69,9 +98,10 @@ public class BGGameState extends AbstractGameState {
     @Override
     protected List<Component> _getAllComponents() {
         List<Component> components = new ArrayList<>();
-        for (int playerId = 0; playerId < getNPlayers(); playerId++) {
-            components.addAll(counters.get(playerId));
+        for (List<Token> counter : counters) {
+            components.addAll(counter);
         }
+        components.addAll(Arrays.asList(dice));
         return components;
     }
 
@@ -92,6 +122,10 @@ public class BGGameState extends AbstractGameState {
      */
     public int getPhysicalSpace(int playerId, int nthPoint) {
         return playerTrackMapping[playerId][nthPoint];
+    }
+
+    public int getLengthOfTrack() {
+        return playerTrackMapping[0].length;
     }
 
     /*
@@ -133,6 +167,19 @@ public class BGGameState extends AbstractGameState {
         blots[playerId]++;
     }
 
+
+    // generally used after the other player was detected cheating
+    public void moveAllPiecesToEnd(int p) {
+        for (int point = 0; point < counters.size(); point++) {
+            List<Token> tokens = new ArrayList<>(counters.get(point));
+            for (Token t : tokens) {
+                if (t.getOwnerId() == p) {
+                    movePiece(p, point, -1);
+                }
+            }
+        }
+    }
+
     public void rollDice() {
         for (Dice die : dice) {
             die.roll(rnd);
@@ -168,6 +215,20 @@ public class BGGameState extends AbstractGameState {
         updateAvailableDiceValues();
     }
 
+    public void setDicePdf(int dieIndex, double[] newPDF) {
+        if (dice[dieIndex].nSides != newPDF.length)
+            throw new IllegalArgumentException("New PDF has wrong number of sides. Expecting " + dice[dieIndex].nSides + " but got " + newPDF.length);
+        dice[dieIndex] = new Dice(newPDF);
+    }
+
+    public int getCheatCount(int playerId) {
+        return loadedDiceUsages[playerId];
+    }
+
+    public void incrementCheatCount(int playerId) {
+        loadedDiceUsages[playerId]++;
+    }
+
     public void useDiceValue(int dieValue) {
         for (int i = 0; i < availableDiceValues.length; i++) {
             if (!diceUsed[i] && availableDiceValues[i] == dieValue) {
@@ -188,6 +249,8 @@ public class BGGameState extends AbstractGameState {
 
     public int[] getAvailableDiceValues() {
         // only return values for dice not yet used
+        if (availableDiceValues == null)
+            return new int[0];
         int[] values = new int[availableDiceValues.length];
         int count = 0;
         for (int i = 0; i < diceUsed.length; i++) {
@@ -196,6 +259,10 @@ public class BGGameState extends AbstractGameState {
             }
         }
         return Arrays.copyOf(values, count);
+    }
+
+    public double[] getDicePdf(int die) {
+        return dice[die].getPdf();
     }
 
     public int piecesOnHomeBoard(int playerId) {
@@ -235,8 +302,8 @@ public class BGGameState extends AbstractGameState {
         for (int i = 0; i < dice.length; i++) {
             copy.dice[i] = dice[i].copy();
         }
-        copy.diceUsed = Arrays.copyOf(diceUsed, diceUsed.length);
-        copy.availableDiceValues = Arrays.copyOf(availableDiceValues, availableDiceValues.length);
+        copy.diceUsed = diceUsed == null ? null : Arrays.copyOf(diceUsed, diceUsed.length);
+        copy.availableDiceValues = availableDiceValues == null ? null : Arrays.copyOf(availableDiceValues, availableDiceValues.length);
 
         copy.counters = new ArrayList<>();
         for (int i = 0; i < counters.size(); i++) {
@@ -246,6 +313,7 @@ public class BGGameState extends AbstractGameState {
         }
         copy.playerTrackMapping = playerTrackMapping; // this is immutable, so we can just copy the reference
         copy.movedThisTurn = new ArrayList<>(movedThisTurn);
+        copy.loadedDiceUsages = Arrays.copyOf(loadedDiceUsages, loadedDiceUsages.length);
         return copy;
     }
 
@@ -316,6 +384,11 @@ public class BGGameState extends AbstractGameState {
                 Objects.hash(counters, movedThisTurn) + 31 * 31 * 31 * 31 * 31 *
                 Arrays.deepHashCode(playerTrackMapping) +
                 super.hashCode();
+    }
+
+    @Override
+    public JSONObject toJSON() {
+        return BGStateJSON.toJSON(this);
     }
 
 }

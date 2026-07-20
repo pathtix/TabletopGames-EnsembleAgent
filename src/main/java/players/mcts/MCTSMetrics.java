@@ -1,6 +1,7 @@
 package players.mcts;
 
 import core.AbstractPlayer;
+import core.actions.AbstractAction;
 import core.interfaces.IGameEvent;
 import evaluation.listeners.MetricsGameListener;
 import evaluation.metrics.AbstractMetric;
@@ -18,17 +19,33 @@ public class MCTSMetrics implements IMetricsCollection {
         @Override
         protected boolean _run(MetricsGameListener listener, Event e, Map<String, Object> records) {
             AbstractPlayer player = listener.getGame().getPlayers().get(e.state.getCurrentPlayer());
-            if (player instanceof MCTSPlayer mctsPlayer) {
-                SingleTreeNode root = mctsPlayer.root;
-                if (root instanceof MultiTreeNode) {
-                    root = Arrays.stream(((MultiTreeNode) root).roots).filter(Objects::nonNull)
-                            .filter(node -> node.decisionPlayer == e.state.getCurrentPlayer())
-                            .findFirst().orElse(null);
-                }
-                if (root == null) return false;
+            if (!(player instanceof MCTSPlayer mctsPlayer)) return false;
+            SingleTreeNode root = mctsPlayer.root;
+            if (root instanceof MultiTreeNode) {
+                root = Arrays.stream(((MultiTreeNode) root).roots).filter(Objects::nonNull)
+                        .filter(node -> node.decisionPlayer == e.state.getCurrentPlayer())
+                        .findFirst().orElse(null);
+            }
+            if (root == null) return false;
+            // if this is a single action, then we skip
+            boolean skipMCTSMetrics = e.actions != null && e.actions.size() == 1;
+            List<AbstractAction> actionsConsidered = root.actionsToConsider(root.actionsFromOpenLoopState);
+            if (skipMCTSMetrics) {
+                // to make sure, we also check the root stats, because there may have been actions added via a Decorator
+                if (e.state.getGameTick() == root.state.getGameTick() && actionsConsidered.size() > 1 && actionsConsidered.contains(e.action))
+                    skipMCTSMetrics = false;
+            }
+            if (!skipMCTSMetrics) {
                 TreeStatistics treeStats = new TreeStatistics(root);
                 int visits = root.getVisits();
                 if (visits == 0) visits = 1;
+                Map<AbstractAction, ActionStats> actionValueEstimates = root.actionValues;
+                List<AbstractAction> sortedActions = actionValueEstimates.keySet().stream()
+                        .filter(a -> actionValueEstimates.get(a) != null) // exclude those never tried (through pruning)
+                        .filter(actionsConsidered::contains)  // exclude impossible actions (from reused parts of the tree)
+                        .sorted(Comparator.comparingDouble(a -> -actionValueEstimates.get(a).valueOf(e.playerID)))
+                        .toList(); // in descending order of value
+
                 records.put("PlayerType", mctsPlayer.toString());
                 records.put("PlayerID", e.state.getCurrentPlayer());
                 records.put("Iterations", root.getVisits());
@@ -46,7 +63,31 @@ public class MCTSMetrics implements IMetricsCollection {
                 OptionalInt maxVisits = Arrays.stream(root.actionVisits()).max();
                 records.put("maxVisitProportion", (maxVisits.isPresent() ? maxVisits.getAsInt() : 0) / (double) visits);
                 records.put("Action", e.action.getString(e.state));
+                if (actionValueEstimates.containsKey(e.action)) {
+                    // Action Taken ad Best Action may not be the same, either due to ROBUST selection, or because of DDA
+                    records.put("ActionValue", actionValueEstimates.get(e.action).valueOf(e.playerID));
+                    records.put("BestAction", sortedActions.get(0).getString(e.state));
+                    records.put("BestActionValue", actionValueEstimates.get(sortedActions.get(0)).valueOf(e.playerID));
+                    AbstractAction secondAction = sortedActions.get(1); // we know there are at least 2 actions
+                    records.put("SecondAction", secondAction.getString(e.state));
+                    records.put("SecondActionValue", actionValueEstimates.get(secondAction).valueOf(e.playerID));
+                    // this may just be the same as the best action
+                    AbstractAction worstAction = sortedActions.getLast();
+                    records.put("WorstAction", worstAction.getString(e.state));
+                    if (actionValueEstimates.containsKey(worstAction)) {
+                        records.put("WorstActionValue", actionValueEstimates.get(worstAction).valueOf(e.playerID));
+                    } else {
+                   //     throw new AssertionError("WorstAction should have an estimate");
+                        System.out.println("WorstAction should have an estimate");
+                        throw new AssertionError("as above");
+                    }
+                } else {
+//                    throw new AssertionError("Action should really have an estimate");
+                    System.out.println("Warning: action has no value");
+                    throw new AssertionError("as above");
+                }
                 records.put("ActionsAtRoot", root.actionValues.size());
+                records.put("ActionsConsidered", actionsConsidered.size());
                 records.put("fmCalls", mctsPlayer.root.fmCallsCount / visits);
                 records.put("copyCalls", mctsPlayer.root.copyCount / visits);
                 records.put("time", mctsPlayer.root.timeTaken);
@@ -80,7 +121,15 @@ public class MCTSMetrics implements IMetricsCollection {
             cols.put("NodeClashes", Integer.class);
             cols.put("maxVisitProportion", Double.class);
             cols.put("Action", String.class);
+            cols.put("ActionValue", Double.class);
+            cols.put("BestAction", String.class);
+            cols.put("BestActionValue", Double.class);
+            cols.put("SecondAction", String.class);
+            cols.put("SecondActionValue", Double.class);
+            cols.put("WorstAction", String.class);
+            cols.put("WorstActionValue", Double.class);
             cols.put("ActionsAtRoot", Integer.class);
+            cols.put("ActionsConsidered", Integer.class);
             cols.put("fmCalls", Integer.class);
             cols.put("copyCalls", Integer.class);
             cols.put("time", Double.class);
@@ -118,6 +167,7 @@ public class MCTSMetrics implements IMetricsCollection {
                 records.put("MeanActionsAtNode", treeStats.stream().mapToDouble(ts -> ts.meanActionsAtNode).average().orElse(0.0));
                 records.put("MeanActionsExpanded", treeStats.stream().mapToDouble(ts -> ts.meanActionsExpanded).average().orElse(0.0));
                 records.put("ActionsAtRoot", otherRoots.stream().mapToInt(node -> node.actionValues.size()).average().orElse(0.0));
+                records.put("ActionsConsidered", otherRoots.stream().mapToInt(node -> node.actionsToConsider(node.actionsFromOpenLoopState).size()).average().orElse(0.0));
                 return true;
             }
             return false;
@@ -142,6 +192,7 @@ public class MCTSMetrics implements IMetricsCollection {
             cols.put("MeanActionsAtNode", Double.class);
             cols.put("MeanActionsExpanded", Double.class);
             cols.put("ActionsAtRoot", Double.class);
+            cols.put("ActionsConsidered", Double.class);
             return cols;
         }
     }

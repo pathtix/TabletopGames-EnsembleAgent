@@ -27,6 +27,11 @@ public class ActionStats {
         nVisits++;
     }
 
+    public double valueOf(int player) {
+        if (nVisits == 0) return 0.0;
+        return totValue[player] / nVisits;
+    }
+
     public ActionStats copy() {
         ActionStats newStats = new ActionStats(totValue.length);
         newStats.nVisits = nVisits;

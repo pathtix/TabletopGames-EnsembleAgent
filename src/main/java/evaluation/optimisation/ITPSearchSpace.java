@@ -224,7 +224,7 @@ public class ITPSearchSpace<T> extends AgentSearchSpace<T> {
         }
 
         // Then we check all the parameters in the JSON file are valid for the ITunableParameters
-        // If any have values that are not the same as the searchspace values (or do not
+        // If any have values that are not the same as the searchSpace values (or do not
         // match the default value for that parameter), then we throw an error
         // This is recursive as needed over any nested ITunableParameters in the JSON
         for (Object key : json.keySet()) {
@@ -236,7 +236,7 @@ public class ITPSearchSpace<T> extends AgentSearchSpace<T> {
             // we do not check recursively here (possible future enhancement)
             if (value instanceof JSONObject)
                 continue;
-            // slightly awkward...TunableParameters has a rawJSON set of data that should be used to provide local overrides to the
+            // TunableParameters has a rawJSON set of data that should be used to provide local overrides to the
             // global defaults specific to the main parameter definition
             Object defaultValue = itp instanceof TunableParameters<?> tp ? tp.getDefaultOverride(keyName) : itp.getDefaultParameterValue(keyName);
             if (!JSONUtils.areValuesEqual(value, defaultValue)) {
@@ -245,7 +245,6 @@ public class ITPSearchSpace<T> extends AgentSearchSpace<T> {
         }
         return settings;
     }
-
 
     public JSONObject constructAgentJSON(int[] settings) {
         // we first need to update itp with the specified parameters, and then instantiate
