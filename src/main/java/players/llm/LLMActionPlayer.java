@@ -223,14 +223,14 @@ public class LLMActionPlayer extends AbstractPlayer {
         switch (gameState.getGamePhase()) {
             case CatanGameState.CatanGamePhase.Robber -> phaseKey = "Robber";
             case CatanGameState.CatanGamePhase.Setup -> phaseKey = "Setup";
-            // case CatanGameState.CatanGamePhase.Trade -> phaseKey = "Trade";
-            default -> phaseKey = "Setup";
+            default -> phaseKey = "TradeInit"; // In main phase -> can initiate trade
         }
 
         return fillPlaceholders(loadPromptTemplate(phaseKey), Map.of(
-            "round", String.valueOf(gameState.getRoundCounter() + 1),
-            "state", stateText,
-            "actions", actionsText
+                "player", String.valueOf(gameState.getCurrentPlayer()),
+                "round", String.valueOf(gameState.getRoundCounter() + 1),
+                "state", stateText,
+                "actions", actionsText
         ));
     }
 

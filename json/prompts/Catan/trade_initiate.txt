@@ -1,0 +1,22 @@
+You are the trading component of a hybrid Catan agent (Player {{player}}, turn/round {{round}}).
+It is your main phase and there is no incoming offer. You may propose ONE trade to another
+player, or take a build/end action if that is better.
+
+Build costs:
+- Road:       1 brick, 1 lumber
+- Settlement: 1 brick, 1 lumber, 1 grain, 1 wool
+- City:       3 ore, 2 grain
+- Dev card:   1 ore, 1 grain, 1 wool
+
+Notation "pA to pB : X <res> for Y <res>": pA (you) give X of the first resource and ask Y of the second resource back from pB.
+
+Your current resources and the board:
+{{state}}
+
+You have three kinds of option this turn: build a piece you can afford now, propose ONE trade toward a build you are close to (giving a resource you can spare for one you still need), or end the turn.
+
+Legal actions (id action):
+{{actions}}
+
+Think in exactly one sentence.
+Your response MUST end with exactly: ACTION_ID: <Legal Action ID>

@@ -1,6 +1,6 @@
 {
   "class": "players.llm.phase.LLMPhaseConfig",
   "matchedBudgetMs": 500,
-  "catanLLMTrade": true,
+  "catanLLMTradeResponse": true,
   "catanLLMPhases": { "enum": "games.catan.CatanGameState$CatanGamePhase", "value": ["Robber"] }
 }

@@ -21,7 +21,9 @@ public class LLMPhaseConfig {
     public boolean sushiGoLLMUntilFullRotation = true;
 
     public Set<CatanGameState.CatanGamePhase> catanLLMPhases = EnumSet.of(CatanGameState.CatanGamePhase.Setup);
-    public boolean catanLLMTrade = false; // should LLM respond to trade offers
+    public boolean catanLLMTradeResponse = false; // should LLM respond to trade offers in main phase
+    public boolean catanLLMTradeInitiation = false; // should LLM inititate trade offers in main phase
+    public int catanSurplusThreshold = 4; // fire when player holds >= this many of one resource AND 0 of another
 
     // use LLM in pokerLLMPhase phases use MCTS in the phases that is not in pokerLLMPhase set
     public Set<PokerGameState.PokerGamePhase> pokerLLMPhases = EnumSet.of(PokerGameState.PokerGamePhase.Preflop);
@@ -49,8 +51,14 @@ public class LLMPhaseConfig {
                 catanLLMPhases.add(CatanGameState.CatanGamePhase.valueOf((String) o));
         }
 
-        if  (json.containsKey("catanLLMTrade"))
-            catanLLMTrade = (boolean) json.get("catanLLMTrade");
+        if  (json.containsKey("catanLLMTradeResponse"))
+            catanLLMTradeResponse = (boolean) json.get("catanLLMTradeResponse");
+
+        if  (json.containsKey("catanLLMTradeInitiation"))
+            catanLLMTradeInitiation = (boolean) json.get("catanLLMTradeInitiation");
+
+        if  (json.containsKey("catanSurplusThreshold"))
+            catanSurplusThreshold = ((Long) json.get("catanSurplusThreshold")).intValue();
 
         if (json.containsKey("pokerLLMPhases")){
             JSONObject phasesJson = (JSONObject) json.get("pokerLLMPhases");

@@ -1,12 +1,19 @@
 package players.llm.phase;
 
 import core.AbstractGameState;
+import core.components.Counter;
 import core.components.GridBoard;
 import games.catan.CatanGameState;
+import games.catan.CatanParameters;
 import games.connect4.Connect4GameState;
 import games.connect4.Connect4FillPhase;
 import games.poker.PokerGameState;
 import games.sushigo.SGGameState;
+
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class LLMPhaseDetector {
     public static boolean isLLMPhase(AbstractGameState gameState, LLMPhaseConfig config) {
@@ -33,11 +40,38 @@ public class LLMPhaseDetector {
             }
             case Catan -> {
                 CatanGameState cgs = (CatanGameState) gameState;
-                if (config.catanLLMTrade && cgs.getTradeOffer() != null) yield true; // llm if pbep has any trade offer
+                CatanParameters cap = (CatanParameters) cgs.getGameParameters();
+                int pbep = gameState.getCurrentPlayer();
+
+                if (config.catanLLMTradeResponse && cgs.getTradeOffer() != null) yield true; // llm if pbep has any trade offer
+
+                if (config.catanLLMTradeInitiation &&
+                        cgs.getTradeOffer() == null &&
+                        gameState.getGamePhase() == core.CoreConstants.DefaultGamePhase.Main &&
+                        cgs.nTradesThisTurn < cap.max_trade_actions_allowed &&
+                        isTradingWorth(cgs, pbep, config))
+                    yield true;
+
                 yield config.catanLLMPhases.contains(gameState.getGamePhase());
             }
             case Poker -> config.pokerLLMPhases.contains(gameState.getGamePhase());
             default -> false;
         };
+    }
+
+    private static boolean isTradingWorth(CatanGameState cgs, int player, LLMPhaseConfig config) {
+        Map<CatanParameters.Resource, Counter> resources = cgs.getPlayerResources(player);
+
+        int max = 0;
+        int min = Integer.MAX_VALUE;
+        for (Map.Entry<CatanParameters.Resource, Counter> entry : resources.entrySet()) {
+            if (entry.getKey() == CatanParameters.Resource.WILD) continue;
+
+            int n = entry.getValue().getValue();
+            if (n > max) max = n;
+            if (n < min) min = n;
+        }
+
+        return max >= config.catanSurplusThreshold && min == 0;
     }
 }
