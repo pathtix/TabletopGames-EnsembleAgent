@@ -1,0 +1,10 @@
+{
+  "game" : "Catan",
+  "nPlayers" : 3,
+  "mode" : "exhaustive",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Non-Fair/Catan_LearnedHeuristic_TradeResponse_3P_200_LLAMA_NonFair",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Non-Fair/Catan_LearnedHeuristic_TradeResponse_3P_200_LLAMA_NonFair/players"
+}

@@ -1,0 +1,10 @@
+{
+  "game" : "Catan",
+  "nPlayers" : 3,
+  "mode" : "exhaustive",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/Fair/Catan_LearnedHeuristic_TradeSurplus_3P_200_Fair/listeners/LLMPhaseBudgetListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Fair/Catan_LearnedHeuristic_TradeSurplus_3P_200_Fair",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Fair/Catan_LearnedHeuristic_TradeSurplus_3P_200_Fair/players"
+}

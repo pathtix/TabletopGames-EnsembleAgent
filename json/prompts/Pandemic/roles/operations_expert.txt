@@ -1,0 +1,1 @@
+The Quarantine Specialist prevents disease cubes from being placed and outbreaks from occurring in the city she currently occupies. This protection covers only the city she stands in (not neighbouring cities) and moves with her.

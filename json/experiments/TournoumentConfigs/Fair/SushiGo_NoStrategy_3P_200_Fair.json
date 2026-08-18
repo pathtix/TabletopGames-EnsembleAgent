@@ -1,0 +1,10 @@
+{
+  "game" : "SushiGo",
+  "nPlayers" : 3,
+  "mode" : "exhaustive",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/Fair/SushiGo_NoStrategy_3P_200_Fair/listeners/LLMPhaseBudgetListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Fair/SushiGo_NoStrategy_3P_200_Fair",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Fair/SushiGo_NoStrategy_3P_200_Fair/players"
+}

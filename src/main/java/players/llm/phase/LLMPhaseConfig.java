@@ -28,6 +28,8 @@ public class LLMPhaseConfig {
     // use LLM in pokerLLMPhase phases use MCTS in the phases that is not in pokerLLMPhase set
     public Set<PokerGameState.PokerGamePhase> pokerLLMPhases = EnumSet.of(PokerGameState.PokerGamePhase.Preflop);
 
+    public int pandemicCuredThreshold = 0; // use llm till reaching to this cured amount then switch to mcts
+
     public LLMPhaseConfig() {}
 
     public LLMPhaseConfig(JSONObject json) {
@@ -67,5 +69,7 @@ public class LLMPhaseConfig {
                    pokerLLMPhases.add(PokerGameState.PokerGamePhase.valueOf((String) o));
         }
 
+        if (json.containsKey("pandemicCuredThreshold"))
+            pandemicCuredThreshold = ((Long) json.get("pandemicCuredThreshold")).intValue();
     }
 }

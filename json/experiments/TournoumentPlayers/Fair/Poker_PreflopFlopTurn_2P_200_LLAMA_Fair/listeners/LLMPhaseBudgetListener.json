@@ -1,0 +1,4 @@
+{
+  "class": "evaluation.listeners.LLMPhaseBudgetListener",
+  "args": ["json/experiments/EnsemblePlayers/Fair/Poker_PreflopFlopTurn_2P_200_LLAMA_Fair/LLMPhaseConfig.json"]
+}

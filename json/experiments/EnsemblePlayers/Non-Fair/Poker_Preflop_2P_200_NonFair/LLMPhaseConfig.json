@@ -1,0 +1,4 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "pokerLLMPhases": { "enum": "games.poker.PokerGameState$PokerGamePhase", "value": ["Preflop"] }
+}

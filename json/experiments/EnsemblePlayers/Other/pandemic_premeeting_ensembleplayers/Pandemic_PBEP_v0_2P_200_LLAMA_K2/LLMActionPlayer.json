@@ -1,0 +1,17 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.pandemic.PandemicLLMFeatures",
+  "actionListClass" : "games.pandemic.PandemicLLMActions",
+  "promptFile": {
+    "default": "json/prompts/Pandemic/default.txt",
+    "Medic": "json/prompts/Pandemic/roles/medic.txt",
+    "Quarantine Specialist": "json/prompts/Pandemic/roles/quarantine_specialist.txt",
+    "Operations Expert": "json/prompts/Pandemic/roles/operations_expert.txt",
+    "Scientist": "json/prompts/Pandemic/roles/scientist.txt"
+  },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "OPENROUTER"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 10000,
+  "logFileName" : "json/experiments/OutputDirectory/Other/Pandemic_PBEP_v0_2P_200_LLAMA_K2/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

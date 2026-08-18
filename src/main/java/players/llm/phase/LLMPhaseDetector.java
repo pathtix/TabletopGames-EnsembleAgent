@@ -7,8 +7,12 @@ import games.catan.CatanGameState;
 import games.catan.CatanParameters;
 import games.connect4.Connect4GameState;
 import games.connect4.Connect4FillPhase;
+import games.pandemic.PandemicConstants;
+import games.pandemic.PandemicGame;
+import games.pandemic.PandemicGameState;
 import games.poker.PokerGameState;
 import games.sushigo.SGGameState;
+import utilities.Hash;
 
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -55,6 +59,16 @@ public class LLMPhaseDetector {
                 yield config.catanLLMPhases.contains(gameState.getGamePhase());
             }
             case Poker -> config.pokerLLMPhases.contains(gameState.getGamePhase());
+            case Pandemic -> {
+                if (config.pandemicCuredThreshold <= 0) yield false;
+                PandemicGameState pgs = (PandemicGameState) gameState;
+                int cured = 0;
+                for (String color : PandemicConstants.colors) {
+                    if (((Counter) pgs.getComponent(Hash.GetInstance().hash("Disease " + color))).getValue() >= 1)
+                        cured++;
+                }
+                yield cured < config.pandemicCuredThreshold;
+            }
             default -> false;
         };
     }

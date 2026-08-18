@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Other/Pandemic_PBEP_v2_4P_200_opt1/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Other/Pandemic_PBEP_v2_4P_200_opt1/Pandemic.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Other/Pandemic_PBEP_v2_4P_200_opt1/LLMPhaseConfig.json"
+}

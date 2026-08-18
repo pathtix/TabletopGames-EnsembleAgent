@@ -1,4 +1,0 @@
-{
-  "class": "evaluation.listeners.LLMPhaseBudgetListener",
-  "args": ["json/experiments/EnsemblePlayers/Connect4_MidLate_2P_200_Fair/LLMPhaseConfig.json"]
-}

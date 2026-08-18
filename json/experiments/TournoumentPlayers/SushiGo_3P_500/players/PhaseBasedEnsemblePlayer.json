@@ -1,6 +1,0 @@
-{
-  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/SushiGo_3P_500/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/SushiGo_3P_500/SushiGo.json",
-  "phaseConfigFile": "json/experiments/EnsemblePlayers/SushiGo_3P_500/LLMPhaseConfig.json"
-}

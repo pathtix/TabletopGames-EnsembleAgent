@@ -1,6 +1,0 @@
-{
-  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/Poker_River_2P_200_Fair/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/Poker_River_2P_200_Fair/Poker_2P.json",
-  "phaseConfigFile": "json/experiments/EnsemblePlayers/Poker_River_2P_200_Fair/LLMPhaseConfig.json"
-}

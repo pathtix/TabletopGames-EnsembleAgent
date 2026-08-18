@@ -1,0 +1,4 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "connect4LLMPhases": { "enum": "games.connect4.Connect4FillPhase", "value": ["Opening", "Late"] }
+}

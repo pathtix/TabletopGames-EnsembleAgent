@@ -1,0 +1,4 @@
+{
+  "class": "evaluation.listeners.LLMPhaseBudgetListener",
+  "args": ["json/experiments/EnsemblePlayers/Fair/SushiGo_Minimal_3P_200_LLAMA_Fair/LLMPhaseConfig.json"]
+}

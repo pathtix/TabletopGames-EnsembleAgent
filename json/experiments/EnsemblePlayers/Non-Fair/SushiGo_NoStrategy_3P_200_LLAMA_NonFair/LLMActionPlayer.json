@@ -1,0 +1,11 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.sushigo.SGLLMFeatures",
+  "actionListClass" : "games.sushigo.SGLLMActions",
+  "promptFile": { "default": "json/prompts/SushiGo/no_strategy.txt" },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "OPENROUTER"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/OutputDirectory/Non-Fair/SushiGo_NoStrategy_3P_200_LLAMA_NonFair/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

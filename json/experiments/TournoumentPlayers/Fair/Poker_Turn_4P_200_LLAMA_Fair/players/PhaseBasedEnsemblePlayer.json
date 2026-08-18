@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Fair/Poker_Turn_4P_200_LLAMA_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Fair/Poker_Turn_4P_200_LLAMA_Fair/Poker_4P.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Fair/Poker_Turn_4P_200_LLAMA_Fair/LLMPhaseConfig.json"
+}

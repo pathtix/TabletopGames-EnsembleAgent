@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Fair/Connect4_Mid_2P_200_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Fair/Connect4_Mid_2P_200_Fair/Connect4.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Fair/Connect4_Mid_2P_200_Fair/LLMPhaseConfig.json"
+}

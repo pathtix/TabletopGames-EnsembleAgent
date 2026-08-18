@@ -5,13 +5,17 @@ import core.components.Card;
 import core.components.Counter;
 import core.components.Deck;
 import core.AbstractGameState;
+import core.properties.Property;
+import core.properties.PropertyColor;
 import games.pandemic.PandemicGameState;
+import games.pandemic.PandemicParameters;
 import utilities.Hash;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static core.CoreConstants.colorHash;
 import static core.CoreConstants.playerHandHash;
 import static games.pandemic.PandemicConstants.playerDeckDiscardHash;
 
@@ -29,19 +33,27 @@ public class CureDisease extends AbstractAction {
     public boolean execute(AbstractGameState gs) {
         // Find disease counter
         PandemicGameState pgs = (PandemicGameState)gs;
+        PandemicParameters pp = (PandemicParameters) gs.getGameParameters();
         Counter diseaseCounter = (Counter) pgs.getComponent(Hash.GetInstance().hash("Disease " + color));
+        int nToDiscard = pp.getnCardsForCure();
+        if ("Scientist".equals(pgs.getPlayerRoleActingPlayer()))  nToDiscard -= pp.getnCardsForCureReducedBy();
         if (diseaseCounter.getValue() == 0) {
             diseaseCounter.setValue(1);  // Set to cured
+            // Discard 4 cards for Scientist and 5 for others
+            int discarded = 0;
 
             // Discard cards from player hand
             Deck<Card> playerHand = (Deck<Card>) pgs.getComponentActingPlayer(playerHandHash);
             Deck<Card> playerDiscard = (Deck<Card>) pgs.getComponent(playerDeckDiscardHash);
-            for (Integer cardId: cardIds) {
-                Card c = (Card)gs.getComponentById(cardId);
-                playerHand.remove(c);
-                playerDiscard.add(c);
+            for (Card c : new ArrayList<>(playerHand.getComponents())) {
+                if (discarded >= nToDiscard) break;
+                Property p = c.getProperty(colorHash);
+                if (p != null && color.equals(((PropertyColor) p).valueStr)) {
+                    playerHand.remove(c);
+                    playerDiscard.add(c);
+                    discarded++;
+                }
             }
-
             return true;
         }
 

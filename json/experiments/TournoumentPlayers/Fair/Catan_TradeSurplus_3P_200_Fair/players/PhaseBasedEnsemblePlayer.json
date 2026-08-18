@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Fair/Catan_TradeSurplus_3P_200_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Fair/Catan_TradeSurplus_3P_200_Fair/Catan.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Fair/Catan_TradeSurplus_3P_200_Fair/LLMPhaseConfig.json"
+}

@@ -1,0 +1,4 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "catanLLMPhases": { "enum": "games.catan.CatanGameState$CatanGamePhase", "value": ["Robber"] }
+}

@@ -1,0 +1,4 @@
+{
+  "class": "players.llm.phase.LLMPhaseConfig",
+  "sushiGoLLMUntilFullRotation": true
+}

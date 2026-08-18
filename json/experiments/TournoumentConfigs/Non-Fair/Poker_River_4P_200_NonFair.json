@@ -1,0 +1,10 @@
+{
+  "game": "Poker",
+  "nPlayers": 4,
+  "mode": "exhaustive",
+  "matchups": 200,
+  "verbose": true,
+  "listener": "json/listeners/GameResultsAndActionListener.json",
+  "destDir": "json/experiments/OutputDirectory/Non-Fair/Poker_River_4P_200_NonFair",
+  "playerDirectory": "json/experiments/TournoumentPlayers/Non-Fair/Poker_River_4P_200_NonFair/players"
+}

@@ -1,0 +1,10 @@
+{
+  "game" : "Poker",
+  "nPlayers" : 4,
+  "mode" : "exhaustive",
+  "matchups" : 200,
+  "verbose" : true,
+  "listener" : "json/listeners/GameResultsAndActionListener.json|json/experiments/TournoumentPlayers/Fair/Poker_Preflop_4P_200_LLAMA_Fair/listeners/LLMPhaseBudgetListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Fair/Poker_Preflop_4P_200_LLAMA_Fair",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Fair/Poker_Preflop_4P_200_LLAMA_Fair/players"
+}

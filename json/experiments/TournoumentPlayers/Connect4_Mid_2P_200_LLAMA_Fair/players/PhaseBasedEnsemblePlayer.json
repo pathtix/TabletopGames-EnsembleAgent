@@ -1,6 +1,0 @@
-{
-  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/Connect4_Mid_2P_200_LLAMA_Fair/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/Connect4_Mid_2P_200_LLAMA_Fair/Connect4.json",
-  "phaseConfigFile": "json/experiments/EnsemblePlayers/Connect4_Mid_2P_200_LLAMA_Fair/LLMPhaseConfig.json"
-}

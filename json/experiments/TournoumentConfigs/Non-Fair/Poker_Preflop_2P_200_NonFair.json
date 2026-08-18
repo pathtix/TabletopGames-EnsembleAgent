@@ -1,0 +1,10 @@
+{
+  "game": "Poker",
+  "nPlayers": 2,
+  "mode": "exhaustive",
+  "matchups": 200,
+  "verbose": true,
+  "listener": "json/listeners/GameResultsAndActionListener.json",
+  "destDir": "json/experiments/OutputDirectory/Non-Fair/Poker_Preflop_2P_200_NonFair",
+  "playerDirectory": "json/experiments/TournoumentPlayers/Non-Fair/Poker_Preflop_2P_200_NonFair/players"
+}

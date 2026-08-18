@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Fair/Poker_PreflopFlopTurn_2P_200_LLAMA_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Fair/Poker_PreflopFlopTurn_2P_200_LLAMA_Fair/Poker_2P.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Fair/Poker_PreflopFlopTurn_2P_200_LLAMA_Fair/LLMPhaseConfig.json"
+}

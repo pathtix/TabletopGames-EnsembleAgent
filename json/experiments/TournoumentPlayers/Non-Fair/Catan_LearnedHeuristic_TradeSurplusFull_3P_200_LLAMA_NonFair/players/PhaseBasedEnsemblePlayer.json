@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Non-Fair/Catan_LearnedHeuristic_TradeSurplusFull_3P_200_LLAMA_NonFair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Non-Fair/Catan_LearnedHeuristic_TradeSurplusFull_3P_200_LLAMA_NonFair/Catan_LearnedHeuristic.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Non-Fair/Catan_LearnedHeuristic_TradeSurplusFull_3P_200_LLAMA_NonFair/LLMPhaseConfig.json"
+}

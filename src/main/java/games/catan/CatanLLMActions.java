@@ -41,7 +41,6 @@ public class CatanLLMActions implements IActionListBuilder {
             return formatSettlement(getTouchingTiles(pswr, gameState), gameState);
         }
 
-        // TODO : robber and trade should be added as their action compactions
         if (action instanceof MoveRobberAndSteal robber) {
             return formatRobber(robber, gameState);
         }

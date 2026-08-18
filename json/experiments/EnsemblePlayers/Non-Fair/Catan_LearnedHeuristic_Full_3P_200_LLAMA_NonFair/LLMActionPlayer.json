@@ -1,0 +1,11 @@
+{
+  "class" : "players.llm.LLMActionParams",
+  "stateFeatureClass" : "games.catan.CatanLLMFeatures",
+  "actionListClass" : "games.catan.CatanLLMActions",
+  "promptFile": { "Setup": "json/prompts/Catan/setup_frequency.txt", "Robber": "json/prompts/Catan/robber.txt", "Trade": "json/prompts/Catan/trade_incoming.txt" },
+  "modelType": {"enum": "llm.LLMAccess$LLM_MODEL", "value": "OPENROUTER"},
+  "modelSize": {"enum": "llm.LLMAccess$LLM_SIZE", "value": "LARGE"},
+  "maxStateChars" : 3000,
+  "logFileName" : "json/experiments/OutputDirectory/Non-Fair/Catan_LearnedHeuristic_Full_3P_200_LLAMA_NonFair/LLMActionPlayerLog.txt",
+  "verbose" : true
+}

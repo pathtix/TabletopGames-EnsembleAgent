@@ -72,6 +72,8 @@ public class MovePlayer extends AbstractAction {
         return destination;
     }
 
+    // MoveType getter for PandemicLLMActions
+    public String getMoveType() { return moveType.name(); }
 
     @Override
     public boolean equals(Object other)

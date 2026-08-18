@@ -1,4 +1,0 @@
-{
-  "class": "evaluation.listeners.LLMPhaseBudgetListener",
-  "args": ["json/experiments/EnsemblePlayers/Catan_LearnedHeuristic_3P_500_LLAMA_Fair/LLMPhaseConfig.json"]
-}

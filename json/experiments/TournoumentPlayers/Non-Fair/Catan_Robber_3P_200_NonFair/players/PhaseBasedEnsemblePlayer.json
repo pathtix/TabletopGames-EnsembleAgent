@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Non-Fair/Catan_Robber_3P_200_NonFair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Non-Fair/Catan_Robber_3P_200_NonFair/Catan.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Non-Fair/Catan_Robber_3P_200_NonFair/LLMPhaseConfig.json"
+}

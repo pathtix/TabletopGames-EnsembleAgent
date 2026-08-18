@@ -1,6 +1,0 @@
-{
-  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
-  "llmParamsFile":  "json/experiments/EnsemblePlayers/Poker_HiBudget_3P_500_LLAMA/LLMActionPlayer.json",
-  "mctsParamsFile": "json/experiments/EnsemblePlayers/Poker_HiBudget_3P_500_LLAMA/Poker_HiBudget.json",
-  "phaseConfigFile": "json/experiments/EnsemblePlayers/Poker_HiBudget_3P_500_LLAMA/LLMPhaseConfig.json"
-}

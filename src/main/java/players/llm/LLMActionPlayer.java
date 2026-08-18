@@ -10,6 +10,9 @@ import core.interfaces.IActionListBuilder;
 import core.interfaces.IStateFeatureJSON;
 import games.GameType;
 import games.catan.CatanGameState;
+import games.pandemic.PandemicConstants;
+import games.pandemic.PandemicGameState;
+import games.pandemic.PandemicParameters;
 import games.sushigo.SGGameState;
 import games.sushigo.SGParameters;
 import games.sushigo.cards.SGCard;
@@ -129,6 +132,7 @@ public class LLMActionPlayer extends AbstractPlayer {
             case Connect4 -> buildPromptConnect4(gameState, stateText, actionsText);
             case SushiGo -> buildPromptSushiGo(gameState, stateText, actionsText);
             case Catan -> buildPromptCatan(gameState, stateText, actionsText);
+            case Pandemic -> buildPromptPandemic(gameState, stateText, actionsText);
             default -> "Game is not supported!";
         };
     }
@@ -234,6 +238,26 @@ public class LLMActionPlayer extends AbstractPlayer {
         ));
     }
 
+    private String buildPromptPandemic(AbstractGameState gameState, String stateText, String actionsText) {
+        PandemicGameState pgs = (PandemicGameState) gameState;
+        PandemicParameters pp = (PandemicParameters) pgs.getGameParameters();
+        int pbepPlayer =  gameState.getCurrentPlayer();
+        String pbepRole = pgs.getPlayerRole(pbepPlayer);
+        String roleAbility = loadPromptTemplate(pbepRole);
+        int nCardsForCure = pp.getnCardsForCure();
+        int reducedAmounttoCure = pp.getnCardsForCureReducedBy();
+
+        return fillPlaceholders(loadPromptTemplate("default"), Map.of(
+                "player", String.valueOf(pbepPlayer),
+                "role", pbepRole,
+                "roleAbility", roleAbility,
+                "nCardsForCure", String.valueOf(nCardsForCure),
+                "reducedAmounttoCure", String.valueOf(nCardsForCure - reducedAmounttoCure),
+                "state", stateText,
+                "actions", actionsText
+        ));
+    }
+
     private String buildActionText(List<AbstractAction> possibleActions, AbstractGameState gameState) {
         String className = getParameters().actionListClass;
         if (className != null && !className.isEmpty()) {
@@ -273,9 +297,13 @@ public class LLMActionPlayer extends AbstractPlayer {
 
         for (String pattern : patterns) {
             Matcher matcher = Pattern.compile(pattern).matcher(response);
-            if (matcher.find()) {
-                int id =  Integer.parseInt(matcher.group(1));
-                if (id >= 0 && id < actionCount) return id;
+            try {
+                if (matcher.find()) {
+                    int id =  Integer.parseInt(matcher.group(1));
+                    if (id >= 0 && id < actionCount) return id;
+                }
+            } catch (NumberFormatException e) {
+                // garbage / overflowing number -> not a valid action id, ignore it and keep looking
             }
         }
         return null;

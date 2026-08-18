@@ -1,0 +1,11 @@
+{
+  "game" : "Pandemic",
+  "nPlayers" : 4,
+  "mode" : "exhaustive",
+  "matchups" : 200,
+  "verbose" : true,
+  "gameParams" : "data/pandemic/train/param-config-v3.json",
+  "listener" : "json/listeners/GameResultsListener.json",
+  "destDir" : "json/experiments/OutputDirectory/Other/Pandemic_PBEP_v3_4P_200",
+  "playerDirectory" : "json/experiments/TournoumentPlayers/Other/Pandemic_PBEP_v3_4P_200/players"
+}

@@ -1,0 +1,6 @@
+{
+  "class": "players.phaseBasedEnsemble.PhaseBasedEnsembleParams",
+  "llmParamsFile":  "json/experiments/EnsemblePlayers/Fair/SushiGo_MinimalCardCountsStatic_3P_200_LLAMA_Fair/LLMActionPlayer.json",
+  "mctsParamsFile": "json/experiments/EnsemblePlayers/Fair/SushiGo_MinimalCardCountsStatic_3P_200_LLAMA_Fair/SushiGo.json",
+  "phaseConfigFile": "json/experiments/EnsemblePlayers/Fair/SushiGo_MinimalCardCountsStatic_3P_200_LLAMA_Fair/LLMPhaseConfig.json"
+}

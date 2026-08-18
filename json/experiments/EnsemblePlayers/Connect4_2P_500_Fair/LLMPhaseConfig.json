@@ -1,5 +1,0 @@
-{
-  "class": "players.llm.phase.LLMPhaseConfig",
-  "matchedBudgetMs": 400,
-  "connect4LLMFillThreshold": 0.07
-}

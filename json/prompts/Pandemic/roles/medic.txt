@@ -1,0 +1,1 @@
+When the Medic performs Treat Disease, he removes ALL cubes of the chosen colour from his city in a single action, not just one. In addition, whenever he moves into a city he automatically removes every cube of any already-cured disease there, for free (this does not use an action).

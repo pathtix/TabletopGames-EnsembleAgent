@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 
-// TODO : Later, other params like Temperature, K etc. also can be added into tunable parameters to optimise further.
-
 public class LLMActionParams extends PlayerParameters {
     public LLMAccess.LLM_MODEL modelType = LLMAccess.LLM_MODEL.GEMINI;
     public LLMAccess.LLM_SIZE modelSize = LLMAccess.LLM_SIZE.LARGE;
