@@ -1,0 +1,373 @@
+Using command line value for config of json/experiments/TournoumentConfigs/Non-Fair/Poker_River_4P_200_LLAMA_NonFair.json
+Game: Poker, Players: 4
+Game: Poker, Players: 4, Mode: EXHAUSTIVE, TotalGames: 192, GamesPerMatchup: 8
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by nonapi.io.github.classgraph.utils.FileUtils (file:/Users/denizgencoatilla/TabletopGames/target/TAG.jar)
+WARNING: Please consider reporting this to the maintainers of class nonapi.io.github.classgraph.utils.FileUtils
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Playing Poker
+[PhaseBasedEnsemblePlayer,Poker_4P_1,Poker_4P_2,Poker_4P_3]
+[LLMActionPlayer] Creating LLMAccess: model=OPENROUTER size=LARGE
+[LLMActionPlayer] API call took 385 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 175 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 229 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 237 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 173 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 198 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 247 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 221 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 242 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[PhaseBasedEnsemblePlayer,Poker_4P_1,Poker_4P_3,Poker_4P_2]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[DRAW_GAME,LOSE_GAME,DRAW_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 238 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 203 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 217 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 183 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 170 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Poker_4P_2,Poker_4P_1,Poker_4P_3]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 217 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 365 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 227 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 186 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 157 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 236 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 400 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[PhaseBasedEnsemblePlayer,Poker_4P_2,Poker_4P_3,Poker_4P_1]
+[LLMActionPlayer] API call took 169 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 196 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 143 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 433 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 159 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 229 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 425 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 539 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 245 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 233 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Poker_4P_3,Poker_4P_1,Poker_4P_2]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 233 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 239 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 210 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 244 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 181 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 221 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Poker_4P_3,Poker_4P_2,Poker_4P_1]
+[LLMActionPlayer] API call took 293 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 190 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 198 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[DRAW_GAME,LOSE_GAME,DRAW_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 177 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_1,PhaseBasedEnsemblePlayer,Poker_4P_2,Poker_4P_3]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 265 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 209 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 208 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 212 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 224 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 173 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[Poker_4P_1,PhaseBasedEnsemblePlayer,Poker_4P_3,Poker_4P_2]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 210 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 244 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 544 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 465 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 413 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_1,Poker_4P_2,PhaseBasedEnsemblePlayer,Poker_4P_3]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 210 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 235 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 267 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 216 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 218 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[Poker_4P_1,Poker_4P_2,Poker_4P_3,PhaseBasedEnsemblePlayer]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 180 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 303 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 606 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_1,Poker_4P_3,PhaseBasedEnsemblePlayer,Poker_4P_2]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[DRAW_GAME,LOSE_GAME,DRAW_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 281 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 336 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 181 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 236 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 243 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_1,Poker_4P_3,Poker_4P_2,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 232 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 577 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 239 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[Poker_4P_2,PhaseBasedEnsemblePlayer,Poker_4P_1,Poker_4P_3]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 176 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_2,PhaseBasedEnsemblePlayer,Poker_4P_3,Poker_4P_1]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 267 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 228 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 193 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 257 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 199 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 184 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_2,Poker_4P_1,PhaseBasedEnsemblePlayer,Poker_4P_3]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 185 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 236 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[Poker_4P_2,Poker_4P_1,Poker_4P_3,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 264 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 227 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 425 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 328 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 161 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[Poker_4P_2,Poker_4P_3,PhaseBasedEnsemblePlayer,Poker_4P_1]
+[LLMActionPlayer] API call took 161 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 246 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_2,Poker_4P_3,Poker_4P_1,PhaseBasedEnsemblePlayer]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 216 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 468 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 349 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,PhaseBasedEnsemblePlayer,Poker_4P_1,Poker_4P_2]
+[LLMActionPlayer] API call took 208 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 185 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 237 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 198 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 237 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,PhaseBasedEnsemblePlayer,Poker_4P_2,Poker_4P_1]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 239 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 200 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 216 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,Poker_4P_1,PhaseBasedEnsemblePlayer,Poker_4P_2]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 458 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 534 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,Poker_4P_1,Poker_4P_2,PhaseBasedEnsemblePlayer]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 205 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 215 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 278 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 242 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 206 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 200 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,Poker_4P_2,PhaseBasedEnsemblePlayer,Poker_4P_1]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 317 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 202 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 199 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 176 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Poker_4P_3,Poker_4P_2,Poker_4P_1,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 227 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 220 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 318 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,WIN_GAME]
+============= Poker - 192 games played ============= 
+PhaseBasedEnsemblePlayer got 43.50 points. PhaseBasedEnsemblePlayer won 23.4% of the 192 games of the tournament. PhaseBasedEnsemblePlayer won 23.4% of the 192 games it played during the tournament.
+PhaseBasedEnsemblePlayer got a mean score of 46.08.
+PhaseBasedEnsemblePlayer won 22.9% of the 192 games against Poker_4P_1.
+PhaseBasedEnsemblePlayer won 22.9% of the 192 games against Poker_4P_2.
+PhaseBasedEnsemblePlayer won 22.9% of the 192 games against Poker_4P_3.
+
+Poker_4P_1 got 47.50 points. Poker_4P_1 won 25.0% of the 192 games of the tournament. Poker_4P_1 won 25.0% of the 192 games it played during the tournament.
+Poker_4P_1 got a mean score of 48.59.
+Poker_4P_1 won 24.5% of the 192 games against PhaseBasedEnsemblePlayer.
+Poker_4P_1 won 25.0% of the 192 games against Poker_4P_2.
+Poker_4P_1 won 25.0% of the 192 games against Poker_4P_3.
+
+Poker_4P_2 got 55.50 points. Poker_4P_2 won 29.2% of the 192 games of the tournament. Poker_4P_2 won 29.2% of the 192 games it played during the tournament.
+Poker_4P_2 got a mean score of 57.06.
+Poker_4P_2 won 28.6% of the 192 games against PhaseBasedEnsemblePlayer.
+Poker_4P_2 won 29.2% of the 192 games against Poker_4P_1.
+Poker_4P_2 won 29.2% of the 192 games against Poker_4P_3.
+
+Poker_4P_3 got 45.50 points. Poker_4P_3 won 24.0% of the 192 games of the tournament. Poker_4P_3 won 24.0% of the 192 games it played during the tournament.
+Poker_4P_3 got a mean score of 48.28.
+Poker_4P_3 won 23.4% of the 192 games against PhaseBasedEnsemblePlayer.
+Poker_4P_3 won 24.0% of the 192 games against Poker_4P_1.
+Poker_4P_3 won 24.0% of the 192 games against Poker_4P_2.
+
+---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
+Poker_4P_2: Win rate 0.29 +/- 0.033	Mean Ordinal 1.85 +/- 0.05
+Poker_4P_1: Win rate 0.25 +/- 0.031	Mean Ordinal 1.91 +/- 0.05
+Poker_4P_3: Win rate 0.24 +/- 0.031	Mean Ordinal 1.94 +/- 0.05
+PhaseBasedEnsemblePlayer: Win rate 0.23 +/- 0.030	Mean Ordinal 1.90 +/- 0.04
+
+
+---- Alpha Rank ----  

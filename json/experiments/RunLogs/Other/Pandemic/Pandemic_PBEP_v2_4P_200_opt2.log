@@ -1,0 +1,1935 @@
+Using command line value for config of json/experiments/TournoumentConfigs/Other/Pandemic_PBEP_v2_4P_200_opt2.json
+Game: Pandemic, Players: 4
+Game: Pandemic, Players: 4, Mode: EXHAUSTIVE, TotalGames: 192, GamesPerMatchup: 8
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by nonapi.io.github.classgraph.utils.FileUtils (file:/Users/denizgencoatilla/TabletopGames/target/TAG.jar)
+WARNING: Please consider reporting this to the maintainers of class nonapi.io.github.classgraph.utils.FileUtils
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Playing Pandemic
+[Pandemic_MCTS_1,Pandemic_MCTS_2,Pandemic_MCTS_3,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] Creating LLMAccessGoogleGenAI: model=gemini-2.5-flash
+[LLMActionPlayer] API call took 814 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 359 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 630 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 507 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 676 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 725 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 6628 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 7614 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist and have 3 blue cards, so I can cure blue with one more blue card, but I can also cure blue right now since I am at a research station and only need 4 cards (not 5) to cure, and I have 3 blue cards and the Atlanta card, which is not blue, so I need to discard 2 blue cards to cure blue.
+I have 3 blue cards (Chicago, St Petersburg, and one more blue card that is not listed in my hand but is implied by the handColorCounts), and I am at a research station (Atlanta), so I can cure blue.
+I have 3 blue cards (Chicago, St Petersburg, and one more blue card that is not listed in my hand but is implied by the handColorCounts), and I am at a research station (Atlanta), so I can cure blue.
+I have 3 blue cards (Chicago, St Petersburg, and one more blue card that is not listed in my hand but is implied by the handColorCounts), and I am at a research station (Atlanta), so I can cure blue.
+I have 3 blue cards (Chicago, St Petersburg, and one more blue card that is not listed in my hand
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 646 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 5576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6946 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 35484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 20733 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 12186 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 463 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1109 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 515 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 641 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 7001 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_1,Pandemic_MCTS_2,PhaseBasedEnsemblePlayer,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 747 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6722 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 642 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 584 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 544 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 631 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 332 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 345 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 553 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 591 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 364 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 435 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 463 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 368 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 373 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 547 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 295 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 323 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_1,Pandemic_MCTS_3,Pandemic_MCTS_2,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 473 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1212 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, so I only need 4 cards of the same color to cure a disease. I have 1 red card and 1 yellow card. I am in Atlanta, which is a research station. I can cure red or yellow if I have enough cards. I have 2 cards, so I can't cure anything yet. I need to collect more cards. I can cure red or yellow. I have 1 red card and 1 yellow card. I need 3 more red cards or 3 more yellow cards. I can drive to Washington, Miami, or Chicago. I can also direct flight to Hong Kong or Santiago. I can also shuttle flight to Atlanta or Osaka. I can also cure red or yellow. I have 2 cards, so I can't cure anything yet. I need to collect more cards. I can cure red or yellow. I have 1 red card and 1 yellow card. I need 3 more red cards or 3 more yellow cards. I can drive to Washington, Miami, or Chicago. I can also direct flight to Hong Kong or Santiago. I can also shuttle flight to Atlanta or Osaka. I can also cure red or yellow. I have 2 cards, so I can'
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 362 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 371 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 581 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 743 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 811 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 335 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 357 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 672 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 613 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 320 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 352 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 719 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 489 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1133 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, so I only need 4 cards to cure a disease. I have 1 black card and am at a research station. I need 3 more black cards to cure black disease. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now, but I only have 1 black card. I need to get more black cards. I should try to get more black cards. I can cure black disease now,
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 8394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 877 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 501 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 613 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 494 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 378 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_1,Pandemic_MCTS_3,PhaseBasedEnsemblePlayer,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 378 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 684 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 334 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 643 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 315 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 655 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 291 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 370 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 653 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 298 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 722 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_1,PhaseBasedEnsemblePlayer,Pandemic_MCTS_2,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 501 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 415 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 522 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 511 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 746 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1690 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the current board state, my role as Quarantine Specialist, and the overall goal of curing diseases. My current location, Los Angeles, has no immediate threats, and I have the "Airlift" card which is very powerful. I also have a blue card (Washington). The Scientist has a yellow card, and the Operations Expert has a yellow card. The Medic has a red and a black card.
+
+Given that I have the "Airlift" card, I can move any player to any city. I also have a blue card, and San Francisco has 2 blue cubes. I could move to San Francisco to prevent an outbreak there, but it's not at risk yet.
+
+The most pressing issue is to start collecting cards for cures. The Scientist and Operations Expert both have yellow cards, so getting them together or getting more yellow cards to them would be beneficial. The Medic has a red and a black card, so getting them more cards of those colors would also be good.
+
+Since I have the Airlift card, I can use it to move a player to a more strategic location. The Operations Expert is in Santiago, which is a research station. The Scientist is in Cairo. The Medic is in Riyadh.
+
+I have
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 581 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 502 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 537 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 644 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1061 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 537 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 335 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 433 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 598 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 646 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 711 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 373 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 611 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1146 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 559 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_1,PhaseBasedEnsemblePlayer,Pandemic_MCTS_3,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 602 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 546 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 515 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 530 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6552 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 364 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 19341 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 7039 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 323 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 329 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 526 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 510 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 561 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 850 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 425 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 522 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 494 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,Pandemic_MCTS_1,Pandemic_MCTS_3,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, and the yellow disease is already cured, so I should focus on curing other diseases. I have a Baghdad card and am at a research station, so I can cure black if I get 3 more black cards. I also have a Miami card, which is connected to Atlanta. I have 2 actions remaining. I can cure yellow, but it is already cured. I can cure black, but I only have 1 black card. I should try to get more black cards. I can shuttle to Sao Paolo, Kolkata, or Kinshasa. I can drive to Washington, Miami, or Chicago. I can direct flight to Baghdad.
+
+I should try to get more black cards. I have a Baghdad card. I am at Atlanta. I can direct flight to Baghdad. This will cost 1 action. Then I will be in Baghdad. I will have 1 action remaining. I will have 1 black card. I will need 3 more black cards to cure black.
+
+I can also drive to Miami. This will cost 1 action. Then I will be in Miami. I will have 1 action remaining. I will have 1 black card. I will need 3 more black cards to cure black.
+
+I
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 747 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1067 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1214 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am at a research station in Atlanta, and I have the Santiago card, which is yellow. I need 4 yellow cards to cure yellow, but I only have 1. I can cure yellow if I get 3 more yellow cards. I can cure blue if I get 4 blue cards. I can cure red if I get 4 red cards. Black is already cured. I have 3 actions remaining. I should try to get more yellow cards. I can cure yellow now if I have 4 yellow cards. I can cure blue now if I have 4 blue cards. I can cure red now if I have 4 red cards. I can cure yellow now if I have 4 yellow cards. I can cure blue now if I have 4 blue cards. I can cure red now if I have 4 red cards. I can cure yellow now if I have 4 yellow cards. I can cure blue now if I have 4 blue cards. I can cure red now if I have 4 red cards. I can cure yellow now if I have 4 yellow cards. I can cure blue now if I have 4 blue cards. I can cure red now if I have 4 red cards. I can cure yellow now
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 625 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 516 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 595 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 670 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 312 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 667 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 309 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 771 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 353 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 294 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 312 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 529 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 329 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1060 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1219 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, and I am currently in Johannesburg, which is a research station. I have 4 cards in my hand: Istanbul (black), Buenos Aires (yellow), San Francisco (blue), and Taipei (red). The red disease is already cured. I need to cure the other diseases. I have enough cards to cure blue (San Francisco) and yellow (Buenos Aires) diseases, as I only need 4 cards of the same color as a Scientist, but I only have one of each. I also have a black card (Istanbul). I need to get more cards of the same color to cure diseases. I can cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to cure red, black, yellow, and blue diseases. I have enough cards to
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 583 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 313 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,Pandemic_MCTS_1,PhaseBasedEnsemblePlayer,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 486 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 513 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 992 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 373 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 513 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 770 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 542 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 624 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 359 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 706 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 446 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 486 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 679 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 378 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 649 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 515 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 548 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,Pandemic_MCTS_3,Pandemic_MCTS_1,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 486 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 543 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 331 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 718 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 664 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 352 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 286 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 289 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 312 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 299 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1487 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am the Scientist, and I am currently in Atlanta, which is a research station. The yellow disease is already cured. I have two yellow cards (Los Angeles and Bogota) in my hand, but since yellow is cured, these cards are not useful for curing. I should consider sharing these cards with another player if they need them, or discarding them if I need space for more useful cards. I have 4 actions remaining.
+
+My current goal is to cure diseases. Yellow is already cured. I have no cards for red, blue, or black. I am at a research station.
+
+Looking at the legal actions, I see "Cure Disease yellow". This is an error in the game state, as yellow is already cured. I should not take this action.
+
+I need to get cards for uncured diseases. I have no cards for red, blue, or black. I am in Atlanta, which is a research station.
+
+Let's look at other players' hands:
+- Medic (Player 0) has 2 red cards.
+- Quarantine Specialist (Player 1) has 3 black cards.
+- Operations Expert (Player 2) has 1 yellow card.
+
+I have 2 yellow cards. Since
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 282 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 778 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 404 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 464 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 415 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 735 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 620 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,Pandemic_MCTS_3,PhaseBasedEnsemblePlayer,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 404 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 607 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 308 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 359 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 341 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 521 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 306 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 331 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 485 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 304 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 540 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 598 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 519 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 274 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 463 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 492 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 604 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 304 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1276 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,PhaseBasedEnsemblePlayer,Pandemic_MCTS_1,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 502 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 607 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 319 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 566 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 519 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1226 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 332 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 368 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 334 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 512 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1526 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am the Quarantine Specialist, and my ability prevents disease cubes and outbreaks in my current city. I am currently in Atlanta, which has a research station. My goal is to help cure diseases. I have two cards: Algiers (black) and San Francisco (blue). The Scientist (Player 3) is also in Atlanta and has two yellow cards, which is enough to cure yellow if they were at a research station (which they are). The Medic (Player 0) is in Tehran and has one red card. The Operations Expert (Player 2) is in Atlanta and has one red and one blue card.
+
+Given that the Scientist can cure yellow, and we are all in Atlanta, which is a research station, I should consider what I can do to help. My current cards are not immediately useful for curing, and I am already in a safe city with a research station. I should consider moving to a city that is at risk or where I can collect more cards.
+
+However, since the Scientist can cure yellow, and we are all in Atlanta, I should prioritize helping the Scientist cure yellow. I can't directly help the Scientist cure yellow, but I can position myself to collect more cards or protect a high-risk city.
+
+Looking
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 556 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 496 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 364 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 558 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 538 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 546 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 352 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 563 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 103274 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 40503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 516 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 19467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 758 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1001 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_2,PhaseBasedEnsemblePlayer,Pandemic_MCTS_3,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 1175 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 699 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 558 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am the Quarantine Specialist, and my ability prevents disease cubes from being placed and outbreaks from occurring in the city I currently occupy. I have 1 action remaining this turn. My current location is Algiers. I need to consider the infected cities and my team's positions to make the best move.
+
+The most pressing issue is the high concentration of black cubes in Kolkata (3 cubes) and the yellow cubes in Buenos Aires (3 cubes). However, I am in Algiers, and my ability is defensive. I can't directly treat disease in other cities. I need to move to a city that is at risk of an outbreak or has a high concentration of cubes to prevent further infection.
+
+Looking at the infected cities, Madrid has 2 blue cubes, and I can reach it. Cairo has 2 black cubes, and I can reach it. Milan has 1 blue cube, and I can reach it. Istanbul has no cubes, and Paris has no cubes.
+
+My current location, Algiers, is not infected. I have 1 action remaining. I should move to a city that is at risk of an outbreak or has a high concentration of cubes to prevent further infection.
+
+Given the current state, moving to Madrid (2 blue cubes)
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 332 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 345 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 334 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 536 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 337 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 584 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 479 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 475 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 492 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 364 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 605 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 351 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 334 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 409 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 611 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1728 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the current board state, my role as Quarantine Specialist, and the overall game strategy to make the most impactful move.
+My current location is Lima, which has a research station.
+The Medic is in Manila, the Operations Expert and Scientist are in Atlanta.
+There are no immediate threats in Lima, and my ability protects this city.
+I have no cards in hand, so I cannot perform any card-based actions like Direct Flight or Charter Flight.
+I have 1 action remaining this turn.
+Given that I have no cards and no immediate threats in Lima, moving to a neighboring city or a research station seems like the best use of my last action.
+Moving to Mexico City (yellow) or Bogota (yellow) would put me in a position to potentially protect those cities from further infection, as both are yellow and Mexico City has 1 yellow cube.
+However, the most pressing issue is the high number of blue cubes on the board, and the fact that the blue disease is uncured.
+The Medic has two blue cards, and the Scientist has one blue card.
+The Operations Expert has a yellow card and is in Atlanta, which is a research station.
+Since I have no cards, I cannot contribute to
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,Pandemic_MCTS_1,Pandemic_MCTS_2,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 1334 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, so I only need 4 yellow cards to cure yellow, and I currently have 2 yellow cards. I am at a research station, and I can cure yellow if I get 2 more yellow cards. I should try to get more yellow cards. I can also cure yellow right now if I had 4 yellow cards. I should try to get more yellow cards. I should also consider that the Operations Expert is in Buenos Aires, and the Medic and Quarantine Specialist are in Atlanta. I should also consider that there are 3 blue cubes in Montreal and St. Petersburg, and 3 red cubes in Shanghai. I should also consider that there are 2 yellow cubes in Khartoum and Jakarta. I should also consider that there are 2 blue cubes in New York. I should also consider that there is 1 yellow cube in Lagos, Sao Paolo, and Bogota. I should also consider that there is 1 red cube in Bangkok. I should also consider that there is 1 black cube in Riyadh. I should also consider that there are 2 red cubes in Jakarta. I should also consider that there are 2 blue cubes in New York. I should also consider that there are 3 blue cubes in Montreal and St. Petersburg.
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 680 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 311 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 425 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 763 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 425 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 613 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 307 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 865 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 557 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 345 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 303 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 555 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 281 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 274 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 794 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1127 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am a Scientist, and I need to cure diseases. I have 2 actions left and I am in Atlanta, which is a research station. I have a black card (Delhi) and a blue card (Washington). I can cure black or blue disease if I have enough cards. I have 1 black card and 1 blue card. I need 4 cards of the same color to cure a disease. I don't have enough cards to cure any disease. I should try to get more cards. I can drive to Washington or Miami, or shuttle to Milan. I can also direct flight to Delhi. I have a black card (Delhi) and a blue card (Washington). I can cure black or blue disease if I have enough cards. I have 1 black card and 1 blue card. I need 4 cards of the same color to cure a disease. I don't have enough cards to cure any disease. I should try to get more cards. I can drive to Washington or Miami, or shuttle to Milan. I can also direct flight to Delhi. I have 2 actions left. I should try to get more cards. I can drive to Washington or Miami, or shuttle to Milan. I can also direct flight to Delhi.
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 533 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 530 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 332 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 353 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 373 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 352 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 529 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 309 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1037 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,Pandemic_MCTS_1,PhaseBasedEnsemblePlayer,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 311 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 362 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 557 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 489 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 577 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 371 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 564 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 587 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 560 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 524 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 512 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 518 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 305 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,Pandemic_MCTS_2,Pandemic_MCTS_1,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 270 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 336 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 370 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 753 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 701 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 567 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 312 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 524 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 589 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 639 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 316 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 324 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 270 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 292 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 285 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 547 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 361 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 463 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 763 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 359 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,Pandemic_MCTS_2,PhaseBasedEnsemblePlayer,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 738 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 433 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 564 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 754 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 627 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 610 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 404 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 526 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 507 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I should share knowledge with the Scientist in Bogota to help them cure a disease, as we are both in the same city.
+ACTION_ID: 101
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1301 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 569 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 506 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 532 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 510 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 295 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 644 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 302 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 277 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 572 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 595 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 325 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 559 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 341 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,PhaseBasedEnsemblePlayer,Pandemic_MCTS_1,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 512 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 368 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 597 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 335 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 472 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 492 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 351 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 373 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 369 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 325 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 608 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 378 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 300 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 313 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 337 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 324 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 511 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 371 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 565 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 319 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 463 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 577 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 370 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 435 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 505 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 487 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 511 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 594 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 583 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[Pandemic_MCTS_3,PhaseBasedEnsemblePlayer,Pandemic_MCTS_2,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 565 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 711 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 458 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 744 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 614 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 364 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the immediate threats and my ability as a Quarantine Specialist, while also looking for opportunities to gather cards for cures.
+The most immediate threat is Shanghai, which is at 5 red cubes and will outbreak if infected again.
+My current location, Karachi, is not directly threatened, but I can move to a city that is.
+I have a Kinshasa card, and Kinshasa has 1 yellow cube.
+I have a Chicago card, and Chicago is not infected.
+I have a Cairo card, and Cairo is not infected.
+I have a Johannesburg card, and Johannesburg is not infected.
+The Medic is in Paris, the Operations Expert is in Cairo, and the Scientist is in Tokyo.
+The black disease is cured.
+I have 2 yellow cards, 1 blue card, and 1 black card.
+I need 2 more yellow cards to cure yellow, 1 more blue card to cure blue, and 2 red cards to cure red.
+I am in Karachi, which is connected to Delhi, Baghdad, Mumbai, Riyadh, and Tehran.
+Tehran has 1 black cube.
+Delhi is not infected.
+Baghdad is not infected.
+Mumbai is not infected.
+R
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 510 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 501 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 709 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 357 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 492 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 345 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 506 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 293 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 592 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 485 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 518 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 435 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 446 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 310 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 494 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 307 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 323 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 618 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 605 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 608 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 435 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_1,Pandemic_MCTS_2,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 533 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 473 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 341 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 865 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 623 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 819 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6102 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 404 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 554 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1650 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the immediate threats and my ability to contribute to a cure, especially with my Medic ability to clear all cubes of a color.
+
+My current location (Montreal) has no disease cubes, and I have 3 blue cards and 2 red cards. The closest blue infected city is Chicago (1 cube), and the closest red infected city is New York (0 cubes). I have enough blue cards to cure blue if I were at a research station, but I'm not. The Operations Expert is in Hong Kong, which has red cubes, and the Quarantine Specialist is in Karachi, which has black cubes. The Scientist is in Istanbul and has a yellow card.
+
+Given that I have 3 blue cards and am close to Chicago (1 blue cube), and there are 3 blue cubes in Madrid, it might be good to move towards a research station to cure blue. However, I don't have a blue research station card.
+
+Looking at the infected cities, Jakarta has 4 red cubes, Bangkok and Shanghai have 3 red cubes. Johannesburg, Sao Paolo, Bogota, and Miami have 3 yellow cubes. Madrid has 3 blue cubes. Riyadh has 3 black cubes.
+
+My current location, Montreal, is connected to
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 890 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 435 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 307 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1703 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider my current location, remaining actions, and the overall game state to make the most impactful move.
+I am in Baghdad with 1 action remaining.
+My hand has 2 red cards, 1 yellow, and 0 blue/black.
+Yellow is cured, so my Medic ability will automatically remove yellow cubes when I enter a city with them.
+There are no research stations in Baghdad.
+My current city Baghdad is connected to Cairo, Riyadh, Karachi, Istanbul, and Tehran.
+Cairo is connected to Sao Paolo, where the Quarantine Specialist is.
+Karachi and Tehran have black cubes.
+There are no red cubes in any adjacent cities.
+The Operations Expert is in Delhi, which has a research station and black cubes.
+The Scientist is in Montreal.
+Sao Paolo has yellow cubes, but yellow is cured, so if I move there, they will be removed automatically.
+I have 1 action left, so I can only move to an adjacent city.
+Moving to Cairo would put me closer to the Quarantine Specialist, but there are no immediate threats there.
+Moving to Karachi or Tehran would allow me to treat black disease, but I don't have any black cards.
+Given that I only have one
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 472 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_1,Pandemic_MCTS_3,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1094 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 479 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 485 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 512 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 320 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 689 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 687 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 342 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to prioritize treating diseases, especially in cities with high cube counts, and collecting cards to cure diseases, so I will start by treating the black disease in Shanghai.
+ACTION_ID: 6
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 609 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 688 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_2,Pandemic_MCTS_1,Pandemic_MCTS_3]
+[LLMActionPlayer] API call took 675 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 542 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 547 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 541 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 524 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 823 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 512 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 515 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 737 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 291 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 501 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 519 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 351 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 425 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 548 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 599 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 561 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 631 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6974 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 7273 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 8834 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am currently in Atlanta, which has a research station, and I have 2 actions remaining. I have a London card and a Sydney card. My teammate, the Operations Expert (P2), is also in Atlanta and has an Atlanta card and a Khartoum card. The Scientist (P3) is in Manila. The Quarantine Specialist (P1) is also in Atlanta.
+
+My goal is to cure diseases. I need 2 cards of the same color to cure a disease (or 1 if I were a Scientist). I currently have 1 red and 1 blue card.
+
+I can take a card from P2 (Operations Expert) since we are in the same city. P2 has an Atlanta card and a Khartoum card. Neither of these cards helps me get closer to a cure right now.
+
+I can also move to a connected city (Chicago, Miami, Washington).
+
+Since I am a Medic, I can remove all cubes of a chosen color from my city in a single action. Atlanta currently has no cubes.
+
+I have 2 actions remaining.
+
+I will take the Atlanta card from P2, as it is a city card that can be used for a direct flight later, or to build a research station.
+ACTION_
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 637 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 644 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 491 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_2,Pandemic_MCTS_3,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 666 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 622 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 783 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1067 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 612 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 536 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1653 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the current game state, my role as Medic, and the available actions to make the most impactful move. My current location is Milan, and I have 1 action remaining. I have one black card (Algiers) in my hand. There are no cubes in Milan. My Medic ability allows me to remove all cubes of a chosen color in a single action, and automatically remove cured disease cubes when moving into a city. Yellow is cured.
+
+Considering the current board state, there are several cities with high cube counts, particularly Montreal (4 blue), Shanghai (4 red), and Jakarta (3 red). However, I am not in a position to treat any of these with my current location and actions. My hand is also not conducive to curing any diseases right now.
+
+Since I only have one action left, and no immediate threats in Milan, I should move to a city that either has cubes I can treat, or is strategically important for future turns. Algiers is connected to Milan, and I have the Algiers card, but there are no cubes there. Paris, Essen, and Istanbul are also connected. Istanbul is connected to Baghdad and Tehran, which have black cubes, and also to St. Petersburg, which is a research station. Moving
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 625 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 973 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 5922 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 514 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 532 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 572 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1650 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I need to consider the current board state, my role as Medic, and the overall game strategy to make the best move.
+My current location is Hong Kong.
+My hand contains Beijing and London.
+The blue disease is cured.
+There are 3 actions remaining.
+Johannesburg has 3 yellow cubes, and Buenos Aires has 4 yellow cubes.
+Karachi has 3 black cubes.
+My ability allows me to remove all cubes of a chosen color from my city in a single action, and automatically remove all cubes of a cured disease when I move into a city.
+Since blue is cured, if I move to London (2 blue cubes) or Madrid (2 blue cubes), I will automatically remove all blue cubes there.
+However, my current hand does not allow me to cure any disease.
+The Scientist is in Johannesburg, which has 3 yellow cubes.
+The Quarantine Specialist is in Istanbul.
+The Operations Expert is in Khartoum.
+There are no immediate threats of outbreaks in my current city or adjacent cities.
+I have 2 cards, and I need 2 cards of the same color to cure a disease (as a Medic, I don't get the Scientist's bonus).
+I should try to get
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 1745 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am currently in Taipei, which has a research station, and I have two actions left. I need to consider the overall game state, especially the infected cities and the cure progress. Blue is cured, which means my Medic ability will automatically remove all blue cubes when I enter a city with blue cubes. There are no blue cubes in Taipei, so I don't need to treat disease here. I have a London card, which is a blue city with 2 cubes, and a Beijing card. My hand is not strong for curing any disease right now. The Quarantine Specialist is in Istanbul, the Operations Expert in Khartoum, and the Scientist in Johannesburg. The Scientist is in a yellow city with 3 cubes, and Buenos Aires has 4 yellow cubes. There are also several black cities with cubes. Since I have a research station in Taipei, I should consider moving to a city where I can either help treat disease or collect cards for a cure. Given that blue is cured, I could use my London card to direct flight to London and automatically remove the 2 blue cubes there, which would be efficient. However, I only have 2 actions left, and I need to consider what the other players are doing. The Scientist is in Johannesburg, which has yellow cubes
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 489 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 478 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 426 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 516 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 896 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 578 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 542 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 483 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 330 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 588 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 619 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 564 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 324 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 336 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 353 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 538 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1068 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 328 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_3,Pandemic_MCTS_1,Pandemic_MCTS_2]
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 547 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 309 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 366 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 371 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 618 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 307 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 505 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 537 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 464 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 313 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 388 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 473 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 610 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,LOSE_GAME,LOSE_GAME,LOSE_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 545 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 417 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 325 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Pandemic_MCTS_3,Pandemic_MCTS_2,Pandemic_MCTS_1]
+[LLMActionPlayer] API call took 537 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 341 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 495 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 351 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 564 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 300 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 599 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 507 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1519 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am the Medic, and my ability to remove all cubes of a chosen color in a single action is powerful for containing outbreaks, especially in cities with multiple cubes. I should prioritize moving to cities with high cube counts, especially those at risk of outbreak, and consider building research stations to facilitate curing diseases.
+
+I am currently in Moscow, which has no cubes, and I have 2 actions remaining. Cairo has 2 black cubes and is where the Quarantine Specialist is, which is good for containing black. Baghdad has 3 black cubes, and Johannesburg has 3 yellow cubes. Paris has 3 blue cubes. I have a Taipei card (red) and a Santiago card (yellow).
+
+Given that I have 2 actions remaining, and there are several cities with 3 cubes, I should prioritize moving to one of these cities to treat the disease. Baghdad (3 black cubes) and Johannesburg (3 yellow cubes) are good candidates. Paris (3 blue cubes) is also a good candidate.
+
+I can Drive/Ferry to St Petersburg (1 action), then from St Petersburg to Paris (1 action). This would put me in Paris, where I can treat the 3 blue cubes in one action on my next turn.
+
+Alternatively, I could Drive
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 371 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 409 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 1494 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am in Tokyo with 3 actions remaining, and I need to consider how to best contribute to curing diseases, especially given my Medic ability to clear all cubes of a chosen color.
+
+My current hand has Tokyo and Jakarta, and I have 2 red cards, but no research station in Tokyo.
+The Operations Expert is in Istanbul with Chicago, and the Scientist is in Seoul with Atlanta, Los Angeles, and Lima.
+The Quarantine Specialist is in Cairo with London and Tehran.
+There are research stations in Atlanta, Khartoum, and Algiers.
+Paris has 4 blue cubes, Johannesburg has 4 yellow cubes, and several cities have 2 black cubes.
+
+Given that I have 2 red cards, and the Scientist has 2 yellow cards, it might be good to try and get to a research station to cure red, or to help the Scientist cure yellow.
+However, I don't have enough cards to cure red yet (need 2 more), and I don't have any yellow cards to give to the Scientist.
+My current location, Tokyo, is not a research station, and building one here would cost me my Tokyo card, which I might need for a Charter Flight.
+The most pressing issue seems to be the
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 457 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 357 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 331 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 578 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 595 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 536 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 851 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 446 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 778 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 321 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 429 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 560 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 305 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1313 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] Invalid response: I am the Medic, and my goal is to cure diseases. I am currently in Atlanta, which has a research station. My hand contains a blue card (London) and a red card (Sydney). Player 2 (Operations Expert) is also in Atlanta and has an Atlanta card, which they can give to me. Player 3 (Scientist) is in Chicago and has two red cards (Tokyo, Taipei) and one blue card (San Francisco).
+
+My current location is Atlanta, which has a research station. I have 4 actions remaining.
+I have a London card (blue) and a Sydney card (red).
+Player 2 (Operations Expert) is in Atlanta and has an Atlanta card.
+Player 3 (Scientist) is in Chicago and has San Francisco (blue), Tokyo (red), and Taipei (red).
+
+Given that I am in Atlanta (a research station) and Player 2 is also in Atlanta, and Player 2 has an Atlanta card, it makes sense for Player 2 to give me the Atlanta card. This doesn't use my action, but it's a good move for the team.
+
+My current hand is London (blue) and Sydney (red).
+I need to collect cards
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 279 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[WIN_GAME,WIN_GAME,WIN_GAME,WIN_GAME]
+============= Pandemic - 192 games played ============= 
+Pandemic_MCTS_1 got Infinity points. Pandemic_MCTS_1 won 100.0% of the 192 games of the tournament. Pandemic_MCTS_1 won 100.0% of the 192 games it played during the tournament.
+Pandemic_MCTS_1 got a mean score of 0.00.
+Pandemic_MCTS_1 won 0.0% of the 192 games against Pandemic_MCTS_2.
+Pandemic_MCTS_1 won 0.0% of the 192 games against Pandemic_MCTS_3.
+Pandemic_MCTS_1 won 0.0% of the 192 games against PhaseBasedEnsemblePlayer.
+
+Pandemic_MCTS_2 got Infinity points. Pandemic_MCTS_2 won 100.0% of the 192 games of the tournament. Pandemic_MCTS_2 won 100.0% of the 192 games it played during the tournament.
+Pandemic_MCTS_2 got a mean score of 0.00.
+Pandemic_MCTS_2 won 0.0% of the 192 games against Pandemic_MCTS_1.
+Pandemic_MCTS_2 won 0.0% of the 192 games against Pandemic_MCTS_3.
+Pandemic_MCTS_2 won 0.0% of the 192 games against PhaseBasedEnsemblePlayer.
+
+Pandemic_MCTS_3 got Infinity points. Pandemic_MCTS_3 won 100.0% of the 192 games of the tournament. Pandemic_MCTS_3 won 100.0% of the 192 games it played during the tournament.
+Pandemic_MCTS_3 got a mean score of 0.00.
+Pandemic_MCTS_3 won 0.0% of the 192 games against Pandemic_MCTS_1.
+Pandemic_MCTS_3 won 0.0% of the 192 games against Pandemic_MCTS_2.
+Pandemic_MCTS_3 won 0.0% of the 192 games against PhaseBasedEnsemblePlayer.
+
+PhaseBasedEnsemblePlayer got Infinity points. PhaseBasedEnsemblePlayer won 100.0% of the 192 games of the tournament. PhaseBasedEnsemblePlayer won 100.0% of the 192 games it played during the tournament.
+PhaseBasedEnsemblePlayer got a mean score of 0.00.
+PhaseBasedEnsemblePlayer won 0.0% of the 192 games against Pandemic_MCTS_1.
+PhaseBasedEnsemblePlayer won 0.0% of the 192 games against Pandemic_MCTS_2.
+PhaseBasedEnsemblePlayer won 0.0% of the 192 games against Pandemic_MCTS_3.
+
+---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
+Pandemic_MCTS_2: Win rate Infinity +/- NaN	Mean Ordinal 1.00 +/- 0.00
+Pandemic_MCTS_3: Win rate Infinity +/- NaN	Mean Ordinal 1.00 +/- 0.00
+Pandemic_MCTS_1: Win rate Infinity +/- NaN	Mean Ordinal 1.00 +/- 0.00
+PhaseBasedEnsemblePlayer: Win rate Infinity +/- NaN	Mean Ordinal 1.00 +/- 0.00
+
+
+---- Alpha Rank ----  

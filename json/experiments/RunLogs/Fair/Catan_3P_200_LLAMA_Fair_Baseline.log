@@ -1,0 +1,635 @@
+Using command line value for config of ./json/experiments/TournoumentConfigs/Catan_3P_500_LLAMA_Fair.json
+Game: Catan, Players: 3
+Game: Catan, Players: 3, Mode: EXHAUSTIVE, TotalGames: 198, GamesPerMatchup: 33
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by nonapi.io.github.classgraph.utils.FileUtils (file:/Users/denizgencoatilla/TabletopGames/target/TAG.jar)
+WARNING: Please consider reporting this to the maintainers of class nonapi.io.github.classgraph.utils.FileUtils
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Playing Catan
+[Catan_1,PhaseBasedEnsemblePlayer,Catan_2]
+[LLMActionPlayer] Creating LLMAccess: model=OPENROUTER size=LARGE
+[LLMActionPlayer] API call took 786 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 271 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 360 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 645 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 580 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 502 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 357 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 323 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 386 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 914 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 689 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 321 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 952 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 330 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 353 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 317 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 253 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 388 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 674 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 329 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 460 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 364 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 588 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 414 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 851 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 306 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 370 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 258 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 401 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 852 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 1016 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 1841 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1041 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 496 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 420 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 360 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 261 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 1040 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 372 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 330 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 495 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 463 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 326 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 293 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 305 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 362 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 805 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[Catan_1,Catan_2,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 305 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 694 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1356 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 654 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 317 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 334 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,DRAW_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 323 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 797 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 324 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 368 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 385 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 1021 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my second settlement on the tile that maximizes total pip count and resource diversity, which is the tile that touches LUMBER 11(2pip), GRAIN 3(2pip) and ORE 6(5pip) with a total of 9 pips and 3 resources, while avoiding numbers already covered by my first settlement, which is not possible in this case since the numbers are not specified, so I will choose the tile that maximizes total pip count and resource diversity, which is the tile that touches LUMBER 11(2pip), GRAIN 3(2pip) and ORE 6(5pip) with a total of 9 pips and 3 resources, which is not available, so I will choose the tile that maximizes total pip count and resource diversity, which is the tile that touches LUMBER 11(2pip), GRAIN 3(2pip) and ORE 6(5pip) with a total of 9 pips and 3 resources, which is not available, so I will choose the tile that maximizes total pip count and resource diversity, which is the tile that touches LUMBER 11(2pip), GRAIN 3(
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LOSE_GAME,DRAW_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 453 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 779 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 344 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 599 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 337 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 918 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 486 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 469 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 306 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 491 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 270 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 801 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 402 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 326 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 413 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 698 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 880 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 406 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 669 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 462 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 532 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 321 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 397 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 297 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,LOSE_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 383 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 362 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 479 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 258 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 874 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 294 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 359 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 382 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 355 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 374 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 324 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 307 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 355 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 930 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 494 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 425 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Catan_1,Catan_2]
+[LLMActionPlayer] API call took 322 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 340 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 430 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 814 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 581 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 508 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 728 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 304 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 418 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 339 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 363 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 452 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 425 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 335 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1037 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my settlement on the tile with the highest total pip count that also maximizes resource diversity, which is [ORE 5(4pip), ORE 6(5pip), GRAIN 9(4pip)] with 13 pips and 2 resources.
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LLMActionPlayer] API call took 313 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 454 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 624 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 775 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 640 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 359 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 429 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 533 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 335 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 410 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 556 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 410 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 760 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 325 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 429 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 832 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 373 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 429 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 375 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 301 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 453 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 523 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 520 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 323 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 432 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 382 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 735 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 387 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 336 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 395 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 368 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 529 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 261 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,LOSE_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 666 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 341 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 729 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 452 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 316 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[PhaseBasedEnsemblePlayer,Catan_2,Catan_1]
+[LLMActionPlayer] API call took 403 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 269 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 383 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 318 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 380 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 314 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,DRAW_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 991 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 275 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 745 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 458 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 489 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 388 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 449 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 410 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 655 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 724 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 310 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 501 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,DRAW_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 401 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 409 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 671 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,DRAW_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 429 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 295 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 850 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 338 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 444 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,DRAW_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 479 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 311 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 356 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 329 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 439 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 446 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 359 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 311 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 427 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 572 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 267 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 356 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 952 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 502 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 445 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 487 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 781 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 1041 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 657 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my second settlement on the tile that maximizes total pip count while also maximizing resource diversity and avoiding numbers already covered by my first settlement, which is the tile [GRAIN 9(4pip), LUMBER 5(4pip)] with 8 pips and 2 resources, but since it's already covered by my first settlement, I will choose the tile [GRAIN 9(4pip)] with 4 pips and 1 resource, however, this is not the best option, the best option is actually [GRAIN 9(4pip), GRAIN 5(4pip)] with 8 pips and 1 resource, but since it's not the best option in terms of resource diversity, I will choose the tile [GRAIN 9(4pip), LUMBER 5(4pip)] is not an option, the best option is actually [GRAIN 9(4pip)] is not the best option, the best option is actually [GRAIN 9(4pip), GRAIN 5(4pip)] is not the best option, the best option is actually [GRAIN 9(4pip)] is not the best option, the best option is actually [GRAIN
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LOSE_GAME,DRAW_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 567 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 376 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 848 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 326 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 275 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 696 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 473 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 379 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 691 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[Catan_2,Catan_1,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 561 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 919 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 440 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 310 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 344 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 322 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 470 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 801 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 378 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,LOSE_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 992 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 321 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 328 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 317 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 1011 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my second settlement on the tile that maximizes total pip count while also maximizing resource diversity and avoiding numbers already covered by my first settlement, which is the tile [LUMBER 8(5pip), ORE 5(4pip)] -> 9 pips, 2 resources, but since it's already covered by the opponent's settlement, I will choose the tile [LUMBER 8(5pip), GRAIN 11(2pip)] -> 9 pips, 2 resources is not the best option, so I will choose the tile [LUMBER 8(5pip), ORE 5(4pip)] is not available, so I will choose the tile [LUMBER 8(5pip), GRAIN 11(2pip)] is not the best option, so I will choose the tile [LUMBER 8(5pip), ORE 5(4pip)] is not available, so I will choose the tile [LUMBER 8(5pip), GRAIN 11(2pip)] is not the best option, so I will choose the tile [LUMBER 8(5pip), ORE 5(4pip)] is not available,
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 354 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 806 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 505 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 317 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 402 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 316 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 418 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 489 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 372 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 495 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 349 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 385 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 343 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 599 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 351 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 323 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 379 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 353 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 404 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 399 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 284 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 516 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 365 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 306 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 371 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,LOSE_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 723 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 330 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 413 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 1000 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 380 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 312 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 863 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 377 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 295 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 633 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 321 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 745 ms (model=OPENROUTER size=LARGE)
+[DRAW_GAME,LOSE_GAME,DRAW_GAME]
+[LLMActionPlayer] API call took 703 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[Catan_2,PhaseBasedEnsemblePlayer,Catan_1]
+[LLMActionPlayer] API call took 310 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 639 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my second settlement on the tile that maximizes total pip count while also maximizing resource diversity and avoiding numbers already covered by my first settlement, which is the tile [GRAIN 2(1pip), WOOL 8(5pip)] with 6 pips and 2 resources, but since it's not the best option, I will choose the tile [GRAIN 2(1pip), LUMBER 10(3pip)] with 4 pips and 2 resources is not the best option either, so I will choose the tile [GRAIN 2(1pip), LUMBER 10(3pip), WOOL 3(2pip)] with 6 pips and 3 resources is not the best option, so I will choose the tile [GRAIN 2(1pip), WOOL 3(2pip)] with 3 pips and 2 resources is not the best option, so I will choose the tile [GRAIN 2(1pip)] with 1 pips and 1 resource is not the best option, so I will choose the tile [WOOL 3(2pip), LUMBER 10(3pip), WOOL 6
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 378 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 842 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 343 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 1014 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 342 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 323 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 305 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 309 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 333 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 391 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 325 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 386 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 337 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 473 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 747 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 330 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 395 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 666 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] Invalid response: I will place my second settlement on the tile with the highest total pip count that maximizes resource diversity and does not overlap with the numbers already covered by my first settlement, which is the tile with 12 pips, 2 resources, and the numbers 4, 3, and 5, located at id 48, but since that would overlap with the opponent's settlement, I will choose the tile with 12 pips, 2 resources, and the numbers 4, 3, and 5, located at id 82, but since that would overlap with the opponent's settlement, I will choose the tile with 12 pips, 2 resources, and the numbers 4, 3, and 5, located at id 48 is not an option, I will choose the tile with 12 pips, 2 resources, and the numbers 4, 3, and 5, located at id 82 is not an option, I will choose the tile with 12 pips, 2 resources, and the numbers 4, 3, and 5, located at id 82 is not an option, I will choose the tile with 12 pips, 2 resources, and the numbers 
+[LLMActionPlayer] Action ID : null selected randomly since LLM returned non valid action[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 482 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 806 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 357 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 995 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 289 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 1992 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 885 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 909 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 507 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 914 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 445 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 629 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 376 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 328 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 352 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 356 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 299 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 438 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 643 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 321 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 303 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 303 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 320 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 329 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 355 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 327 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 348 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 713 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 639 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=OPENROUTER size=LARGE)
+[WIN_GAME,LOSE_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 650 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 444 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 891 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 341 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 298 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 396 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 382 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 439 ms (model=OPENROUTER size=LARGE)
+[LLMActionPlayer] API call took 319 ms (model=OPENROUTER size=LARGE)
+[LOSE_GAME,LOSE_GAME,WIN_GAME]
+============= Catan - 198 games played ============= 
+Catan_1 got 62.50 points. Catan_1 won 30.8% of the 198 games of the tournament. Catan_1 won 30.8% of the 198 games it played during the tournament.
+Catan_1 got a mean score of 6.58.
+Catan_1 won 30.8% of the 198 games against PhaseBasedEnsemblePlayer.
+Catan_1 won 30.8% of the 198 games against Catan_2.
+
+PhaseBasedEnsemblePlayer got 84.00 points. PhaseBasedEnsemblePlayer won 39.9% of the 198 games of the tournament. PhaseBasedEnsemblePlayer won 39.9% of the 198 games it played during the tournament.
+PhaseBasedEnsemblePlayer got a mean score of 7.20.
+PhaseBasedEnsemblePlayer won 39.9% of the 198 games against Catan_1.
+PhaseBasedEnsemblePlayer won 39.9% of the 198 games against Catan_2.
+
+Catan_2 got 51.50 points. Catan_2 won 23.2% of the 198 games of the tournament. Catan_2 won 23.2% of the 198 games it played during the tournament.
+Catan_2 got a mean score of 6.20.
+Catan_2 won 23.2% of the 198 games against Catan_1.
+Catan_2 won 23.2% of the 198 games against PhaseBasedEnsemblePlayer.
+
+---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
+PhaseBasedEnsemblePlayer: Win rate 0.42 +/- 0.034	Mean Ordinal 1.77 +/- 0.06
+Catan_1: Win rate 0.32 +/- 0.033	Mean Ordinal 1.94 +/- 0.05
+Catan_2: Win rate 0.26 +/- 0.030	Mean Ordinal 1.99 +/- 0.05

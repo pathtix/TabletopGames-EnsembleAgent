@@ -1,0 +1,708 @@
+Using command line value for config of json/experiments/TournoumentConfigs/Non-Fair/Poker_Flop_2P_200_NonFair.json
+Game: Poker, Players: 2
+Game: Poker, Players: 2, Mode: EXHAUSTIVE, TotalGames: 200, GamesPerMatchup: 100
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::invokeCleaner has been called by nonapi.io.github.classgraph.utils.FileUtils (file:/Users/denizgencoatilla/TabletopGames/target/TAG.jar)
+WARNING: Please consider reporting this to the maintainers of class nonapi.io.github.classgraph.utils.FileUtils
+WARNING: sun.misc.Unsafe::invokeCleaner will be removed in a future release
+Playing Poker
+[PhaseBasedEnsemblePlayer,Poker_2P_1]
+[LLMActionPlayer] Creating LLMAccessGoogleGenAI: model=gemini-2.5-flash
+[LLMActionPlayer] API call took 848 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 550 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 634 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 634 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 488 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 458 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 555 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 589 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 533 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 575 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 603 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 406 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 655 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 708 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 574 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 521 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 425 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 319 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 590 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 356 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 522 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 486 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 554 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 558 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 515 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 716 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 464 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 741 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 421 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 622 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 565 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 533 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 492 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 495 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 423 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 662 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 347 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 658 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 399 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 377 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 618 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 445 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 440 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 550 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 431 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 489 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 681 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 529 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 346 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 465 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 506 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 494 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 569 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 486 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 593 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 576 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 475 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 470 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 603 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 367 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 502 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 625 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 475 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 640 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 495 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 495 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 532 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 678 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 449 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 475 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 536 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 412 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 609 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 531 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 616 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 403 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 365 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 625 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 489 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 521 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 493 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 396 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 385 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 513 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 382 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 668 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 743 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 331 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 378 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 362 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 375 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 550 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 496 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 436 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 547 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 420 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 538 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 514 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 506 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 370 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 687 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 372 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 497 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 444 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 358 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 604 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 392 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 326 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 398 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 545 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 408 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 637 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 479 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 534 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 432 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 336 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 638 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 376 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 462 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 579 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 538 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 527 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 471 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 570 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 451 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 381 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 573 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 6950 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 7194 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 590 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 601 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 422 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 517 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 644 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 511 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[Poker_2P_1,PhaseBasedEnsemblePlayer]
+[LLMActionPlayer] API call took 583 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 560 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 636 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 418 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 533 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 472 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 442 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 516 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 393 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 542 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 780 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 614 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 591 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 390 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 553 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 735 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 455 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 558 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 532 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 521 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 539 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 620 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 565 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 651 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 563 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 459 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 575 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 683 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 383 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 7363 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 580 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 637 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 306 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 516 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 705 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 526 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 529 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 500 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 556 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 570 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 587 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 556 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 549 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 645 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 510 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 603 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 668 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 360 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 484 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 514 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 508 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 626 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 494 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 557 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 514 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 548 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 395 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 543 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 474 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 513 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 343 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 648 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 588 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 468 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 479 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 514 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 569 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 581 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 525 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 466 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 453 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 520 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 344 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 606 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 380 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 402 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 570 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 416 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 458 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 568 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 632 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 397 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 587 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 611 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 357 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 557 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 683 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 505 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 579 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 554 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 571 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 354 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 450 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 577 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 496 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 374 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 499 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 438 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 391 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 437 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 289 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 379 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 410 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 504 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 452 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 526 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 609 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 348 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 563 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 585 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 572 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 528 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 400 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 415 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 503 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 511 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 590 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 394 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 562 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 464 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 594 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 523 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 505 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 443 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 558 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 502 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 350 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 461 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 386 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 509 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 467 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 349 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 456 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 477 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 454 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 476 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 555 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 481 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 405 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 460 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 644 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 419 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 582 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 490 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 448 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 384 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 480 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 705 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 424 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 447 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 428 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 430 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 611 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 439 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 413 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 387 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 434 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 530 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 315 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 414 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 642 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 469 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 592 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 482 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 411 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 407 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 339 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 605 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 626 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 731 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 401 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 498 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 540 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 389 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[LLMActionPlayer] API call took 441 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 505 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 427 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 485 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 648 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 562 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 475 ms (model=GEMINI size=LARGE)
+[LOSE_GAME,WIN_GAME]
+[LLMActionPlayer] API call took 599 ms (model=GEMINI size=LARGE)
+[LLMActionPlayer] API call took 601 ms (model=GEMINI size=LARGE)
+[WIN_GAME,LOSE_GAME]
+[WIN_GAME,LOSE_GAME]
+============= Poker - 200 games played ============= 
+PhaseBasedEnsemblePlayer got 88.00 points. PhaseBasedEnsemblePlayer won 44.0% of the 200 games of the tournament. PhaseBasedEnsemblePlayer won 44.0% of the 200 games it played during the tournament.
+PhaseBasedEnsemblePlayer got a mean score of 45.45.
+PhaseBasedEnsemblePlayer won 44.0% of the 200 games against Poker_2P_1.
+
+Poker_2P_1 got 112.00 points. Poker_2P_1 won 56.0% of the 200 games of the tournament. Poker_2P_1 won 56.0% of the 200 games it played during the tournament.
+Poker_2P_1 got a mean score of 54.55.
+Poker_2P_1 won 56.0% of the 200 games against PhaseBasedEnsemblePlayer.
+
+---- Ranking ---- (+/- are standard errors on the mean calculated using a Normal approximation) 
+Poker_2P_1: Win rate 0.56 +/- 0.035	Mean Ordinal 1.44 +/- 0.04
+PhaseBasedEnsemblePlayer: Win rate 0.44 +/- 0.035	Mean Ordinal 1.56 +/- 0.04
+
+
+---- Alpha Rank ----  
